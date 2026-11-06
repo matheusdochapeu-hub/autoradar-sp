@@ -24,7 +24,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 78900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 8.550 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/13-firefly-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Fiat Sinal — Unidade Ipiranga",
@@ -86,7 +86,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 81900,
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 7.100 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-turbo-branco.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/10-turbo-200-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Localiza Seminovos — Santo André",
@@ -147,7 +147,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 83000,
     "fipePrice": 86200,
     "priceVsFipe": "-R$ 6.700 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "image": null,
     "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
     "dealer": {
       "name": "Carrera Seminovos — Butantã",
@@ -209,7 +209,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 84900,
     "fipePrice": 88300,
     "priceVsFipe": "-R$ 7.300 (Oferta Especial)",
-    "image": "./img/cars/pulse-audace-azul.jpg",
+    "image": null,
     "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
     "dealer": {
       "name": "Auto Shopping Cristal — Multimarcas Sul",
@@ -270,7 +270,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 76900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 10.550 (Super Desconto)",
-    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Campinas&precoate=75000",
     "dealer": {
       "name": "Daitan Seminovos — Campinas Norte",
@@ -332,7 +332,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 96900,
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 15.600 (Abaixo de Mercado)",
-    "image": "./img/cars/byd-dolphin-mini-branco.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=S%C3%A3o%20Paulo&precoate=90000",
     "dealer": {
       "name": "AutoPrime Motors — Anhaia Mello",
@@ -395,7 +395,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 85000,
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 18.600 (Preço Limite Casal)",
-    "image": "./img/cars/byd-dolphin-mini-verde.jpg",
+    "image": null,
     "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini",
     "dealer": {
       "name": "Anúncio Verificado — Particular (Matheus & Renata)",
@@ -457,7 +457,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 92000,
     "fipePrice": 101000,
     "priceVsFipe": "-R$ 16.500",
-    "image": "./img/cars/byd-dolphin-mini-preto.jpg",
+    "image": null,
     "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_32150.1_&lim=20",
     "dealer": {
       "name": "BYD Dahruj Seminovos — Campinas",
@@ -518,7 +518,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 105900,
     "fipePrice": 108000,
     "priceVsFipe": "-R$ 18.100 (Unidade de Diretoria)",
-    "image": "./img/cars/vw-tera.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
     "dealer": {
       "name": "Carrera Volkswagen — Ceasa",
@@ -579,7 +579,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 105000,
     "fipePrice": 108000,
     "priceVsFipe": "-R$ 28.100 (Oportunidade Dentro do Teto)",
-    "image": "./img/cars/vw-tera.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
     "dealer": {
       "name": "Localiza Seminovos — São Paulo",
@@ -641,7 +641,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 75900,
     "fipePrice": 76500,
     "priceVsFipe": "-R$ 6.600 (R$ 10k Abaixo do seu Orçamento!)",
-    "image": "./img/cars/kwid-etech.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/renault/kwid/e-tech?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Renault Grand Brasil — Moema",
@@ -705,7 +705,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 74000,
     "fipePrice": 75800,
     "priceVsFipe": "-R$ 7.300 (Dentro do Orçamento)",
-    "image": "./img/cars/jac-ejs1.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/jac/e-js1?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "EletroCar Seminovos — Vila Olímpia",
@@ -769,7 +769,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 81000,
     "fipePrice": 82500,
     "priceVsFipe": "-R$ 5.600 (Excelente Custo-Benefício)",
-    "image": "./img/cars/vw-polo-tsi.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/volkswagen/polo/10-200-tsi-total-flex-comfortline-automatico?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Carrera Seminovos — Vila Leopoldina",
@@ -831,7 +831,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 83500,
     "fipePrice": 85900,
     "priceVsFipe": "-R$ 7.000 (Dentro dos R$ 80k)",
-    "image": "./img/cars/nissan-kicks.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/nissan/kicks/16-16v-flexstart-sv-4p-xtronic?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Daitan Nissan — Ibirapuera",
@@ -893,7 +893,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 78000,
     "fipePrice": 79200,
     "priceVsFipe": "-R$ 5.300",
-    "image": "./img/cars/c4-cactus.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/citroen/c4-cactus/16-vti-120-flex-feel-eat6?estadocidade=S%C3%A3o%20Paulo&precoate=75000",
     "dealer": {
       "name": "Stellantis Seminovos — Sorocaba",
@@ -954,7 +954,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 82000,
     "fipePrice": 83900,
     "priceVsFipe": "-R$ 7.400",
-    "image": "./img/cars/argo-trekking.jpg",
+    "image": null,
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo/13-firefly-flex-trekking-cvt?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Amazonas Seminovos — Radial Leste",
@@ -1016,7 +1016,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 81900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 6.550 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "image": null,
     "portal": "Mercado Livre Carros SP",
     "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/sao-paulo/ribeirao-preto/pulse-drive-at_PriceRange_0-80000",
     "dealer": {
@@ -1079,7 +1079,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 82900,
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 7.000 (Oportunidade)",
-    "image": "./img/cars/pulse-turbo-branco.jpg",
+    "image": null,
     "portal": "OLX São Paulo",
     "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
     "dealer": {
@@ -1141,7 +1141,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 81000,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 6.950 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "image": null,
     "portal": "Webmotors Santos",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Santos&precoate=80000",
     "dealer": {
@@ -1203,7 +1203,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 80900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 7.650 (Super Oferta)",
-    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "image": null,
     "portal": "Mobiauto",
     "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/sorocaba?preco_ate=80000",
     "dealer": {
@@ -1263,7 +1263,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 83500,
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 6.000 (Seminovo Premium)",
-    "image": "./img/cars/pulse-audace-azul.jpg",
+    "image": null,
     "portal": "Kavak Brasil",
     "listingUrl": "https://www.kavak.com/br/carros-usados/fiat/pulse?price_max=80000",
     "dealer": {
@@ -1323,7 +1323,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 85000,
     "fipePrice": 89900,
     "priceVsFipe": "-R$ 10.700 (Excelente Oferta)",
-    "image": "./img/cars/byd-dolphin-mini-verde.jpg",
+    "image": null,
     "portal": "iCarros",
     "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_31201.1_&lim=20",
     "dealer": {
@@ -1387,7 +1387,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 86900,
     "fipePrice": 91500,
     "priceVsFipe": "-R$ 11.700 (5 Lugares Oficial)",
-    "image": "./img/cars/byd-dolphin-mini-preto.jpg",
+    "image": null,
     "portal": "OLX São Paulo",
     "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini?pe=85000",
     "dealer": {
@@ -1449,7 +1449,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 84500,
     "fipePrice": 88900,
     "priceVsFipe": "-R$ 10.400 (Oportunidade)",
-    "image": "./img/cars/byd-dolphin-mini-branco.jpg",
+    "image": null,
     "portal": "Webmotors Santos",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=Santos&precoate=85000",
     "dealer": {
@@ -1511,7 +1511,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 81500,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 7.250 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "image": null,
     "portal": "Chaves na Mão SP",
     "listingUrl": "https://www.chavesnamao.com.br/carros-usados/sp-jundiai/fiat/pulse/?precoate=80000",
     "dealer": {
@@ -1572,7 +1572,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 80900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 8.050 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-turbo-branco.jpg",
+    "image": null,
     "portal": "Mobiauto",
     "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/piracicaba?preco_ate=80000",
     "dealer": {
@@ -1633,7 +1633,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 62000,
     "fipePrice": 61200,
     "priceVsFipe": "-R$ 3.300 (Abaixo da FIPE)",
-    "image": "./img/cars/argo-trekking.jpg",
+    "image": null,
     "portal": "Webmotors SP",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo?estadocidade=S%C3%A3o%20Paulo&precoate=60000",
     "dealer": {
@@ -1877,7 +1877,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 109000,
     "fipePrice": 112000,
     "priceVsFipe": "-R$ 13.100 (Oportunidade Upgrade)",
-    "image": "./img/cars/byd-dolphin-mini-branco.jpg",
+    "image": null,
     "portal": "Webmotors SP",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin?estadocidade=S%C3%A3o%20Paulo&precoate=100000",
     "dealer": {
@@ -1940,7 +1940,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 99900,
     "fipePrice": 98400,
     "priceVsFipe": "-R$ 5.900 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-audace-azul.jpg",
+    "image": null,
     "portal": "Mercado Livre SP",
     "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/pulse-impetus_PriceRange_0-100000",
     "dealer": {
@@ -2065,7 +2065,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 134000,
     "fipePrice": 132000,
     "priceVsFipe": "-R$ 12.200 (Super Desconto)",
-    "image": "./img/cars/byd-dolphin-mini-preto.jpg",
+    "image": null,
     "portal": "Webmotors SP",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-plus?estadocidade=S%C3%A3o%20Paulo&precoate=125000",
     "dealer": {
@@ -2128,7 +2128,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 128000,
     "fipePrice": 125900,
     "priceVsFipe": "-R$ 7.400 (Abaixo da FIPE)",
-    "image": "./img/cars/pulse-turbo-branco.jpg",
+    "image": null,
     "portal": "Mobiauto Campinas",
     "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/campinas?preco_ate=120000",
     "dealer": {
