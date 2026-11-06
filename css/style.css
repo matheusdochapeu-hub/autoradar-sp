@@ -1696,3 +1696,141 @@ body {
     width: 100%;
   }
 }
+
+
+/* ==============================================================
+   Filtros em Botões (Chips / Segmented Buttons) & Cards Clicáveis
+   ============================================================== */
+
+.filter-controls-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.filter-group-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-group-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 110px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-group-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-group-chips.scrollable {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-btn-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-btn-chip:hover {
+  border-color: var(--electric-green);
+  color: #fff;
+  background: rgba(0, 255, 136, 0.08);
+}
+
+.filter-btn-chip.active {
+  background: var(--electric-green);
+  color: #0b0e14;
+  border-color: var(--electric-green);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.35);
+}
+
+/* Chips específicos de modelos */
+.filter-model-chip.active {
+  background: #fff;
+  color: #0b0e14;
+  border-color: #fff;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+/* Cards de Destaque no Topo Clicáveis */
+.insight-card {
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  user-select: none;
+}
+
+.insight-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 255, 136, 0.5);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.insight-card.active {
+  border-color: var(--electric-green) !important;
+  box-shadow: 0 0 16px rgba(0, 255, 136, 0.35) !important;
+  background: linear-gradient(180deg, rgba(0, 255, 136, 0.1), var(--bg-card)) !important;
+}
+
+.insight-click-hint {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--electric-green);
+  font-weight: 700;
+}
+
+/* Card sem foto (estilo limpo & focado em dados) */
+.car-card-no-img-header {
+  padding: 14px 18px 10px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.car-no-img-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--electric-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.car-no-img-notice {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

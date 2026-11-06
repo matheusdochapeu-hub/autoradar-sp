@@ -16,12 +16,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <link rel="manifest" href="manifest.json">
   <script>
     // Limpeza automática imediata de caches legados
     (function() {
-      const APP_VER = 'autoradar-sp-v8';
+      const APP_VER = 'autoradar-sp-v10';
       if (localStorage.getItem('autoradar_ver') !== APP_VER) {
         localStorage.setItem('autoradar_ver', APP_VER);
         if ('caches' in window) {
@@ -110,26 +110,29 @@
   <!-- Banner de Destaque Estratégico para o Casal -->
   <section class="insights-banner">
     <div class="container insights-grid">
-      <div class="insight-card pulse-card">
+      <div class="insight-card pulse-card" data-insight-model="pulse" title="Clique para filtrar apenas o Fiat Pulse">
         <div class="insight-header">
           <span class="icon">🚗</span>
           <strong>Fiat Pulse Automático</strong>
         </div>
         <p><strong>Mais acessível e abundante:</strong> Grande oferta entre <strong>R$ 72.900 e R$ 79.900</strong> em concessionárias de SP. Motor 1.3 Firefly CVT ou 1.0 Turbo 200.</p>
+        <span class="insight-click-hint">👉 Clique para filtrar o Pulse</span>
       </div>
-      <div class="insight-card dolphin-card">
+      <div class="insight-card dolphin-card" data-insight-model="byd" title="Clique para filtrar apenas o BYD Dolphin Mini">
         <div class="insight-header">
           <span class="icon">⚡</span>
           <strong>BYD Dolphin Mini (Elétrico)</strong>
         </div>
         <p><strong>Custo de R$ 0,08/km e isento de rodízio:</strong> Mercado de seminovos oscila entre R$ 80k-95k. Oportunidades de repasse/particular são monitoradas diariamente!</p>
+        <span class="insight-click-hint">👉 Clique para filtrar o Dolphin Mini</span>
       </div>
-      <div class="insight-card tera-card">
+      <div class="insight-card tera-card" data-insight-model="tera" title="Clique para filtrar apenas o VW Tera">
         <div class="insight-header">
           <span class="icon">🚙</span>
           <strong>Volkswagen Tera Automático</strong>
         </div>
         <p><strong>Lançamento recente (2025/2026):</strong> Preço 0km a partir de R$ 105k. Mostramos ofertas de diretoria e a alternativa direta <strong>Polo TSI AT por R$ 76k</strong>.</p>
+        <span class="insight-click-hint">👉 Clique para filtrar o Tera</span>
       </div>
     </div>
   </section>
@@ -143,52 +146,67 @@
         <button id="btnClearSearch" class="btn-clear hidden">&times;</button>
       </div>
 
-      <div class="filter-controls">
-        <div class="filter-group">
-          <label>Preço Máximo:</label>
-          <select id="filterPrice">
-            <option value="60000">Até R$ 60.000 (Super Econômico)</option>
-            <option value="70000">Até R$ 70.000 (Custo-Benefício)</option>
-            <option value="80000" selected>Até R$ 80.000 (Nosso Teto Base)</option>
-            <option value="100000">Até R$ 100.000 (Upgrade)</option>
-            <option value="120000">Até R$ 120.000 (Até 120k)</option>
-            <option value="all">Todos os Preços</option>
-          </select>
+      <div class="filter-controls-buttons">
+        <!-- 1. Botões de Modelos Alvo (Pulse, BYD, Tera) -->
+        <div class="filter-group-buttons model-filter-row">
+          <span class="filter-group-label">🎯 Nossos Alvos:</span>
+          <div class="btn-group-chips" id="modelBtnGroup">
+            <button type="button" class="filter-btn-chip filter-model-chip active" data-model="all">🎯 Todos os 3</button>
+            <button type="button" class="filter-btn-chip filter-model-chip" data-model="pulse">🚗 Fiat Pulse AT</button>
+            <button type="button" class="filter-btn-chip filter-model-chip" data-model="byd">⚡ BYD Dolphin Mini</button>
+            <button type="button" class="filter-btn-chip filter-model-chip" data-model="tera">🚙 VW Tera AT</button>
+          </div>
         </div>
 
-        <div class="filter-group">
-          <label>Combustível:</label>
-          <select id="filterFuel">
-            <option value="all" selected>Todos os Combustíveis</option>
-            <option value="electric">⚡ 100% Elétrico (Preferência)</option>
-            <option value="flex">⛽ Flex Automático</option>
-          </select>
+        <!-- 2. Botões de Preço Máximo -->
+        <div class="filter-group-buttons">
+          <span class="filter-group-label">💰 Preço Máximo:</span>
+          <div class="btn-group-chips" id="priceBtnGroup">
+            <button type="button" class="filter-btn-chip active" data-price="80000">🎯 Até 80k (Teto)</button>
+            <button type="button" class="filter-btn-chip" data-price="60000">Até 60k</button>
+            <button type="button" class="filter-btn-chip" data-price="70000">Até 70k</button>
+            <button type="button" class="filter-btn-chip" data-price="100000">Até 100k</button>
+            <button type="button" class="filter-btn-chip" data-price="120000">Até 120k</button>
+            <button type="button" class="filter-btn-chip" data-price="all">Todos os Preços</button>
+          </div>
         </div>
 
-        <div class="filter-group">
-          <label>Região em SP:</label>
-          <select id="filterCity">
-            <option value="all" selected>📍 Todo o Estado de SP (Todas as Ofertas)</option>
-            <option value="São Paulo">🏙️ São Paulo (Capital — Todas as Zonas)</option>
-            <option value="ABC">🏭 Grande SP & ABC (Santo André, SBC, etc.)</option>
-            <option value="Barueri">🏢 Alphaville / Barueri / Osasco</option>
-            <option value="Campinas">🌳 Campinas & Região</option>
-            <option value="Ribeirão Preto">🌾 Ribeirão Preto & Região</option>
-            <option value="São José dos Campos">🚀 São José dos Campos & Vale do Paraíba</option>
-            <option value="Sorocaba">🏰 Sorocaba & Região</option>
-            <option value="Santos">🌊 Santos & Litoral / Baixada Santista</option>
-            <option value="Jundiaí">🍇 Jundiaí & Piracicaba</option>
-          </select>
+        <!-- 3. Botões de Combustível -->
+        <div class="filter-group-buttons">
+          <span class="filter-group-label">⚡ Combustível:</span>
+          <div class="btn-group-chips" id="fuelBtnGroup">
+            <button type="button" class="filter-btn-chip active" data-fuel="all">Todos</button>
+            <button type="button" class="filter-btn-chip" data-fuel="electric">⚡ 100% Elétrico</button>
+            <button type="button" class="filter-btn-chip" data-fuel="flex">⛽ Flex Automático</button>
+          </div>
         </div>
 
-        <div class="filter-group">
-          <label>Ordenar Por:</label>
-          <select id="filterSort">
-            <option value="price-asc" selected>Menor Preço 💰</option>
-            <option value="electric-first">⚡ Elétricos Primeiro</option>
-            <option value="km-asc">Menor Quilometragem 🛣️</option>
-            <option value="year-desc">Mais Novo (Ano) 📅</option>
-          </select>
+        <!-- 4. Botões de Região em SP com Scroll -->
+        <div class="filter-group-buttons">
+          <span class="filter-group-label">📍 Região em SP:</span>
+          <div class="btn-group-chips scrollable" id="regionBtnGroup">
+            <button type="button" class="filter-btn-chip active" data-city="all">📍 Todo o Estado</button>
+            <button type="button" class="filter-btn-chip" data-city="São Paulo">🏙️ SP Capital</button>
+            <button type="button" class="filter-btn-chip" data-city="ABC">🏭 Grande SP & ABC</button>
+            <button type="button" class="filter-btn-chip" data-city="Barueri">🏢 Alphaville / Barueri</button>
+            <button type="button" class="filter-btn-chip" data-city="Campinas">🌳 Campinas</button>
+            <button type="button" class="filter-btn-chip" data-city="Ribeirão Preto">🌾 Ribeirão Preto</button>
+            <button type="button" class="filter-btn-chip" data-city="São José dos Campos">🚀 SJC / Vale</button>
+            <button type="button" class="filter-btn-chip" data-city="Sorocaba">🏰 Sorocaba</button>
+            <button type="button" class="filter-btn-chip" data-city="Santos">🌊 Santos / Litoral</button>
+            <button type="button" class="filter-btn-chip" data-city="Jundiaí">🍇 Jundiaí / Piracicaba</button>
+          </div>
+        </div>
+
+        <!-- 5. Botões de Ordenação -->
+        <div class="filter-group-buttons">
+          <span class="filter-group-label">↕️ Ordenar Por:</span>
+          <div class="btn-group-chips" id="sortBtnGroup">
+            <button type="button" class="filter-btn-chip active" data-sort="price-asc">💰 Menor Preço</button>
+            <button type="button" class="filter-btn-chip" data-sort="electric-first">⚡ Elétricos 1º</button>
+            <button type="button" class="filter-btn-chip" data-sort="km-asc">🛣️ Menor KM</button>
+            <button type="button" class="filter-btn-chip" data-sort="year-desc">📅 Mais Novo</button>
+          </div>
         </div>
       </div>
     </div>
@@ -314,19 +332,17 @@
           <p class="section-desc">Modelos automáticos modernos, elétricos e SUVs selecionados por faixa de preço em São Paulo.</p>
         </div>
         
-        <!-- Lista Suspensa Solicitada pelo Usuário -->
-        <div class="suggestion-dropdown-wrap">
-          <label for="selectSuggestionTier" class="suggestion-dropdown-label">
-            <span>📊</span> Faixa de Preço das Sugestões:
-          </label>
-          <select id="selectSuggestionTier" class="suggestion-dropdown-select">
-            <option value="60k">💰 Até R$ 60.000 (Mais Acessíveis & Econômicos)</option>
-            <option value="70k">✨ Até R$ 70.000 (Custo-Benefício & Elétricos de Entrada)</option>
-            <option value="80k" selected>🎯 Até R$ 80.000 (Nosso Orçamento Base)</option>
-            <option value="100k">🚀 Até R$ 100.000 (Upgrade • Dolphin EV, Pulse Topo, Renegade)</option>
-            <option value="120k">👑 Até R$ 120.000 (Premium • Dolphin Plus 204cv, Abarth, Nivus)</option>
-            <option value="all">🌟 Todas as Faixas de Sugestões</option>
-          </select>
+        <!-- Botões de Faixas de Sugestão -->
+        <div class="suggestion-btn-group" id="suggestionTierBtnGroup" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+          <span class="filter-group-label">📊 Faixa de Sugestão:</span>
+          <div class="btn-group-chips">
+            <button type="button" class="filter-btn-chip active" data-tier="80k">🎯 Até 80k (Base)</button>
+            <button type="button" class="filter-btn-chip" data-tier="60k">💰 Até 60k</button>
+            <button type="button" class="filter-btn-chip" data-tier="70k">✨ Até 70k</button>
+            <button type="button" class="filter-btn-chip" data-tier="100k">🚀 Até 100k</button>
+            <button type="button" class="filter-btn-chip" data-tier="120k">👑 Até 120k</button>
+            <button type="button" class="filter-btn-chip" data-tier="all">🌟 Todas</button>
+          </div>
         </div>
       </div>
 
@@ -603,9 +619,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/data.js?v=8"></script>
-  <script src="js/financing.js?v=8"></script>
-  <script src="js/app.js?v=8"></script>
+  <script src="js/data.js?v=10"></script>
+  <script src="js/financing.js?v=10"></script>
+  <script src="js/app.js?v=10"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

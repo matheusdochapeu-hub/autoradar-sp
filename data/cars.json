@@ -1636,7 +1636,7 @@
       "originalPrice": 64500,
       "fipePrice": 63900,
       "priceVsFipe": "-R$ 4.100 (Abaixo da FIPE)",
-      "image": "./img/cars/c4-cactus.jpg",
+      "image": null,
       "portal": "OLX Campinas",
       "listingUrl": "https://sp.olx.com.br/regiao-de-campinas/autos-e-pecas/carros-vans-e-utilitarios/chevrolet/onix?pe=60000&gb=2",
       "dealer": {
@@ -1697,7 +1697,7 @@
       "originalPrice": 73500,
       "fipePrice": 72800,
       "priceVsFipe": "-R$ 3.900 (Abaixo da FIPE)",
-      "image": "./img/cars/argo-trekking.jpg",
+      "image": null,
       "portal": "iCarros SP",
       "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
       "dealer": {
@@ -1758,7 +1758,7 @@
       "originalPrice": 71900,
       "fipePrice": 70500,
       "priceVsFipe": "-R$ 3.600 (Abaixo da FIPE)",
-      "image": "./img/cars/vw-polo-tsi.jpg",
+      "image": null,
       "portal": "Mercado Livre SP",
       "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/hyundai/hb20/sao-paulo/hb20-automatico_PriceRange_0-70000",
       "dealer": {
@@ -1944,7 +1944,7 @@
       "originalPrice": 102000,
       "fipePrice": 101500,
       "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
-      "image": "./img/cars/c4-cactus.jpg",
+      "image": null,
       "portal": "OLX São José dos Campos",
       "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/jeep/renegade?pe=100000&gb=2",
       "dealer": {
@@ -2131,7 +2131,7 @@
       "originalPrice": 121000,
       "fipePrice": 119500,
       "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
-      "image": "./img/cars/vw-tera.jpg",
+      "image": null,
       "portal": "Kavak Alphaville",
       "listingUrl": "https://www.kavak.com/br/carros-usados/volkswagen/nivus?price_max=120000",
       "dealer": {

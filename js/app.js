@@ -11,13 +11,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   const state = {
     currentTab: 'tab-targets',
     targetSubfilter: 'all',
+    filterModel: 'all', // 'all', 'pulse', 'byd', 'tera'
     suggestionTier: '80k',
     searchQuery: '',
     filterPrice: 80000,
     filterFuel: 'all',
     filterCity: 'all',
     filterSort: 'price-asc',
-    comparedCarIds: ['pulse-01', 'byd-01'], // 2 carros pré-selecionados para o comparador já nascer útil!
+    compareSlots: ['pulse-01', 'byd-01', null],
+    comparedCarIds: ['pulse-01', 'byd-01'],
     simCurrentTerm: 48
   };
 
@@ -39,13 +41,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const gridSuggestions = document.getElementById('gridSuggestions');
   const compareContainer = document.getElementById('compareContainer');
 
-  // Filtros
+  // Filtros Globais e Chips de Botões
   const searchInput = document.getElementById('searchInput');
   const btnClearSearch = document.getElementById('btnClearSearch');
-  const filterPrice = document.getElementById('filterPrice');
-  const filterFuel = document.getElementById('filterFuel');
-  const filterCity = document.getElementById('filterCity');
-  const filterSort = document.getElementById('filterSort');
   const subfilterPills = document.querySelectorAll('.subfilter-pill');
 
   // Simulador
@@ -124,31 +122,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderAllGrids();
   });
 
-  filterPrice.addEventListener('change', (e) => {
-    state.filterPrice = e.target.value === 'all' ? 9999999 : parseFloat(e.target.value);
-    renderAllGrids();
-  });
-
-  filterFuel.addEventListener('change', (e) => {
-    state.filterFuel = e.target.value;
-    renderAllGrids();
-  });
-
-  filterCity.addEventListener('change', (e) => {
-    state.filterCity = e.target.value;
-    renderAllGrids();
-  });
-
-  filterSort.addEventListener('change', (e) => {
-    state.filterSort = e.target.value;
-    renderAllGrids();
-  });
+// Listeners antigos de <select> removidos (agora controlados por botões chips)
 
   // ==============================================================
   // 4. Lógica de Filtragem e Ordenação
   // ==============================================================
   function filterCars(carList) {
     return carList.filter(car => {
+      // Filtro de Modelo Selecionado (Pulse, BYD, Tera)
+      if (state.filterModel !== 'all') {
+        const cat = (car.modelCategory || '').toLowerCase();
+        const t = (car.title || '').toLowerCase();
+        if (state.filterModel === 'pulse' && !cat.includes('pulse') && !t.includes('pulse')) return false;
+        if (state.filterModel === 'byd' && !cat.includes('dolphin') && !t.includes('dolphin')) return false;
+        if (state.filterModel === 'tera' && !cat.includes('tera') && !t.includes('tera') && !t.includes('polo')) return false;
+      }
       // Filtro de Preço (considera tanto preço anunciado quanto meta de negociação)
       const effectivePrice = car.negotiatedTarget || car.price;
       if (effectivePrice > state.filterPrice) return false;
@@ -228,30 +216,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 5. Renderização dos Cards Estilo Marketplace
   // ==============================================================
   function getExactCarImage(c) {
-    if (!c) return './img/cars/pulse-drive-cinza.jpg';
-    if (c.image && !c.image.includes('unsplash') && (c.image.startsWith('./img/cars/') || c.image.startsWith('img/cars/'))) {
+    if (!c || !c.image) return null;
+    if (c.image.includes('unsplash')) return null;
+    if (c.image.startsWith('./img/cars/') || c.image.startsWith('img/cars/')) {
       return c.image;
     }
-    const t = (c.title || '').toLowerCase();
-    const cat = (c.modelCategory || '').toLowerCase();
-    if (cat.includes('pulse') || t.includes('pulse')) {
-      if (t.includes('turbo') || t.includes('branco')) return './img/cars/pulse-turbo-branco.jpg';
-      if (t.includes('audace') || t.includes('azul')) return './img/cars/pulse-audace-azul.jpg';
-      return './img/cars/pulse-drive-cinza.jpg';
-    }
-    if (cat.includes('dolphin') || t.includes('dolphin')) {
-      if (t.includes('verde')) return './img/cars/byd-dolphin-mini-verde.jpg';
-      if (t.includes('preto') || t.includes('5 lugares')) return './img/cars/byd-dolphin-mini-preto.jpg';
-      return './img/cars/byd-dolphin-mini-branco.jpg';
-    }
-    if (cat.includes('tera') || t.includes('tera')) return './img/cars/vw-tera.jpg';
-    if (t.includes('kwid')) return './img/cars/kwid-etech.jpg';
-    if (t.includes('jac') || t.includes('js1')) return './img/cars/jac-ejs1.jpg';
-    if (t.includes('polo')) return './img/cars/vw-polo-tsi.jpg';
-    if (t.includes('kicks')) return './img/cars/nissan-kicks.jpg';
-    if (t.includes('cactus')) return './img/cars/c4-cactus.jpg';
-    if (t.includes('argo')) return './img/cars/argo-trekking.jpg';
-    return './img/cars/pulse-drive-cinza.jpg';
+    return null;
   }
 
   function createCarCardHTML(car) {
@@ -272,23 +242,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     const waText = encodeURIComponent(`Olá! Vi o anúncio do ${car.title} por ${fmt(car.price)} no AutoRadar SP. Gostaria de saber mais sobre as opções de financiamento e agendar uma visita.`);
     const waLink = `https://wa.me/${waPhone}?text=${waText}`;
 
-    return `
-      <div class="car-card" data-id="${car.id}">
-        <div class="car-image-box">
-          <img src="${cardImg}" alt="${car.title}" loading="lazy">
-          
-          <span class="car-badge-top ${isElec ? 'badge-electric' : ''}">
+    const imgBoxHtml = cardImg ? `
+      <div class="car-image-box">
+        <img src="${cardImg}" alt="${car.title}" loading="lazy" onerror="this.closest('.car-image-box').remove();">
+        <span class="car-badge-top ${isElec ? 'badge-electric' : ''}">
+          ${car.badge || (isElec ? '⚡ 100% Elétrico' : '🚗 Automático')}
+        </span>
+        <button class="car-favorite-btn ${isFav ? 'favorited' : ''}" data-fav-id="${car.id}" title="Salvar nos favoritos">
+          ${isFav ? '❤️' : '🤍'}
+        </button>
+        <div class="car-location-tag">
+          <span>📍</span> ${car.dealer?.city || 'São Paulo'} - ${car.dealer?.neighborhood || 'SP'}
+        </div>
+      </div>
+    ` : `
+      <div class="car-card-no-img-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="car-no-img-badge">
             ${car.badge || (isElec ? '⚡ 100% Elétrico' : '🚗 Automático')}
           </span>
-
-          <button class="car-favorite-btn ${isFav ? 'favorited' : ''}" data-fav-id="${car.id}" title="Salvar nos favoritos">
-            ${isFav ? '❤️' : '🤍'}
-          </button>
-
-          <div class="car-location-tag">
-            <span>📍</span> ${car.dealer?.city || 'São Paulo'} - ${car.dealer?.neighborhood || 'SP'}
-          </div>
+          <span class="car-no-img-notice">📷 Fotos no anúncio oficial</span>
         </div>
+        <button class="car-favorite-btn ${isFav ? 'favorited' : ''}" data-fav-id="${car.id}" style="position: static;" title="Salvar nos favoritos">
+          ${isFav ? '❤️' : '🤍'}
+        </button>
+      </div>
+    `;
+
+    return `
+      <div class="car-card ${cardImg ? '' : 'car-card-no-img'}" data-id="${car.id}">
+        ${imgBoxHtml}
 
         <div class="car-content">
           <div class="car-header-row">
@@ -439,6 +422,107 @@ document.addEventListener('DOMContentLoaded', async () => {
     attachCardListeners();
   }
 
+  // ==============================================================
+  // 4.1 Listeners dos Filtros em Botões (Chips) e Cards de Modelos
+  // ==============================================================
+  
+  // A. Botões de Modelos (Pulse, BYD, Tera)
+  function setModelFilter(modelKey) {
+    state.filterModel = modelKey;
+    
+    // Atualizar botões de chip de modelo
+    document.querySelectorAll('#modelBtnGroup .filter-model-chip').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-model') === modelKey);
+    });
+
+    // Atualizar pílulas da aba de alvos
+    document.querySelectorAll('.subfilter-pill').forEach(pill => {
+      pill.classList.toggle('active', pill.getAttribute('data-target') === modelKey);
+    });
+
+    // Atualizar cards de insight do topo
+    document.querySelectorAll('.insight-card[data-insight-model]').forEach(card => {
+      card.classList.toggle('active', card.getAttribute('data-insight-model') === modelKey);
+    });
+
+    renderAllGrids();
+  }
+
+  document.querySelectorAll('#modelBtnGroup .filter-model-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const m = btn.getAttribute('data-model');
+      setModelFilter(m);
+    });
+  });
+
+  // B. Cards de Destaque no Topo Clicáveis (Pulse, BYD, Tera)
+  document.querySelectorAll('.insight-card[data-insight-model]').forEach(card => {
+    card.addEventListener('click', () => {
+      const targetModel = card.getAttribute('data-insight-model');
+      if (state.filterModel === targetModel) {
+        setModelFilter('all');
+      } else {
+        setModelFilter(targetModel);
+      }
+      // Se estiver em outra aba, navegar para alvos
+      if (state.currentTab !== 'tab-targets') {
+        switchTab('tab-targets');
+      }
+    });
+  });
+
+  // C. Botões de Preço Máximo
+  document.querySelectorAll('#priceBtnGroup .filter-btn-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#priceBtnGroup .filter-btn-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const val = btn.getAttribute('data-price');
+      state.filterPrice = val === 'all' ? Infinity : parseFloat(val);
+      renderAllGrids();
+    });
+  });
+
+  // D. Botões de Combustível
+  document.querySelectorAll('#fuelBtnGroup .filter-btn-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#fuelBtnGroup .filter-btn-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.filterFuel = btn.getAttribute('data-fuel');
+      renderAllGrids();
+    });
+  });
+
+  // E. Botões de Região em SP
+  document.querySelectorAll('#regionBtnGroup .filter-btn-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#regionBtnGroup .filter-btn-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.filterCity = btn.getAttribute('data-city');
+      renderAllGrids();
+    });
+  });
+
+  // F. Botões de Ordenação
+  document.querySelectorAll('#sortBtnGroup .filter-btn-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#sortBtnGroup .filter-btn-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.filterSort = btn.getAttribute('data-sort');
+      renderAllGrids();
+    });
+  });
+
+  // G. Botões de Faixas de Sugestão
+  document.querySelectorAll('#suggestionTierBtnGroup .filter-btn-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#suggestionTierBtnGroup .filter-btn-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.suggestionTier = btn.getAttribute('data-tier');
+      renderAllGrids();
+    });
+  });
+
+
   function attachCardListeners() {
     // Favoritar
     document.querySelectorAll('.car-favorite-btn').forEach(btn => {
@@ -488,9 +572,35 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const buildOptions = (placeholder) => {
       let opts = `<option value="">${placeholder}</option>`;
-      allCars.forEach(c => {
-        opts += `<option value="${c.id}">${c.title} — ${fmt(c.price)} (${c.dealer?.city || 'SP'})</option>`;
-      });
+      
+      const alvos = allCars.filter(c => c.isTarget);
+      const eletricos = allCars.filter(c => !c.isTarget && c.fuel?.includes('Elétrico'));
+      const sugestoes = allCars.filter(c => !c.isTarget && !c.fuel?.includes('Elétrico'));
+
+      if (alvos.length > 0) {
+        opts += `<optgroup label="🎯 Nossos 3 Alvos (Pulse, Dolphin Mini, Tera)">`;
+        alvos.forEach(c => {
+          opts += `<option value="${c.id}">${c.title} — ${fmt(c.price)} (${c.dealer?.city || 'SP'})</option>`;
+        });
+        opts += `</optgroup>`;
+      }
+
+      if (eletricos.length > 0) {
+        opts += `<optgroup label="⚡ Sugestões 100% Elétricas">`;
+        eletricos.forEach(c => {
+          opts += `<option value="${c.id}">${c.title} — ${fmt(c.price)} (${c.dealer?.city || 'SP'})</option>`;
+        });
+        opts += `</optgroup>`;
+      }
+
+      if (sugestoes.length > 0) {
+        opts += `<optgroup label="💡 Sugestões Automáticas">`;
+        sugestoes.forEach(c => {
+          opts += `<option value="${c.id}">${c.title} — ${fmt(c.price)} (${c.dealer?.city || 'SP'})</option>`;
+        });
+        opts += `</optgroup>`;
+      }
+
       return opts;
     };
 
@@ -500,33 +610,44 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function setSlotCar(slotIdx, carId) {
-    if (!carId) {
-      if (state.comparedCarIds.length > slotIdx) {
-        state.comparedCarIds.splice(slotIdx, 1);
-      }
-    } else {
-      // Remover se já existir em outra posição para não duplicar
-      state.comparedCarIds = state.comparedCarIds.filter(id => id !== carId);
-      state.comparedCarIds.splice(slotIdx, 0, carId);
-      if (state.comparedCarIds.length > 3) {
-        state.comparedCarIds = state.comparedCarIds.slice(0, 3);
+    if (!state.compareSlots) {
+      state.compareSlots = [null, null, null];
+    }
+    
+    // Se selecionou um carro que já está em outro slot, limpa o outro slot
+    if (carId) {
+      for (let i = 0; i < 3; i++) {
+        if (i !== slotIdx && state.compareSlots[i] === carId) {
+          state.compareSlots[i] = null;
+        }
       }
     }
+    
+    state.compareSlots[slotIdx] = carId || null;
+    state.comparedCarIds = state.compareSlots.filter(Boolean);
+    
     renderComparator();
     renderAllGrids();
   }
 
   function toggleCompare(carId) {
-    const idx = state.comparedCarIds.indexOf(carId);
-    if (idx > -1) {
-      state.comparedCarIds.splice(idx, 1);
+    if (!state.compareSlots) {
+      state.compareSlots = [null, null, null];
+    }
+
+    const currentIdx = state.compareSlots.indexOf(carId);
+    if (currentIdx !== -1) {
+      state.compareSlots[currentIdx] = null;
     } else {
-      if (state.comparedCarIds.length >= 3) {
-        alert('Você pode comparar no máximo 3 carros ao mesmo tempo. Remova um para adicionar outro.');
+      const emptyIdx = state.compareSlots.findIndex(s => !s);
+      if (emptyIdx === -1) {
+        alert('Você já tem 3 veículos selecionados para comparação. Remova um deles para adicionar outro.');
         return;
       }
-      state.comparedCarIds.push(carId);
+      state.compareSlots[emptyIdx] = carId;
     }
+
+    state.comparedCarIds = state.compareSlots.filter(Boolean);
     renderAllGrids();
     if (state.currentTab === 'tab-comparator') {
       renderComparator();
@@ -542,8 +663,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     const targetList = presets[presetKey] || presets['alvos'];
-    const validIds = targetList.filter(id => window.autoRadarData.getCarById(id));
-    state.comparedCarIds = [...validIds];
+    state.compareSlots = [
+      targetList[0] || null,
+      targetList[1] || null,
+      targetList[2] || null
+    ];
+    state.comparedCarIds = state.compareSlots.filter(Boolean);
 
     renderComparator();
     renderAllGrids();
@@ -560,7 +685,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     slots.forEach(s => {
       if (!s.select || !s.preview || !s.card) return;
-      const carId = state.comparedCarIds[s.idx] || '';
+      const carId = (state.compareSlots && state.compareSlots[s.idx]) || '';
       s.select.value = carId;
 
       const removeBtn = s.card.querySelector(`[data-remove-slot="${s.idx}"]`);
@@ -570,9 +695,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (car) {
           s.card.classList.add('active');
           if (removeBtn) removeBtn.style.display = 'inline-block';
+          const img = getExactCarImage(car);
           s.preview.innerHTML = `
             <div class="slot-car-preview">
-              <img src="${getExactCarImage(car)}" alt="${car.title}">
+              ${img ? `<img src="${img}" alt="${car.title}" onerror="this.remove();">` : `<div style="width: 50px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 6px; font-size: 16px;">🚗</div>`}
               <div class="slot-car-info">
                 <div class="slot-car-name">${car.title}</div>
                 <div class="slot-car-price">${fmt(car.price)} <span style="font-size: 11px; color: var(--text-muted); font-weight: normal;">• ${car.dealer?.city || 'SP'}</span></div>
@@ -621,9 +747,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             <th>Especificação Técnica</th>
             ${cars.map((c, colIdx) => `
               <th class="compare-card-col">
-                <div style="margin-bottom: 8px;">
-                  <img src="${getExactCarImage(c)}" alt="${c.title}" style="width: 100%; max-height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-color);">
-                </div>
+                ${getExactCarImage(c) ? `
+                  <div style="margin-bottom: 8px;">
+                    <img src="${getExactCarImage(c)}" alt="${c.title}" style="width: 100%; max-height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-color);" onerror="this.remove();">
+                  </div>
+                ` : `
+                  <div style="height: 50px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); border-radius: 8px; margin-bottom: 8px; font-size: 11px; color: var(--text-muted);">
+                    📷 Fotos no anúncio
+                  </div>
+                `}
                 <div style="font-size: 15px; color: #fff; line-height: 1.3;">${c.title}</div>
                 <div style="font-size: 18px; margin-top: 4px; color: var(--electric-green); font-weight: 800;">${fmt(c.price)}</div>
                 <div style="margin-top: 8px; display: flex; gap: 6px;">
@@ -747,6 +879,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   document.getElementById('btnClearCompare').addEventListener('click', () => {
+    state.compareSlots = [null, null, null];
     state.comparedCarIds = [];
     renderAllGrids();
     renderComparator();
@@ -894,12 +1027,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     const waText = encodeURIComponent(`Olá! Vi o anúncio do ${car.title} por ${fmt(car.price)} no AutoRadar SP. Gostaria de agendar uma visita e negociar.`);
     const waLink = `https://wa.me/${waPhone}?text=${waText}`;
 
-    modalContent.innerHTML = `
+    const modalImg = getExactCarImage(car);
+    const modalImgBox = modalImg ? `
       <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
-        <img src="${getExactCarImage(car)}" 
+        <img src="${modalImg}" 
              alt="${car.title}" 
-             style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px;">
+             style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px;"
+             onerror="this.parentElement.remove();">
       </div>
+    ` : `
+      <div style="background: rgba(255, 255, 255, 0.03); border: 1px dashed var(--border-color); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 20px;">
+        <span style="font-size: 28px;">📷</span>
+        <h4 style="color: #fff; margin-top: 6px; font-size: 15px;">Fotos Reais no Anúncio Oficial</h4>
+        <p style="color: var(--text-muted); font-size: 12.5px; margin-top: 4px; max-width: 440px; margin-left: auto; margin-right: auto;">
+          Para total transparência e evitar fotos incorretas de outros modelos, veja a galeria de fotos e o laudo cautelar diretamente no anúncio oficial da concessionária/loja.
+        </p>
+      </div>
+    `;
+
+    modalContent.innerHTML = `
+      ${modalImgBox}
 
       <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
         <div>
