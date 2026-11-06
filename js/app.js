@@ -336,25 +336,25 @@ document.addEventListener('DOMContentLoaded', async () => {
  </span>
  </div>
 
- <!-- Botões de Ação -->
- <div class="card-actions-row">
- <a href="${waLink}" target="_blank" rel="noopener" class="btn-card-main">
- <span></span> WhatsApp
- </a>
- <a href="${car.listingUrl || '#'}" target="_blank" rel="noopener" class="btn-card-listing" title="Abrir anúncio verificado em ${car.portal || 'portal parceiro de SP'}">
- <span></span> ${car.portal ? car.portal.replace(' Carros SP', '').replace(' São Paulo', '').replace(' Brasil', '') : 'Anúncio'}
- </a>
- <button class="btn-card-secondary btn-details" data-detail-id="${car.id}">
- Ficha
- </button>
- <button class="btn-card-compare ${isCompared ? 'active' : ''}" data-compare-id="${car.id}" title="${isCompared ? 'Remover do comparador' : 'Adicionar ao comparador'}">
- 
- </button>
- </div>
- </div>
- </div>
- `;
- }
+         <!-- Botões de Ação -->
+        <div class="card-actions-row">
+          <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-card-main">
+            WhatsApp
+          </a>
+          <a href="${car.listingUrl || '#'}" target="_blank" rel="noopener noreferrer" class="btn-card-listing" title="Abrir anúncio verificado em ${car.portal || 'portal parceiro de SP'}">
+            Ver Anúncio ↗
+          </a>
+          <button class="btn-card-secondary btn-details" data-detail-id="${car.id}">
+            Ficha
+          </button>
+          <button class="btn-card-compare ${isCompared ? 'active' : ''}" data-compare-id="${car.id}" title="${isCompared ? 'Remover do comparador' : 'Adicionar ao comparador'}">
+            ${isCompared ? '✓ Comparando' : 'Comparar'}
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
 
  function renderAllGrids() {
  // 1. Nossos 3 Alvos
@@ -1070,7 +1070,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; list-style: none; padding: 0;">
  ${(car.specs?.features || ['Câmbio Automático', 'Ar-Condicionado', 'Direção Elétrica', 'Multimídia', 'Airbags', 'Freios ABS']).map(f => `
  <li style="font-size: 12.5px; color: #e2e8f0; display: flex; align-items: center; gap: 6px;">
- <span style="color: var(--electric-green);"></span> ${f}
+ <span style="color: var(--electric-green);">✓</span> ${f}
  </li>
  `).join('')}
  </ul>
@@ -1081,7 +1081,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  <span></span> Chamar no WhatsApp da Loja
  </a>
  <a href="${car.listingUrl || '#'}" target="_blank" rel="noopener" class="btn-card-listing-lg" style="flex: 2; text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px;">
- <span></span> Abrir Anúncio Oficial (Webmotors / Portal)
+ <span></span> Abrir Anúncio Oficial (${car.portal || "Webmotors"}) ↗
  </a>
  <button class="btn-secondary-sm" onclick="window.autoRadarApp.openInSimulator('${car.id}')" style="flex: 1; min-width: 160px; padding: 12px;">
  Simular Parcelas

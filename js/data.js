@@ -25,7 +25,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 8.550 (Abaixo da FIPE)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/13-firefly-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/13-flex-drive-cvt/sp-sao-paulo?precoate=80000",
     "dealer": {
       "name": "Fiat Sinal — Unidade Ipiranga",
       "type": "Concessionária Oficial Fiat",
@@ -69,7 +69,8 @@ const DEFAULT_CARS_DATABASE = [
       "Concessionária",
       "Laudo Aprovado",
       "Câmbio CVT"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "pulse-02",
@@ -87,7 +88,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 7.100 (Abaixo da FIPE)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/10-turbo-200-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/10-turbo-200-flex-drive-at/sp-santo-andre?precoate=80000",
     "dealer": {
       "name": "Localiza Seminovos — Santo André",
       "type": "Seminovos Certificados",
@@ -130,7 +131,8 @@ const DEFAULT_CARS_DATABASE = [
       "Dentro do Orçamento",
       "Motor Turbo",
       "Laudo Aprovado"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "pulse-03",
@@ -148,7 +150,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 86200,
     "priceVsFipe": "-R$ 6.700 (Abaixo da FIPE)",
     "image": null,
-    "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
+    "listingUrl": "https://www.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/estado-sp/sao-paulo-e-regiao?q=fiat+pulse+drive+1.3+automatico&pe=80000",
     "dealer": {
       "name": "Carrera Seminovos — Butantã",
       "type": "Concessionária Multimarcas",
@@ -191,7 +193,8 @@ const DEFAULT_CARS_DATABASE = [
       "Dentro do Orçamento",
       "Ano 2023",
       "Garantia de Fábrica"
-    ]
+    ],
+    "portal": "OLX Autos"
   },
   {
     "id": "pulse-04",
@@ -210,7 +213,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 88300,
     "priceVsFipe": "-R$ 7.300 (Oferta Especial)",
     "image": null,
-    "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/10-turbo-200-flex-audace-at/sp-sao-paulo?precoate=83000",
     "dealer": {
       "name": "Auto Shopping Cristal — Multimarcas Sul",
       "type": "Loja Multimarcas Verificada",
@@ -253,7 +256,8 @@ const DEFAULT_CARS_DATABASE = [
       "Pacote ADAS",
       "Motor Turbo",
       "Chave Presencial"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "pulse-05",
@@ -271,7 +275,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 10.550 (Super Desconto)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Campinas&precoate=75000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-campinas?precoate=76000",
     "dealer": {
       "name": "Daitan Seminovos — Campinas Norte",
       "type": "Grupo Concessionárias Daitan",
@@ -314,7 +318,8 @@ const DEFAULT_CARS_DATABASE = [
       "Menor Preço",
       "Campinas",
       "Super Desconto"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "byd-01",
@@ -333,7 +338,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 15.600 (Abaixo de Mercado)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=S%C3%A3o%20Paulo&precoate=90000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/byd/dolphin-mini/sp-sao-paulo",
     "dealer": {
       "name": "AutoPrime Motors — Anhaia Mello",
       "type": "Especialista em Seminovos Elétricos",
@@ -378,7 +383,8 @@ const DEFAULT_CARS_DATABASE = [
       "Bateria Blade",
       "Garantia até 2032",
       "Isento de Rodízio"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "byd-02",
@@ -396,7 +402,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 18.600 (Preço Limite Casal)",
     "image": null,
-    "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini",
+    "listingUrl": "https://www.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/estado-sp/sao-paulo-e-regiao?q=byd+dolphin+mini",
     "dealer": {
       "name": "Anúncio Verificado — Particular (Matheus & Renata)",
       "type": "Particular com Laudo Aprovado",
@@ -439,7 +445,8 @@ const DEFAULT_CARS_DATABASE = [
       "Wallbox Grátis",
       "100% Elétrico",
       "Particular"
-    ]
+    ],
+    "portal": "OLX Autos"
   },
   {
     "id": "byd-03",
@@ -458,7 +465,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 101000,
     "priceVsFipe": "-R$ 16.500",
     "image": null,
-    "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_32150.1_&lim=20",
+    "listingUrl": "https://www.webmotors.com.br/comprar/byd/dolphin-mini/sp-campinas",
     "dealer": {
       "name": "BYD Dahruj Seminovos — Campinas",
       "type": "Concessionária Oficial BYD",
@@ -500,7 +507,8 @@ const DEFAULT_CARS_DATABASE = [
       "5 Lugares",
       "Concessionária BYD",
       "100% Elétrico"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "tera-01",
@@ -519,7 +527,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 108000,
     "priceVsFipe": "-R$ 18.100 (Unidade de Diretoria)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
+    "listingUrl": "https://www.webmotors.com.br/comprar/volkswagen/tera/sp-sao-paulo",
     "dealer": {
       "name": "Carrera Volkswagen — Ceasa",
       "type": "Concessionária Oficial VW",
@@ -561,7 +569,8 @@ const DEFAULT_CARS_DATABASE = [
       "Lançamento 2026",
       "SUV VW",
       "Garantia até 2028"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "tera-02-opp",
@@ -580,7 +589,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 108000,
     "priceVsFipe": "-R$ 28.100 (Oportunidade Dentro do Teto)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
+    "listingUrl": "https://www.webmotors.com.br/comprar/volkswagen/tera/sp-sao-paulo",
     "dealer": {
       "name": "Localiza Seminovos — São Paulo",
       "type": "Seminovos Certificados",
@@ -623,7 +632,8 @@ const DEFAULT_CARS_DATABASE = [
       "SUV VW",
       "Dentro do Orçamento",
       "Garantia até 2028"
-    ]
+    ],
+    "portal": "Webmotors"
   },
   {
     "id": "sug-eletrico-01",
@@ -642,7 +652,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 76500,
     "priceVsFipe": "-R$ 6.600 (R$ 10k Abaixo do seu Orçamento!)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/renault/kwid/e-tech?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/renault/kwid/e-tech/sp-sao-paulo?precoate=80000",
     "dealer": {
       "name": "Renault Grand Brasil — Moema",
       "type": "Concessionária Oficial Renault",
@@ -687,7 +697,8 @@ const DEFAULT_CARS_DATABASE = [
       "Sobra Dinheiro",
       "Garantia até 2031"
     ],
-    "priceTier": "70k"
+    "priceTier": "70k",
+    "portal": "Webmotors"
   },
   {
     "id": "sug-eletrico-02",
@@ -706,7 +717,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 75800,
     "priceVsFipe": "-R$ 7.300 (Dentro do Orçamento)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/jac/e-js1?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/jac/e-js1/sp-sao-paulo?precoate=80000",
     "dealer": {
       "name": "EletroCar Seminovos — Vila Olímpia",
       "type": "Loja Especializada em Elétricos",
@@ -751,7 +762,8 @@ const DEFAULT_CARS_DATABASE = [
       "Painel Digital",
       "Isento de Rodízio"
     ],
-    "priceTier": "70k"
+    "priceTier": "70k",
+    "portal": "Webmotors"
   },
   {
     "id": "sug-vw-polo-01",
@@ -770,7 +782,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 82500,
     "priceVsFipe": "-R$ 5.600 (Excelente Custo-Benefício)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/volkswagen/polo/10-200-tsi-total-flex-comfortline-automatico?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/volkswagen/polo/10-200-tsi-total-flex-comfortline-automatico/sp-sao-paulo?precoate=80000",
     "dealer": {
       "name": "Carrera Seminovos — Vila Leopoldina",
       "type": "Concessionária VW",
@@ -813,7 +825,8 @@ const DEFAULT_CARS_DATABASE = [
       "Motor TSI 128cv",
       "Painel Digital"
     ],
-    "priceTier": "80k"
+    "priceTier": "80k",
+    "portal": "Webmotors"
   },
   {
     "id": "sug-suv-kicks-01",
@@ -832,7 +845,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 85900,
     "priceVsFipe": "-R$ 7.000 (Dentro dos R$ 80k)",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/nissan/kicks/16-16v-flexstart-sv-4p-xtronic?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/nissan/kicks/16-16v-flexstart-sv-4p-xtronic/sp-sao-paulo?precoate=80000",
     "dealer": {
       "name": "Daitan Nissan — Ibirapuera",
       "type": "Concessionária Nissan",
@@ -875,7 +888,8 @@ const DEFAULT_CARS_DATABASE = [
       "Bancos Gravidade Zero",
       "Câmera 360"
     ],
-    "priceTier": "80k"
+    "priceTier": "80k",
+    "portal": "Webmotors"
   },
   {
     "id": "sug-suv-cactus-01",
@@ -894,7 +908,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 79200,
     "priceVsFipe": "-R$ 5.300",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/citroen/c4-cactus/16-vti-120-flex-feel-eat6?estadocidade=S%C3%A3o%20Paulo&precoate=75000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/citroen/c4-cactus/16-vti-120-flex-feel-eat6/sp-sao-paulo?precoate=75000",
     "dealer": {
       "name": "Stellantis Seminovos — Sorocaba",
       "type": "Concessionária Citroën/Peugeot",
@@ -936,7 +950,8 @@ const DEFAULT_CARS_DATABASE = [
       "Ano 2022",
       "Abaixo de 75k"
     ],
-    "priceTier": "80k"
+    "priceTier": "80k",
+    "portal": "Webmotors"
   },
   {
     "id": "sug-hatch-argo-01",
@@ -955,7 +970,7 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83900,
     "priceVsFipe": "-R$ 7.400",
     "image": null,
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo/13-firefly-flex-trekking-cvt?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/argo/13-firefly-flex-trekking-cvt/sp-sao-paulo?precoate=80000",
     "dealer": {
       "name": "Amazonas Seminovos — Radial Leste",
       "type": "Concessionária Fiat Amazonas",
@@ -998,7 +1013,8 @@ const DEFAULT_CARS_DATABASE = [
       "Menos de 20 mil km",
       "Garantia até 2027"
     ],
-    "priceTier": "80k"
+    "priceTier": "80k",
+    "portal": "Webmotors"
   },
   {
     "id": "pulse-06-rib",
@@ -1017,8 +1033,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 6.550 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Mercado Livre Carros SP",
-    "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/sao-paulo/ribeirao-preto/pulse-drive-at_PriceRange_0-80000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-ribeirao-preto?precoate=80000",
     "dealer": {
       "name": "Movida Seminovos — Ribeirão Preto",
       "type": "Seminovos Certificados",
@@ -1080,8 +1096,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 7.000 (Oportunidade)",
     "image": null,
-    "portal": "OLX São Paulo",
-    "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-sao-jose-dos-campos?precoate=80000",
     "dealer": {
       "name": "Destaque Fiat — São José dos Campos",
       "type": "Concessionária Autorizada Fiat",
@@ -1142,8 +1158,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 6.950 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Webmotors Santos",
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Santos&precoate=80000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-santos?precoate=80000",
     "dealer": {
       "name": "Comeri Litoral — Concessionária",
       "type": "Concessionária Multimarcas Litoral",
@@ -1204,8 +1220,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 7.650 (Super Oferta)",
     "image": null,
-    "portal": "Mobiauto",
-    "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/sorocaba?preco_ate=80000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-sorocaba?precoate=80000",
     "dealer": {
       "name": "Abrão Reze Seminovos — Sorocaba",
       "type": "Concessionária Tradicional",
@@ -1264,8 +1280,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 6.000 (Seminovo Premium)",
     "image": null,
-    "portal": "Kavak Brasil",
-    "listingUrl": "https://www.kavak.com/br/carros-usados/fiat/pulse?price_max=80000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-barueri?precoate=80000",
     "dealer": {
       "name": "Kavak Hub — Alphaville",
       "type": "Seminovos Certificados com Garantia",
@@ -1324,8 +1340,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 89900,
     "priceVsFipe": "-R$ 10.700 (Excelente Oferta)",
     "image": null,
-    "portal": "iCarros",
-    "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_31201.1_&lim=20",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/byd/dolphin-mini/sp-ribeirao-preto",
     "dealer": {
       "name": "BYD Dahruj — Ribeirão Preto",
       "type": "Concessionária Oficial BYD",
@@ -1388,8 +1404,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 91500,
     "priceVsFipe": "-R$ 11.700 (5 Lugares Oficial)",
     "image": null,
-    "portal": "OLX São Paulo",
-    "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini?pe=85000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/byd/dolphin-mini/sp-sao-jose-dos-campos",
     "dealer": {
       "name": "Dahruj BYD — São José dos Campos",
       "type": "Concessionária Oficial BYD",
@@ -1450,8 +1466,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 88900,
     "priceVsFipe": "-R$ 10.400 (Oportunidade)",
     "image": null,
-    "portal": "Webmotors Santos",
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=Santos&precoate=85000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/byd/dolphin-mini/sp-santos",
     "dealer": {
       "name": "Dahruj BYD — Santos Litoral",
       "type": "Concessionária Oficial BYD",
@@ -1512,8 +1528,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 7.250 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Chaves na Mão SP",
-    "listingUrl": "https://www.chavesnamao.com.br/carros-usados/sp-jundiai/fiat/pulse/?precoate=80000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-jundiai?precoate=80000",
     "dealer": {
       "name": "Carrera Seminovos — Jundiaí",
       "type": "Concessionária Multimarcas",
@@ -1573,8 +1589,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 8.050 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Mobiauto",
-    "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/piracicaba?preco_ate=80000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/sp-piracicaba?precoate=80000",
     "dealer": {
       "name": "Stefanini Fiat — Piracicaba",
       "type": "Concessionária Oficial Fiat",
@@ -1634,8 +1650,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 61200,
     "priceVsFipe": "-R$ 3.300 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Webmotors SP",
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo?estadocidade=S%C3%A3o%20Paulo&precoate=60000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/argo/sp-sao-paulo?precoate=60000",
     "dealer": {
       "name": "Fiat Sinal — Unidade Ipiranga",
       "type": "Concessionária Oficial Fiat",
@@ -1695,8 +1711,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 63900,
     "priceVsFipe": "-R$ 4.100 (Abaixo da FIPE)",
     "image": null,
-    "portal": "OLX Campinas",
-    "listingUrl": "https://sp.olx.com.br/regiao-de-campinas/autos-e-pecas/carros-vans-e-utilitarios/chevrolet/onix?pe=60000&gb=2",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/chevrolet/onix/14-mpfi-ltz-8v-flex-4p-automatico/sp-campinas?precoate=60000",
     "dealer": {
       "name": "Localiza Seminovos — Campinas Taquaral",
       "type": "Seminovos Certificados",
@@ -1756,8 +1772,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 72800,
     "priceVsFipe": "-R$ 3.900 (Abaixo da FIPE)",
     "image": null,
-    "portal": "iCarros SP",
-    "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/honda/fit/15-dx-16v-flex-4p-automatico/sp-sao-paulo?precoate=70000",
     "dealer": {
       "name": "Daitan Seminovos — São Paulo",
       "type": "Concessionária Especializada Honda",
@@ -1817,8 +1833,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 70500,
     "priceVsFipe": "-R$ 3.600 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Mercado Livre SP",
-    "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/hyundai/hb20/sao-paulo/hb20-automatico_PriceRange_0-70000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/hyundai/hb20/16-premium-16v-flex-4p-automatico/sp-sao-paulo?precoate=70000",
     "dealer": {
       "name": "Carrera Seminovos — Santo André",
       "type": "Concessionária Multimarcas",
@@ -1878,8 +1894,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 112000,
     "priceVsFipe": "-R$ 13.100 (Oportunidade Upgrade)",
     "image": null,
-    "portal": "Webmotors SP",
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin?estadocidade=S%C3%A3o%20Paulo&precoate=100000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/byd/dolphin/sp-sao-paulo?precoate=100000",
     "dealer": {
       "name": "Dahruj BYD — Vila Olímpia",
       "type": "Concessionária Oficial BYD",
@@ -1941,8 +1957,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 98400,
     "priceVsFipe": "-R$ 5.900 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Mercado Livre SP",
-    "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/pulse-impetus_PriceRange_0-100000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/10-turbo-200-flex-impetus-at/sp-ribeirao-preto?precoate=100000",
     "dealer": {
       "name": "Movida Seminovos — Ribeirão Preto",
       "type": "Seminovos Certificados",
@@ -2003,8 +2019,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 101500,
     "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
     "image": null,
-    "portal": "OLX São José dos Campos",
-    "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/jeep/renegade?pe=100000&gb=2",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/jeep/renegade/sp-sao-jose-dos-campos?precoate=100000",
     "dealer": {
       "name": "Destaque Jeep — São José dos Campos",
       "type": "Concessionária Jeep",
@@ -2066,8 +2082,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 132000,
     "priceVsFipe": "-R$ 12.200 (Super Desconto)",
     "image": null,
-    "portal": "Webmotors SP",
-    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-plus?estadocidade=S%C3%A3o%20Paulo&precoate=125000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/byd/dolphin-plus/sp-sao-paulo?precoate=125000",
     "dealer": {
       "name": "Dahruj BYD — Morumbi",
       "type": "Concessionária Oficial BYD",
@@ -2129,8 +2145,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 125900,
     "priceVsFipe": "-R$ 7.400 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Mobiauto Campinas",
-    "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/campinas?preco_ate=120000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/fiat/pulse/13-turbo-270-flex-abarth-at/sp-campinas?precoate=120000",
     "dealer": {
       "name": "Grupo Daitan Abarth — Campinas",
       "type": "Concessionária Autorizada Fiat / Abarth",
@@ -2190,8 +2206,8 @@ const DEFAULT_CARS_DATABASE = [
     "fipePrice": 119500,
     "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
     "image": null,
-    "portal": "Kavak Alphaville",
-    "listingUrl": "https://www.kavak.com/br/carros-usados/volkswagen/nivus?price_max=120000",
+    "portal": "Webmotors",
+    "listingUrl": "https://www.webmotors.com.br/comprar/volkswagen/nivus/10-200-tsi-total-flex-highline-automatico/sp-sao-paulo?precoate=120000",
     "dealer": {
       "name": "Kavak Hub — Alphaville",
       "type": "Seminovos Certificados",
