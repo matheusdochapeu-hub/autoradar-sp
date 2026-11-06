@@ -24,7 +24,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 78900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 8.550 (Abaixo da FIPE)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/2022_Fiat_Pulse_1.3_Drive.jpg",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/13-firefly-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Fiat Sinal — Unidade Ipiranga",
@@ -86,7 +86,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 81900,
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 7.100 (Abaixo da FIPE)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/2022_Fiat_Pulse_Impetus_T200_%28Brazil%29_front_view.png",
+    "image": "./img/cars/pulse-turbo-branco.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/10-turbo-200-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Localiza Seminovos — Santo André",
@@ -147,7 +147,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 83000,
     "fipePrice": 86200,
     "priceVsFipe": "-R$ 6.700 (Abaixo da FIPE)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/2022_Fiat_Pulse_1.3_Drive.jpg",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
     "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
     "dealer": {
       "name": "Carrera Seminovos — Butantã",
@@ -209,7 +209,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 84900,
     "fipePrice": 88300,
     "priceVsFipe": "-R$ 7.300 (Oferta Especial)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/2024_Fiat_Pulse_1.0_Turbo_200_Audace.jpg",
+    "image": "./img/cars/pulse-audace-azul.jpg",
     "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
     "dealer": {
       "name": "Auto Shopping Cristal — Multimarcas Sul",
@@ -270,7 +270,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 76900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 10.550 (Super Desconto)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/2022_Fiat_Pulse_1.3_Drive.jpg",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Campinas&precoate=75000",
     "dealer": {
       "name": "Daitan Seminovos — Campinas Norte",
@@ -332,7 +332,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 96900,
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 15.600 (Abaixo de Mercado)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/BYD_DOLPHIN_MINI_%28BRAZIL%29_BYD_SEAGULL.jpg",
+    "image": "./img/cars/byd-dolphin-mini-branco.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=S%C3%A3o%20Paulo&precoate=90000",
     "dealer": {
       "name": "AutoPrime Motors — Anhaia Mello",
@@ -395,7 +395,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 85000,
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 18.600 (Preço Limite Casal)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/BYD_Seagull_Sprout_Green_01.jpg",
+    "image": "./img/cars/byd-dolphin-mini-verde.jpg",
     "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini",
     "dealer": {
       "name": "Anúncio Verificado — Particular (Matheus & Renata)",
@@ -457,7 +457,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 92000,
     "fipePrice": 101000,
     "priceVsFipe": "-R$ 16.500",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/2023_BYD_Seagull_%28front%29.jpg",
+    "image": "./img/cars/byd-dolphin-mini-preto.jpg",
     "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_32150.1_&lim=20",
     "dealer": {
       "name": "BYD Dahruj Seminovos — Campinas",
@@ -518,7 +518,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 105900,
     "fipePrice": 108000,
     "priceVsFipe": "-R$ 18.100 (Unidade de Diretoria)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Volkswagen_Polo_VI_%28Facelift%29_IMG_5943.jpg",
+    "image": "./img/cars/vw-tera.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
     "dealer": {
       "name": "Carrera Volkswagen — Ceasa",
@@ -579,7 +579,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 75900,
     "fipePrice": 76500,
     "priceVsFipe": "-R$ 6.600 (R$ 10k Abaixo do seu Orçamento!)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Renault_Kwid_E-Tech_Electric_01.jpg",
+    "image": "./img/cars/kwid-etech.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/renault/kwid/e-tech?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Renault Grand Brasil — Moema",
@@ -642,7 +642,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 74000,
     "fipePrice": 75800,
     "priceVsFipe": "-R$ 7.300 (Dentro do Orçamento)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/JAC_E10X_001.jpg",
+    "image": "./img/cars/jac-ejs1.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/jac/e-js1?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "EletroCar Seminovos — Vila Olímpia",
@@ -705,7 +705,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 81000,
     "fipePrice": 82500,
     "priceVsFipe": "-R$ 5.600 (Excelente Custo-Benefício)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Volkswagen_Polo_VI_%28Facelift%29_IMG_5943.jpg",
+    "image": "./img/cars/vw-polo-tsi.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/volkswagen/polo/10-200-tsi-total-flex-comfortline-automatico?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Carrera Seminovos — Vila Leopoldina",
@@ -766,7 +766,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 83500,
     "fipePrice": 85900,
     "priceVsFipe": "-R$ 7.000 (Dentro dos R$ 80k)",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/NISSAN_KICKS_China.jpg",
+    "image": "./img/cars/nissan-kicks.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/nissan/kicks/16-16v-flexstart-sv-4p-xtronic?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Daitan Nissan — Ibirapuera",
@@ -827,7 +827,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 78000,
     "fipePrice": 79200,
     "priceVsFipe": "-R$ 5.300",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Citro%C3%ABn_C4_Cactus_%28second_facelift%29_IMG_2393.jpg",
+    "image": "./img/cars/c4-cactus.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/citroen/c4-cactus/16-vti-120-flex-feel-eat6?estadocidade=S%C3%A3o%20Paulo&precoate=75000",
     "dealer": {
       "name": "Stellantis Seminovos — Sorocaba",
@@ -887,7 +887,7 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 82000,
     "fipePrice": 83900,
     "priceVsFipe": "-R$ 7.400",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Fiat_Argo_Trekking_1.3_%28rear_view%29.jpg",
+    "image": "./img/cars/argo-trekking.jpg",
     "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo/13-firefly-flex-trekking-cvt?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Amazonas Seminovos — Radial Leste",

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'autoradar-sp-v4';
+const CACHE_NAME = 'autoradar-sp-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -39,6 +39,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
+            console.log('[SW] Apagando cache antigo obsoleto:', key);
             return caches.delete(key);
           }
         })
@@ -49,23 +50,40 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Network first para data/cars.json para sempre ter os dados mais atualizados
-  if (event.request.url.includes('data/cars.json')) {
+  const url = event.request.url;
+
+  // Network-first para HTML, scripts e cars.json (sempre entrega a versão mais recente)
+  const isCodeOrData = url.includes('data/cars.json') || 
+                       url.includes('.js') || 
+                       url.endsWith('/') || 
+                       url.includes('index.html');
+
+  if (isCodeOrData) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          if (response && response.status === 200) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          }
           return response;
         })
-        .catch(() => caches.match(event.request))
+        .catch(() => caches.match(event.request).then(cached => cached || caches.match('./index.html')))
     );
     return;
   }
 
+  // Cache-first para imagens e ícones locais já otimizados
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request).catch(() => caches.match('./index.html'));
+      if (cachedResponse) return cachedResponse;
+      return fetch(event.request).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const clone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+        }
+        return networkResponse;
+      });
     })
   );
 });

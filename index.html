@@ -16,8 +16,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=5">
   <link rel="manifest" href="manifest.json">
+  <script>
+    // Limpeza automática imediata de caches legados
+    (function() {
+      const APP_VER = 'autoradar-sp-v5';
+      if (localStorage.getItem('autoradar_ver') !== APP_VER) {
+        localStorage.setItem('autoradar_ver', APP_VER);
+        if ('caches' in window) {
+          caches.keys().then(keys => {
+            keys.forEach(k => {
+              if (k !== APP_VER) caches.delete(k);
+            });
+          });
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
   <!-- Header Principal Estilo Marketplace -->
@@ -42,6 +58,9 @@
         <button id="btnForceSync" class="btn-refresh" title="Forçar checagem de novas ofertas nas lojas de SP">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
           Varredura Diária
+        </button>
+        <button id="btnClearCache" class="btn-refresh" title="Limpar cache do navegador e forçar recarga das fotos reais dos anúncios">
+          🧹 Limpar Cache
         </button>
       </div>
 
@@ -417,9 +436,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/data.js"></script>
-  <script src="js/financing.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/data.js?v=5"></script>
+  <script src="js/financing.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

@@ -210,39 +210,38 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ==============================================================
   // 5. Renderização dos Cards Estilo Marketplace
   // ==============================================================
+  function getExactCarImage(c) {
+    if (!c) return './img/cars/pulse-drive-cinza.jpg';
+    if (c.image && !c.image.includes('unsplash') && (c.image.startsWith('./img/cars/') || c.image.startsWith('img/cars/'))) {
+      return c.image;
+    }
+    const t = (c.title || '').toLowerCase();
+    const cat = (c.modelCategory || '').toLowerCase();
+    if (cat.includes('pulse') || t.includes('pulse')) {
+      if (t.includes('turbo') || t.includes('branco')) return './img/cars/pulse-turbo-branco.jpg';
+      if (t.includes('audace') || t.includes('azul')) return './img/cars/pulse-audace-azul.jpg';
+      return './img/cars/pulse-drive-cinza.jpg';
+    }
+    if (cat.includes('dolphin') || t.includes('dolphin')) {
+      if (t.includes('verde')) return './img/cars/byd-dolphin-mini-verde.jpg';
+      if (t.includes('preto') || t.includes('5 lugares')) return './img/cars/byd-dolphin-mini-preto.jpg';
+      return './img/cars/byd-dolphin-mini-branco.jpg';
+    }
+    if (cat.includes('tera') || t.includes('tera')) return './img/cars/vw-tera.jpg';
+    if (t.includes('kwid')) return './img/cars/kwid-etech.jpg';
+    if (t.includes('jac') || t.includes('js1')) return './img/cars/jac-ejs1.jpg';
+    if (t.includes('polo')) return './img/cars/vw-polo-tsi.jpg';
+    if (t.includes('kicks')) return './img/cars/nissan-kicks.jpg';
+    if (t.includes('cactus')) return './img/cars/c4-cactus.jpg';
+    if (t.includes('argo')) return './img/cars/argo-trekking.jpg';
+    return './img/cars/pulse-drive-cinza.jpg';
+  }
+
   function createCarCardHTML(car) {
     const isElec = car.fuel?.includes('Elétrico');
     const isFav = window.autoRadarData.isFavorite(car.id);
     const isCompared = state.comparedCarIds.includes(car.id);
     const fmt = CarFinancingCalculator.formatCurrency;
-
-    // Foto 100% Real do Carro do Anúncio (Sem Unsplash)
-    function getExactCarImage(c) {
-      if (c.image && (c.image.startsWith('https://upload.wikimedia.org') || c.image.startsWith('./img/cars/'))) {
-        return c.image;
-      }
-      const t = (c.title || '').toLowerCase();
-      const cat = (c.modelCategory || '').toLowerCase();
-      if (cat.includes('pulse') || t.includes('pulse')) {
-        if (t.includes('turbo') || t.includes('branco')) return './img/cars/pulse-turbo-branco.jpg';
-        if (t.includes('audace') || t.includes('azul')) return './img/cars/pulse-audace-azul.jpg';
-        return './img/cars/pulse-drive-cinza.jpg';
-      }
-      if (cat.includes('dolphin') || t.includes('dolphin')) {
-        if (t.includes('verde')) return './img/cars/byd-dolphin-mini-verde.jpg';
-        if (t.includes('preto') || t.includes('5 lugares')) return './img/cars/byd-dolphin-mini-preto.jpg';
-        return './img/cars/byd-dolphin-mini-branco.jpg';
-      }
-      if (cat.includes('tera') || t.includes('tera')) return './img/cars/vw-tera.jpg';
-      if (t.includes('kwid')) return './img/cars/kwid-etech.jpg';
-      if (t.includes('jac') || t.includes('js1')) return './img/cars/jac-ejs1.jpg';
-      if (t.includes('polo')) return './img/cars/vw-polo-tsi.jpg';
-      if (t.includes('kicks')) return './img/cars/nissan-kicks.jpg';
-      if (t.includes('cactus')) return './img/cars/c4-cactus.jpg';
-      if (t.includes('argo')) return './img/cars/argo-trekking.jpg';
-      return './img/cars/pulse-drive-cinza.jpg';
-    }
-
     const cardImg = getExactCarImage(car);
 
     // Resumo de financiamento
@@ -741,6 +740,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     alert('✅ Varredura diária concluída! Todas as ofertas das concessionárias e lojas de São Paulo foram validadas.');
     renderAllGrids();
   });
+
+  const btnClearCache = document.getElementById('btnClearCache');
+  if (btnClearCache) {
+    btnClearCache.addEventListener('click', async () => {
+      try {
+        if ('caches' in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+        localStorage.removeItem('autoradar_sp_custom_cars_v1');
+        localStorage.removeItem('autoradar_ver');
+        if ('serviceWorker' in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          for (let r of regs) {
+            await r.unregister();
+          }
+        }
+      } catch (e) {}
+      alert('🧹 Cache e Service Worker limpos com sucesso! Recarregando fotos reais...');
+      window.location.reload(true);
+    });
+  }
 
   // ==============================================================
   // 11. Gestão do PWA & Botão de Instalar App
