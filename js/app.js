@@ -260,9 +260,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const fmt = CarFinancingCalculator.formatCurrency;
     const cardImg = getExactCarImage(car);
 
-    // Resumo de financiamento
+    // Resumo de financiamento com Taxa Real de Mercado (2.50% a.m. ou taxa do veículo)
     const downPmt = car.financing?.downPayment || Math.round(car.price * 0.3);
-    const installment = car.financing?.monthlyInstallment || Math.round((car.price - downPmt) * 0.0276);
+    const rateUsed = car.financing?.interestRate || 2.50;
+    const calcObj = CarFinancingCalculator.calculatePrice(car.price, downPmt, 48, rateUsed);
+    const installment = car.financing?.monthlyInstallment || Math.round(calcObj.monthlyInstallment);
 
     // Link WhatsApp
     const waPhone = car.dealer?.whatsapp || '5511999999999';
@@ -302,6 +304,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="price-financing-sub">
               <span>Entrada ${fmt(downPmt)}:</span>
               <strong>48x de ${fmt(installment)}</strong>
+              <span style="font-size: 11px; color: var(--text-muted); display: block; margin-top: 2px;">(CET Real Balcão: ${rateUsed.toFixed(2).replace('.', ',')}% a.m.)</span>
             </div>
           </div>
 
@@ -733,7 +736,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function updateSimulator() {
     const price = parseFloat(simVehiclePrice.value) || 0;
     const downPayment = parseFloat(simDownPaymentRange.value) || 0;
-    const rate = parseFloat(simInterestRate.value) || 1.39;
+    const rate = parseFloat(simInterestRate.value) || 2.50;
     const term = state.simCurrentTerm;
 
     // Atualizar labels
@@ -789,6 +792,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   simDownPaymentRange.addEventListener('input', updateSimulator);
   simInterestRate.addEventListener('input', updateSimulator);
+  // Listeners dos botões de taxa de juros pré-configurados
+  document.querySelectorAll('.rate-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.rate-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const r = parseFloat(btn.getAttribute('data-rate'));
+      if (simInterestRate && !isNaN(r)) {
+        simInterestRate.value = r;
+        updateSimulator();
+      }
+    });
+  });
+
+  if (simInterestRate) {
+    simInterestRate.addEventListener('input', () => {
+      const currentVal = parseFloat(simInterestRate.value);
+      document.querySelectorAll('.rate-chip').forEach(b => {
+        b.classList.toggle('active', parseFloat(b.getAttribute('data-rate')) === currentVal);
+      });
+    });
+  }
+
 
   termButtons.forEach(btn => {
     btn.addEventListener('click', () => {

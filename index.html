@@ -16,12 +16,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <link rel="manifest" href="manifest.json">
   <script>
     // Limpeza automática imediata de caches legados
     (function() {
-      const APP_VER = 'autoradar-sp-v6';
+      const APP_VER = 'autoradar-sp-v7';
       if (localStorage.getItem('autoradar_ver') !== APP_VER) {
         localStorage.setItem('autoradar_ver', APP_VER);
         if ('caches' in window) {
@@ -424,10 +424,21 @@
           <div class="form-row">
             <label>Taxa de Juros Mensal (% a.m.):</label>
             <div class="interest-input-wrap">
-              <input type="number" id="simInterestRate" value="1.39" step="0.05" min="0" max="4">
+              <input type="number" id="simInterestRate" value="2.50" step="0.05" min="0.5" max="5.0">
               <span class="unit">% a.m.</span>
             </div>
-            <span class="help-text">Taxas médias atuais em SP: Bancos de Montadora (1,19% a 1,39%), Bancos Privados (1,45% a 1,75%).</span>
+            
+            <!-- Cenários Reais de Mercado -->
+            <div class="rate-presets-row" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
+              <button type="button" class="rate-chip active" data-rate="2.50" title="Taxa real cobrada na mesa de concessionárias em SP (com CET e retorno)">🏢 Concessionária Real (2,50% a.m.)</button>
+              <button type="button" class="rate-chip" data-rate="1.99" title="Taxa negociada diretamente no app do seu banco com bom relacionamento">🤝 Correntista (1,99% a.m.)</button>
+              <button type="button" class="rate-chip" data-rate="1.49" title="Taxa subsidiada de fábrica (geralmente exige 40% a 50% de entrada)">⚡ Montadora / Elétrico (1,49% a.m.)</button>
+              <button type="button" class="rate-chip" data-rate="2.90" title="Taxa com entrada mínima ou score em recuperação">⚠️ Entrada Baixa (2,90% a.m.)</button>
+            </div>
+
+            <span class="help-text" style="margin-top: 8px; display: block; line-height: 1.4;">
+              ⚠️ <strong>Realidade de Balcão:</strong> Concessionárias em SP costumam ofertar taxas de <strong>2,30% a 2,65% a.m. (CET)</strong> em seminovos porque embutem IOF, TAC (tarifa de cadastro), gravame e a comissão da loja (retorno de mesa).
+            </span>
           </div>
         </div>
 
@@ -466,6 +477,24 @@
             <span class="tip-icon">💡</span>
             <p><strong>Dica de Compra:</strong> Com R$ 80.000 em mãos, você pode comprar o <strong>Fiat Pulse à vista</strong> sem pagar R$ 1 real de juros bancários, ou dar R$ 40.000 de entrada e deixar R$ 40.000 rendendo no Tesouro Selic!</p>
           </div>
+        </div>
+      </div>
+
+      <!-- Card Explicativo de Taxas Reais de Concessionária -->
+      <div class="simulator-card reality-check-card" style="margin-top: 20px; background: rgba(0, 210, 255, 0.04); border: 1px solid rgba(0, 210, 255, 0.2);">
+        <h4 style="color: var(--electric-blue); font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>🔍</span> Por que a concessionária oferece 2,5% ao mês em vez das taxas de comercial de TV?
+        </h4>
+        <p style="font-size: 13px; color: var(--text-main); line-height: 1.5; margin-bottom: 10px;">
+          A taxa que a concessionária calcula na mesa chama-se <strong>CET (Custo Efetivo Total)</strong>. Mesmo quando o banco parceiro tem uma taxa base de 1,9% a.m., o lojista adiciona despesas que elevam o custo para <strong>2,5% a.m.</strong>:
+        </p>
+        <ul style="font-size: 12.5px; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin-bottom: 12px;">
+          <li><strong>IOF Financiamento:</strong> 0,38% fixo + alíquota diária obrigatória do Governo Federal recolhida na operação.</li>
+          <li><strong>Custos Administrativos Embutidos:</strong> Tarifa de Cadastro (TAC de R$ 800 a R$ 1.500) e taxa de registro de gravame no Detran-SP (R$ 350 a R$ 600) somados ao saldo financiado.</li>
+          <li><strong>Retorno de Mesa (Comissão da Loja):</strong> A concessionária tem margem para aplicar um spread de 0,3% a 0,6% a.m. a favor dela sobre a taxa bancária.</li>
+        </ul>
+        <div style="background: rgba(0, 255, 136, 0.06); border-left: 3px solid var(--electric-green); padding: 10px 14px; border-radius: 4px; font-size: 12.5px; color: #fff; line-height: 1.5;">
+          💡 <strong>Dica de Ouro de Negociação:</strong> Como você possui até R$ 80.000 de orçamento, você tem <strong>poder total de compra à vista</strong> em um Fiat Pulse seminovo (fugindo de 100% dos juros). Se for financiar, simule o CDC direto no aplicativo do seu banco (ex: Inter, Itaú, BB) antes de fechar na concessionária para exigir que eles igualem a taxa!
         </div>
       </div>
     </div>
@@ -557,9 +586,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/data.js?v=6"></script>
-  <script src="js/financing.js?v=6"></script>
-  <script src="js/app.js?v=6"></script>
+  <script src="js/data.js?v=7"></script>
+  <script src="js/financing.js?v=7"></script>
+  <script src="js/app.js?v=7"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

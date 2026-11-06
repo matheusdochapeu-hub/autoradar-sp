@@ -61,10 +61,10 @@
         "downPayment": 22470,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1548,
-        "interestRate": 1.39,
-        "bank": "Banco Santander / Banco Fiat",
-        "optionsText": "Entrada de R$ 22.470 (30%) + 48x de R$ 1.548 ou entrada no cartão de crédito em até 21x. Aceita FGTS e veículo na troca."
+        "monthlyInstallment": 1888,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 22,470 (30%) + 48x de R$ 1,888 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado sem apontamentos (Supervisão)",
       "tags": [
@@ -123,10 +123,10 @@
         "downPayment": 23340,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1608,
-        "interestRate": 1.42,
-        "bank": "Banco Itaú / BV Financeira",
-        "optionsText": "Entrada de R$ 23.340 + 48x de R$ 1.608 ou entrada zero com parcelas em 60x mediante análise de crédito. Aceita consórcio contemplado."
+        "monthlyInstallment": 1961,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23,340 (30%) + 48x de R$ 1,961 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado (Dekra)",
       "tags": [
@@ -184,10 +184,10 @@
         "downPayment": 23850,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1642,
-        "interestRate": 1.35,
-        "bank": "Banco Safra / Bradesco",
-        "optionsText": "Entrada facilitada em até 12x sem juros no cartão de R$ 23.850 + 48x de R$ 1.642. Taxa especial para correntistas."
+        "monthlyInstallment": 2004,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23,850 (30%) + 48x de R$ 2,004 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Periciado e aprovado",
       "tags": [
@@ -246,10 +246,10 @@
         "downPayment": 24300,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1675,
-        "interestRate": 1.45,
-        "bank": "BV Financeira / Banco PAN",
-        "optionsText": "Preço de vitrine R$ 81.000, loja confirmou proposta à vista por R$ 79.500. Financiamento com entrada de R$ 24.300 + 48x de R$ 1.675."
+        "monthlyInstallment": 2042,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 24,300 (30%) + 48x de R$ 2,042 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado sem restrição",
       "tags": [
@@ -307,10 +307,10 @@
         "downPayment": 21870,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1506,
-        "interestRate": 1.38,
-        "bank": "Banco Santander / Itaú",
-        "optionsText": "Entrada de R$ 21.870 + 48x de R$ 1.506. Aceita troca de menor ou maior valor com troco na conta."
+        "monthlyInstallment": 1837,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 21,870 (30%) + 48x de R$ 1,837 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Laudo Aprovado",
       "tags": [
@@ -370,10 +370,10 @@
         "downPayment": 24870,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1712,
-        "interestRate": 1.39,
-        "bank": "BYD Financiamentos (Banco BV / Santander)",
-        "optionsText": "Preço R$ 82.900 anunciado, vendedor aceita contraproposta de R$ 80.000 à vista! Financiamento com R$ 24.870 de entrada + 48x de R$ 1.712."
+        "monthlyInstallment": 2089,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 24,870): 48x de R$ 2,089 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 33,160): 48x de R$ 1,458 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "100% Aprovado sem retoques (Dekra)",
       "tags": [
@@ -428,13 +428,13 @@
         ]
       },
       "financing": {
-        "downPayment": 30000,
-        "downPaymentPercent": 37.5,
-        "termMonths": 36,
-        "monthlyInstallment": 1780,
-        "interestRate": 1.29,
-        "bank": "Transferência de Financiamento Santander ou Pagamento à Vista",
-        "optionsText": "Aceita pagamento à vista integral de R$ 79.900 ou transferência de dívida (Entrada de R$ 30.000 + parcelas). Aceita vistoria cautelar em qualquer empresa."
+        "downPayment": 23970,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 2014,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 23,970): 48x de R$ 2,014 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,960): 48x de R$ 1,405 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "Laudo Cautelar 100% Aprovado emitido há 15 dias",
       "tags": [
@@ -493,10 +493,10 @@
         "downPayment": 25350,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1745,
-        "interestRate": 1.35,
-        "bank": "Banco Santander / BV",
-        "optionsText": "Concessionária aberta a proposta de fechar em R$ 80.000 para pagamento à vista até o fim de semana. Financiamento com taxa de 1,35% a.m."
+        "monthlyInstallment": 2130,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 25,350): 48x de R$ 2,130 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 33,800): 48x de R$ 1,486 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "Certificado BYD 100% Aprovado",
       "tags": [
@@ -551,13 +551,13 @@
         ]
       },
       "financing": {
-        "downPayment": 35000,
-        "downPaymentPercent": 38.9,
+        "downPayment": 26970,
+        "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1598,
-        "interestRate": 1.29,
-        "bank": "Banco Volkswagen",
-        "optionsText": "Como o Tera acabou de ser lançado e custa ~R$ 105k 0km, esta unidade seminova pode ser adquirida com entrada de R$ 35.000 ou R$ 80.000 à vista no plano recompra garantida VW."
+        "monthlyInstallment": 2266,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 26,970 (30%) + 48x de R$ 2,266 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Impecável - Carro da montadora",
       "tags": [
@@ -616,10 +616,10 @@
         "downPayment": 20970,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1445,
-        "interestRate": 1.35,
-        "bank": "Banco RCI / Renault",
-        "optionsText": "Sobra mais de R$ 10.000 do seu orçamento de R$ 80 mil! Financiamento com R$ 20.970 de entrada + 48x de R$ 1.445."
+        "monthlyInstallment": 1762,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 20,970): 48x de R$ 1,762 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 27,960): 48x de R$ 1,229 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "100% Aprovado e revisado na concessionária",
       "tags": [
@@ -679,10 +679,10 @@
         "downPayment": 20550,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1415,
-        "interestRate": 1.38,
-        "bank": "Banco Santander / BV",
-        "optionsText": "Entrada de R$ 20.550 + 48x de R$ 1.415 ou pagamento à vista com R$ 11.500 de sobra no seu teto orçamentário."
+        "monthlyInstallment": 1726,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 20,550): 48x de R$ 1,726 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 27,400): 48x de R$ 1,205 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "Laudo Pericial 100% Aprovado",
       "tags": [
@@ -741,10 +741,10 @@
         "downPayment": 23070,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1589,
-        "interestRate": 1.35,
-        "bank": "Banco Volkswagen / Itaú",
-        "optionsText": "Entrada de R$ 23.070 + 48x de R$ 1.589. É a escolha perfeita para quem quer a mecânica e robustez VW sem pagar o sobrepreço de lançamento do Tera!"
+        "monthlyInstallment": 1938,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23,070 (30%) + 48x de R$ 1,938 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Laudo Aprovado Dekra",
       "tags": [
@@ -802,10 +802,10 @@
         "downPayment": 23670,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1630,
-        "interestRate": 1.36,
-        "bank": "CrediNissan / Banco Santander",
-        "optionsText": "Entrada de R$ 23.670 + 48x de R$ 1.630. Excelente para viagens com a família pelo enorme porta-malas e conforto."
+        "monthlyInstallment": 1989,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23,670 (30%) + 48x de R$ 1,989 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado e periciado",
       "tags": [
@@ -862,10 +862,10 @@
         "downPayment": 22170,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1527,
-        "interestRate": 1.39,
-        "bank": "Banco PSA / Bradesco",
-        "optionsText": "Entrada de R$ 22.170 + 48x de R$ 1.527. Sobra mais de R$ 6.000 do orçamento para documentação e IPVA."
+        "monthlyInstallment": 1863,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 22,170 (30%) + 48x de R$ 1,863 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado",
       "tags": [
@@ -923,10 +923,10 @@
         "downPayment": 22950,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1581,
-        "interestRate": 1.34,
-        "bank": "Banco Santander / Fiat",
-        "optionsText": "Entrada de R$ 22.950 + 48x de R$ 1.581. Carro 2024 com cheirinho de novo e mecânica idêntica ao Pulse."
+        "monthlyInstallment": 1928,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 22,950 (30%) + 48x de R$ 1,928 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Laudo Impecável",
       "tags": [
@@ -985,10 +985,10 @@
         "downPayment": 23070,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1590,
-        "interestRate": 1.39,
-        "bank": "Banco Santander / BV",
-        "optionsText": "Entrada de R$ 23.070 (30%) + 48x de R$ 1.590. Aceita veículo na troca com avaliação FIPE."
+        "monthlyInstallment": 1938,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23,070 (30%) + 48x de R$ 1,938 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado Dekra",
       "tags": [
@@ -1047,10 +1047,10 @@
         "downPayment": 23370,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1610,
-        "interestRate": 1.41,
-        "bank": "Banco Fiat / Itaú",
-        "optionsText": "Entrada de R$ 23.370 + 48x de R$ 1.610. Parcelamento de entrada em até 12x no cartão."
+        "monthlyInstallment": 1963,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23,370 (30%) + 48x de R$ 1,963 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Periciado e Laudo Cautelar Aprovado",
       "tags": [
@@ -1109,10 +1109,10 @@
         "downPayment": 22950,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1581,
-        "interestRate": 1.38,
-        "bank": "Banco Santander / Bradesco",
-        "optionsText": "Entrada de R$ 22.950 + 48x de R$ 1.581. Aceita FGTS e carta de consórcio contemplada."
+        "monthlyInstallment": 1928,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 22,950 (30%) + 48x de R$ 1,928 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado sem restrições",
       "tags": [
@@ -1170,10 +1170,10 @@
         "downPayment": 22740,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1566,
-        "interestRate": 1.37,
-        "bank": "Banco Safra / BV",
-        "optionsText": "Entrada de R$ 22.740 + 48x de R$ 1.566. Taxa promocional de 1.37% a.m."
+        "monthlyInstallment": 1910,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 22,740 (30%) + 48x de R$ 1,910 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Dekra Aprovado",
       "tags": [
@@ -1230,10 +1230,10 @@
         "downPayment": 23670,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1630,
-        "interestRate": 1.39,
-        "bank": "Kavak Financiamento / Santander",
-        "optionsText": "Entrada de R$ 23.670 + 48x de R$ 1.630. Aprovação 100% online em 2 minutos."
+        "monthlyInstallment": 1989,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23,670 (30%) + 48x de R$ 1,989 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado Certificado 240 Itens",
       "tags": [
@@ -1293,10 +1293,10 @@
         "downPayment": 23760,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1637,
-        "interestRate": 1.35,
-        "bank": "Banco Santander / BYD Finance",
-        "optionsText": "Entrada de R$ 23.760 + 48x de R$ 1.637. Taxa subsidiada BYD para elétricos."
+        "monthlyInstallment": 1996,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 23,760): 48x de R$ 1,996 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,680): 48x de R$ 1,393 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "100% Impecável sem retoques",
       "tags": [
@@ -1355,10 +1355,10 @@
         "downPayment": 23940,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1649,
-        "interestRate": 1.35,
-        "bank": "Banco Santander / BYD",
-        "optionsText": "Entrada de R$ 23.940 + 48x de R$ 1.649. Taxa especial para elétricos."
+        "monthlyInstallment": 2011,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 23,940): 48x de R$ 2,011 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,920): 48x de R$ 1,403 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "100% Aprovado",
       "tags": [
@@ -1418,10 +1418,10 @@
         "downPayment": 23550,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1622,
-        "interestRate": 1.35,
-        "bank": "Banco Santander / BYD",
-        "optionsText": "Entrada de R$ 23.550 + 48x de R$ 1.622."
+        "monthlyInstallment": 1979,
+        "interestRate": 2.5,
+        "bank": "BYD Finance / Santander / BV",
+        "optionsText": "Balcão Concessionária (30% entrada R$ 23,550): 48x de R$ 1,979 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,400): 48x de R$ 1,381 (taxa especial 1,49% a.m.)."
       },
       "cautelarStatus": "100% Impecável",
       "tags": [
@@ -1479,10 +1479,10 @@
         "downPayment": 22860,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1574,
-        "interestRate": 1.38,
-        "bank": "Banco Santander / Bradesco",
-        "optionsText": "Entrada de R$ 22.860 + 48x de R$ 1.574."
+        "monthlyInstallment": 1921,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 22,860 (30%) + 48x de R$ 1,921 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Dekra Aprovado",
       "tags": [
@@ -1539,10 +1539,10 @@
         "downPayment": 22620,
         "downPaymentPercent": 30,
         "termMonths": 48,
-        "monthlyInstallment": 1558,
-        "interestRate": 1.37,
-        "bank": "Banco Fiat / BV",
-        "optionsText": "Entrada de R$ 22.620 + 48x de R$ 1.558."
+        "monthlyInstallment": 1900,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 22,620 (30%) + 48x de R$ 1,900 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
       },
       "cautelarStatus": "100% Aprovado",
       "tags": [

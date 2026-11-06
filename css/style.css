@@ -1623,3 +1623,23 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+.rate-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.rate-chip:hover, .rate-chip.active {
+  border-color: var(--electric-blue);
+  color: #fff;
+  background: var(--electric-blue-dim);
+}
