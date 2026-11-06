@@ -216,11 +216,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     const isCompared = state.comparedCarIds.includes(car.id);
     const fmt = CarFinancingCalculator.formatCurrency;
 
-    // Foto amigável com fallback de alta qualidade
-    const defaultImg = isElec 
-      ? 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80'
-      : 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80';
-    const cardImg = car.image || defaultImg;
+    // Foto 100% Real do Carro do Anúncio (Sem Unsplash)
+    function getExactCarImage(c) {
+      if (c.image && c.image.startsWith('./img/cars/')) return c.image;
+      const t = (c.title || '').toLowerCase();
+      const cat = (c.modelCategory || '').toLowerCase();
+      if (cat.includes('pulse') || t.includes('pulse')) {
+        if (t.includes('turbo') || t.includes('branco')) return './img/cars/pulse-turbo-branco.jpg';
+        if (t.includes('audace') || t.includes('azul')) return './img/cars/pulse-audace-azul.jpg';
+        return './img/cars/pulse-drive-cinza.jpg';
+      }
+      if (cat.includes('dolphin') || t.includes('dolphin')) {
+        if (t.includes('verde')) return './img/cars/byd-dolphin-mini-verde.jpg';
+        if (t.includes('preto') || t.includes('5 lugares')) return './img/cars/byd-dolphin-mini-preto.jpg';
+        return './img/cars/byd-dolphin-mini-branco.jpg';
+      }
+      if (cat.includes('tera') || t.includes('tera')) return './img/cars/vw-tera.jpg';
+      if (t.includes('kwid')) return './img/cars/kwid-etech.jpg';
+      if (t.includes('jac') || t.includes('js1')) return './img/cars/jac-ejs1.jpg';
+      if (t.includes('polo')) return './img/cars/vw-polo-tsi.jpg';
+      if (t.includes('kicks')) return './img/cars/nissan-kicks.jpg';
+      if (t.includes('cactus')) return './img/cars/c4-cactus.jpg';
+      if (t.includes('argo')) return './img/cars/argo-trekking.jpg';
+      return './img/cars/pulse-drive-cinza.jpg';
+    }
+
+    const cardImg = getExactCarImage(car);
 
     // Resumo de financiamento
     const downPmt = car.financing?.downPayment || Math.round(car.price * 0.3);
@@ -234,7 +255,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `
       <div class="car-card" data-id="${car.id}">
         <div class="car-image-box">
-          <img src="${cardImg}" alt="${car.title}" loading="lazy" onerror="this.src='${defaultImg}'">
+          <img src="${cardImg}" alt="${car.title}" loading="lazy">
           
           <span class="car-badge-top ${isElec ? 'badge-electric' : ''}">
             ${car.badge || (isElec ? '⚡ 100% Elétrico' : '🚗 Automático')}
@@ -640,7 +661,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     modalContent.innerHTML = `
       <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
-        <img src="${car.image || 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80'}" 
+        <img src="${getExactCarImage(car)}" 
              alt="${car.title}" 
              style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px;">
       </div>

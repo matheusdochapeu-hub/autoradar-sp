@@ -1,4 +1,4 @@
-const CACHE_NAME = 'autoradar-sp-v3';
+const CACHE_NAME = 'autoradar-sp-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -27,10 +27,10 @@ const ASSETS_TO_CACHE = [
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
   );
-  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
@@ -49,6 +49,20 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // Network first para data/cars.json para sempre ter os dados mais atualizados
+  if (event.request.url.includes('data/cars.json')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       return cachedResponse || fetch(event.request).catch(() => caches.match('./index.html'));

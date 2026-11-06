@@ -997,7 +997,12 @@ class AutoRadarDataService {
     try {
       const saved = localStorage.getItem(STORAGE_KEY_CUSTOM_CARS);
       if (saved) {
-        this.customCars = JSON.parse(saved);
+        if (saved.includes('unsplash')) {
+          localStorage.removeItem(STORAGE_KEY_CUSTOM_CARS);
+          this.customCars = [];
+        } else {
+          this.customCars = JSON.parse(saved);
+        }
       }
     } catch (e) {
       this.customCars = [];
