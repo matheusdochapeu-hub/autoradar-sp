@@ -218,7 +218,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Foto 100% Real do Carro do Anúncio (Sem Unsplash)
     function getExactCarImage(c) {
-      if (c.image && c.image.startsWith('./img/cars/')) return c.image;
+      if (c.image && (c.image.startsWith('https://upload.wikimedia.org') || c.image.startsWith('./img/cars/'))) {
+        return c.image;
+      }
       const t = (c.title || '').toLowerCase();
       const cat = (c.modelCategory || '').toLowerCase();
       if (cat.includes('pulse') || t.includes('pulse')) {
