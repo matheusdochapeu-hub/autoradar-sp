@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  // Filtros Globais e Chips de Botões
  const searchInput = document.getElementById('searchInput');
  const btnClearSearch = document.getElementById('btnClearSearch');
- const subfilterPills = document.querySelectorAll('.subfilter-pill');
+ // subfilterPills unificado no modelBtnGroup
 
  // Simulador
  const simCarSelect = document.getElementById('simCarSelect');

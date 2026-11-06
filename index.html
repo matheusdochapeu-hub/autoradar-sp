@@ -16,12 +16,12 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="css/style.css?v=11">
+ <link rel="stylesheet" href="css/style.css?v=12">
  <link rel="manifest" href="manifest.json">
  <script>
  // Limpeza automática imediata de caches legados
  (function() {
- const APP_VER = 'autoradar-sp-v11';
+ const APP_VER = 'autoradar-sp-v12';
  if (localStorage.getItem('autoradar_ver') !== APP_VER) {
  localStorage.setItem('autoradar_ver', APP_VER);
  if ('caches' in window) {
@@ -286,12 +286,7 @@
  <h2>Carros nos 3 Modelos Desejados</h2>
  <p class="section-desc">BYD Dolphin Mini, Volkswagen Tera Automático e Fiat Pulse Automático encontrados em lojas e concessionárias de São Paulo.</p>
  </div>
- <div class="target-pills">
- <button class="subfilter-pill active" data-target="all">Todos os 3</button>
- <button class="subfilter-pill" data-target="pulse">Fiat Pulse AT</button>
- <button class="subfilter-pill" data-target="byd">BYD Dolphin Mini</button>
- <button class="subfilter-pill" data-target="tera">VW Tera AT</button>
- </div>
+ 
  </div>
 
  <div class="cars-grid" id="gridTargets">
@@ -611,9 +606,9 @@
  </div>
 
  <!-- Scripts -->
- <script src="js/data.js?v=11"></script>
- <script src="js/financing.js?v=11"></script>
- <script src="js/app.js?v=11"></script>
+ <script src="js/data.js?v=12"></script>
+ <script src="js/financing.js?v=12"></script>
+ <script src="js/app.js?v=12"></script>
  <script>
  if ('serviceWorker' in navigator) {
  window.addEventListener('load', () => {

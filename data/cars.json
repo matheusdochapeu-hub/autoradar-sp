@@ -568,6 +568,68 @@
       ]
     },
     {
+      "id": "tera-02-opp",
+      "isTarget": true,
+      "modelCategory": "Volkswagen Tera Automático",
+      "title": "Volkswagen Tera 1.0 170 TSI Automático 2026",
+      "badge": "Lançamento 2026 • Repasse Frotista / CNPJ",
+      "year": 2025,
+      "km": 6500,
+      "color": "Cinza Moonstone",
+      "fuel": "Flex (Etanol/Gasolina)",
+      "transmission": "Automático de 6 marchas Tiptronic",
+      "price": 79900,
+      "negotiatedTarget": 78000,
+      "originalPrice": 105000,
+      "fipePrice": 108000,
+      "priceVsFipe": "-R$ 28.100 (Oportunidade Dentro do Teto)",
+      "image": "./img/cars/vw-tera.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
+      "dealer": {
+        "name": "Localiza Seminovos — São Paulo",
+        "type": "Seminovos Certificados",
+        "city": "São Paulo",
+        "state": "SP",
+        "neighborhood": "Lapa",
+        "address": "Av. Ermano Marchetti, 1020 - Lapa, São Paulo - SP",
+        "phone": "(11) 3613-7000",
+        "whatsapp": "5511993332211",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.0 170 TSI Turbo Flex (3 cilindros)",
+        "power": "116 cv (E) / 109 cv (G) - 16,8 kgfm torque",
+        "consumptionCity": "12,6 km/l (G) / 9,0 km/l (E)",
+        "consumptionRoad": "14,8 km/l (G) / 10,5 km/l (E)",
+        "trunk": "350 Litros",
+        "warranty": "Garantia Integral de Fábrica VW até 2028 (3 anos)",
+        "features": [
+          "SUV de nova geração VW baseado na plataforma moderna A00",
+          "Central VW Play de 10.1 polegadas com espelhamento sem fio",
+          "6 Airbags de série + Frenagem Autônoma de Emergência",
+          "Faróis em LED com DRL assinatura VW",
+          "Direção elétrica progressiva e controle de estabilidade"
+        ]
+      },
+      "financing": {
+        "downPayment": 23970,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 2014,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 23.970 (30%) + 48x de R$ 2.014 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      },
+      "cautelarStatus": "100% Aprovado (Dekra)",
+      "tags": [
+        "Foto Real",
+        "Lançamento 2026",
+        "SUV VW",
+        "Dentro do Orçamento",
+        "Garantia até 2028"
+      ]
+    },
+    {
       "id": "sug-eletrico-01",
       "isTarget": false,
       "isSuggestion": true,

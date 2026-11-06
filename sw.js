@@ -1,4 +1,4 @@
-const CACHE_NAME = 'autoradar-sp-v11';
+const CACHE_NAME = 'autoradar-sp-v12';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
