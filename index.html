@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1117">
+  <title>AutoRadar SP — Buscador de Carros & Marketplace até R$ 80k</title>
+  
+  <!-- Meta tags PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AutoRadar SP">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <!-- Estilos e Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Header Principal Estilo Marketplace -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <div class="brand-logo">
+          <span class="logo-icon">🚗⚡</span>
+          <div class="brand-text">
+            <span class="brand-title">AutoRadar <span class="highlight-sp">SP</span></span>
+            <span class="brand-subtitle">Buscador Inteligente de Veículos até R$ 80.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status de Atualização Diária -->
+      <div class="sync-status-card">
+        <div class="sync-indicator">
+          <span class="pulse-dot"></span>
+          <span id="syncStatusText">Atualizado Hoje às 12:00</span>
+        </div>
+        <button id="btnForceSync" class="btn-refresh" title="Forçar checagem de novas ofertas nas lojas de SP">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          Varredura Diária
+        </button>
+      </div>
+
+      <!-- Resumo do Orçamento do Casal -->
+      <div class="budget-badge-pill">
+        <span class="pill-label">Nosso Teto:</span>
+        <span class="pill-value">Até R$ 80.000</span>
+        <span class="pill-pref">⚡ Preferência Elétricos</span>
+      </div>
+
+      <!-- Botão de Instalação PWA -->
+      <button id="btnInstallPwa" class="btn-install-pwa hidden" title="Instalar aplicativo na tela de início do seu celular ou PC">
+        <span class="pwa-icon">📲</span>
+        <span class="pwa-text">Instalar App</span>
+      </button>
+    </div>
+
+    <!-- Navegação de Abas -->
+    <nav class="main-tabs-nav">
+      <div class="nav-container">
+        <button class="nav-tab active" data-tab="tab-targets">
+          <span class="tab-emoji">🎯</span> Nossos 3 Alvos
+          <span class="tab-count" id="countTargets">0</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-electrics">
+          <span class="tab-emoji">⚡</span> Radar 100% Elétricos
+          <span class="tab-count" id="countElectrics">0</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-suggestions">
+          <span class="tab-emoji">💡</span> Sugestões & Similares até 80k
+          <span class="tab-count" id="countSuggestions">0</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-comparator">
+          <span class="tab-emoji">⚖️</span> Comparador Lado a Lado
+          <span class="tab-count" id="countCompare">0</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-simulator">
+          <span class="tab-emoji">🧮</span> Simulador de Financiamento
+        </button>
+        <button class="nav-tab" data-tab="tab-add">
+          <span class="tab-emoji">➕</span> Adicionar Anúncio
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner de Destaque Estratégico para o Casal -->
+  <section class="insights-banner">
+    <div class="container insights-grid">
+      <div class="insight-card pulse-card">
+        <div class="insight-header">
+          <span class="icon">🚗</span>
+          <strong>Fiat Pulse Automático</strong>
+        </div>
+        <p><strong>Mais acessível e abundante:</strong> Grande oferta entre <strong>R$ 72.900 e R$ 79.900</strong> em concessionárias de SP. Motor 1.3 Firefly CVT ou 1.0 Turbo 200.</p>
+      </div>
+      <div class="insight-card dolphin-card">
+        <div class="insight-header">
+          <span class="icon">⚡</span>
+          <strong>BYD Dolphin Mini (Elétrico)</strong>
+        </div>
+        <p><strong>Custo de R$ 0,08/km e isento de rodízio:</strong> Mercado de seminovos oscila entre R$ 80k-95k. Oportunidades de repasse/particular são monitoradas diariamente!</p>
+      </div>
+      <div class="insight-card tera-card">
+        <div class="insight-header">
+          <span class="icon">🚙</span>
+          <strong>Volkswagen Tera Automático</strong>
+        </div>
+        <p><strong>Lançamento recente (2025/2026):</strong> Preço 0km a partir de R$ 105k. Mostramos ofertas de diretoria e a alternativa direta <strong>Polo TSI AT por R$ 76k</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Filtros Estilo Marketplace -->
+  <section class="filters-bar-section">
+    <div class="container filters-container">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Buscar por modelo, loja, bairro ou cidade de SP...">
+        <button id="btnClearSearch" class="btn-clear hidden">&times;</button>
+      </div>
+
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label>Preço Máximo:</label>
+          <select id="filterPrice">
+            <option value="80000" selected>Até R$ 80.000 (Nosso Teto)</option>
+            <option value="75000">Até R$ 75.000 (Super Econômico)</option>
+            <option value="85000">Até R$ 85.000 (Com Negociação)</option>
+            <option value="all">Todos os Preços</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Combustível:</label>
+          <select id="filterFuel">
+            <option value="all" selected>Todos os Combustíveis</option>
+            <option value="electric">⚡ 100% Elétrico (Preferência)</option>
+            <option value="flex">⛽ Flex Automático</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Região em SP:</label>
+          <select id="filterCity">
+            <option value="all" selected>Todo o Estado de SP</option>
+            <option value="São Paulo">São Paulo (Capital)</option>
+            <option value="Santo André">Santo André / ABC</option>
+            <option value="São Bernardo do Campo">São Bernardo do Campo</option>
+            <option value="Campinas">Campinas</option>
+            <option value="Sorocaba">Sorocaba</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Ordenar Por:</label>
+          <select id="filterSort">
+            <option value="price-asc" selected>Menor Preço 💰</option>
+            <option value="electric-first">⚡ Elétricos Primeiro</option>
+            <option value="km-asc">Menor Quilometragem 🛣️</option>
+            <option value="year-desc">Mais Novo (Ano) 📅</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Área Principal de Conteúdo -->
+  <main class="main-content container">
+
+    <!-- ABA 1: Nossos 3 Alvos -->
+    <div id="tab-targets" class="tab-pane active">
+      <div class="section-title-wrap">
+        <div>
+          <h2>🎯 Carros nos 3 Modelos Desejados</h2>
+          <p class="section-desc">BYD Dolphin Mini, Volkswagen Tera Automático e Fiat Pulse Automático encontrados em lojas e concessionárias de São Paulo.</p>
+        </div>
+        <div class="target-pills">
+          <button class="subfilter-pill active" data-target="all">Todos os 3</button>
+          <button class="subfilter-pill" data-target="pulse">Fiat Pulse AT</button>
+          <button class="subfilter-pill" data-target="byd">BYD Dolphin Mini</button>
+          <button class="subfilter-pill" data-target="tera">VW Tera AT</button>
+        </div>
+      </div>
+
+      <div class="cars-grid" id="gridTargets">
+        <!-- Injetado via JS -->
+      </div>
+    </div>
+
+    <!-- ABA 2: Radar 100% Elétricos -->
+    <div id="tab-electrics" class="tab-pane">
+      <div class="section-title-wrap">
+        <div>
+          <h2>⚡ Radar Especial de Carros Elétricos até R$ 80k</h2>
+          <p class="section-desc">Atendendo à sua preferência por elétricos: BYD Dolphin Mini, Renault Kwid E-Tech, JAC E-JS1 e Chery iCar. Zero gasto com gasolina e isenção de rodízio em SP!</p>
+        </div>
+        <div class="electric-benefit-badge">
+          <span>🌿 IPVA Reduzido + Isenção de Rodízio SP + ~R$ 0,08 por km rodado</span>
+        </div>
+      </div>
+
+      <div class="cars-grid" id="gridElectrics">
+        <!-- Injetado via JS -->
+      </div>
+    </div>
+
+    <!-- ABA 3: Sugestões & Similares até 80k -->
+    <div id="tab-suggestions" class="tab-pane">
+      <div class="section-title-wrap">
+        <div>
+          <h2>💡 Sugestões Inteligentes de Similares até R$ 80.000</h2>
+          <p class="section-desc">Modelos automáticos modernos e SUVs com excelente custo-benefício em São Paulo (alternativas diretas aos lançamentos com a mesma mecânica).</p>
+        </div>
+      </div>
+
+      <div class="cars-grid" id="gridSuggestions">
+        <!-- Injetado via JS -->
+      </div>
+    </div>
+
+    <!-- ABA 4: Comparador Lado a Lado -->
+    <div id="tab-comparator" class="tab-pane">
+      <div class="section-title-wrap">
+        <div>
+          <h2>⚖️ Comparador Técnico Lado a Lado</h2>
+          <p class="section-desc">Compare até 3 modelos em consumo urbano, custo por km rodado, tamanho do porta-malas, potência e custos de manutenção.</p>
+        </div>
+        <button id="btnClearCompare" class="btn-secondary-sm">Limpar Comparação</button>
+      </div>
+
+      <div id="compareContainer" class="compare-container">
+        <!-- Injetado via JS -->
+      </div>
+    </div>
+
+    <!-- ABA 5: Simulador de Financiamento -->
+    <div id="tab-simulator" class="tab-pane">
+      <div class="section-title-wrap">
+        <div>
+          <h2>🧮 Simulador de Financiamento & Condições de Pagamento</h2>
+          <p class="section-desc">Simule a melhor composição entre o seu orçamento de R$ 80.000, entradas facilitadas, CDC bancário e taxas de juros reais.</p>
+        </div>
+      </div>
+
+      <div class="simulator-layout">
+        <div class="simulator-card inputs-card">
+          <h3>Configurar Simulação</h3>
+          <div class="form-row">
+            <label>Selecione um Carro do Catálogo (ou digite o valor):</label>
+            <select id="simCarSelect">
+              <option value="custom">Valor Personalizado...</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Valor do Veículo (R$):</label>
+            <input type="number" id="simVehiclePrice" value="79900" step="500">
+          </div>
+
+          <div class="form-row">
+            <div class="label-with-val">
+              <label>Valor da Entrada (R$):</label>
+              <span id="simDownPaymentVal" class="val-tag">R$ 23.970 (30%)</span>
+            </div>
+            <input type="range" id="simDownPaymentRange" min="0" max="80000" step="1000" value="23970">
+          </div>
+
+          <div class="form-row">
+            <label>Prazo de Financiamento:</label>
+            <div class="term-selector">
+              <button class="term-btn" data-term="12">12x</button>
+              <button class="term-btn" data-term="24">24x</button>
+              <button class="term-btn" data-term="36">36x</button>
+              <button class="term-btn active" data-term="48">48x</button>
+              <button class="term-btn" data-term="60">60x</button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Taxa de Juros Mensal (% a.m.):</label>
+            <div class="interest-input-wrap">
+              <input type="number" id="simInterestRate" value="1.39" step="0.05" min="0" max="4">
+              <span class="unit">% a.m.</span>
+            </div>
+            <span class="help-text">Taxas médias atuais em SP: Bancos de Montadora (1,19% a 1,39%), Bancos Privados (1,45% a 1,75%).</span>
+          </div>
+        </div>
+
+        <div class="simulator-card results-card">
+          <h3>Resultado da Simulação</h3>
+          <div class="calc-highlight-box">
+            <span class="calc-label">Parcela Estimada Mensal:</span>
+            <span id="simMonthlyResult" class="calc-big-value">R$ 1.548,22</span>
+            <span id="simTotalInterestResult" class="calc-sub">Total financiado: R$ 55.930,00</span>
+          </div>
+
+          <div class="cost-summary-list">
+            <div class="cost-item">
+              <span>Valor do Veículo:</span>
+              <strong id="simSummaryPrice">R$ 79.900,00</strong>
+            </div>
+            <div class="cost-item">
+              <span>Entrada à Vista:</span>
+              <strong id="simSummaryDownPayment" class="text-green">R$ 23.970,00</strong>
+            </div>
+            <div class="cost-item">
+              <span>Saldo a Financiar:</span>
+              <strong id="simSummaryFinanced">R$ 55.930,00</strong>
+            </div>
+            <div class="cost-item">
+              <span>Custo Efetivo Total (Entrada + Parcelas):</span>
+              <strong id="simSummaryTotalCost">R$ 98.284,56</strong>
+            </div>
+            <div class="cost-item highlight">
+              <span>Sobra do seu orçamento de R$ 80k na entrada:</span>
+              <strong id="simSummaryBudgetSurplus" class="text-cyan">R$ 56.030,00 de reserva!</strong>
+            </div>
+          </div>
+
+          <div class="tip-box">
+            <span class="tip-icon">💡</span>
+            <p><strong>Dica de Compra:</strong> Com R$ 80.000 em mãos, você pode comprar o <strong>Fiat Pulse à vista</strong> sem pagar R$ 1 real de juros bancários, ou dar R$ 40.000 de entrada e deixar R$ 40.000 rendendo no Tesouro Selic!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 6: Adicionar Anúncio Encontrado -->
+    <div id="tab-add" class="tab-pane">
+      <div class="section-title-wrap">
+        <div>
+          <h2>➕ Adicionar Novo Carro / Anúncio Encontrado</h2>
+          <p class="section-desc">Achou uma oferta interessante no Webmotors, OLX ou concessionária física? Cadastre aqui para salvar no seu app e calcular o financiamento!</p>
+        </div>
+      </div>
+
+      <div class="add-car-form-card">
+        <form id="formAddCar">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Modelo / Título do Anúncio:</label>
+              <input type="text" id="addTitle" placeholder="Ex: Fiat Pulse Drive 1.3 AT 2023" required>
+            </div>
+            <div class="form-group">
+              <label>Categoria:</label>
+              <select id="addCategory">
+                <option value="Fiat Pulse Automático">Fiat Pulse Automático</option>
+                <option value="BYD Dolphin Mini">BYD Dolphin Mini</option>
+                <option value="Volkswagen Tera Automático">Volkswagen Tera Automático</option>
+                <option value="Sugestão: 100% Elétrico">Sugestão: 100% Elétrico</option>
+                <option value="Sugestão: Outro">Outra Sugestão até 80k</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preço Anunciado (R$):</label>
+              <input type="number" id="addPrice" placeholder="Ex: 77900" required>
+            </div>
+            <div class="form-group">
+              <label>Ano do Carro:</label>
+              <input type="number" id="addYear" placeholder="Ex: 2023" value="2023" required>
+            </div>
+            <div class="form-group">
+              <label>Quilometragem (KM):</label>
+              <input type="number" id="addKm" placeholder="Ex: 38000" required>
+            </div>
+            <div class="form-group">
+              <label>Combustível:</label>
+              <select id="addFuel">
+                <option value="Flex (Etanol/Gasolina)">Flex Automático</option>
+                <option value="100% Elétrico">100% Elétrico ⚡</option>
+                <option value="Híbrido">Híbrido</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Nome da Loja / Concessionária:</label>
+              <input type="text" id="addDealerName" placeholder="Ex: Localiza Seminovos ou Particular" required>
+            </div>
+            <div class="form-group">
+              <label>Cidade / Bairro em SP:</label>
+              <input type="text" id="addCity" placeholder="Ex: São Paulo - Moema" required>
+            </div>
+            <div class="form-group">
+              <label>WhatsApp / Telefone de Contato:</label>
+              <input type="text" id="addWhatsapp" placeholder="Ex: 11999998888">
+            </div>
+            <div class="form-group">
+              <label>Link do Anúncio (Webmotors, OLX, Loja):</label>
+              <input type="url" id="addLink" placeholder="https://www.webmotors.com.br/...">
+            </div>
+            <div class="form-group full-width">
+              <label>Observações ou Condições de Pagamento:</label>
+              <textarea id="addNotes" rows="2" placeholder="Ex: Laudo 100% aprovado, aceita contraproposta de R$ 75k à vista, IPVA 2026 pago."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Salvar Carro no AutoRadar SP</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal de Detalhes do Carro -->
+  <div id="carModal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <button class="modal-close" id="btnCloseModal">&times;</button>
+      <div id="modalContent">
+        <!-- Injetado dinamicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/financing.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW fail:', err));
+      });
+    }
+  </script>
+</body>
+</html>
