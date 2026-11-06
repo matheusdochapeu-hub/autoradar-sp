@@ -1,5 +1,8 @@
 # 🚗⚡ AutoRadar SP — Buscador de Carros & Marketplace até R$ 80k
 
+> **Link do App Online (PWA):** [https://matheusdochapeu-hub.github.io/autoradar-sp/](https://matheusdochapeu-hub.github.io/autoradar-sp/)  
+> **Repositório GitHub:** [https://github.com/matheusdochapeu-hub/autoradar-sp](https://github.com/matheusdochapeu-hub/autoradar-sp)
+
 Aplicativo e marketplace inteligente sob medida para **Matheus & Scarlet** encontrarem o carro ideal no Estado de São Paulo, priorizando:
 1. **BYD Dolphin Mini** (100% Elétrico)
 2. **Fiat Pulse Automático** (Drive 1.3 CVT ou Turbo 200 AT)
