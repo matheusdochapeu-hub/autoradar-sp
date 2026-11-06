@@ -16,12 +16,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
   <link rel="manifest" href="manifest.json">
   <script>
     // Limpeza automática imediata de caches legados
     (function() {
-      const APP_VER = 'autoradar-sp-v5';
+      const APP_VER = 'autoradar-sp-v6';
       if (localStorage.getItem('autoradar_ver') !== APP_VER) {
         localStorage.setItem('autoradar_ver', APP_VER);
         if ('caches' in window) {
@@ -166,12 +166,16 @@
         <div class="filter-group">
           <label>Região em SP:</label>
           <select id="filterCity">
-            <option value="all" selected>Todo o Estado de SP</option>
-            <option value="São Paulo">São Paulo (Capital)</option>
-            <option value="Santo André">Santo André / ABC</option>
-            <option value="São Bernardo do Campo">São Bernardo do Campo</option>
-            <option value="Campinas">Campinas</option>
-            <option value="Sorocaba">Sorocaba</option>
+            <option value="all" selected>📍 Todo o Estado de SP (Todas as Ofertas)</option>
+            <option value="São Paulo">🏙️ São Paulo (Capital — Todas as Zonas)</option>
+            <option value="ABC">🏭 Grande SP & ABC (Santo André, SBC, etc.)</option>
+            <option value="Barueri">🏢 Alphaville / Barueri / Osasco</option>
+            <option value="Campinas">🌳 Campinas & Região</option>
+            <option value="Ribeirão Preto">🌾 Ribeirão Preto & Região</option>
+            <option value="São José dos Campos">🚀 São José dos Campos & Vale do Paraíba</option>
+            <option value="Sorocaba">🏰 Sorocaba & Região</option>
+            <option value="Santos">🌊 Santos & Litoral / Baixada Santista</option>
+            <option value="Jundiaí">🍇 Jundiaí & Piracicaba</option>
           </select>
         </div>
 
@@ -184,6 +188,78 @@
             <option value="year-desc">Mais Novo (Ano) 📅</option>
           </select>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hub de Portais Externos de Busca em SP -->
+  <section class="container" style="margin-top: -10px; margin-bottom: 24px;">
+    <div class="portal-search-hub">
+      <div class="portal-hub-header">
+        <div>
+          <div class="portal-hub-title">
+            <span>🌐</span> Radares de Busca Automotiva em SP (Busca Direta nos Portais)
+          </div>
+          <p class="portal-hub-desc">Acesse com 1 clique as buscas oficiais pré-filtradas (até R$ 80.000 • Estado de São Paulo • Nossos Modelos):</p>
+        </div>
+      </div>
+      <div class="portal-chips-grid">
+        <a href="https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=S%C3%A3o%20Paulo&precoate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">🚗</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">Webmotors SP</div>
+            <div class="portal-chip-sub">Pulse & Elétricos até 80k</div>
+          </div>
+        </a>
+        <a href="https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">🟠</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">OLX São Paulo</div>
+            <div class="portal-chip-sub">Particulares & Lojistas SP</div>
+          </div>
+        </a>
+        <a href="https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/sao-paulo/pulse-automatico_PriceRange_0-80000" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">🟡</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">Mercado Livre SP</div>
+            <div class="portal-chip-sub">Carros & Seminovos SP</div>
+          </div>
+        </a>
+        <a href="https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">🔵</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">iCarros SP</div>
+            <div class="portal-chip-sub">Concessionárias do Estado</div>
+          </div>
+        </a>
+        <a href="https://www.mobiauto.com.br/carros/fiat/pulse/sp?preco_ate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">⚡</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">Mobiauto SP</div>
+            <div class="portal-chip-sub">Ofertas Capital e Interior</div>
+          </div>
+        </a>
+        <a href="https://www.kavak.com/br/carros-usados?price_max=80000" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">🛡️</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">Kavak SP & Alphaville</div>
+            <div class="portal-chip-sub">Revisados com Garantia</div>
+          </div>
+        </a>
+        <a href="https://www.chavesnamao.com.br/carros-usados/sp/fiat/pulse/?precoate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">🔑</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">Chaves na Mão SP</div>
+            <div class="portal-chip-sub">Lojistas do Interior e ABC</div>
+          </div>
+        </a>
+        <a href="https://seminovos.localiza.com/carros/sp?precoMaximo=80000" target="_blank" rel="noopener" class="portal-chip-link">
+          <span class="portal-chip-icon">🟢</span>
+          <div class="portal-chip-content">
+            <div class="portal-chip-name">Localiza & Movida</div>
+            <div class="portal-chip-sub">Seminovos com Laudo Dekra</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -247,9 +323,54 @@
       <div class="section-title-wrap">
         <div>
           <h2>⚖️ Comparador Técnico Lado a Lado</h2>
-          <p class="section-desc">Compare até 3 modelos em consumo urbano, custo por km rodado, tamanho do porta-malas, potência e custos de manutenção.</p>
+          <p class="section-desc">Escolha até 3 veículos nos slots abaixo ou use os duelos prontos para confrontar consumo, autonomia, custos e financiamento lado a lado.</p>
         </div>
-        <button id="btnClearCompare" class="btn-secondary-sm">Limpar Comparação</button>
+        <button id="btnClearCompare" class="btn-secondary-sm" title="Zerar comparação atual">🧹 Limpar Comparação</button>
+      </div>
+
+      <!-- Atalhos de Comparações Rápidas (1-Clique) -->
+      <div class="compare-shortcuts-bar">
+        <span class="compare-shortcuts-label">⚡ Duelos Prontos:</span>
+        <button class="shortcut-chip" data-compare-preset="alvos">🎯 Nossos 3 Alvos (Pulse vs Dolphin Mini vs Tera)</button>
+        <button class="shortcut-chip" data-compare-preset="eletricos">🔋 Duelo 100% Elétricos (Dolphin Mini vs Kwid vs JAC)</button>
+        <button class="shortcut-chip" data-compare-preset="automaticos">🚗 Automáticos até 80k (Pulse vs Polo TSI vs Kicks)</button>
+        <button class="shortcut-chip" data-compare-preset="economicos">💰 Mais Econômicos (Pulse CVT vs Dolphin Mini vs Kwid E-Tech)</button>
+      </div>
+
+      <!-- Barra Interativa de Seleção dos 3 Slots -->
+      <div class="compare-slots-grid">
+        <div class="compare-slot-card" id="compareSlotCard1">
+          <div class="slot-badge-row">
+            <span class="slot-badge">Veículo 1</span>
+            <button class="btn-slot-remove" data-remove-slot="0" title="Remover este veículo" style="display: none;">❌ Remover</button>
+          </div>
+          <select id="compareSlotSelect1" class="compare-slot-select" data-slot-index="0">
+            <option value="">-- Selecione o 1º Veículo --</option>
+          </select>
+          <div id="compareSlotPreview1"></div>
+        </div>
+
+        <div class="compare-slot-card" id="compareSlotCard2">
+          <div class="slot-badge-row">
+            <span class="slot-badge">Veículo 2</span>
+            <button class="btn-slot-remove" data-remove-slot="1" title="Remover este veículo" style="display: none;">❌ Remover</button>
+          </div>
+          <select id="compareSlotSelect2" class="compare-slot-select" data-slot-index="1">
+            <option value="">-- Selecione o 2º Veículo --</option>
+          </select>
+          <div id="compareSlotPreview2"></div>
+        </div>
+
+        <div class="compare-slot-card" id="compareSlotCard3">
+          <div class="slot-badge-row">
+            <span class="slot-badge">Veículo 3 (Opcional)</span>
+            <button class="btn-slot-remove" data-remove-slot="2" title="Remover este veículo" style="display: none;">❌ Remover</button>
+          </div>
+          <select id="compareSlotSelect3" class="compare-slot-select" data-slot-index="2">
+            <option value="">-- Selecione o 3º Veículo (Opcional) --</option>
+          </select>
+          <div id="compareSlotPreview3"></div>
+        </div>
       </div>
 
       <div id="compareContainer" class="compare-container">
@@ -436,9 +557,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/data.js?v=5"></script>
-  <script src="js/financing.js?v=5"></script>
-  <script src="js/app.js?v=5"></script>
+  <script src="js/data.js?v=6"></script>
+  <script src="js/financing.js?v=6"></script>
+  <script src="js/app.js?v=6"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

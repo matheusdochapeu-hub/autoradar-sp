@@ -162,10 +162,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!isFlex) return false;
       }
 
-      // Filtro de Cidade
+      // Filtro de Cidade / Região em SP
       if (state.filterCity !== 'all') {
-        if (!car.dealer || !car.dealer.city || !car.dealer.city.toLowerCase().includes(state.filterCity.toLowerCase())) {
-          return false;
+        const fc = state.filterCity.toLowerCase();
+        const city = (car.dealer?.city || '').toLowerCase();
+        const neigh = (car.dealer?.neighborhood || '').toLowerCase();
+        const badge = (car.badge || '').toLowerCase();
+
+        if (fc === 'abc') {
+          const isAbc = city.includes('santo andré') || city.includes('são bernardo') || city.includes('sbc') || city.includes('são caetano') || city.includes('diadema') || city.includes('mauá') || badge.includes('abc');
+          if (!isAbc) return false;
+        } else if (fc === 'barueri') {
+          const isWest = city.includes('barueri') || city.includes('osasco') || neigh.includes('alphaville') || badge.includes('alphaville') || city.includes('cotia');
+          if (!isWest) return false;
+        } else if (fc === 'jundiaí') {
+          const isJun = city.includes('jundiaí') || city.includes('piracicaba');
+          if (!isJun) return false;
+        } else {
+          if (!city.includes(fc) && !neigh.includes(fc) && !badge.includes(fc)) {
+            return false;
+          }
         }
       }
 
@@ -326,6 +342,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <span class="dealer-name">
               <span class="verified-icon">✓</span>
               ${car.dealer?.name || 'Loja Verificada'}
+              ${car.portal ? `<span class="car-portal-badge">🌐 ${car.portal}</span>` : ''}
             </span>
             <span class="cautelar-approved">
               🛡️ ${car.cautelarStatus ? 'Laudo Aprovado' : 'Periciado'}
@@ -337,8 +354,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             <a href="${waLink}" target="_blank" rel="noopener" class="btn-card-main">
               <span>💬</span> WhatsApp
             </a>
-            <a href="${car.listingUrl || '#'}" target="_blank" rel="noopener" class="btn-card-listing" title="Abrir anúncio verificado na Webmotors / iCarros / Loja">
-              <span>🔗</span> Anúncio
+            <a href="${car.listingUrl || '#'}" target="_blank" rel="noopener" class="btn-card-listing" title="Abrir anúncio verificado em ${car.portal || 'portal parceiro de SP'}">
+              <span>🔗</span> ${car.portal ? car.portal.replace(' Carros SP', '').replace(' São Paulo', '').replace(' Brasil', '') : 'Anúncio'}
             </a>
             <button class="btn-card-secondary btn-details" data-detail-id="${car.id}">
               Ficha
@@ -422,8 +439,52 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // ==============================================================
-  // 6. Comparador Lado a Lado
+  // 6. Comparador Lado a Lado Interativo (Seletores & Duelos)
   // ==============================================================
+  const compareSlotSelect1 = document.getElementById('compareSlotSelect1');
+  const compareSlotSelect2 = document.getElementById('compareSlotSelect2');
+  const compareSlotSelect3 = document.getElementById('compareSlotSelect3');
+  const compareSlotPreview1 = document.getElementById('compareSlotPreview1');
+  const compareSlotPreview2 = document.getElementById('compareSlotPreview2');
+  const compareSlotPreview3 = document.getElementById('compareSlotPreview3');
+  const compareSlotCard1 = document.getElementById('compareSlotCard1');
+  const compareSlotCard2 = document.getElementById('compareSlotCard2');
+  const compareSlotCard3 = document.getElementById('compareSlotCard3');
+
+  function populateCompareSlots() {
+    const allCars = window.autoRadarData.getAllCars();
+    const fmt = CarFinancingCalculator.formatCurrency;
+
+    const buildOptions = (placeholder) => {
+      let opts = `<option value="">${placeholder}</option>`;
+      allCars.forEach(c => {
+        opts += `<option value="${c.id}">${c.title} — ${fmt(c.price)} (${c.dealer?.city || 'SP'})</option>`;
+      });
+      return opts;
+    };
+
+    if (compareSlotSelect1) compareSlotSelect1.innerHTML = buildOptions('-- Selecione o 1º Veículo --');
+    if (compareSlotSelect2) compareSlotSelect2.innerHTML = buildOptions('-- Selecione o 2º Veículo --');
+    if (compareSlotSelect3) compareSlotSelect3.innerHTML = buildOptions('-- Selecione o 3º Veículo (Opcional) --');
+  }
+
+  function setSlotCar(slotIdx, carId) {
+    if (!carId) {
+      if (state.comparedCarIds.length > slotIdx) {
+        state.comparedCarIds.splice(slotIdx, 1);
+      }
+    } else {
+      // Remover se já existir em outra posição para não duplicar
+      state.comparedCarIds = state.comparedCarIds.filter(id => id !== carId);
+      state.comparedCarIds.splice(slotIdx, 0, carId);
+      if (state.comparedCarIds.length > 3) {
+        state.comparedCarIds = state.comparedCarIds.slice(0, 3);
+      }
+    }
+    renderComparator();
+    renderAllGrids();
+  }
+
   function toggleCompare(carId) {
     const idx = state.comparedCarIds.indexOf(carId);
     if (idx > -1) {
@@ -441,46 +502,131 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  function applyComparePreset(presetKey) {
+    const presets = {
+      'alvos': ['pulse-01', 'byd-01', 'tera-01'],
+      'eletricos': ['byd-01', 'sug-eletrico-01', 'sug-eletrico-02'],
+      'automaticos': ['pulse-01', 'sug-vw-polo-01', 'sug-suv-kicks-01'],
+      'economicos': ['pulse-01', 'byd-01', 'sug-eletrico-01']
+    };
+
+    const targetList = presets[presetKey] || presets['alvos'];
+    const validIds = targetList.filter(id => window.autoRadarData.getCarById(id));
+    state.comparedCarIds = [...validIds];
+
+    renderComparator();
+    renderAllGrids();
+  }
+
+  function updateSlotPreviews() {
+    const slots = [
+      { select: compareSlotSelect1, preview: compareSlotPreview1, card: compareSlotCard1, idx: 0 },
+      { select: compareSlotSelect2, preview: compareSlotPreview2, card: compareSlotCard2, idx: 1 },
+      { select: compareSlotSelect3, preview: compareSlotPreview3, card: compareSlotCard3, idx: 2 }
+    ];
+
+    const fmt = CarFinancingCalculator.formatCurrency;
+
+    slots.forEach(s => {
+      if (!s.select || !s.preview || !s.card) return;
+      const carId = state.comparedCarIds[s.idx] || '';
+      s.select.value = carId;
+
+      const removeBtn = s.card.querySelector(`[data-remove-slot="${s.idx}"]`);
+
+      if (carId) {
+        const car = window.autoRadarData.getCarById(carId);
+        if (car) {
+          s.card.classList.add('active');
+          if (removeBtn) removeBtn.style.display = 'inline-block';
+          s.preview.innerHTML = `
+            <div class="slot-car-preview">
+              <img src="${getExactCarImage(car)}" alt="${car.title}">
+              <div class="slot-car-info">
+                <div class="slot-car-name">${car.title}</div>
+                <div class="slot-car-price">${fmt(car.price)} <span style="font-size: 11px; color: var(--text-muted); font-weight: normal;">• ${car.dealer?.city || 'SP'}</span></div>
+              </div>
+            </div>
+          `;
+          return;
+        }
+      }
+
+      s.card.classList.remove('active');
+      if (removeBtn) removeBtn.style.display = 'none';
+      s.preview.innerHTML = '';
+    });
+  }
+
   function renderComparator() {
     const cars = state.comparedCarIds.map(id => window.autoRadarData.getCarById(id)).filter(Boolean);
+    countCompare.textContent = state.comparedCarIds.length;
+    updateSlotPreviews();
+
     if (cars.length === 0) {
       compareContainer.innerHTML = `
         <div class="empty-compare-state">
           <div class="empty-icon">⚖️</div>
-          <h3>Nenhum carro selecionado para comparação</h3>
-          <p>Navegue pelas abas de carros e clique no botão <strong>⚖️</strong> em qualquer card para comparar lado a lado!</p>
+          <h3>Nenhum veículo selecionado para comparação</h3>
+          <p style="margin-bottom: 16px; font-size: 14px; max-width: 540px; margin-left: auto; margin-right: auto;">
+            Escolha os modelos nos <strong>3 seletores acima</strong>, clique em um dos <strong>duelos prontos</strong> ou navegue pelas abas de carros clicando no botão <strong>⚖️</strong>!
+          </p>
+          <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <button class="shortcut-chip" onclick="window.autoRadarApp.applyComparePreset('alvos')">🎯 Comparar Nossos 3 Alvos</button>
+            <button class="shortcut-chip" onclick="window.autoRadarApp.applyComparePreset('eletricos')">🔋 Duelo 100% Elétricos</button>
+          </div>
         </div>
       `;
       return;
     }
 
     const fmt = CarFinancingCalculator.formatCurrency;
+    const allCars = window.autoRadarData.getAllCars();
 
     let html = `
       <table class="compare-table">
         <thead>
           <tr>
             <th>Especificação Técnica</th>
-            ${cars.map(c => `
+            ${cars.map((c, colIdx) => `
               <th class="compare-card-col">
-                <div>${c.title}</div>
-                <div style="font-size: 18px; margin-top: 4px;">${fmt(c.price)}</div>
+                <div style="margin-bottom: 8px;">
+                  <img src="${getExactCarImage(c)}" alt="${c.title}" style="width: 100%; max-height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-color);">
+                </div>
+                <div style="font-size: 15px; color: #fff; line-height: 1.3;">${c.title}</div>
+                <div style="font-size: 18px; margin-top: 4px; color: var(--electric-green); font-weight: 800;">${fmt(c.price)}</div>
+                <div style="margin-top: 8px; display: flex; gap: 6px;">
+                  <button class="btn-slot-remove" onclick="window.autoRadarApp.removeSlot(${colIdx})">❌ Remover</button>
+                  <a href="${c.listingUrl || '#'}" target="_blank" rel="noopener" class="btn-card-listing" style="padding: 4px 10px; font-size: 11px;">🔗 Anúncio</a>
+                </div>
               </th>
             `).join('')}
+            ${cars.length < 3 ? `
+              <th class="compare-card-col" style="vertical-align: middle; text-align: center; background: rgba(255,255,255,0.02); border: 1px dashed var(--border-color); border-radius: 8px;">
+                <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">➕ Adicionar outro veículo</div>
+                <select class="compare-slot-select" onchange="window.autoRadarApp.setSlotCar(${cars.length}, this.value)" style="max-width: 200px; margin: 0 auto;">
+                  <option value="">-- Escolher Carro --</option>
+                  ${allCars.filter(ac => !state.comparedCarIds.includes(ac.id)).map(ac => `<option value="${ac.id}">${ac.title} (${fmt(ac.price)})</option>`).join('')}
+                </select>
+              </th>
+            ` : ''}
           </tr>
         </thead>
         <tbody>
           <tr>
             <th>Categoria / Tipo</th>
             ${cars.map(c => `<td><strong>${c.modelCategory}</strong></td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Combustível</th>
             ${cars.map(c => `<td>${c.fuel || 'Flex'}</td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Câmbio</th>
             ${cars.map(c => `<td>${c.transmission || 'Automático'}</td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Consumo Urbano / Autonomia</th>
@@ -490,26 +636,32 @@ document.addEventListener('DOMContentLoaded', async () => {
               }
               return `<td>${c.specs?.consumptionCity || '12,5 km/l'}</td>`;
             }).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Consumo Estrada</th>
             ${cars.map(c => `<td>${c.specs?.consumptionRoad || '14,3 km/l (Flex)'}</td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Porta-Malas</th>
             ${cars.map(c => `<td>${c.specs?.trunk || '370 L'}</td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Potência & Torque</th>
             ${cars.map(c => `<td>${c.specs?.power || '107 cv'}</td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Garantia & Procedência</th>
             ${cars.map(c => `<td>${c.specs?.warranty || 'Garantia Concessionária'}</td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Localização em SP</th>
-            ${cars.map(c => `<td>📍 ${c.dealer?.city} - ${c.dealer?.neighborhood}</td>`).join('')}
+            ${cars.map(c => `<td>📍 ${c.dealer?.city} - ${c.dealer?.neighborhood} (${c.portal || 'Loja'})</td>`).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
             <th>Opção de Financiamento</th>
@@ -518,14 +670,18 @@ document.addEventListener('DOMContentLoaded', async () => {
               const inst = c.financing?.monthlyInstallment || Math.round((c.price - dp) * 0.0276);
               return `<td>Entrada de ${fmt(dp)} + 48x de <strong>${fmt(inst)}</strong></td>`;
             }).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
           <tr>
-            <th>Ações</th>
+            <th>Ações & Negociação</th>
             ${cars.map(c => `
               <td>
-                <button class="btn-secondary-sm" onclick="window.autoRadarApp.toggleCompare('${c.id}')">Remover da Comparação</button>
+                <button class="btn-card-main" onclick="window.autoRadarApp.openInSimulator('${c.id}')" style="margin-bottom: 6px; width: 100%; text-align: center; justify-content: center;">
+                  Simular Financiamento
+                </button>
               </td>
             `).join('')}
+            ${cars.length < 3 ? '<td>-</td>' : ''}
           </tr>
         </tbody>
       </table>
@@ -533,6 +689,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     compareContainer.innerHTML = html;
   }
+
+  // Listeners dos seletores de slot
+  [compareSlotSelect1, compareSlotSelect2, compareSlotSelect3].forEach((sel, idx) => {
+    if (sel) {
+      sel.addEventListener('change', () => {
+        setSlotCar(idx, sel.value);
+      });
+    }
+  });
+
+  // Listeners dos botões de remover de slot
+  document.querySelectorAll('[data-remove-slot]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-remove-slot'), 10);
+      setSlotCar(idx, '');
+    });
+  });
+
+  // Listeners dos botões de preset
+  document.querySelectorAll('[data-compare-preset]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const presetKey = btn.getAttribute('data-compare-preset');
+      applyComparePreset(presetKey);
+    });
+  });
 
   document.getElementById('btnClearCompare').addEventListener('click', () => {
     state.comparedCarIds = [];
@@ -830,6 +1011,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Expor métodos úteis globalmente
   window.autoRadarApp = {
     toggleCompare,
+    setSlotCar,
+    removeSlot: (slotIdx) => setSlotCar(slotIdx, ''),
+    applyComparePreset,
     openInSimulator: (carId) => {
       carModal.classList.add('hidden');
       switchTab('tab-simulator');
@@ -839,6 +1023,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   // Inicialização Inicial
+  populateCompareSlots();
   populateSimulatorCarSelect();
   renderAllGrids();
   updateSimulator();

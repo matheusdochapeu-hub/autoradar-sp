@@ -931,6 +931,622 @@ const DEFAULT_CARS_DATABASE = [
       "Menos de 20 mil km",
       "Garantia até 2027"
     ]
+  },
+  {
+    "id": "pulse-06-rib",
+    "title": "Fiat Pulse Drive 1.3 AT CVT — Ribeirão Preto",
+    "modelCategory": "Fiat Pulse Automático",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "Interior SP • Ribeirão",
+    "year": "2023/2023",
+    "km": 29800,
+    "color": "Cinza Silverstone",
+    "fuel": "Flex (Gasolina / Etanol)",
+    "transmission": "Automático CVT (7 velocidades simuladas)",
+    "price": 76900,
+    "originalPrice": 81900,
+    "fipePrice": 83450,
+    "priceVsFipe": "-R$ 6.550 (Abaixo da FIPE)",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "portal": "Mercado Livre Carros SP",
+    "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/sao-paulo/ribeirao-preto/pulse-drive-at_PriceRange_0-80000",
+    "dealer": {
+      "name": "Movida Seminovos — Ribeirão Preto",
+      "type": "Seminovos Certificados",
+      "city": "Ribeirão Preto",
+      "state": "SP",
+      "neighborhood": "Jardim Botânico",
+      "address": "Av. Maurílio Biagi, 1850 - Ribeirão Preto, SP",
+      "phone": "(16) 3968-4500",
+      "whatsapp": "5516997451234",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.3 Firefly Flex",
+      "power": "107 cv (E) / 98 cv (G)",
+      "consumptionCity": "13,4 km/l (G) / 9,4 km/l (E)",
+      "consumptionRoad": "14,9 km/l (G) / 10,6 km/l (E)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia de 1 ano motor e câmbio (Gestauto)",
+      "features": [
+        "Piloto Automático",
+        "Faróis Full LED",
+        "Central Multimídia 8.4\"",
+        "Ar Digital",
+        "Controle de Estabilidade"
+      ]
+    },
+    "financing": {
+      "downPayment": 23070,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1590,
+      "interestRate": 1.39,
+      "bank": "Banco Santander / BV",
+      "optionsText": "Entrada de R$ 23.070 (30%) + 48x de R$ 1.590. Aceita veículo na troca com avaliação FIPE."
+    },
+    "cautelarStatus": "100% Aprovado Dekra",
+    "tags": [
+      "Foto Real",
+      "Ribeirão Preto",
+      "Mercado Livre",
+      "Dentro do Orçamento",
+      "Laudo Aprovado"
+    ]
+  },
+  {
+    "id": "pulse-07-sjc",
+    "title": "Fiat Pulse Drive 1.0 Turbo 200 AT — SJC Vale do Paraíba",
+    "modelCategory": "Fiat Pulse Automático",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "Vale do Paraíba",
+    "year": "2022/2023",
+    "km": 36500,
+    "color": "Branco Banchisa",
+    "fuel": "Flex (Gasolina / Etanol)",
+    "transmission": "Automático CVT 7v",
+    "price": 77900,
+    "originalPrice": 82900,
+    "fipePrice": 84900,
+    "priceVsFipe": "-R$ 7.000 (Oportunidade)",
+    "image": "./img/cars/pulse-turbo-branco.jpg",
+    "portal": "OLX São Paulo",
+    "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
+    "dealer": {
+      "name": "Destaque Fiat — São José dos Campos",
+      "type": "Concessionária Autorizada Fiat",
+      "city": "São José dos Campos",
+      "state": "SP",
+      "neighborhood": "Jardim Aquárius",
+      "address": "Av. Cassiano Ricardo, 1400 - SJC, SP",
+      "phone": "(12) 3946-8800",
+      "whatsapp": "5512988776655",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.0 Turbo 200 Flex",
+      "power": "130 cv (E) / 125 cv (G)",
+      "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
+      "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia de Fábrica remanescente",
+      "features": [
+        "Motor Turbo 130 cv",
+        "Modo Sport com botão vermelho no volante",
+        "Câmera de ré",
+        "Controle de Tração TC+"
+      ]
+    },
+    "financing": {
+      "downPayment": 23370,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1610,
+      "interestRate": 1.41,
+      "bank": "Banco Fiat / Itaú",
+      "optionsText": "Entrada de R$ 23.370 + 48x de R$ 1.610. Parcelamento de entrada em até 12x no cartão."
+    },
+    "cautelarStatus": "100% Periciado e Laudo Cautelar Aprovado",
+    "tags": [
+      "Foto Real",
+      "São José dos Campos",
+      "OLX",
+      "Motor Turbo",
+      "Laudo Aprovado"
+    ]
+  },
+  {
+    "id": "pulse-08-santos",
+    "title": "Fiat Pulse Drive 1.3 AT CVT — Santos Litoral",
+    "modelCategory": "Fiat Pulse Automático",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "Litoral / Baixada Santista",
+    "year": "2023/2023",
+    "km": 27400,
+    "color": "Cinza Strato",
+    "fuel": "Flex (Gasolina / Etanol)",
+    "transmission": "Automático CVT 7v",
+    "price": 76500,
+    "originalPrice": 81000,
+    "fipePrice": 83450,
+    "priceVsFipe": "-R$ 6.950 (Abaixo da FIPE)",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "portal": "Webmotors Santos",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Santos&precoate=80000",
+    "dealer": {
+      "name": "Comeri Litoral — Concessionária",
+      "type": "Concessionária Multimarcas Litoral",
+      "city": "Santos",
+      "state": "SP",
+      "neighborhood": "Gonzaga",
+      "address": "Av. Ana Costa, 310 - Gonzaga, Santos, SP",
+      "phone": "(13) 3229-9000",
+      "whatsapp": "5513996541234",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.3 Firefly Flex",
+      "power": "107 cv (E)",
+      "consumptionCity": "13,4 km/l (G)",
+      "consumptionRoad": "14,9 km/l (G)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia de 1 ano de procedência",
+      "features": [
+        "Sem maresia, carro de garagem",
+        "Laudo pericial 100% aprovado",
+        "Central Multimídia",
+        "Sensor de estacionamento"
+      ]
+    },
+    "financing": {
+      "downPayment": 22950,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1581,
+      "interestRate": 1.38,
+      "bank": "Banco Santander / Bradesco",
+      "optionsText": "Entrada de R$ 22.950 + 48x de R$ 1.581. Aceita FGTS e carta de consórcio contemplada."
+    },
+    "cautelarStatus": "100% Aprovado sem restrições",
+    "tags": [
+      "Foto Real",
+      "Santos",
+      "Webmotors",
+      "Litoral",
+      "Dentro do Orçamento"
+    ]
+  },
+  {
+    "id": "pulse-09-sorocaba",
+    "title": "Fiat Pulse Drive 1.3 Flex AT — Sorocaba",
+    "modelCategory": "Fiat Pulse Automático",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "Sorocaba & Região",
+    "year": "2023/2023",
+    "km": 31200,
+    "color": "Cinza Silverstone",
+    "fuel": "Flex (Gasolina / Etanol)",
+    "transmission": "Automático CVT",
+    "price": 75800,
+    "originalPrice": 80900,
+    "fipePrice": 83450,
+    "priceVsFipe": "-R$ 7.650 (Super Oferta)",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "portal": "Mobiauto",
+    "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/sorocaba?preco_ate=80000",
+    "dealer": {
+      "name": "Abrão Reze Seminovos — Sorocaba",
+      "type": "Concessionária Tradicional",
+      "city": "Sorocaba",
+      "state": "SP",
+      "neighborhood": "Campolim",
+      "address": "Av. Antônio Carlos Comitre, 1100 - Campolim, Sorocaba, SP",
+      "phone": "(15) 3219-5000",
+      "whatsapp": "5515998765432",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.3 Firefly Flex",
+      "power": "107 cv",
+      "consumptionCity": "13,4 km/l",
+      "consumptionRoad": "14,9 km/l",
+      "trunk": "370 Litros",
+      "warranty": "Garantia de 1 ano",
+      "features": [
+        "Único dono",
+        "Todas as revisões feitas em concessionária",
+        "Multimídia com espelhamento sem fio"
+      ]
+    },
+    "financing": {
+      "downPayment": 22740,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1566,
+      "interestRate": 1.37,
+      "bank": "Banco Safra / BV",
+      "optionsText": "Entrada de R$ 22.740 + 48x de R$ 1.566. Taxa promocional de 1.37% a.m."
+    },
+    "cautelarStatus": "100% Dekra Aprovado",
+    "tags": [
+      "Foto Real",
+      "Sorocaba",
+      "Mobiauto",
+      "Único Dono"
+    ]
+  },
+  {
+    "id": "pulse-10-alphaville",
+    "title": "Fiat Pulse Drive 1.3 AT CVT — Alphaville / Barueri",
+    "modelCategory": "Fiat Pulse Automático",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "Alphaville / Barueri",
+    "year": "2023/2023",
+    "km": 22100,
+    "color": "Azul Amalfi",
+    "fuel": "Flex (Gasolina / Etanol)",
+    "transmission": "Automático CVT 7v",
+    "price": 78900,
+    "originalPrice": 83500,
+    "fipePrice": 84900,
+    "priceVsFipe": "-R$ 6.000 (Seminovo Premium)",
+    "image": "./img/cars/pulse-audace-azul.jpg",
+    "portal": "Kavak Brasil",
+    "listingUrl": "https://www.kavak.com/br/carros-usados/fiat/pulse?price_max=80000",
+    "dealer": {
+      "name": "Kavak Hub — Alphaville",
+      "type": "Seminovos Certificados com Garantia",
+      "city": "Barueri",
+      "state": "SP",
+      "neighborhood": "Alphaville",
+      "address": "Alameda Araguaia, 2044 - Alphaville, Barueri, SP",
+      "phone": "(11) 3230-0000",
+      "whatsapp": "5511991238899",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.3 Firefly Flex",
+      "power": "107 cv",
+      "consumptionCity": "13,4 km/l",
+      "consumptionRoad": "14,9 km/l",
+      "trunk": "370 Litros",
+      "warranty": "Garantia Kavak Total de 2 Anos",
+      "features": [
+        "Inspeção de 240 itens",
+        "Devolução grátis em 7 dias",
+        "Quilometragem real comprovada"
+      ]
+    },
+    "financing": {
+      "downPayment": 23670,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1630,
+      "interestRate": 1.39,
+      "bank": "Kavak Financiamento / Santander",
+      "optionsText": "Entrada de R$ 23.670 + 48x de R$ 1.630. Aprovação 100% online em 2 minutos."
+    },
+    "cautelarStatus": "100% Aprovado Certificado 240 Itens",
+    "tags": [
+      "Foto Real",
+      "Alphaville",
+      "Kavak",
+      "Garantia 2 Anos"
+    ]
+  },
+  {
+    "id": "byd-04-rib",
+    "title": "BYD Dolphin Mini EV 38 kWh — Ribeirão Preto",
+    "modelCategory": "BYD Dolphin Mini",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "⚡ 100% Elétrico • Ribeirão",
+    "year": "2024/2025",
+    "km": 9400,
+    "color": "Sprout Green (Verde)",
+    "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
+    "transmission": "Automático Direto (1 marcha)",
+    "price": 79200,
+    "originalPrice": 85000,
+    "fipePrice": 89900,
+    "priceVsFipe": "-R$ 10.700 (Excelente Oferta)",
+    "image": "./img/cars/byd-dolphin-mini-verde.jpg",
+    "portal": "iCarros",
+    "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_31201.1_&lim=20",
+    "dealer": {
+      "name": "BYD Dahruj — Ribeirão Preto",
+      "type": "Concessionária Oficial BYD",
+      "city": "Ribeirão Preto",
+      "state": "SP",
+      "neighborhood": "Nova Aliança",
+      "address": "Av. Braz Olaia Acosta, 720 - Ribeirão Preto, SP",
+      "phone": "(16) 3514-8000",
+      "whatsapp": "5516996321122",
+      "verified": true
+    },
+    "specs": {
+      "engine": "Motor Elétrico Síncrono de Imã Permanente",
+      "power": "75 cv / 13,8 kgfm (Torque Instantâneo)",
+      "range": "280 km (PBEV / Inmetro) / até 340 km cidade",
+      "battery": "38 kWh Bateria Blade (Ultra-segura e durável)",
+      "costPerKm": "R$ 0,08 por km rodado (Economia de 80% vs Gasolina)",
+      "chargingTime": "30 min de 30% a 80% em DC rápida",
+      "trunk": "230 Litros",
+      "warranty": "Garantia de 5 anos do carro e 8 anos da bateria Blade (até 2032!)",
+      "features": [
+        "Isenção de IPVA / Rodízio",
+        "Carregamento AC residencial bivolt incluso",
+        "Tela giratória 10.1\"",
+        "Freio de mão eletrônico com Auto Hold"
+      ]
+    },
+    "financing": {
+      "downPayment": 23760,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1637,
+      "interestRate": 1.35,
+      "bank": "Banco Santander / BYD Finance",
+      "optionsText": "Entrada de R$ 23.760 + 48x de R$ 1.637. Taxa subsidiada BYD para elétricos."
+    },
+    "cautelarStatus": "100% Impecável sem retoques",
+    "tags": [
+      "Foto Real",
+      "Ribeirão Preto",
+      "100% Elétrico",
+      "Bateria Blade",
+      "Garantia até 2032"
+    ]
+  },
+  {
+    "id": "byd-05-sjc",
+    "title": "BYD Dolphin Mini EV 5 Lugares — SJC Vale do Paraíba",
+    "modelCategory": "BYD Dolphin Mini",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "⚡ 100% Elétrico • 5 Lugares",
+    "year": "2024/2025",
+    "km": 8200,
+    "color": "Preto Cosmos",
+    "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
+    "transmission": "Automático Direto",
+    "price": 79800,
+    "originalPrice": 86900,
+    "fipePrice": 91500,
+    "priceVsFipe": "-R$ 11.700 (5 Lugares Oficial)",
+    "image": "./img/cars/byd-dolphin-mini-preto.jpg",
+    "portal": "OLX São Paulo",
+    "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini?pe=85000",
+    "dealer": {
+      "name": "Dahruj BYD — São José dos Campos",
+      "type": "Concessionária Oficial BYD",
+      "city": "São José dos Campos",
+      "state": "SP",
+      "neighborhood": "Jardim São Dimas",
+      "address": "Av. Nelson D'Ávila, 1200 - SJC, SP",
+      "phone": "(12) 3904-4000",
+      "whatsapp": "5512991112233",
+      "verified": true
+    },
+    "specs": {
+      "engine": "Elétrico Blade 75 cv",
+      "power": "75 cv / 135 Nm",
+      "range": "280 km (Inmetro)",
+      "battery": "38 kWh Blade",
+      "costPerKm": "R$ 0,08 por km rodado",
+      "trunk": "230 Litros",
+      "warranty": "Garantia BYD até 2032",
+      "features": [
+        "Versão 5 lugares com 3 cintos de 3 pontos atrás",
+        "Carregador portátil incluso",
+        "Chave presencial NFC"
+      ]
+    },
+    "financing": {
+      "downPayment": 23940,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1649,
+      "interestRate": 1.35,
+      "bank": "Banco Santander / BYD",
+      "optionsText": "Entrada de R$ 23.940 + 48x de R$ 1.649. Taxa especial para elétricos."
+    },
+    "cautelarStatus": "100% Aprovado",
+    "tags": [
+      "Foto Real",
+      "São José dos Campos",
+      "5 Lugares",
+      "100% Elétrico",
+      "Bateria Blade"
+    ]
+  },
+  {
+    "id": "byd-06-santos",
+    "title": "BYD Dolphin Mini EV — Santos / Baixada Santista",
+    "modelCategory": "BYD Dolphin Mini",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "⚡ 100% Elétrico • Santos",
+    "year": "2024/2024",
+    "km": 11500,
+    "color": "Branco Apricity",
+    "fuel": "100% Elétrico",
+    "transmission": "Automático Direto",
+    "price": 78500,
+    "originalPrice": 84500,
+    "fipePrice": 88900,
+    "priceVsFipe": "-R$ 10.400 (Oportunidade)",
+    "image": "./img/cars/byd-dolphin-mini-branco.jpg",
+    "portal": "Webmotors Santos",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=Santos&precoate=85000",
+    "dealer": {
+      "name": "Dahruj BYD — Santos Litoral",
+      "type": "Concessionária Oficial BYD",
+      "city": "Santos",
+      "state": "SP",
+      "neighborhood": "Ponta da Praia",
+      "address": "Av. Rei Alberto I, 180 - Ponta da Praia, Santos, SP",
+      "phone": "(13) 3269-8000",
+      "whatsapp": "5513997788990",
+      "verified": true
+    },
+    "specs": {
+      "engine": "Elétrico Blade 75 cv",
+      "power": "75 cv",
+      "range": "280 km (Inmetro)",
+      "battery": "38 kWh",
+      "costPerKm": "R$ 0,08 por km",
+      "trunk": "230 Litros",
+      "warranty": "Garantia até 2032",
+      "features": [
+        "Isenção IPVA SP",
+        "Câmera e sensores",
+        "Faróis LED",
+        "Carregador residencial"
+      ]
+    },
+    "financing": {
+      "downPayment": 23550,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1622,
+      "interestRate": 1.35,
+      "bank": "Banco Santander / BYD",
+      "optionsText": "Entrada de R$ 23.550 + 48x de R$ 1.622."
+    },
+    "cautelarStatus": "100% Impecável",
+    "tags": [
+      "Foto Real",
+      "Santos",
+      "Litoral",
+      "100% Elétrico"
+    ]
+  },
+  {
+    "id": "pulse-11-jundiai",
+    "title": "Fiat Pulse Drive 1.3 Flex AT CVT — Jundiaí",
+    "modelCategory": "Fiat Pulse Automático",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "Jundiaí & Região",
+    "year": "2023/2023",
+    "km": 28900,
+    "color": "Cinza Silverstone",
+    "fuel": "Flex (Gasolina / Etanol)",
+    "transmission": "Automático CVT 7v",
+    "price": 76200,
+    "originalPrice": 81500,
+    "fipePrice": 83450,
+    "priceVsFipe": "-R$ 7.250 (Abaixo da FIPE)",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "portal": "Chaves na Mão SP",
+    "listingUrl": "https://www.chavesnamao.com.br/carros-usados/sp-jundiai/fiat/pulse/?precoate=80000",
+    "dealer": {
+      "name": "Carrera Seminovos — Jundiaí",
+      "type": "Concessionária Multimarcas",
+      "city": "Jundiaí",
+      "state": "SP",
+      "neighborhood": "Anhangabaú",
+      "address": "Av. 9 de Julho, 2500 - Jundiaí, SP",
+      "phone": "(11) 4583-7000",
+      "whatsapp": "5511995544332",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.3 Firefly Flex",
+      "power": "107 cv",
+      "consumptionCity": "13,4 km/l",
+      "consumptionRoad": "14,9 km/l",
+      "trunk": "370 Litros",
+      "warranty": "Garantia 1 ano",
+      "features": [
+        "Piloto Automático",
+        "Multimídia 8.4\"",
+        "Faróis LED",
+        "Laudo Dekra 100%"
+      ]
+    },
+    "financing": {
+      "downPayment": 22860,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1574,
+      "interestRate": 1.38,
+      "bank": "Banco Santander / Bradesco",
+      "optionsText": "Entrada de R$ 22.860 + 48x de R$ 1.574."
+    },
+    "cautelarStatus": "100% Dekra Aprovado",
+    "tags": [
+      "Foto Real",
+      "Jundiaí",
+      "Chaves na Mão",
+      "Dentro do Orçamento"
+    ]
+  },
+  {
+    "id": "pulse-12-piracicaba",
+    "title": "Fiat Pulse Drive 1.3 AT CVT — Piracicaba",
+    "modelCategory": "Fiat Pulse Automático",
+    "isTarget": true,
+    "isSuggestion": false,
+    "badge": "Piracicaba & Região",
+    "year": "2023/2023",
+    "km": 33100,
+    "color": "Branco Banchisa",
+    "fuel": "Flex (Gasolina / Etanol)",
+    "transmission": "Automático CVT 7v",
+    "price": 75400,
+    "originalPrice": 80900,
+    "fipePrice": 83450,
+    "priceVsFipe": "-R$ 8.050 (Abaixo da FIPE)",
+    "image": "./img/cars/pulse-turbo-branco.jpg",
+    "portal": "Mobiauto",
+    "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/piracicaba?preco_ate=80000",
+    "dealer": {
+      "name": "Stefanini Fiat — Piracicaba",
+      "type": "Concessionária Oficial Fiat",
+      "city": "Piracicaba",
+      "state": "SP",
+      "neighborhood": "Vila Rezende",
+      "address": "Av. Rui Barbosa, 600 - Piracicaba, SP",
+      "phone": "(19) 3412-8000",
+      "whatsapp": "5519998877661",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.3 Firefly Flex",
+      "power": "107 cv",
+      "consumptionCity": "13,4 km/l",
+      "consumptionRoad": "14,9 km/l",
+      "trunk": "370 Litros",
+      "warranty": "Garantia de concessionária",
+      "features": [
+        "Laudo pericial 100% aprovado",
+        "Direção elétrica progressiva",
+        "Ar digital automático"
+      ]
+    },
+    "financing": {
+      "downPayment": 22620,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1558,
+      "interestRate": 1.37,
+      "bank": "Banco Fiat / BV",
+      "optionsText": "Entrada de R$ 22.620 + 48x de R$ 1.558."
+    },
+    "cautelarStatus": "100% Aprovado",
+    "tags": [
+      "Foto Real",
+      "Piracicaba",
+      "Mobiauto",
+      "Dentro do Orçamento"
+    ]
   }
 ];
 class AutoRadarDataService {

@@ -939,6 +939,259 @@ body {
 }
 
 /* ==============================================================
+   Comparador Lado a Lado Interativo (Seletores & Duelos Prontos)
+   ============================================================== */
+
+.compare-shortcuts-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  background: var(--bg-card);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.compare-shortcuts-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--electric-green);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shortcut-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.shortcut-chip:hover {
+  border-color: var(--electric-green);
+  color: var(--electric-green);
+  background: rgba(0, 255, 136, 0.08);
+  transform: translateY(-1px);
+}
+
+.compare-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .compare-slots-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compare-slot-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+}
+
+.compare-slot-card.active {
+  border-color: rgba(0, 255, 136, 0.4);
+  background: linear-gradient(180deg, rgba(0, 255, 136, 0.04), var(--bg-card));
+}
+
+.slot-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slot-badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--electric-green);
+}
+
+.compare-slot-select {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.compare-slot-select:focus {
+  border-color: var(--electric-green);
+  outline: none;
+}
+
+.slot-car-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.slot-car-preview img {
+  width: 68px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.slot-car-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.slot-car-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot-car-price {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--electric-green);
+  margin-top: 2px;
+}
+
+.btn-slot-remove {
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.2);
+  color: #ff4757;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn-slot-remove:hover {
+  background: #ff4757;
+  color: #fff;
+}
+
+/* Hub de Radares & Portais de Busca em SP */
+.portal-search-hub {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.portal-hub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portal-hub-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.portal-hub-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.portal-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.portal-chip-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.portal-chip-link:hover {
+  border-color: var(--electric-green);
+  transform: translateY(-2px);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.portal-chip-icon {
+  font-size: 20px;
+}
+
+.portal-chip-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.portal-chip-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.portal-chip-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.car-portal-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--electric-blue);
+  background: var(--electric-blue-dim);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  margin-left: 6px;
+}
+
+/* ==============================================================
    Comparador Lado a Lado
    ============================================================== */
 
