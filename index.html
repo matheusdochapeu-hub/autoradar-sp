@@ -16,12 +16,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
   <link rel="manifest" href="manifest.json">
   <script>
     // Limpeza automática imediata de caches legados
     (function() {
-      const APP_VER = 'autoradar-sp-v7';
+      const APP_VER = 'autoradar-sp-v8';
       if (localStorage.getItem('autoradar_ver') !== APP_VER) {
         localStorage.setItem('autoradar_ver', APP_VER);
         if ('caches' in window) {
@@ -90,7 +90,7 @@
           <span class="tab-count" id="countElectrics">0</span>
         </button>
         <button class="nav-tab" data-tab="tab-suggestions">
-          <span class="tab-emoji">💡</span> Sugestões & Similares até 80k
+          <span class="tab-emoji">💡</span> <span id="tabSuggestionsTitle">Sugestões & Similares</span>
           <span class="tab-count" id="countSuggestions">0</span>
         </button>
         <button class="nav-tab" data-tab="tab-comparator">
@@ -147,9 +147,11 @@
         <div class="filter-group">
           <label>Preço Máximo:</label>
           <select id="filterPrice">
-            <option value="80000" selected>Até R$ 80.000 (Nosso Teto)</option>
-            <option value="75000">Até R$ 75.000 (Super Econômico)</option>
-            <option value="85000">Até R$ 85.000 (Com Negociação)</option>
+            <option value="60000">Até R$ 60.000 (Super Econômico)</option>
+            <option value="70000">Até R$ 70.000 (Custo-Benefício)</option>
+            <option value="80000" selected>Até R$ 80.000 (Nosso Teto Base)</option>
+            <option value="100000">Até R$ 100.000 (Upgrade)</option>
+            <option value="120000">Até R$ 120.000 (Até 120k)</option>
             <option value="all">Todos os Preços</option>
           </select>
         </div>
@@ -304,12 +306,27 @@
       </div>
     </div>
 
-    <!-- ABA 3: Sugestões & Similares até 80k -->
+    <!-- ABA 3: Sugestões & Similares -->
     <div id="tab-suggestions" class="tab-pane">
       <div class="section-title-wrap">
         <div>
-          <h2>💡 Sugestões Inteligentes de Similares até R$ 80.000</h2>
-          <p class="section-desc">Modelos automáticos modernos e SUVs com excelente custo-benefício em São Paulo (alternativas diretas aos lançamentos com a mesma mecânica).</p>
+          <h2>💡 Sugestões Inteligentes de Similares & Alternativas</h2>
+          <p class="section-desc">Modelos automáticos modernos, elétricos e SUVs selecionados por faixa de preço em São Paulo.</p>
+        </div>
+        
+        <!-- Lista Suspensa Solicitada pelo Usuário -->
+        <div class="suggestion-dropdown-wrap">
+          <label for="selectSuggestionTier" class="suggestion-dropdown-label">
+            <span>📊</span> Faixa de Preço das Sugestões:
+          </label>
+          <select id="selectSuggestionTier" class="suggestion-dropdown-select">
+            <option value="60k">💰 Até R$ 60.000 (Mais Acessíveis & Econômicos)</option>
+            <option value="70k">✨ Até R$ 70.000 (Custo-Benefício & Elétricos de Entrada)</option>
+            <option value="80k" selected>🎯 Até R$ 80.000 (Nosso Orçamento Base)</option>
+            <option value="100k">🚀 Até R$ 100.000 (Upgrade • Dolphin EV, Pulse Topo, Renegade)</option>
+            <option value="120k">👑 Até R$ 120.000 (Premium • Dolphin Plus 204cv, Abarth, Nivus)</option>
+            <option value="all">🌟 Todas as Faixas de Sugestões</option>
+          </select>
         </div>
       </div>
 
@@ -586,9 +603,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/data.js?v=7"></script>
-  <script src="js/financing.js?v=7"></script>
-  <script src="js/app.js?v=7"></script>
+  <script src="js/data.js?v=8"></script>
+  <script src="js/financing.js?v=8"></script>
+  <script src="js/app.js?v=8"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

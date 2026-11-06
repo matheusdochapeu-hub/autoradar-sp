@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const state = {
     currentTab: 'tab-targets',
     targetSubfilter: 'all',
+    suggestionTier: '80k',
     searchQuery: '',
     filterPrice: 80000,
     filterFuel: 'all',
@@ -396,13 +397,40 @@ document.addEventListener('DOMContentLoaded', async () => {
       : '<div class="empty-state">Nenhum veículo elétrico encontrado com esses filtros.</div>';
     countElectrics.textContent = filteredElectrics.length;
 
-    // 3. Sugestões & Similares
-    const suggestions = window.autoRadarData.getSuggestionCars();
+    // 3. Sugestões & Similares com Lista Suspensa de Faixa de Preço
+    let suggestions = window.autoRadarData.getSuggestionCars();
+    if (state.suggestionTier !== 'all') {
+      if (state.suggestionTier === '60k') {
+        suggestions = suggestions.filter(c => c.priceTier === '60k' || c.price <= 60000);
+      } else if (state.suggestionTier === '70k') {
+        suggestions = suggestions.filter(c => c.priceTier === '70k' || (c.price > 60000 && c.price <= 70000));
+      } else if (state.suggestionTier === '80k') {
+        suggestions = suggestions.filter(c => c.priceTier === '80k' || (c.price > 70000 && c.price <= 80000));
+      } else if (state.suggestionTier === '100k') {
+        suggestions = suggestions.filter(c => c.priceTier === '100k' || (c.price > 80000 && c.price <= 100000));
+      } else if (state.suggestionTier === '120k') {
+        suggestions = suggestions.filter(c => c.priceTier === '120k' || (c.price > 100000 && c.price <= 120000));
+      }
+    }
     const filteredSuggestions = sortCars(filterCars(suggestions));
     gridSuggestions.innerHTML = filteredSuggestions.length > 0 
       ? filteredSuggestions.map(createCarCardHTML).join('') 
-      : '<div class="empty-state">Nenhuma sugestão encontrada com esses filtros.</div>';
+      : '<div class="empty-state">Nenhuma sugestão encontrada nesta faixa de preço com os filtros selecionados.</div>';
     countSuggestions.textContent = filteredSuggestions.length;
+
+    // Atualizar título dinâmico na aba
+    const tabTitleEl = document.getElementById('tabSuggestionsTitle');
+    if (tabTitleEl) {
+      const mapTitles = {
+        '60k': 'Sugestões até 60k',
+        '70k': 'Sugestões até 70k',
+        '80k': 'Sugestões até 80k',
+        '100k': 'Sugestões até 100k',
+        '120k': 'Sugestões até 120k',
+        'all': 'Todas as Sugestões'
+      };
+      tabTitleEl.textContent = mapTitles[state.suggestionTier] || 'Sugestões & Similares';
+    }
 
     // Atualizar Badge do Comparador
     countCompare.textContent = state.comparedCarIds.length;

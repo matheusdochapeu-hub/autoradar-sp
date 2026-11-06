@@ -628,7 +628,8 @@
         "Abaixo de 70k",
         "Sobra Dinheiro",
         "Garantia até 2031"
-      ]
+      ],
+      "priceTier": "70k"
     },
     {
       "id": "sug-eletrico-02",
@@ -691,7 +692,8 @@
         "Torque Instantâneo",
         "Painel Digital",
         "Isento de Rodízio"
-      ]
+      ],
+      "priceTier": "70k"
     },
     {
       "id": "sug-vw-polo-01",
@@ -752,7 +754,8 @@
         "Base do Tera",
         "Motor TSI 128cv",
         "Painel Digital"
-      ]
+      ],
+      "priceTier": "80k"
     },
     {
       "id": "sug-suv-kicks-01",
@@ -813,7 +816,8 @@
         "Porta-Malas 432L",
         "Bancos Gravidade Zero",
         "Câmera 360"
-      ]
+      ],
+      "priceTier": "80k"
     },
     {
       "id": "sug-suv-cactus-01",
@@ -873,7 +877,8 @@
         "Câmbio Japonês Aisin",
         "Ano 2022",
         "Abaixo de 75k"
-      ]
+      ],
+      "priceTier": "80k"
     },
     {
       "id": "sug-hatch-argo-01",
@@ -934,7 +939,8 @@
         "Ano 2024",
         "Menos de 20 mil km",
         "Garantia até 2027"
-      ]
+      ],
+      "priceTier": "80k"
     },
     {
       "id": "pulse-06-rib",
@@ -1551,6 +1557,624 @@
         "Mobiauto",
         "Dentro do Orçamento"
       ]
+    },
+    {
+      "id": "sug-60k-argo",
+      "title": "Fiat Argo Drive 1.3 GSR Flex Automático 2020",
+      "modelCategory": "Fiat Argo Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "60k",
+      "badge": "💰 Sugestão até 60k",
+      "year": "2020/2020",
+      "km": 48200,
+      "color": "Branco Banchisa",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático 5v com Paddle Shifts no volante",
+      "price": 57900,
+      "originalPrice": 62000,
+      "fipePrice": 61200,
+      "priceVsFipe": "-R$ 3.300 (Abaixo da FIPE)",
+      "image": "./img/cars/argo-trekking.jpg",
+      "portal": "Webmotors SP",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo?estadocidade=S%C3%A3o%20Paulo&precoate=60000",
+      "dealer": {
+        "name": "Fiat Sinal — Unidade Ipiranga",
+        "type": "Concessionária Oficial Fiat",
+        "city": "São Paulo",
+        "state": "SP",
+        "neighborhood": "Ipiranga",
+        "phone": "(11) 2067-1000",
+        "whatsapp": "5511999991111",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.3 Firefly Flex",
+        "power": "109 cv (E) / 101 cv (G)",
+        "consumptionCity": "12,9 km/l (G) / 9,2 km/l (E)",
+        "consumptionRoad": "14,3 km/l (G) / 10,2 km/l (E)",
+        "trunk": "300 Litros",
+        "warranty": "Garantia de 1 ano motor e câmbio",
+        "features": [
+          "Paddle Shifts no volante",
+          "Start&Stop",
+          "Central Multimídia",
+          "Sensor de estacionamento"
+        ]
+      },
+      "cautelarStatus": "100% Aprovado Supervisão",
+      "tags": [
+        "Foto Real",
+        "Até 60k",
+        "Super Econômico",
+        "Garantia 1 Ano"
+      ],
+      "financing": {
+        "downPayment": 17370,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 1459,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 17,370 (30%) + 48x de R$ 1,459 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-60k-onix",
+      "title": "Chevrolet Onix 1.4 LTZ Flex Automático 6m 2019",
+      "modelCategory": "Chevrolet Onix Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "60k",
+      "badge": "💰 Sugestão até 60k",
+      "year": "2019/2019",
+      "km": 52400,
+      "color": "Prata Switchblade",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático de 6 marchas com conversor de torque",
+      "price": 59800,
+      "originalPrice": 64500,
+      "fipePrice": 63900,
+      "priceVsFipe": "-R$ 4.100 (Abaixo da FIPE)",
+      "image": "./img/cars/c4-cactus.jpg",
+      "portal": "OLX Campinas",
+      "listingUrl": "https://sp.olx.com.br/regiao-de-campinas/autos-e-pecas/carros-vans-e-utilitarios/chevrolet/onix?pe=60000&gb=2",
+      "dealer": {
+        "name": "Localiza Seminovos — Campinas Taquaral",
+        "type": "Seminovos Certificados",
+        "city": "Campinas",
+        "state": "SP",
+        "neighborhood": "Taquaral",
+        "phone": "(19) 3795-8000",
+        "whatsapp": "5519992345678",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.4 SPE/4 Flex",
+        "power": "106 cv (E) / 98 cv (G)",
+        "consumptionCity": "11,7 km/l (G) / 7,9 km/l (E)",
+        "consumptionRoad": "13,9 km/l (G) / 9,6 km/l (E)",
+        "trunk": "280 Litros",
+        "warranty": "Garantia Localiza de 1 ano",
+        "features": [
+          "Câmbio AT6 confiável",
+          "MyLink com Apple CarPlay e Android Auto",
+          "Piloto Automático",
+          "Câmera de ré"
+        ]
+      },
+      "cautelarStatus": "100% Dekra Aprovado",
+      "tags": [
+        "Foto Real",
+        "Até 60k",
+        "Câmbio Automático 6m",
+        "Campinas"
+      ],
+      "financing": {
+        "downPayment": 17940,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 1507,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 17,940 (30%) + 48x de R$ 1,507 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-70k-fit",
+      "title": "Honda Fit EX 1.5 16V i-VTEC Flex CVT 2018",
+      "modelCategory": "Honda Fit Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "70k",
+      "badge": "✨ Sugestão até 70k",
+      "year": "2018/2018",
+      "km": 49800,
+      "color": "Cinza Barium",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático CVT de 7 velocidades simuladas",
+      "price": 68900,
+      "originalPrice": 73500,
+      "fipePrice": 72800,
+      "priceVsFipe": "-R$ 3.900 (Abaixo da FIPE)",
+      "image": "./img/cars/argo-trekking.jpg",
+      "portal": "iCarros SP",
+      "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
+      "dealer": {
+        "name": "Daitan Seminovos — São Paulo",
+        "type": "Concessionária Especializada Honda",
+        "city": "São Paulo",
+        "state": "SP",
+        "neighborhood": "Moema",
+        "phone": "(11) 5053-8000",
+        "whatsapp": "5511998877665",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.5 i-VTEC Flex",
+        "power": "116 cv (E) / 115 cv (G)",
+        "consumptionCity": "12,3 km/l (G) / 8,3 km/l (E)",
+        "consumptionRoad": "14,1 km/l (G) / 9,9 km/l (E)",
+        "trunk": "363 Litros (Sistema Magic Seat)",
+        "warranty": "Garantia de concessionária",
+        "features": [
+          "Mecânica japonesa lendária",
+          "Bancos Magic Seat com rebatimento total",
+          "Piloto Automático",
+          "Ar condicionado digital"
+        ]
+      },
+      "cautelarStatus": "100% Cautelar Dekra Aprovado",
+      "tags": [
+        "Foto Real",
+        "Até 70k",
+        "Honda Fit",
+        "Super Confiável"
+      ],
+      "financing": {
+        "downPayment": 20670,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 1737,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 20,670 (30%) + 48x de R$ 1,737 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-70k-hb20",
+      "title": "Hyundai HB20 Premium 1.6 Flex Automático 2019",
+      "modelCategory": "Hyundai HB20 Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "70k",
+      "badge": "✨ Sugestão até 70k",
+      "year": "2019/2019",
+      "km": 44100,
+      "color": "Branco Polar",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático de 6 marchas",
+      "price": 66900,
+      "originalPrice": 71900,
+      "fipePrice": 70500,
+      "priceVsFipe": "-R$ 3.600 (Abaixo da FIPE)",
+      "image": "./img/cars/vw-polo-tsi.jpg",
+      "portal": "Mercado Livre SP",
+      "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/hyundai/hb20/sao-paulo/hb20-automatico_PriceRange_0-70000",
+      "dealer": {
+        "name": "Carrera Seminovos — Santo André",
+        "type": "Concessionária Multimarcas",
+        "city": "Santo André",
+        "state": "SP",
+        "neighborhood": "Campestre",
+        "phone": "(11) 4433-2000",
+        "whatsapp": "5511993344556",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.6 Gamma Flex",
+        "power": "128 cv (E) / 122 cv (G)",
+        "consumptionCity": "11,5 km/l (G) / 7,1 km/l (E)",
+        "consumptionRoad": "13,6 km/l (G) / 9,4 km/l (E)",
+        "trunk": "300 Litros",
+        "warranty": "Garantia 1 ano",
+        "features": [
+          "Versão topo de linha Premium",
+          "Bancos em couro marrom",
+          "Ar digital",
+          "Acendimento automático dos faróis"
+        ]
+      },
+      "cautelarStatus": "100% Periciado",
+      "tags": [
+        "Foto Real",
+        "Até 70k",
+        "Topo de Linha",
+        "Santo André"
+      ],
+      "financing": {
+        "downPayment": 20070,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 1686,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 20,070 (30%) + 48x de R$ 1,686 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-100k-dolphin",
+      "title": "BYD Dolphin EV 44.9 kWh (Hatch Médio) 2024",
+      "modelCategory": "BYD Dolphin EV",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "100k",
+      "badge": "🚀 Upgrade até 100k",
+      "year": "2023/2024",
+      "km": 14200,
+      "color": "Cinza Dolphin / Afterglow Pink",
+      "fuel": "100% Elétrico (Bateria Blade 44.9 kWh)",
+      "transmission": "Automático Direto",
+      "price": 98900,
+      "originalPrice": 109000,
+      "fipePrice": 112000,
+      "priceVsFipe": "-R$ 13.100 (Oportunidade Upgrade)",
+      "image": "./img/cars/byd-dolphin-mini-branco.jpg",
+      "portal": "Webmotors SP",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin?estadocidade=S%C3%A3o%20Paulo&precoate=100000",
+      "dealer": {
+        "name": "Dahruj BYD — Vila Olímpia",
+        "type": "Concessionária Oficial BYD",
+        "city": "São Paulo",
+        "state": "SP",
+        "neighborhood": "Vila Olímpia",
+        "phone": "(11) 3048-2000",
+        "whatsapp": "5511997788112",
+        "verified": true
+      },
+      "specs": {
+        "engine": "Motor Elétrico 95 cv / 18,4 kgfm",
+        "power": "95 cv (Mais espaçoso que o Mini)",
+        "range": "291 km (Inmetro) / até 360 km cidade",
+        "battery": "44.9 kWh Blade Battery",
+        "costPerKm": "R$ 0,09 por km",
+        "trunk": "345 Litros",
+        "warranty": "Garantia BYD até 2031",
+        "features": [
+          "O irmão maior do Dolphin Mini",
+          "Entre-eixos gigante de 2,70m",
+          "Câmera 360°",
+          "Tela rotativa 12.8\""
+        ]
+      },
+      "cautelarStatus": "100% Impecável sem apontamentos",
+      "tags": [
+        "Foto Real",
+        "Até 100k",
+        "100% Elétrico",
+        "BYD Dolphin Maior",
+        "Bateria Blade"
+      ],
+      "financing": {
+        "downPayment": 29670,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 2493,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 29,670 (30%) + 48x de R$ 2,493 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-100k-pulse-impetus",
+      "title": "Fiat Pulse Impetus Turbo 200 AT Topo de Linha 2024",
+      "modelCategory": "Fiat Pulse Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "100k",
+      "badge": "🚀 Upgrade até 100k",
+      "year": "2023/2024",
+      "km": 18900,
+      "color": "Cinza Strato com Teto Preto",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático CVT de 7 marchas",
+      "price": 92500,
+      "originalPrice": 99900,
+      "fipePrice": 98400,
+      "priceVsFipe": "-R$ 5.900 (Abaixo da FIPE)",
+      "image": "./img/cars/pulse-audace-azul.jpg",
+      "portal": "Mercado Livre SP",
+      "listingUrl": "https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/pulse-impetus_PriceRange_0-100000",
+      "dealer": {
+        "name": "Movida Seminovos — Ribeirão Preto",
+        "type": "Seminovos Certificados",
+        "city": "Ribeirão Preto",
+        "state": "SP",
+        "neighborhood": "Jardim Botânico",
+        "phone": "(16) 3968-4500",
+        "whatsapp": "5516997451234",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.0 Turbo 200 Flex",
+        "power": "130 cv (E) / 125 cv (G)",
+        "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
+        "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
+        "trunk": "370 Litros",
+        "warranty": "Garantia de fábrica até 2027",
+        "features": [
+          "Versão topo de linha com frenagem autônoma de emergência",
+          "Alerta de saída de faixa",
+          "Painel 100% digital 7\"",
+          "Teto bicolor"
+        ]
+      },
+      "cautelarStatus": "100% Aprovado Dekra",
+      "tags": [
+        "Foto Real",
+        "Até 100k",
+        "Pulse Impetus Topo",
+        "Turbo 130cv",
+        "ADAS"
+      ],
+      "financing": {
+        "downPayment": 27750,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 2331,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 27,750 (30%) + 48x de R$ 2,331 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-100k-renegade",
+      "title": "Jeep Renegade Longitude 1.3 Turbo T270 Flex AT 2023",
+      "modelCategory": "Jeep Renegade Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "100k",
+      "badge": "🚀 Upgrade até 100k",
+      "year": "2022/2023",
+      "km": 34100,
+      "color": "Preto Carbon",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático de 6 marchas",
+      "price": 94900,
+      "originalPrice": 102000,
+      "fipePrice": 101500,
+      "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
+      "image": "./img/cars/c4-cactus.jpg",
+      "portal": "OLX São José dos Campos",
+      "listingUrl": "https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/autos-e-pecas/carros-vans-e-utilitarios/jeep/renegade?pe=100000&gb=2",
+      "dealer": {
+        "name": "Destaque Jeep — São José dos Campos",
+        "type": "Concessionária Jeep",
+        "city": "São José dos Campos",
+        "state": "SP",
+        "neighborhood": "Jardim Aquárius",
+        "phone": "(12) 3946-8800",
+        "whatsapp": "5512988776655",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.3 Turbo T270 Flex",
+        "power": "185 cv (Super potente)",
+        "consumptionCity": "11,0 km/l (G) / 7,7 km/l (E)",
+        "consumptionRoad": "12,8 km/l (G) / 9,1 km/l (E)",
+        "trunk": "320 Litros",
+        "warranty": "Garantia Jeep ativa",
+        "features": [
+          "Motor T270 de 185 cv",
+          "Frenagem autônoma",
+          "Faróis Full LED",
+          "Bancos em couro",
+          "Painel digital"
+        ]
+      },
+      "cautelarStatus": "100% Aprovado",
+      "tags": [
+        "Foto Real",
+        "Até 100k",
+        "SUV Médio",
+        "Turbo 185cv",
+        "Jeep"
+      ],
+      "financing": {
+        "downPayment": 28470,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 2392,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 28,470 (30%) + 48x de R$ 2,392 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-120k-dolphin-plus",
+      "title": "BYD Dolphin Plus EV 204 cv / 60 kWh 2024",
+      "modelCategory": "BYD Dolphin EV",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "120k",
+      "badge": "👑 Premium até 120k",
+      "year": "2023/2024",
+      "km": 11800,
+      "color": "Cinza com Teto Preto (Dual Color)",
+      "fuel": "100% Elétrico (Bateria Blade 60.5 kWh)",
+      "transmission": "Automático Direto",
+      "price": 119800,
+      "originalPrice": 134000,
+      "fipePrice": 132000,
+      "priceVsFipe": "-R$ 12.200 (Super Desconto)",
+      "image": "./img/cars/byd-dolphin-mini-preto.jpg",
+      "portal": "Webmotors SP",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-plus?estadocidade=S%C3%A3o%20Paulo&precoate=125000",
+      "dealer": {
+        "name": "Dahruj BYD — Morumbi",
+        "type": "Concessionária Oficial BYD",
+        "city": "São Paulo",
+        "state": "SP",
+        "neighborhood": "Morumbi",
+        "phone": "(11) 3740-9000",
+        "whatsapp": "5511991223344",
+        "verified": true
+      },
+      "specs": {
+        "engine": "Motor Elétrico 204 cv / 31,6 kgfm de torque",
+        "power": "204 cv (0 a 100 km/h em 7,0 segundos!)",
+        "range": "330 km (Inmetro) / até 420 km cidade",
+        "battery": "60.5 kWh Bateria Blade",
+        "costPerKm": "R$ 0,09 por km",
+        "trunk": "345 Litros",
+        "warranty": "Garantia até 2031",
+        "features": [
+          "Teto solar panorâmico",
+          "Bancos dianteiros elétricos com aquecimento",
+          "Piloto automático adaptativo (ACC)",
+          "204 cavalos de potência"
+        ]
+      },
+      "cautelarStatus": "100% Impecável laudo pericial",
+      "tags": [
+        "Foto Real",
+        "Até 120k",
+        "204 cv",
+        "Teto Solar",
+        "Blade 60 kWh"
+      ],
+      "financing": {
+        "downPayment": 35940,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 3019,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 35,940 (30%) + 48x de R$ 3,019 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-120k-pulse-abarth",
+      "title": "Fiat Pulse Abarth 1.3 Turbo 185 cv Esportivo 2024",
+      "modelCategory": "Fiat Pulse Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "120k",
+      "badge": "👑 Premium até 120k",
+      "year": "2023/2024",
+      "km": 15400,
+      "color": "Branco com Faixas Vermelhas Abarth",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático de 6 marchas com calibração Abarth",
+      "price": 118500,
+      "originalPrice": 128000,
+      "fipePrice": 125900,
+      "priceVsFipe": "-R$ 7.400 (Abaixo da FIPE)",
+      "image": "./img/cars/pulse-turbo-branco.jpg",
+      "portal": "Mobiauto Campinas",
+      "listingUrl": "https://www.mobiauto.com.br/carros/fiat/pulse/sp/campinas?preco_ate=120000",
+      "dealer": {
+        "name": "Grupo Daitan Abarth — Campinas",
+        "type": "Concessionária Autorizada Fiat / Abarth",
+        "city": "Campinas",
+        "state": "SP",
+        "neighborhood": "Nova Campinas",
+        "phone": "(19) 3755-9000",
+        "whatsapp": "5519997881122",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.3 Turbo T270 Abarth",
+        "power": "185 cv / 27,5 kgfm (0 a 100 em 7,6s)",
+        "consumptionCity": "10,0 km/l (G) / 6,8 km/l (E)",
+        "consumptionRoad": "12,3 km/l (G) / 8,8 km/l (E)",
+        "trunk": "370 Litros",
+        "warranty": "Garantia de fábrica ativa",
+        "features": [
+          "Edição especial Abarth com escapamento duplo esportivo",
+          "Botão Poison no volante",
+          "Rodas 17\" pretas",
+          "Freio de mão eletrônico com Auto Hold"
+        ]
+      },
+      "cautelarStatus": "100% Periciado",
+      "tags": [
+        "Foto Real",
+        "Até 120k",
+        "Pulse Abarth 185cv",
+        "Esportivo Autêntico"
+      ],
+      "financing": {
+        "downPayment": 35550,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 2987,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 35,550 (30%) + 48x de R$ 2,987 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
+    },
+    {
+      "id": "sug-120k-nivus-high",
+      "title": "Volkswagen Nivus Highline 200 TSI Automático 2024",
+      "modelCategory": "Volkswagen Nivus Automático",
+      "isTarget": false,
+      "isSuggestion": true,
+      "priceTier": "120k",
+      "badge": "👑 Premium até 120k",
+      "year": "2023/2024",
+      "km": 21300,
+      "color": "Cinza Moonstone",
+      "fuel": "Flex (Gasolina / Etanol)",
+      "transmission": "Automático de 6 marchas",
+      "price": 112900,
+      "originalPrice": 121000,
+      "fipePrice": 119500,
+      "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
+      "image": "./img/cars/vw-tera.jpg",
+      "portal": "Kavak Alphaville",
+      "listingUrl": "https://www.kavak.com/br/carros-usados/volkswagen/nivus?price_max=120000",
+      "dealer": {
+        "name": "Kavak Hub — Alphaville",
+        "type": "Seminovos Certificados",
+        "city": "Barueri",
+        "state": "SP",
+        "neighborhood": "Alphaville",
+        "phone": "(11) 3230-0000",
+        "whatsapp": "5511991238899",
+        "verified": true
+      },
+      "specs": {
+        "engine": "1.0 200 TSI Flex",
+        "power": "128 cv (E) / 116 cv (G)",
+        "consumptionCity": "12,1 km/l (G) / 8,3 km/l (E)",
+        "consumptionRoad": "14,2 km/l (G) / 10,1 km/l (E)",
+        "trunk": "415 Litros (Porta-malas gigante)",
+        "warranty": "Garantia Kavak Total de 2 Anos",
+        "features": [
+          "Versão topo de linha Highline",
+          "Piloto Automático Adaptativo (ACC)",
+          "Painel Active Info Display 10.25\"",
+          "VW Play com conexão sem fio"
+        ]
+      },
+      "cautelarStatus": "100% Certificado 240 Itens",
+      "tags": [
+        "Foto Real",
+        "Até 120k",
+        "Nivus Highline",
+        "ACC",
+        "Alphaville"
+      ],
+      "financing": {
+        "downPayment": 33870,
+        "downPaymentPercent": 30,
+        "termMonths": 48,
+        "monthlyInstallment": 2846,
+        "interestRate": 2.5,
+        "bank": "Banco Santander / BV / Itaú",
+        "optionsText": "Entrada de R$ 33,870 (30%) + 48x de R$ 2,846 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
+      }
     }
   ]
 }
