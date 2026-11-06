@@ -90,9 +90,12 @@ body {
 }
 
 .logo-icon {
-  font-size: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 255, 136, 0.1);
-  padding: 6px 10px;
+  color: var(--electric-green);
+  padding: 8px 10px;
   border-radius: var(--radius-md);
   border: 1px solid rgba(0, 255, 136, 0.25);
 }

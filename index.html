@@ -1,633 +1,625 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0d1117">
-  <title>AutoRadar SP — Buscador de Carros & Marketplace até R$ 80k</title>
-  
-  <!-- Meta tags PWA -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="AutoRadar SP">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="theme-color" content="#0d1117">
+ <title>AutoRadar SP — Buscador de Carros & Marketplace até R$ 80k</title>
+ 
+ <!-- Meta tags PWA -->
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="apple-mobile-web-app-title" content="AutoRadar SP">
+ <link rel="apple-touch-icon" href="icons/icon-192.png">
 
-  <!-- Estilos e Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=10">
-  <link rel="manifest" href="manifest.json">
-  <script>
-    // Limpeza automática imediata de caches legados
-    (function() {
-      const APP_VER = 'autoradar-sp-v10';
-      if (localStorage.getItem('autoradar_ver') !== APP_VER) {
-        localStorage.setItem('autoradar_ver', APP_VER);
-        if ('caches' in window) {
-          caches.keys().then(keys => {
-            keys.forEach(k => {
-              if (k !== APP_VER) caches.delete(k);
-            });
-          });
-        }
-      }
-    })();
-  </script>
+ <!-- Estilos e Fontes -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css?v=11">
+ <link rel="manifest" href="manifest.json">
+ <script>
+ // Limpeza automática imediata de caches legados
+ (function() {
+ const APP_VER = 'autoradar-sp-v11';
+ if (localStorage.getItem('autoradar_ver') !== APP_VER) {
+ localStorage.setItem('autoradar_ver', APP_VER);
+ if ('caches' in window) {
+ caches.keys().then(keys => {
+ keys.forEach(k => {
+ if (k !== APP_VER) caches.delete(k);
+ });
+ });
+ }
+ }
+ })();
+ </script>
 </head>
 <body>
-  <!-- Header Principal Estilo Marketplace -->
-  <header class="app-header">
-    <div class="header-container">
-      <div class="brand-group">
-        <div class="brand-logo">
-          <span class="logo-icon">🚗⚡</span>
-          <div class="brand-text">
-            <span class="brand-title">AutoRadar <span class="highlight-sp">SP</span></span>
-            <span class="brand-subtitle">Buscador Inteligente de Veículos até R$ 80.000</span>
-          </div>
-        </div>
-      </div>
+ <!-- Header Principal Estilo Marketplace -->
+ <header class="app-header">
+ <div class="header-container">
+ <div class="brand-group">
+ <div class="brand-logo">
+ <span class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+ <div class="brand-text">
+ <span class="brand-title">AutoRadar <span class="highlight-sp">SP</span></span>
+ <span class="brand-subtitle">Buscador Inteligente de Veículos até R$ 80.000</span>
+ </div>
+ </div>
+ </div>
 
-      <!-- Status de Atualização Diária -->
-      <div class="sync-status-card">
-        <div class="sync-indicator">
-          <span class="pulse-dot"></span>
-          <span id="syncStatusText">Atualizado Hoje às 12:00</span>
-        </div>
-        <button id="btnForceSync" class="btn-refresh" title="Forçar checagem de novas ofertas nas lojas de SP">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
-          Varredura Diária
-        </button>
-        <button id="btnClearCache" class="btn-refresh" title="Limpar cache do navegador e forçar recarga das fotos reais dos anúncios">
-          🧹 Limpar Cache
-        </button>
-      </div>
+ <!-- Status de Atualização Diária -->
+ <div class="sync-status-card">
+ <div class="sync-indicator">
+ <span class="pulse-dot"></span>
+ <span id="syncStatusText">Atualizado Hoje às 12:00</span>
+ </div>
+ <button id="btnForceSync" class="btn-refresh" title="Forçar checagem de novas ofertas nas lojas de SP">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+ Varredura Diária
+ </button>
+ <button id="btnClearCache" class="btn-refresh" title="Limpar cache do navegador e forçar recarga das fotos reais dos anúncios">
+ Limpar Cache
+ </button>
+ </div>
 
-      <!-- Resumo do Orçamento do Casal -->
-      <div class="budget-badge-pill">
-        <span class="pill-label">Nosso Teto:</span>
-        <span class="pill-value">Até R$ 80.000</span>
-        <span class="pill-pref">⚡ Preferência Elétricos</span>
-      </div>
+ <!-- Resumo do Orçamento do Casal -->
+ <div class="budget-badge-pill">
+ <span class="pill-label">Nosso Teto:</span>
+ <span class="pill-value">Até R$ 80.000</span>
+ <span class="pill-pref">Preferência 100% Elétricos</span>
+ </div>
 
-      <!-- Botão de Instalação PWA -->
-      <button id="btnInstallPwa" class="btn-install-pwa hidden" title="Instalar aplicativo na tela de início do seu celular ou PC">
-        <span class="pwa-icon">📲</span>
-        <span class="pwa-text">Instalar App</span>
-      </button>
-    </div>
+ <!-- Botão de Instalação PWA -->
+ <button id="btnInstallPwa" class="btn-install-pwa hidden" title="Instalar aplicativo na tela de início do seu celular ou PC">
+ <span class="pwa-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+ <span class="pwa-text">Instalar App</span>
+ </button>
+ </div>
 
-    <!-- Navegação de Abas -->
-    <nav class="main-tabs-nav">
-      <div class="nav-container">
-        <button class="nav-tab active" data-tab="tab-targets">
-          <span class="tab-emoji">🎯</span> Nossos 3 Alvos
-          <span class="tab-count" id="countTargets">0</span>
-        </button>
-        <button class="nav-tab" data-tab="tab-electrics">
-          <span class="tab-emoji">⚡</span> Radar 100% Elétricos
-          <span class="tab-count" id="countElectrics">0</span>
-        </button>
-        <button class="nav-tab" data-tab="tab-suggestions">
-          <span class="tab-emoji">💡</span> <span id="tabSuggestionsTitle">Sugestões & Similares</span>
-          <span class="tab-count" id="countSuggestions">0</span>
-        </button>
-        <button class="nav-tab" data-tab="tab-comparator">
-          <span class="tab-emoji">⚖️</span> Comparador Lado a Lado
-          <span class="tab-count" id="countCompare">0</span>
-        </button>
-        <button class="nav-tab" data-tab="tab-simulator">
-          <span class="tab-emoji">🧮</span> Simulador de Financiamento
-        </button>
-        <button class="nav-tab" data-tab="tab-add">
-          <span class="tab-emoji">➕</span> Adicionar Anúncio
-        </button>
-      </div>
-    </nav>
-  </header>
+ <!-- Navegação de Abas -->
+ <nav class="main-tabs-nav">
+ <div class="nav-container">
+ <button class="nav-tab active" data-tab="tab-targets">
+ Nossos 3 Alvos
+ <span class="tab-count" id="countTargets">0</span>
+ </button>
+ <button class="nav-tab" data-tab="tab-electrics">
+ Radar 100% Elétricos
+ <span class="tab-count" id="countElectrics">0</span>
+ </button>
+ <button class="nav-tab" data-tab="tab-suggestions">
+ <span id="tabSuggestionsTitle">Sugestões & Similares</span>
+ <span class="tab-count" id="countSuggestions">0</span>
+ </button>
+ <button class="nav-tab" data-tab="tab-comparator">
+ Comparador Lado a Lado
+ <span class="tab-count" id="countCompare">0</span>
+ </button>
+ <button class="nav-tab" data-tab="tab-simulator">
+ Simulador de Financiamento
+ </button>
+ <button class="nav-tab" data-tab="tab-add">
+ Adicionar Anúncio
+ </button>
+ </div>
+ </nav>
+ </header>
 
-  <!-- Banner de Destaque Estratégico para o Casal -->
-  <section class="insights-banner">
-    <div class="container insights-grid">
-      <div class="insight-card pulse-card" data-insight-model="pulse" title="Clique para filtrar apenas o Fiat Pulse">
-        <div class="insight-header">
-          <span class="icon">🚗</span>
-          <strong>Fiat Pulse Automático</strong>
-        </div>
-        <p><strong>Mais acessível e abundante:</strong> Grande oferta entre <strong>R$ 72.900 e R$ 79.900</strong> em concessionárias de SP. Motor 1.3 Firefly CVT ou 1.0 Turbo 200.</p>
-        <span class="insight-click-hint">👉 Clique para filtrar o Pulse</span>
-      </div>
-      <div class="insight-card dolphin-card" data-insight-model="byd" title="Clique para filtrar apenas o BYD Dolphin Mini">
-        <div class="insight-header">
-          <span class="icon">⚡</span>
-          <strong>BYD Dolphin Mini (Elétrico)</strong>
-        </div>
-        <p><strong>Custo de R$ 0,08/km e isento de rodízio:</strong> Mercado de seminovos oscila entre R$ 80k-95k. Oportunidades de repasse/particular são monitoradas diariamente!</p>
-        <span class="insight-click-hint">👉 Clique para filtrar o Dolphin Mini</span>
-      </div>
-      <div class="insight-card tera-card" data-insight-model="tera" title="Clique para filtrar apenas o VW Tera">
-        <div class="insight-header">
-          <span class="icon">🚙</span>
-          <strong>Volkswagen Tera Automático</strong>
-        </div>
-        <p><strong>Lançamento recente (2025/2026):</strong> Preço 0km a partir de R$ 105k. Mostramos ofertas de diretoria e a alternativa direta <strong>Polo TSI AT por R$ 76k</strong>.</p>
-        <span class="insight-click-hint">👉 Clique para filtrar o Tera</span>
-      </div>
-    </div>
-  </section>
+ <!-- Banner de Destaque Estratégico para o Casal -->
+ <section class="insights-banner">
+ <div class="container insights-grid">
+ <div class="insight-card pulse-card" data-insight-model="pulse" title="Clique para filtrar apenas o Fiat Pulse">
+ <div class="insight-header">
+ 
+ <strong>Fiat Pulse Automático</strong>
+ </div>
+ <p><strong>Mais acessível e abundante:</strong> Grande oferta entre <strong>R$ 72.900 e R$ 79.900</strong> em concessionárias de SP. Motor 1.3 Firefly CVT ou 1.0 Turbo 200.</p>
+ <span class="insight-click-hint">Clique para filtrar o Pulse</span>
+ </div>
+ <div class="insight-card dolphin-card" data-insight-model="byd" title="Clique para filtrar apenas o BYD Dolphin Mini">
+ <div class="insight-header">
+ 
+ <strong>BYD Dolphin Mini (Elétrico)</strong>
+ </div>
+ <p><strong>Custo de R$ 0,08/km e isento de rodízio:</strong> Mercado de seminovos oscila entre R$ 80k-95k. Oportunidades de repasse/particular são monitoradas diariamente!</p>
+ <span class="insight-click-hint">Clique para filtrar o Dolphin Mini</span>
+ </div>
+ <div class="insight-card tera-card" data-insight-model="tera" title="Clique para filtrar apenas o VW Tera">
+ <div class="insight-header">
+ 
+ <strong>Volkswagen Tera Automático</strong>
+ </div>
+ <p><strong>Lançamento recente (2025/2026):</strong> Preço 0km a partir de R$ 105k. Mostramos ofertas de diretoria e a alternativa direta <strong>Polo TSI AT por R$ 76k</strong>.</p>
+ <span class="insight-click-hint">Clique para filtrar o Tera</span>
+ </div>
+ </div>
+ </section>
 
-  <!-- Barra de Filtros Estilo Marketplace -->
-  <section class="filters-bar-section">
-    <div class="container filters-container">
-      <div class="search-box">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="searchInput" placeholder="Buscar por modelo, loja, bairro ou cidade de SP...">
-        <button id="btnClearSearch" class="btn-clear hidden">&times;</button>
-      </div>
+ <!-- Barra de Filtros Estilo Marketplace -->
+ <section class="filters-bar-section">
+ <div class="container filters-container">
+ <div class="search-box">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="text" id="searchInput" placeholder="Buscar por modelo, loja, bairro ou cidade de SP...">
+ <button id="btnClearSearch" class="btn-clear hidden">&times;</button>
+ </div>
 
-      <div class="filter-controls-buttons">
-        <!-- 1. Botões de Modelos Alvo (Pulse, BYD, Tera) -->
-        <div class="filter-group-buttons model-filter-row">
-          <span class="filter-group-label">🎯 Nossos Alvos:</span>
-          <div class="btn-group-chips" id="modelBtnGroup">
-            <button type="button" class="filter-btn-chip filter-model-chip active" data-model="all">🎯 Todos os 3</button>
-            <button type="button" class="filter-btn-chip filter-model-chip" data-model="pulse">🚗 Fiat Pulse AT</button>
-            <button type="button" class="filter-btn-chip filter-model-chip" data-model="byd">⚡ BYD Dolphin Mini</button>
-            <button type="button" class="filter-btn-chip filter-model-chip" data-model="tera">🚙 VW Tera AT</button>
-          </div>
-        </div>
+ <div class="filter-controls-buttons">
+ <!-- 1. Botões de Modelos Alvo (Pulse, BYD, Tera) -->
+ <div class="filter-group-buttons model-filter-row">
+ <span class="filter-group-label">Modelos Alvo:</span>
+ <div class="btn-group-chips" id="modelBtnGroup">
+ <button type="button" class="filter-btn-chip filter-model-chip active" data-model="all">Todos os 3</button>
+ <button type="button" class="filter-btn-chip filter-model-chip" data-model="pulse">Fiat Pulse AT</button>
+ <button type="button" class="filter-btn-chip filter-model-chip" data-model="byd">BYD Dolphin Mini</button>
+ <button type="button" class="filter-btn-chip filter-model-chip" data-model="tera">VW Tera AT</button>
+ </div>
+ </div>
 
-        <!-- 2. Botões de Preço Máximo -->
-        <div class="filter-group-buttons">
-          <span class="filter-group-label">💰 Preço Máximo:</span>
-          <div class="btn-group-chips" id="priceBtnGroup">
-            <button type="button" class="filter-btn-chip active" data-price="80000">🎯 Até 80k (Teto)</button>
-            <button type="button" class="filter-btn-chip" data-price="60000">Até 60k</button>
-            <button type="button" class="filter-btn-chip" data-price="70000">Até 70k</button>
-            <button type="button" class="filter-btn-chip" data-price="100000">Até 100k</button>
-            <button type="button" class="filter-btn-chip" data-price="120000">Até 120k</button>
-            <button type="button" class="filter-btn-chip" data-price="all">Todos os Preços</button>
-          </div>
-        </div>
+ <!-- 2. Botões de Preço Máximo -->
+ <div class="filter-group-buttons">
+ <span class="filter-group-label">Preço Máximo:</span>
+ <div class="btn-group-chips" id="priceBtnGroup">
+ <button type="button" class="filter-btn-chip active" data-price="80000">Até 80k (Teto)</button>
+ <button type="button" class="filter-btn-chip" data-price="60000">Até 60k</button>
+ <button type="button" class="filter-btn-chip" data-price="70000">Até 70k</button>
+ <button type="button" class="filter-btn-chip" data-price="100000">Até 100k</button>
+ <button type="button" class="filter-btn-chip" data-price="120000">Até 120k</button>
+ <button type="button" class="filter-btn-chip" data-price="all">Todos os Preços</button>
+ </div>
+ </div>
 
-        <!-- 3. Botões de Combustível -->
-        <div class="filter-group-buttons">
-          <span class="filter-group-label">⚡ Combustível:</span>
-          <div class="btn-group-chips" id="fuelBtnGroup">
-            <button type="button" class="filter-btn-chip active" data-fuel="all">Todos</button>
-            <button type="button" class="filter-btn-chip" data-fuel="electric">⚡ 100% Elétrico</button>
-            <button type="button" class="filter-btn-chip" data-fuel="flex">⛽ Flex Automático</button>
-          </div>
-        </div>
+ <!-- 3. Botões de Combustível -->
+ <div class="filter-group-buttons">
+ <span class="filter-group-label">Combustível:</span>
+ <div class="btn-group-chips" id="fuelBtnGroup">
+ <button type="button" class="filter-btn-chip active" data-fuel="all">Todos</button>
+ <button type="button" class="filter-btn-chip" data-fuel="electric">100% Elétrico</button>
+ <button type="button" class="filter-btn-chip" data-fuel="flex">Flex Automático</button>
+ </div>
+ </div>
 
-        <!-- 4. Botões de Região em SP com Scroll -->
-        <div class="filter-group-buttons">
-          <span class="filter-group-label">📍 Região em SP:</span>
-          <div class="btn-group-chips scrollable" id="regionBtnGroup">
-            <button type="button" class="filter-btn-chip active" data-city="all">📍 Todo o Estado</button>
-            <button type="button" class="filter-btn-chip" data-city="São Paulo">🏙️ SP Capital</button>
-            <button type="button" class="filter-btn-chip" data-city="ABC">🏭 Grande SP & ABC</button>
-            <button type="button" class="filter-btn-chip" data-city="Barueri">🏢 Alphaville / Barueri</button>
-            <button type="button" class="filter-btn-chip" data-city="Campinas">🌳 Campinas</button>
-            <button type="button" class="filter-btn-chip" data-city="Ribeirão Preto">🌾 Ribeirão Preto</button>
-            <button type="button" class="filter-btn-chip" data-city="São José dos Campos">🚀 SJC / Vale</button>
-            <button type="button" class="filter-btn-chip" data-city="Sorocaba">🏰 Sorocaba</button>
-            <button type="button" class="filter-btn-chip" data-city="Santos">🌊 Santos / Litoral</button>
-            <button type="button" class="filter-btn-chip" data-city="Jundiaí">🍇 Jundiaí / Piracicaba</button>
-          </div>
-        </div>
+ <!-- 4. Botões de Região em SP com Scroll -->
+ <div class="filter-group-buttons">
+ <span class="filter-group-label">Região em SP:</span>
+ <div class="btn-group-chips scrollable" id="regionBtnGroup">
+ <button type="button" class="filter-btn-chip active" data-city="all">Todo o Estado</button>
+ <button type="button" class="filter-btn-chip" data-city="São Paulo">SP Capital</button>
+ <button type="button" class="filter-btn-chip" data-city="ABC">Grande SP & ABC</button>
+ <button type="button" class="filter-btn-chip" data-city="Barueri">Alphaville / Barueri</button>
+ <button type="button" class="filter-btn-chip" data-city="Campinas">Campinas</button>
+ <button type="button" class="filter-btn-chip" data-city="Ribeirão Preto">Ribeirão Preto</button>
+ <button type="button" class="filter-btn-chip" data-city="São José dos Campos">SJC / Vale</button>
+ <button type="button" class="filter-btn-chip" data-city="Sorocaba">Sorocaba</button>
+ <button type="button" class="filter-btn-chip" data-city="Santos">Santos / Litoral</button>
+ <button type="button" class="filter-btn-chip" data-city="Jundiaí">Jundiaí / Piracicaba</button>
+ </div>
+ </div>
 
-        <!-- 5. Botões de Ordenação -->
-        <div class="filter-group-buttons">
-          <span class="filter-group-label">↕️ Ordenar Por:</span>
-          <div class="btn-group-chips" id="sortBtnGroup">
-            <button type="button" class="filter-btn-chip active" data-sort="price-asc">💰 Menor Preço</button>
-            <button type="button" class="filter-btn-chip" data-sort="electric-first">⚡ Elétricos 1º</button>
-            <button type="button" class="filter-btn-chip" data-sort="km-asc">🛣️ Menor KM</button>
-            <button type="button" class="filter-btn-chip" data-sort="year-desc">📅 Mais Novo</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ <!-- 5. Botões de Ordenação -->
+ <div class="filter-group-buttons">
+ <span class="filter-group-label">Ordenar Por:</span>
+ <div class="btn-group-chips" id="sortBtnGroup">
+ <button type="button" class="filter-btn-chip active" data-sort="price-asc">Menor Preço</button>
+ <button type="button" class="filter-btn-chip" data-sort="electric-first">Elétricos 1º</button>
+ <button type="button" class="filter-btn-chip" data-sort="km-asc">Menor KM</button>
+ <button type="button" class="filter-btn-chip" data-sort="year-desc">Mais Novo</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <!-- Hub de Portais Externos de Busca em SP -->
-  <section class="container" style="margin-top: -10px; margin-bottom: 24px;">
-    <div class="portal-search-hub">
-      <div class="portal-hub-header">
-        <div>
-          <div class="portal-hub-title">
-            <span>🌐</span> Radares de Busca Automotiva em SP (Busca Direta nos Portais)
-          </div>
-          <p class="portal-hub-desc">Acesse com 1 clique as buscas oficiais pré-filtradas (até R$ 80.000 • Estado de São Paulo • Nossos Modelos):</p>
-        </div>
-      </div>
-      <div class="portal-chips-grid">
-        <a href="https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=S%C3%A3o%20Paulo&precoate=80000" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">🚗</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">Webmotors SP</div>
-            <div class="portal-chip-sub">Pulse & Elétricos até 80k</div>
-          </div>
-        </a>
-        <a href="https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">🟠</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">OLX São Paulo</div>
-            <div class="portal-chip-sub">Particulares & Lojistas SP</div>
-          </div>
-        </a>
-        <a href="https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/sao-paulo/pulse-automatico_PriceRange_0-80000" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">🟡</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">Mercado Livre SP</div>
-            <div class="portal-chip-sub">Carros & Seminovos SP</div>
-          </div>
-        </a>
-        <a href="https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">🔵</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">iCarros SP</div>
-            <div class="portal-chip-sub">Concessionárias do Estado</div>
-          </div>
-        </a>
-        <a href="https://www.mobiauto.com.br/carros/fiat/pulse/sp?preco_ate=80000" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">⚡</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">Mobiauto SP</div>
-            <div class="portal-chip-sub">Ofertas Capital e Interior</div>
-          </div>
-        </a>
-        <a href="https://www.kavak.com/br/carros-usados?price_max=80000" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">🛡️</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">Kavak SP & Alphaville</div>
-            <div class="portal-chip-sub">Revisados com Garantia</div>
-          </div>
-        </a>
-        <a href="https://www.chavesnamao.com.br/carros-usados/sp/fiat/pulse/?precoate=80000" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">🔑</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">Chaves na Mão SP</div>
-            <div class="portal-chip-sub">Lojistas do Interior e ABC</div>
-          </div>
-        </a>
-        <a href="https://seminovos.localiza.com/carros/sp?precoMaximo=80000" target="_blank" rel="noopener" class="portal-chip-link">
-          <span class="portal-chip-icon">🟢</span>
-          <div class="portal-chip-content">
-            <div class="portal-chip-name">Localiza & Movida</div>
-            <div class="portal-chip-sub">Seminovos com Laudo Dekra</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+ <!-- Hub de Portais Externos de Busca em SP -->
+ <section class="container" style="margin-top: -10px; margin-bottom: 24px;">
+ <div class="portal-search-hub">
+ <div class="portal-hub-header">
+ <div>
+ <div class="portal-hub-title">
+ <span></span> Radares de Busca Automotiva em SP (Busca Direta nos Portais)
+ </div>
+ <p class="portal-hub-desc">Acesse com 1 clique as buscas oficiais pré-filtradas (até R$ 80.000 • Estado de São Paulo • Nossos Modelos):</p>
+ </div>
+ </div>
+ <div class="portal-chips-grid">
+ <a href="https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=S%C3%A3o%20Paulo&precoate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">Webmotors SP</div>
+ <div class="portal-chip-sub">Pulse & Elétricos até 80k</div>
+ </div>
+ </a>
+ <a href="https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">OLX São Paulo</div>
+ <div class="portal-chip-sub">Particulares & Lojistas SP</div>
+ </div>
+ </a>
+ <a href="https://lista.mercadolivre.com.br/veiculos/carros-vans-utilitarios/fiat/pulse/sao-paulo/pulse-automatico_PriceRange_0-80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">Mercado Livre SP</div>
+ <div class="portal-chip-sub">Carros & Seminovos SP</div>
+ </div>
+ </a>
+ <a href="https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">iCarros SP</div>
+ <div class="portal-chip-sub">Concessionárias do Estado</div>
+ </div>
+ </a>
+ <a href="https://www.mobiauto.com.br/carros/fiat/pulse/sp?preco_ate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">Mobiauto SP</div>
+ <div class="portal-chip-sub">Ofertas Capital e Interior</div>
+ </div>
+ </a>
+ <a href="https://www.kavak.com/br/carros-usados?price_max=80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">Kavak SP & Alphaville</div>
+ <div class="portal-chip-sub">Revisados com Garantia</div>
+ </div>
+ </a>
+ <a href="https://www.chavesnamao.com.br/carros-usados/sp/fiat/pulse/?precoate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">Chaves na Mão SP</div>
+ <div class="portal-chip-sub">Lojistas do Interior e ABC</div>
+ </div>
+ </a>
+ <a href="https://seminovos.localiza.com/carros/sp?precoMaximo=80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <div class="portal-chip-content">
+ <div class="portal-chip-name">Localiza & Movida</div>
+ <div class="portal-chip-sub">Seminovos com Laudo Dekra</div>
+ </div>
+ </a>
+ </div>
+ </div>
+ </section>
 
-  <!-- Área Principal de Conteúdo -->
-  <main class="main-content container">
+ <!-- Área Principal de Conteúdo -->
+ <main class="main-content container">
 
-    <!-- ABA 1: Nossos 3 Alvos -->
-    <div id="tab-targets" class="tab-pane active">
-      <div class="section-title-wrap">
-        <div>
-          <h2>🎯 Carros nos 3 Modelos Desejados</h2>
-          <p class="section-desc">BYD Dolphin Mini, Volkswagen Tera Automático e Fiat Pulse Automático encontrados em lojas e concessionárias de São Paulo.</p>
-        </div>
-        <div class="target-pills">
-          <button class="subfilter-pill active" data-target="all">Todos os 3</button>
-          <button class="subfilter-pill" data-target="pulse">Fiat Pulse AT</button>
-          <button class="subfilter-pill" data-target="byd">BYD Dolphin Mini</button>
-          <button class="subfilter-pill" data-target="tera">VW Tera AT</button>
-        </div>
-      </div>
+ <!-- ABA 1: Nossos 3 Alvos -->
+ <div id="tab-targets" class="tab-pane active">
+ <div class="section-title-wrap">
+ <div>
+ <h2>Carros nos 3 Modelos Desejados</h2>
+ <p class="section-desc">BYD Dolphin Mini, Volkswagen Tera Automático e Fiat Pulse Automático encontrados em lojas e concessionárias de São Paulo.</p>
+ </div>
+ <div class="target-pills">
+ <button class="subfilter-pill active" data-target="all">Todos os 3</button>
+ <button class="subfilter-pill" data-target="pulse">Fiat Pulse AT</button>
+ <button class="subfilter-pill" data-target="byd">BYD Dolphin Mini</button>
+ <button class="subfilter-pill" data-target="tera">VW Tera AT</button>
+ </div>
+ </div>
 
-      <div class="cars-grid" id="gridTargets">
-        <!-- Injetado via JS -->
-      </div>
-    </div>
+ <div class="cars-grid" id="gridTargets">
+ <!-- Injetado via JS -->
+ </div>
+ </div>
 
-    <!-- ABA 2: Radar 100% Elétricos -->
-    <div id="tab-electrics" class="tab-pane">
-      <div class="section-title-wrap">
-        <div>
-          <h2>⚡ Radar Especial de Carros Elétricos até R$ 80k</h2>
-          <p class="section-desc">Atendendo à sua preferência por elétricos: BYD Dolphin Mini, Renault Kwid E-Tech, JAC E-JS1 e Chery iCar. Zero gasto com gasolina e isenção de rodízio em SP!</p>
-        </div>
-        <div class="electric-benefit-badge">
-          <span>🌿 IPVA Reduzido + Isenção de Rodízio SP + ~R$ 0,08 por km rodado</span>
-        </div>
-      </div>
+ <!-- ABA 2: Radar 100% Elétricos -->
+ <div id="tab-electrics" class="tab-pane">
+ <div class="section-title-wrap">
+ <div>
+ <h2>Radar Especial de Carros Elétricos até R$ 80k</h2>
+ <p class="section-desc">Atendendo à sua preferência por elétricos: BYD Dolphin Mini, Renault Kwid E-Tech, JAC E-JS1 e Chery iCar. Zero gasto com gasolina e isenção de rodízio em SP!</p>
+ </div>
+ <div class="electric-benefit-badge">
+ <span> IPVA Reduzido + Isenção de Rodízio SP + ~R$ 0,08 por km rodado</span>
+ </div>
+ </div>
 
-      <div class="cars-grid" id="gridElectrics">
-        <!-- Injetado via JS -->
-      </div>
-    </div>
+ <div class="cars-grid" id="gridElectrics">
+ <!-- Injetado via JS -->
+ </div>
+ </div>
 
-    <!-- ABA 3: Sugestões & Similares -->
-    <div id="tab-suggestions" class="tab-pane">
-      <div class="section-title-wrap">
-        <div>
-          <h2>💡 Sugestões Inteligentes de Similares & Alternativas</h2>
-          <p class="section-desc">Modelos automáticos modernos, elétricos e SUVs selecionados por faixa de preço em São Paulo.</p>
-        </div>
-        
-        <!-- Botões de Faixas de Sugestão -->
-        <div class="suggestion-btn-group" id="suggestionTierBtnGroup" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-          <span class="filter-group-label">📊 Faixa de Sugestão:</span>
-          <div class="btn-group-chips">
-            <button type="button" class="filter-btn-chip active" data-tier="80k">🎯 Até 80k (Base)</button>
-            <button type="button" class="filter-btn-chip" data-tier="60k">💰 Até 60k</button>
-            <button type="button" class="filter-btn-chip" data-tier="70k">✨ Até 70k</button>
-            <button type="button" class="filter-btn-chip" data-tier="100k">🚀 Até 100k</button>
-            <button type="button" class="filter-btn-chip" data-tier="120k">👑 Até 120k</button>
-            <button type="button" class="filter-btn-chip" data-tier="all">🌟 Todas</button>
-          </div>
-        </div>
-      </div>
+ <!-- ABA 3: Sugestões & Similares -->
+ <div id="tab-suggestions" class="tab-pane">
+ <div class="section-title-wrap">
+ <div>
+ <h2>Sugestões Inteligentes de Similares & Alternativas</h2>
+ <p class="section-desc">Modelos automáticos modernos, elétricos e SUVs selecionados por faixa de preço em São Paulo.</p>
+ </div>
+ 
+ <!-- Botões de Faixas de Sugestão -->
+ <div class="suggestion-btn-group" id="suggestionTierBtnGroup" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+ <span class="filter-group-label">Faixa de Sugestão:</span>
+ <div class="btn-group-chips">
+ <button type="button" class="filter-btn-chip active" data-tier="80k">Até 80k (Base)</button>
+ <button type="button" class="filter-btn-chip" data-tier="60k">Até 60k</button>
+ <button type="button" class="filter-btn-chip" data-tier="70k">Até 70k</button>
+ <button type="button" class="filter-btn-chip" data-tier="100k">Até 100k</button>
+ <button type="button" class="filter-btn-chip" data-tier="120k">Até 120k</button>
+ <button type="button" class="filter-btn-chip" data-tier="all">Todas as Faixas</button>
+ </div>
+ </div>
+ </div>
 
-      <div class="cars-grid" id="gridSuggestions">
-        <!-- Injetado via JS -->
-      </div>
-    </div>
+ <div class="cars-grid" id="gridSuggestions">
+ <!-- Injetado via JS -->
+ </div>
+ </div>
 
-    <!-- ABA 4: Comparador Lado a Lado -->
-    <div id="tab-comparator" class="tab-pane">
-      <div class="section-title-wrap">
-        <div>
-          <h2>⚖️ Comparador Técnico Lado a Lado</h2>
-          <p class="section-desc">Escolha até 3 veículos nos slots abaixo ou use os duelos prontos para confrontar consumo, autonomia, custos e financiamento lado a lado.</p>
-        </div>
-        <button id="btnClearCompare" class="btn-secondary-sm" title="Zerar comparação atual">🧹 Limpar Comparação</button>
-      </div>
+ <!-- ABA 4: Comparador Lado a Lado -->
+ <div id="tab-comparator" class="tab-pane">
+ <div class="section-title-wrap">
+ <div>
+ <h2>Comparador Técnico Lado a Lado</h2>
+ <p class="section-desc">Escolha até 3 veículos nos slots abaixo ou use os duelos prontos para confrontar consumo, autonomia, custos e financiamento lado a lado.</p>
+ </div>
+ <button id="btnClearCompare" class="btn-secondary-sm" title="Zerar comparação atual"> Limpar Comparação</button>
+ </div>
 
-      <!-- Atalhos de Comparações Rápidas (1-Clique) -->
-      <div class="compare-shortcuts-bar">
-        <span class="compare-shortcuts-label">⚡ Duelos Prontos:</span>
-        <button class="shortcut-chip" data-compare-preset="alvos">🎯 Nossos 3 Alvos (Pulse vs Dolphin Mini vs Tera)</button>
-        <button class="shortcut-chip" data-compare-preset="eletricos">🔋 Duelo 100% Elétricos (Dolphin Mini vs Kwid vs JAC)</button>
-        <button class="shortcut-chip" data-compare-preset="automaticos">🚗 Automáticos até 80k (Pulse vs Polo TSI vs Kicks)</button>
-        <button class="shortcut-chip" data-compare-preset="economicos">💰 Mais Econômicos (Pulse CVT vs Dolphin Mini vs Kwid E-Tech)</button>
-      </div>
+ <!-- Atalhos de Comparações Rápidas (1-Clique) -->
+ <div class="compare-shortcuts-bar">
+ <span class="compare-shortcuts-label">Duelos Prontos:</span>
+ <button class="shortcut-chip" data-compare-preset="alvos">Nossos 3 Alvos (Pulse vs Dolphin Mini vs Tera)</button>
+ <button class="shortcut-chip" data-compare-preset="eletricos">Duelo 100% Elétricos (Dolphin Mini vs Kwid vs JAC)</button>
+ <button class="shortcut-chip" data-compare-preset="automaticos">Automáticos até 80k (Pulse vs Polo TSI vs Kicks)</button>
+ <button class="shortcut-chip" data-compare-preset="economicos">Mais Econômicos (Pulse CVT vs Dolphin Mini vs Kwid E-Tech)</button>
+ </div>
 
-      <!-- Barra Interativa de Seleção dos 3 Slots -->
-      <div class="compare-slots-grid">
-        <div class="compare-slot-card" id="compareSlotCard1">
-          <div class="slot-badge-row">
-            <span class="slot-badge">Veículo 1</span>
-            <button class="btn-slot-remove" data-remove-slot="0" title="Remover este veículo" style="display: none;">❌ Remover</button>
-          </div>
-          <select id="compareSlotSelect1" class="compare-slot-select" data-slot-index="0">
-            <option value="">-- Selecione o 1º Veículo --</option>
-          </select>
-          <div id="compareSlotPreview1"></div>
-        </div>
+ <!-- Barra Interativa de Seleção dos 3 Slots -->
+ <div class="compare-slots-grid">
+ <div class="compare-slot-card" id="compareSlotCard1">
+ <div class="slot-badge-row">
+ <span class="slot-badge">Veículo 1</span>
+ <button class="btn-slot-remove" data-remove-slot="0" title="Remover este veículo" style="display: none;">Remover</button>
+ </div>
+ <select id="compareSlotSelect1" class="compare-slot-select" data-slot-index="0">
+ <option value="">-- Selecione o 1º Veículo --</option>
+ </select>
+ <div id="compareSlotPreview1"></div>
+ </div>
 
-        <div class="compare-slot-card" id="compareSlotCard2">
-          <div class="slot-badge-row">
-            <span class="slot-badge">Veículo 2</span>
-            <button class="btn-slot-remove" data-remove-slot="1" title="Remover este veículo" style="display: none;">❌ Remover</button>
-          </div>
-          <select id="compareSlotSelect2" class="compare-slot-select" data-slot-index="1">
-            <option value="">-- Selecione o 2º Veículo --</option>
-          </select>
-          <div id="compareSlotPreview2"></div>
-        </div>
+ <div class="compare-slot-card" id="compareSlotCard2">
+ <div class="slot-badge-row">
+ <span class="slot-badge">Veículo 2</span>
+ <button class="btn-slot-remove" data-remove-slot="1" title="Remover este veículo" style="display: none;">Remover</button>
+ </div>
+ <select id="compareSlotSelect2" class="compare-slot-select" data-slot-index="1">
+ <option value="">-- Selecione o 2º Veículo --</option>
+ </select>
+ <div id="compareSlotPreview2"></div>
+ </div>
 
-        <div class="compare-slot-card" id="compareSlotCard3">
-          <div class="slot-badge-row">
-            <span class="slot-badge">Veículo 3 (Opcional)</span>
-            <button class="btn-slot-remove" data-remove-slot="2" title="Remover este veículo" style="display: none;">❌ Remover</button>
-          </div>
-          <select id="compareSlotSelect3" class="compare-slot-select" data-slot-index="2">
-            <option value="">-- Selecione o 3º Veículo (Opcional) --</option>
-          </select>
-          <div id="compareSlotPreview3"></div>
-        </div>
-      </div>
+ <div class="compare-slot-card" id="compareSlotCard3">
+ <div class="slot-badge-row">
+ <span class="slot-badge">Veículo 3 (Opcional)</span>
+ <button class="btn-slot-remove" data-remove-slot="2" title="Remover este veículo" style="display: none;">Remover</button>
+ </div>
+ <select id="compareSlotSelect3" class="compare-slot-select" data-slot-index="2">
+ <option value="">-- Selecione o 3º Veículo (Opcional) --</option>
+ </select>
+ <div id="compareSlotPreview3"></div>
+ </div>
+ </div>
 
-      <div id="compareContainer" class="compare-container">
-        <!-- Injetado via JS -->
-      </div>
-    </div>
+ <div id="compareContainer" class="compare-container">
+ <!-- Injetado via JS -->
+ </div>
+ </div>
 
-    <!-- ABA 5: Simulador de Financiamento -->
-    <div id="tab-simulator" class="tab-pane">
-      <div class="section-title-wrap">
-        <div>
-          <h2>🧮 Simulador de Financiamento & Condições de Pagamento</h2>
-          <p class="section-desc">Simule a melhor composição entre o seu orçamento de R$ 80.000, entradas facilitadas, CDC bancário e taxas de juros reais.</p>
-        </div>
-      </div>
+ <!-- ABA 5: Simulador de Financiamento -->
+ <div id="tab-simulator" class="tab-pane">
+ <div class="section-title-wrap">
+ <div>
+ <h2>Simulador de Financiamento & Condições de Pagamento</h2>
+ <p class="section-desc">Simule a melhor composição entre o seu orçamento de R$ 80.000, entradas facilitadas, CDC bancário e taxas de juros reais.</p>
+ </div>
+ </div>
 
-      <div class="simulator-layout">
-        <div class="simulator-card inputs-card">
-          <h3>Configurar Simulação</h3>
-          <div class="form-row">
-            <label>Selecione um Carro do Catálogo (ou digite o valor):</label>
-            <select id="simCarSelect">
-              <option value="custom">Valor Personalizado...</option>
-            </select>
-          </div>
+ <div class="simulator-layout">
+ <div class="simulator-card inputs-card">
+ <h3>Configurar Simulação</h3>
+ <div class="form-row">
+ <label>Selecione um Carro do Catálogo (ou digite o valor):</label>
+ <select id="simCarSelect">
+ <option value="custom">Valor Personalizado...</option>
+ </select>
+ </div>
 
-          <div class="form-row">
-            <label>Valor do Veículo (R$):</label>
-            <input type="number" id="simVehiclePrice" value="79900" step="500">
-          </div>
+ <div class="form-row">
+ <label>Valor do Veículo (R$):</label>
+ <input type="number" id="simVehiclePrice" value="79900" step="500">
+ </div>
 
-          <div class="form-row">
-            <div class="label-with-val">
-              <label>Valor da Entrada (R$):</label>
-              <span id="simDownPaymentVal" class="val-tag">R$ 23.970 (30%)</span>
-            </div>
-            <input type="range" id="simDownPaymentRange" min="0" max="80000" step="1000" value="23970">
-          </div>
+ <div class="form-row">
+ <div class="label-with-val">
+ <label>Valor da Entrada (R$):</label>
+ <span id="simDownPaymentVal" class="val-tag">R$ 23.970 (30%)</span>
+ </div>
+ <input type="range" id="simDownPaymentRange" min="0" max="80000" step="1000" value="23970">
+ </div>
 
-          <div class="form-row">
-            <label>Prazo de Financiamento:</label>
-            <div class="term-selector">
-              <button class="term-btn" data-term="12">12x</button>
-              <button class="term-btn" data-term="24">24x</button>
-              <button class="term-btn" data-term="36">36x</button>
-              <button class="term-btn active" data-term="48">48x</button>
-              <button class="term-btn" data-term="60">60x</button>
-            </div>
-          </div>
+ <div class="form-row">
+ <label>Prazo de Financiamento:</label>
+ <div class="term-selector">
+ <button class="term-btn" data-term="12">12x</button>
+ <button class="term-btn" data-term="24">24x</button>
+ <button class="term-btn" data-term="36">36x</button>
+ <button class="term-btn active" data-term="48">48x</button>
+ <button class="term-btn" data-term="60">60x</button>
+ </div>
+ </div>
 
-          <div class="form-row">
-            <label>Taxa de Juros Mensal (% a.m.):</label>
-            <div class="interest-input-wrap">
-              <input type="number" id="simInterestRate" value="2.50" step="0.05" min="0.5" max="5.0">
-              <span class="unit">% a.m.</span>
-            </div>
-            
-            <!-- Cenários Reais de Mercado -->
-            <div class="rate-presets-row" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
-              <button type="button" class="rate-chip active" data-rate="2.50" title="Taxa real cobrada na mesa de concessionárias em SP (com CET e retorno)">🏢 Concessionária Real (2,50% a.m.)</button>
-              <button type="button" class="rate-chip" data-rate="1.99" title="Taxa negociada diretamente no app do seu banco com bom relacionamento">🤝 Correntista (1,99% a.m.)</button>
-              <button type="button" class="rate-chip" data-rate="1.49" title="Taxa subsidiada de fábrica (geralmente exige 40% a 50% de entrada)">⚡ Montadora / Elétrico (1,49% a.m.)</button>
-              <button type="button" class="rate-chip" data-rate="2.90" title="Taxa com entrada mínima ou score em recuperação">⚠️ Entrada Baixa (2,90% a.m.)</button>
-            </div>
+ <div class="form-row">
+ <label>Taxa de Juros Mensal (% a.m.):</label>
+ <div class="interest-input-wrap">
+ <input type="number" id="simInterestRate" value="2.50" step="0.05" min="0.5" max="5.0">
+ <span class="unit">% a.m.</span>
+ </div>
+ 
+ <!-- Cenários Reais de Mercado -->
+ <div class="rate-presets-row" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
+ <button type="button" class="rate-chip active" data-rate="2.50" title="Taxa real cobrada na mesa de concessionárias em SP (com CET e retorno)"> Concessionária Real (2,50% a.m.)</button>
+ <button type="button" class="rate-chip" data-rate="1.99" title="Taxa negociada diretamente no app do seu banco com bom relacionamento"> Correntista (1,99% a.m.)</button>
+ <button type="button" class="rate-chip" data-rate="1.49" title="Taxa subsidiada de fábrica (geralmente exige 40% a 50% de entrada)"> Montadora / Elétrico (1,49% a.m.)</button>
+ <button type="button" class="rate-chip" data-rate="2.90" title="Taxa com entrada mínima ou score em recuperação"> Entrada Baixa (2,90% a.m.)</button>
+ </div>
 
-            <span class="help-text" style="margin-top: 8px; display: block; line-height: 1.4;">
-              ⚠️ <strong>Realidade de Balcão:</strong> Concessionárias em SP costumam ofertar taxas de <strong>2,30% a 2,65% a.m. (CET)</strong> em seminovos porque embutem IOF, TAC (tarifa de cadastro), gravame e a comissão da loja (retorno de mesa).
-            </span>
-          </div>
-        </div>
+ <span class="help-text" style="margin-top: 8px; display: block; line-height: 1.4;">
+ <strong>Realidade de Balcão:</strong> Concessionárias em SP costumam ofertar taxas de <strong>2,30% a 2,65% a.m. (CET)</strong> em seminovos porque embutem IOF, TAC (tarifa de cadastro), gravame e a comissão da loja (retorno de mesa).
+ </span>
+ </div>
+ </div>
 
-        <div class="simulator-card results-card">
-          <h3>Resultado da Simulação</h3>
-          <div class="calc-highlight-box">
-            <span class="calc-label">Parcela Estimada Mensal:</span>
-            <span id="simMonthlyResult" class="calc-big-value">R$ 1.548,22</span>
-            <span id="simTotalInterestResult" class="calc-sub">Total financiado: R$ 55.930,00</span>
-          </div>
+ <div class="simulator-card results-card">
+ <h3>Resultado da Simulação</h3>
+ <div class="calc-highlight-box">
+ <span class="calc-label">Parcela Estimada Mensal:</span>
+ <span id="simMonthlyResult" class="calc-big-value">R$ 1.548,22</span>
+ <span id="simTotalInterestResult" class="calc-sub">Total financiado: R$ 55.930,00</span>
+ </div>
 
-          <div class="cost-summary-list">
-            <div class="cost-item">
-              <span>Valor do Veículo:</span>
-              <strong id="simSummaryPrice">R$ 79.900,00</strong>
-            </div>
-            <div class="cost-item">
-              <span>Entrada à Vista:</span>
-              <strong id="simSummaryDownPayment" class="text-green">R$ 23.970,00</strong>
-            </div>
-            <div class="cost-item">
-              <span>Saldo a Financiar:</span>
-              <strong id="simSummaryFinanced">R$ 55.930,00</strong>
-            </div>
-            <div class="cost-item">
-              <span>Custo Efetivo Total (Entrada + Parcelas):</span>
-              <strong id="simSummaryTotalCost">R$ 98.284,56</strong>
-            </div>
-            <div class="cost-item highlight">
-              <span>Sobra do seu orçamento de R$ 80k na entrada:</span>
-              <strong id="simSummaryBudgetSurplus" class="text-cyan">R$ 56.030,00 de reserva!</strong>
-            </div>
-          </div>
+ <div class="cost-summary-list">
+ <div class="cost-item">
+ <span>Valor do Veículo:</span>
+ <strong id="simSummaryPrice">R$ 79.900,00</strong>
+ </div>
+ <div class="cost-item">
+ <span>Entrada à Vista:</span>
+ <strong id="simSummaryDownPayment" class="text-green">R$ 23.970,00</strong>
+ </div>
+ <div class="cost-item">
+ <span>Saldo a Financiar:</span>
+ <strong id="simSummaryFinanced">R$ 55.930,00</strong>
+ </div>
+ <div class="cost-item">
+ <span>Custo Efetivo Total (Entrada + Parcelas):</span>
+ <strong id="simSummaryTotalCost">R$ 98.284,56</strong>
+ </div>
+ <div class="cost-item highlight">
+ <span>Sobra do seu orçamento de R$ 80k na entrada:</span>
+ <strong id="simSummaryBudgetSurplus" class="text-cyan">R$ 56.030,00 de reserva!</strong>
+ </div>
+ </div>
 
-          <div class="tip-box">
-            <span class="tip-icon">💡</span>
-            <p><strong>Dica de Compra:</strong> Com R$ 80.000 em mãos, você pode comprar o <strong>Fiat Pulse à vista</strong> sem pagar R$ 1 real de juros bancários, ou dar R$ 40.000 de entrada e deixar R$ 40.000 rendendo no Tesouro Selic!</p>
-          </div>
-        </div>
-      </div>
+ <div class="tip-box">
+ 
+ <p><strong>Dica de Compra:</strong> Com R$ 80.000 em mãos, você pode comprar o <strong>Fiat Pulse à vista</strong> sem pagar R$ 1 real de juros bancários, ou dar R$ 40.000 de entrada e deixar R$ 40.000 rendendo no Tesouro Selic!</p>
+ </div>
+ </div>
+ </div>
 
-      <!-- Card Explicativo de Taxas Reais de Concessionária -->
-      <div class="simulator-card reality-check-card" style="margin-top: 20px; background: rgba(0, 210, 255, 0.04); border: 1px solid rgba(0, 210, 255, 0.2);">
-        <h4 style="color: var(--electric-blue); font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-          <span>🔍</span> Por que a concessionária oferece 2,5% ao mês em vez das taxas de comercial de TV?
-        </h4>
-        <p style="font-size: 13px; color: var(--text-main); line-height: 1.5; margin-bottom: 10px;">
-          A taxa que a concessionária calcula na mesa chama-se <strong>CET (Custo Efetivo Total)</strong>. Mesmo quando o banco parceiro tem uma taxa base de 1,9% a.m., o lojista adiciona despesas que elevam o custo para <strong>2,5% a.m.</strong>:
-        </p>
-        <ul style="font-size: 12.5px; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin-bottom: 12px;">
-          <li><strong>IOF Financiamento:</strong> 0,38% fixo + alíquota diária obrigatória do Governo Federal recolhida na operação.</li>
-          <li><strong>Custos Administrativos Embutidos:</strong> Tarifa de Cadastro (TAC de R$ 800 a R$ 1.500) e taxa de registro de gravame no Detran-SP (R$ 350 a R$ 600) somados ao saldo financiado.</li>
-          <li><strong>Retorno de Mesa (Comissão da Loja):</strong> A concessionária tem margem para aplicar um spread de 0,3% a 0,6% a.m. a favor dela sobre a taxa bancária.</li>
-        </ul>
-        <div style="background: rgba(0, 255, 136, 0.06); border-left: 3px solid var(--electric-green); padding: 10px 14px; border-radius: 4px; font-size: 12.5px; color: #fff; line-height: 1.5;">
-          💡 <strong>Dica de Ouro de Negociação:</strong> Como você possui até R$ 80.000 de orçamento, você tem <strong>poder total de compra à vista</strong> em um Fiat Pulse seminovo (fugindo de 100% dos juros). Se for financiar, simule o CDC direto no aplicativo do seu banco (ex: Inter, Itaú, BB) antes de fechar na concessionária para exigir que eles igualem a taxa!
-        </div>
-      </div>
-    </div>
+ <!-- Card Explicativo de Taxas Reais de Concessionária -->
+ <div class="simulator-card reality-check-card" style="margin-top: 20px; background: rgba(0, 210, 255, 0.04); border: 1px solid rgba(0, 210, 255, 0.2);">
+ <h4 style="color: var(--electric-blue); font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+ <span></span> Por que a concessionária oferece 2,5% ao mês em vez das taxas de comercial de TV?
+ </h4>
+ <p style="font-size: 13px; color: var(--text-main); line-height: 1.5; margin-bottom: 10px;">
+ A taxa que a concessionária calcula na mesa chama-se <strong>CET (Custo Efetivo Total)</strong>. Mesmo quando o banco parceiro tem uma taxa base de 1,9% a.m., o lojista adiciona despesas que elevam o custo para <strong>2,5% a.m.</strong>:
+ </p>
+ <ul style="font-size: 12.5px; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin-bottom: 12px;">
+ <li><strong>IOF Financiamento:</strong> 0,38% fixo + alíquota diária obrigatória do Governo Federal recolhida na operação.</li>
+ <li><strong>Custos Administrativos Embutidos:</strong> Tarifa de Cadastro (TAC de R$ 800 a R$ 1.500) e taxa de registro de gravame no Detran-SP (R$ 350 a R$ 600) somados ao saldo financiado.</li>
+ <li><strong>Retorno de Mesa (Comissão da Loja):</strong> A concessionária tem margem para aplicar um spread de 0,3% a 0,6% a.m. a favor dela sobre a taxa bancária.</li>
+ </ul>
+ <div style="background: rgba(0, 255, 136, 0.06); border-left: 3px solid var(--electric-green); padding: 10px 14px; border-radius: 4px; font-size: 12.5px; color: #fff; line-height: 1.5;">
+ <strong>Dica de Negociação:</strong> Como você possui até R$ 80.000 de orçamento, você tem <strong>poder total de compra à vista</strong> em um Fiat Pulse seminovo (fugindo de 100% dos juros). Se for financiar, simule o CDC direto no aplicativo do seu banco (ex: Inter, Itaú, BB) antes de fechar na concessionária para exigir que eles igualem a taxa!
+ </div>
+ </div>
+ </div>
 
-    <!-- ABA 6: Adicionar Anúncio Encontrado -->
-    <div id="tab-add" class="tab-pane">
-      <div class="section-title-wrap">
-        <div>
-          <h2>➕ Adicionar Novo Carro / Anúncio Encontrado</h2>
-          <p class="section-desc">Achou uma oferta interessante no Webmotors, OLX ou concessionária física? Cadastre aqui para salvar no seu app e calcular o financiamento!</p>
-        </div>
-      </div>
+ <!-- ABA 6: Adicionar Anúncio Encontrado -->
+ <div id="tab-add" class="tab-pane">
+ <div class="section-title-wrap">
+ <div>
+ <h2> Adicionar Novo Carro / Anúncio Encontrado</h2>
+ <p class="section-desc">Achou uma oferta interessante no Webmotors, OLX ou concessionária física? Cadastre aqui para salvar no seu app e calcular o financiamento!</p>
+ </div>
+ </div>
 
-      <div class="add-car-form-card">
-        <form id="formAddCar">
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Modelo / Título do Anúncio:</label>
-              <input type="text" id="addTitle" placeholder="Ex: Fiat Pulse Drive 1.3 AT 2023" required>
-            </div>
-            <div class="form-group">
-              <label>Categoria:</label>
-              <select id="addCategory">
-                <option value="Fiat Pulse Automático">Fiat Pulse Automático</option>
-                <option value="BYD Dolphin Mini">BYD Dolphin Mini</option>
-                <option value="Volkswagen Tera Automático">Volkswagen Tera Automático</option>
-                <option value="Sugestão: 100% Elétrico">Sugestão: 100% Elétrico</option>
-                <option value="Sugestão: Outro">Outra Sugestão até 80k</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Preço Anunciado (R$):</label>
-              <input type="number" id="addPrice" placeholder="Ex: 77900" required>
-            </div>
-            <div class="form-group">
-              <label>Ano do Carro:</label>
-              <input type="number" id="addYear" placeholder="Ex: 2023" value="2023" required>
-            </div>
-            <div class="form-group">
-              <label>Quilometragem (KM):</label>
-              <input type="number" id="addKm" placeholder="Ex: 38000" required>
-            </div>
-            <div class="form-group">
-              <label>Combustível:</label>
-              <select id="addFuel">
-                <option value="Flex (Etanol/Gasolina)">Flex Automático</option>
-                <option value="100% Elétrico">100% Elétrico ⚡</option>
-                <option value="Híbrido">Híbrido</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Nome da Loja / Concessionária:</label>
-              <input type="text" id="addDealerName" placeholder="Ex: Localiza Seminovos ou Particular" required>
-            </div>
-            <div class="form-group">
-              <label>Cidade / Bairro em SP:</label>
-              <input type="text" id="addCity" placeholder="Ex: São Paulo - Moema" required>
-            </div>
-            <div class="form-group">
-              <label>WhatsApp / Telefone de Contato:</label>
-              <input type="text" id="addWhatsapp" placeholder="Ex: 11999998888">
-            </div>
-            <div class="form-group">
-              <label>Link do Anúncio (Webmotors, OLX, Loja):</label>
-              <input type="url" id="addLink" placeholder="https://www.webmotors.com.br/...">
-            </div>
-            <div class="form-group full-width">
-              <label>Observações ou Condições de Pagamento:</label>
-              <textarea id="addNotes" rows="2" placeholder="Ex: Laudo 100% aprovado, aceita contraproposta de R$ 75k à vista, IPVA 2026 pago."></textarea>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn-primary">Salvar Carro no AutoRadar SP</button>
-          </div>
-        </form>
-      </div>
-    </div>
+ <div class="add-car-form-card">
+ <form id="formAddCar">
+ <div class="form-grid">
+ <div class="form-group">
+ <label>Modelo / Título do Anúncio:</label>
+ <input type="text" id="addTitle" placeholder="Ex: Fiat Pulse Drive 1.3 AT 2023" required>
+ </div>
+ <div class="form-group">
+ <label>Categoria:</label>
+ <select id="addCategory">
+ <option value="Fiat Pulse Automático">Fiat Pulse Automático</option>
+ <option value="BYD Dolphin Mini">BYD Dolphin Mini</option>
+ <option value="Volkswagen Tera Automático">Volkswagen Tera Automático</option>
+ <option value="Sugestão: 100% Elétrico">Sugestão: 100% Elétrico</option>
+ <option value="Sugestão: Outro">Outra Sugestão até 80k</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label>Preço Anunciado (R$):</label>
+ <input type="number" id="addPrice" placeholder="Ex: 77900" required>
+ </div>
+ <div class="form-group">
+ <label>Ano do Carro:</label>
+ <input type="number" id="addYear" placeholder="Ex: 2023" value="2023" required>
+ </div>
+ <div class="form-group">
+ <label>Quilometragem (KM):</label>
+ <input type="number" id="addKm" placeholder="Ex: 38000" required>
+ </div>
+ <div class="form-group">
+ <label>Combustível:</label>
+ <select id="addFuel">
+ <option value="Flex (Etanol/Gasolina)">Flex Automático</option>
+ <option value="100% Elétrico">100% Elétrico</option>
+ <option value="Híbrido">Híbrido</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label>Nome da Loja / Concessionária:</label>
+ <input type="text" id="addDealerName" placeholder="Ex: Localiza Seminovos ou Particular" required>
+ </div>
+ <div class="form-group">
+ <label>Cidade / Bairro em SP:</label>
+ <input type="text" id="addCity" placeholder="Ex: São Paulo - Moema" required>
+ </div>
+ <div class="form-group">
+ <label>WhatsApp / Telefone de Contato:</label>
+ <input type="text" id="addWhatsapp" placeholder="Ex: 11999998888">
+ </div>
+ <div class="form-group">
+ <label>Link do Anúncio (Webmotors, OLX, Loja):</label>
+ <input type="url" id="addLink" placeholder="https://www.webmotors.com.br/...">
+ </div>
+ <div class="form-group full-width">
+ <label>Observações ou Condições de Pagamento:</label>
+ <textarea id="addNotes" rows="2" placeholder="Ex: Laudo 100% aprovado, aceita contraproposta de R$ 75k à vista, IPVA 2026 pago."></textarea>
+ </div>
+ </div>
+ <div class="form-actions">
+ <button type="submit" class="btn-primary">Salvar Carro no AutoRadar SP</button>
+ </div>
+ </form>
+ </div>
+ </div>
 
-  </main>
+ </main>
 
-  <!-- Modal de Detalhes do Carro -->
-  <div id="carModal" class="modal-backdrop hidden">
-    <div class="modal-card">
-      <button class="modal-close" id="btnCloseModal">&times;</button>
-      <div id="modalContent">
-        <!-- Injetado dinamicamente -->
-      </div>
-    </div>
-  </div>
+ <!-- Modal de Detalhes do Carro -->
+ <div id="carModal" class="modal-backdrop hidden">
+ <div class="modal-card">
+ <button class="modal-close" id="btnCloseModal">&times;</button>
+ <div id="modalContent">
+ <!-- Injetado dinamicamente -->
+ </div>
+ </div>
+ </div>
 
-  <!-- Scripts -->
-  <script src="js/data.js?v=10"></script>
-  <script src="js/financing.js?v=10"></script>
-  <script src="js/app.js?v=10"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW fail:', err));
-      });
-    }
-  </script>
+ <!-- Scripts -->
+ <script src="js/data.js?v=11"></script>
+ <script src="js/financing.js?v=11"></script>
+ <script src="js/app.js?v=11"></script>
+ <script>
+ if ('serviceWorker' in navigator) {
+ window.addEventListener('load', () => {
+ navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW fail:', err));
+ });
+ }
+ </script>
 </body>
 </html>
