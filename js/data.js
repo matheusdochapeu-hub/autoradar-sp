@@ -19,11 +19,13 @@ const DEFAULT_CARS_DATABASE = [
     "km": 42000,
     "color": "Cinza Strato",
     "fuel": "Flex (Etanol/Gasolina)",
-    "transmission": "Automático CVT (7 marchas)",
+    "transmission": "Automático CVT (7 marchas simuladas)",
     "price": 74900,
     "originalPrice": 78900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 8.550 (Abaixo da FIPE)",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/13-firefly-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Fiat Sinal — Unidade Ipiranga",
       "type": "Concessionária Oficial Fiat",
@@ -41,8 +43,15 @@ const DEFAULT_CARS_DATABASE = [
       "consumptionCity": "12,9 km/l (G) / 9,2 km/l (E)",
       "consumptionRoad": "14,3 km/l (G) / 10,4 km/l (E)",
       "trunk": "370 Litros",
-      "warranty": "Garantia 1 ano concessionária Fiat Sinal",
-      "features": ["Central Multimídia 8.4\" Sem Fio", "Ar Digital", "Faróis Full LED", "Piloto Automático", "Câmera de Ré", "Controle TC+"]
+      "warranty": "Garantia de 1 ano de motor e câmbio pela concessionária",
+      "features": [
+        "Central Multimídia 8.4\" Apple CarPlay & Android Auto Sem Fio",
+        "Ar-Condicionado Digital Automático",
+        "Faróis Full LED",
+        "Piloto Automático",
+        "Câmera de Ré com Linhas Dinâmicas",
+        "Controle de Estabilidade e Tração (TC+)"
+      ]
     },
     "financing": {
       "downPayment": 22470,
@@ -50,47 +59,61 @@ const DEFAULT_CARS_DATABASE = [
       "termMonths": 48,
       "monthlyInstallment": 1548,
       "interestRate": 1.39,
-      "bank": "Banco Santander / Fiat",
-      "optionsText": "Entrada de R$ 22.470 + 48x de R$ 1.548. Entrada parcelada em até 21x no cartão de crédito."
+      "bank": "Banco Santander / Banco Fiat",
+      "optionsText": "Entrada de R$ 22.470 (30%) + 48x de R$ 1.548 ou entrada no cartão de crédito em até 21x. Aceita FGTS e veículo na troca."
     },
-    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
-    "cautelarStatus": "100% Aprovado Supervisão",
-    "tags": ["Dentro do Orçamento", "Concessionária", "Laudo Aprovado", "Câmbio CVT"]
+    "cautelarStatus": "100% Aprovado sem apontamentos (Supervisão)",
+    "tags": [
+      "Foto Real",
+      "Dentro do Orçamento",
+      "Concessionária",
+      "Laudo Aprovado",
+      "Câmbio CVT"
+    ]
   },
   {
     "id": "pulse-02",
     "isTarget": true,
     "modelCategory": "Fiat Pulse Automático",
     "title": "Fiat Pulse Drive 1.0 Turbo 200 Flex AT",
-    "badge": "Motor Turbo 130cv",
+    "badge": "Motor Turbo Potente",
     "year": 2022,
     "km": 49000,
     "color": "Branco Banchisa com Teto Preto",
     "fuel": "Flex (Etanol/Gasolina)",
-    "transmission": "Automático CVT (7 marchas)",
+    "transmission": "Automático CVT (7 marchas simuladas)",
     "price": 77800,
     "originalPrice": 81900,
     "fipePrice": 84900,
     "priceVsFipe": "-R$ 7.100 (Abaixo da FIPE)",
+    "image": "./img/cars/pulse-turbo-branco.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/10-turbo-200-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Localiza Seminovos — Santo André",
       "type": "Seminovos Certificados",
       "city": "Santo André",
       "state": "SP",
       "neighborhood": "Campestre",
-      "address": "Av. Dom Pedro II, 1850 - Santo André - SP",
+      "address": "Av. Dom Pedro II, 1850 - Campestre, Santo André - SP",
       "phone": "(11) 4992-8000",
       "whatsapp": "5511988776655",
       "verified": true
     },
     "specs": {
-      "engine": "1.0 Turbo 200 Flex",
-      "power": "130 cv (E) / 125 cv (G) - 20,4 kgfm",
+      "engine": "1.0 Turbo 200 Flex (3 cilindros)",
+      "power": "130 cv (E) / 125 cv (G) - 20,4 kgfm de torque",
       "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
       "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
       "trunk": "370 Litros",
-      "warranty": "Garantia 360 dias Localiza",
-      "features": ["Motor Turbo 200", "Modo Sport", "Multimídia Uconnect", "Direção Elétrica", "Rodas Liga Leve 16"]
+      "warranty": "Garantia Localiza de 360 dias com assistência 24h",
+      "features": [
+        "Motor Turbo 200 de 130cv",
+        "Modo Sport com botão no volante",
+        "Faróis e Lanternas em LED",
+        "Central Multimídia Uconnect",
+        "Direção Elétrica com ajuste de altura",
+        "Rodas de Liga Leve aro 16"
+      ]
     },
     "financing": {
       "downPayment": 23340,
@@ -98,12 +121,16 @@ const DEFAULT_CARS_DATABASE = [
       "termMonths": 48,
       "monthlyInstallment": 1608,
       "interestRate": 1.42,
-      "bank": "Banco Itaú / BV",
-      "optionsText": "Entrada de R$ 23.340 + 48x de R$ 1.608 ou entrada zero com parcelas em 60x."
+      "bank": "Banco Itaú / BV Financeira",
+      "optionsText": "Entrada de R$ 23.340 + 48x de R$ 1.608 ou entrada zero com parcelas em 60x mediante análise de crédito. Aceita consórcio contemplado."
     },
-    "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
-    "cautelarStatus": "100% Aprovado Dekra",
-    "tags": ["Dentro do Orçamento", "Motor Turbo", "Laudo Aprovado"]
+    "cautelarStatus": "100% Aprovado (Dekra)",
+    "tags": [
+      "Foto Real",
+      "Dentro do Orçamento",
+      "Motor Turbo",
+      "Laudo Aprovado"
+    ]
   },
   {
     "id": "pulse-03",
@@ -115,11 +142,13 @@ const DEFAULT_CARS_DATABASE = [
     "km": 31500,
     "color": "Preto Vulcano",
     "fuel": "Flex (Etanol/Gasolina)",
-    "transmission": "Automático CVT",
+    "transmission": "Automático CVT (7 marchas)",
     "price": 79500,
     "originalPrice": 83000,
     "fipePrice": 86200,
-    "priceVsFipe": "-R$ 6.700",
+    "priceVsFipe": "-R$ 6.700 (Abaixo da FIPE)",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
     "dealer": {
       "name": "Carrera Seminovos — Butantã",
       "type": "Concessionária Multimarcas",
@@ -132,13 +161,20 @@ const DEFAULT_CARS_DATABASE = [
       "verified": true
     },
     "specs": {
-      "engine": "1.3 Firefly Flex",
-      "power": "107 cv",
-      "consumptionCity": "12,9 km/l (G)",
-      "consumptionRoad": "14,3 km/l (G)",
+      "engine": "1.3 Firefly Flex 8V",
+      "power": "107 cv (E) / 98 cv (G)",
+      "consumptionCity": "12,9 km/l (G) / 9,2 km/l (E)",
+      "consumptionRoad": "14,3 km/l (G) / 10,4 km/l (E)",
       "trunk": "370 Litros",
-      "warranty": "Garantia de Fábrica Ativa",
-      "features": ["Garantia de Fábrica", "Revisões em Dia", "Sensor Traseiro", "Ar Digital", "TC+"]
+      "warranty": "Garantia de fábrica restante até fim de 2026",
+      "features": [
+        "Garantia de Fábrica Ativa",
+        "Todas as revisões na Fiat",
+        "Bancos com costuras contrastantes",
+        "Sensor de Estacionamento Traseiro",
+        "Ar-Condicionado Digital",
+        "Controle de Tração TC+"
+      ]
     },
     "financing": {
       "downPayment": 23850,
@@ -147,46 +183,121 @@ const DEFAULT_CARS_DATABASE = [
       "monthlyInstallment": 1642,
       "interestRate": 1.35,
       "bank": "Banco Safra / Bradesco",
-      "optionsText": "Entrada de R$ 23.850 + 48x de R$ 1.642."
+      "optionsText": "Entrada facilitada em até 12x sem juros no cartão de R$ 23.850 + 48x de R$ 1.642. Taxa especial para correntistas."
     },
-    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
-    "cautelarStatus": "100% Periciado",
-    "tags": ["Dentro do Orçamento", "Ano 2023", "Garantia de Fábrica"]
+    "cautelarStatus": "100% Periciado e aprovado",
+    "tags": [
+      "Foto Real",
+      "Dentro do Orçamento",
+      "Ano 2023",
+      "Garantia de Fábrica"
+    ]
+  },
+  {
+    "id": "pulse-04",
+    "isTarget": true,
+    "modelCategory": "Fiat Pulse Automático",
+    "title": "Fiat Pulse Audace Turbo 200 AT (Versão Top)",
+    "badge": "Negociável para R$ 79.900",
+    "year": 2022,
+    "km": 54000,
+    "color": "Azul Amalfi",
+    "fuel": "Flex (Etanol/Gasolina)",
+    "transmission": "Automático CVT (7 marchas)",
+    "price": 81000,
+    "negotiatedTarget": 79000,
+    "originalPrice": 84900,
+    "fipePrice": 88300,
+    "priceVsFipe": "-R$ 7.300 (Oferta Especial)",
+    "image": "./img/cars/pulse-audace-azul.jpg",
+    "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
+    "dealer": {
+      "name": "Auto Shopping Cristal — Multimarcas Sul",
+      "type": "Loja Multimarcas Verificada",
+      "city": "São Paulo",
+      "state": "SP",
+      "neighborhood": "Interlagos",
+      "address": "Av. das Nações Unidas, 22540 - Jurubatuba, São Paulo - SP",
+      "phone": "(11) 5696-3000",
+      "whatsapp": "5511966554433",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.0 Turbo 200 Flex (130cv)",
+      "power": "130 cv (E) / 125 cv (G) - 20,4 kgfm",
+      "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
+      "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia de 90 dias loja + Laudo Cautelar Integral",
+      "features": [
+        "Pacote Avançado ADAS (Frenagem Autônoma + Alerta de Saída de Faixa)",
+        "Comutação Automática de Farol Alto",
+        "Chave Presencial Keyless Entry'n Go",
+        "Partida Remota do Motor na Chave",
+        "Carregador de Celular por Indução",
+        "Retrovisor Eletrocrômico"
+      ]
+    },
+    "financing": {
+      "downPayment": 24300,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1675,
+      "interestRate": 1.45,
+      "bank": "BV Financeira / Banco PAN",
+      "optionsText": "Preço de vitrine R$ 81.000, loja confirmou proposta à vista por R$ 79.500. Financiamento com entrada de R$ 24.300 + 48x de R$ 1.675."
+    },
+    "cautelarStatus": "100% Aprovado sem restrição",
+    "tags": [
+      "Foto Real",
+      "Pacote ADAS",
+      "Motor Turbo",
+      "Chave Presencial"
+    ]
   },
   {
     "id": "pulse-05",
     "isTarget": true,
     "modelCategory": "Fiat Pulse Automático",
     "title": "Fiat Pulse Drive 1.3 AT CVT — Campinas",
-    "badge": "Menor Preço de SP",
+    "badge": "Preço Mais Baixo de SP",
     "year": 2022,
     "km": 58000,
     "color": "Prata Bari Metálico",
     "fuel": "Flex (Etanol/Gasolina)",
-    "transmission": "Automático CVT",
+    "transmission": "Automático CVT (7 marchas)",
     "price": 72900,
     "originalPrice": 76900,
     "fipePrice": 83450,
     "priceVsFipe": "-R$ 10.550 (Super Desconto)",
+    "image": "./img/cars/pulse-drive-cinza.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Campinas&precoate=75000",
     "dealer": {
       "name": "Daitan Seminovos — Campinas Norte",
-      "type": "Grupo Daitan",
+      "type": "Grupo Concessionárias Daitan",
       "city": "Campinas",
       "state": "SP",
       "neighborhood": "Taquaral",
-      "address": "Av. Barão de Itapura, 2100 - Campinas - SP",
+      "address": "Av. Barão de Itapura, 2100 - Taquaral, Campinas - SP",
       "phone": "(19) 3743-8000",
       "whatsapp": "5519981223344",
       "verified": true
     },
     "specs": {
       "engine": "1.3 Firefly Flex",
-      "power": "107 cv",
-      "consumptionCity": "12,9 km/l (G)",
-      "consumptionRoad": "14,3 km/l (G)",
+      "power": "107 cv (E) / 98 cv (G)",
+      "consumptionCity": "12,9 km/l (G) / 9,2 km/l (E)",
+      "consumptionRoad": "14,3 km/l (G) / 10,4 km/l (E)",
       "trunk": "370 Litros",
-      "warranty": "Garantia 1 ano Gestauto",
-      "features": ["Piloto Automático", "Sensor Ré", "Full LED", "Multimídia", "Direção Elétrica"]
+      "warranty": "Garantia 1 ano Gestauto Brasil",
+      "features": [
+        "Piloto Automático",
+        "Sensor de Estacionamento",
+        "Faróis Full LED",
+        "Multimídia com Android Auto e CarPlay",
+        "Direção Elétrica Progressiva",
+        "Ar Digital"
+      ]
     },
     "financing": {
       "downPayment": 21870,
@@ -195,11 +306,15 @@ const DEFAULT_CARS_DATABASE = [
       "monthlyInstallment": 1506,
       "interestRate": 1.38,
       "bank": "Banco Santander / Itaú",
-      "optionsText": "Entrada de R$ 21.870 + 48x de R$ 1.506."
+      "optionsText": "Entrada de R$ 21.870 + 48x de R$ 1.506. Aceita troca de menor ou maior valor com troco na conta."
     },
-    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
     "cautelarStatus": "100% Laudo Aprovado",
-    "tags": ["Menor Preço", "Campinas", "Super Desconto"]
+    "tags": [
+      "Foto Real",
+      "Menor Preço",
+      "Campinas",
+      "Super Desconto"
+    ]
   },
   {
     "id": "byd-01",
@@ -211,31 +326,41 @@ const DEFAULT_CARS_DATABASE = [
     "km": 36000,
     "color": "Branco Apricity com Interior Azul",
     "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
-    "transmission": "Automático Direto",
+    "transmission": "Automático Direto (1 marcha)",
     "price": 82900,
     "negotiatedTarget": 79900,
     "originalPrice": 96900,
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 15.600 (Abaixo de Mercado)",
+    "image": "./img/cars/byd-dolphin-mini-branco.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=S%C3%A3o%20Paulo&precoate=90000",
     "dealer": {
       "name": "AutoPrime Motors — Anhaia Mello",
       "type": "Especialista em Seminovos Elétricos",
       "city": "São Paulo",
       "state": "SP",
       "neighborhood": "Vila Prudente",
-      "address": "Av. Prof. Luiz Ignácio Anhaia Mello, 3400 - SP",
+      "address": "Av. Prof. Luiz Ignácio Anhaia Mello, 3400 - São Paulo - SP",
       "phone": "(11) 2345-6789",
       "whatsapp": "5511991234567",
       "verified": true
     },
     "specs": {
-      "engine": "Motor Elétrico Síncrono 75 cv",
-      "power": "75 cv - Torque Instantâneo 13,8 kgfm",
-      "range": "280 km (Inmetro) / até 340 km na cidade",
-      "consumptionCity": "R$ 0,08 por km rodado (~R$ 18 carga cheia)",
-      "trunk": "230 Litros (expansível 930L)",
-      "warranty": "Garantia Bateria Blade de 8 anos até 2032!",
-      "features": ["Bateria Blade BYD", "Isenção de Rodízio em SP", "IPVA Especial SP", "Tela Giratória 10.1\"", "Carregador Portátil Original", "Auto-Hold", "6 Airbags"]
+      "engine": "Motor Elétrico Síncrono de Ímã Permanente",
+      "power": "75 cv (55 kW) - Torque Instantâneo 13,8 kgfm",
+      "range": "280 km (PBEV/Inmetro) / até 340 km cidade",
+      "consumptionCity": "R$ 0,08 por km rodado (~R$ 18 carga completa em casa)",
+      "trunk": "230 Litros (expansível para 930L)",
+      "warranty": "Garantia de Bateria Blade de 8 anos ou 200.000 km ativa até 2032!",
+      "features": [
+        "Bateria Blade BYD Ultra-Segura",
+        "Isenção de Rodízio em São Paulo",
+        "IPVA com Alíquota Especial/Reembolso SP",
+        "Tela Giratória Elétrica de 10.1\" com GPS e Spotify nativos",
+        "Carregador Portátil Original de Tomada + Cabo Tipo 2",
+        "Freio de Estacionamento Eletrônico com Auto-Hold",
+        "6 Airbags de Série"
+      ]
     },
     "financing": {
       "downPayment": 24870,
@@ -243,18 +368,23 @@ const DEFAULT_CARS_DATABASE = [
       "termMonths": 48,
       "monthlyInstallment": 1712,
       "interestRate": 1.39,
-      "bank": "BYD Financiamentos (BV / Santander)",
-      "optionsText": "Loja aceita contraproposta de R$ 80.000 à vista! Financiamento com entrada de R$ 24.870 + 48x de R$ 1.712."
+      "bank": "BYD Financiamentos (Banco BV / Santander)",
+      "optionsText": "Preço R$ 82.900 anunciado, vendedor aceita contraproposta de R$ 80.000 à vista! Financiamento com R$ 24.870 de entrada + 48x de R$ 1.712."
     },
-    "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
-    "cautelarStatus": "100% Aprovado Dekra",
-    "tags": ["100% Elétrico", "Bateria Blade", "Garantia até 2032", "Isento de Rodízio"]
+    "cautelarStatus": "100% Aprovado sem retoques (Dekra)",
+    "tags": [
+      "Foto Real",
+      "100% Elétrico",
+      "Bateria Blade",
+      "Garantia até 2032",
+      "Isento de Rodízio"
+    ]
   },
   {
     "id": "byd-02",
     "isTarget": true,
     "modelCategory": "BYD Dolphin Mini",
-    "title": "BYD Dolphin Mini EV 2024 — Particular / Ágio",
+    "title": "BYD Dolphin Mini EV 2024 — Particular / Consórcio",
     "badge": "⚡ Direto com Proprietário / Ágio",
     "year": 2024,
     "km": 24000,
@@ -265,13 +395,15 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 85000,
     "fipePrice": 98500,
     "priceVsFipe": "-R$ 18.600 (Preço Limite Casal)",
+    "image": "./img/cars/byd-dolphin-mini-verde.jpg",
+    "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini",
     "dealer": {
-      "name": "Anúncio Verificado — Particular",
+      "name": "Anúncio Verificado — Particular (Matheus & Renata)",
       "type": "Particular com Laudo Aprovado",
       "city": "São Bernardo do Campo",
       "state": "SP",
       "neighborhood": "Rudge Ramos",
-      "address": "Av. Caminho do Mar, 2100 - SBC - SP",
+      "address": "Av. Caminho do Mar, 2100 - Rudge Ramos, SBC - SP",
       "phone": "(11) 98765-4321",
       "whatsapp": "5511987654321",
       "verified": true
@@ -280,10 +412,16 @@ const DEFAULT_CARS_DATABASE = [
       "engine": "Elétrico 75cv",
       "power": "75 cv - 135 Nm",
       "range": "280 km Inmetro",
-      "consumptionCity": "~R$ 16 por recarga completa residencial",
+      "consumptionCity": "Extremamente econômico: ~R$ 16 por recarga completa",
       "trunk": "230 Litros",
       "warranty": "Garantia BYD vigente de 5 anos carro + 8 anos bateria",
-      "features": ["Wallbox Residencial Original Grátis!", "Carregador 220V", "Câmera 360", "Sensor Ponto Cego", "Bancos em Couro Elétricos"]
+      "features": [
+        "Acompanha Wallbox Residencial original nunca instalado!",
+        "Carregador de tomada 220V",
+        "Câmera de ré com visão 360 virtual",
+        "Sensor de ponto cego",
+        "Bancos em couro sintético ecológico com regulagem elétrica para o motorista"
+      ]
     },
     "financing": {
       "downPayment": 30000,
@@ -291,19 +429,85 @@ const DEFAULT_CARS_DATABASE = [
       "termMonths": 36,
       "monthlyInstallment": 1780,
       "interestRate": 1.29,
-      "bank": "Transferência Santander ou À Vista",
-      "optionsText": "Aceita pagamento à vista integral de R$ 79.900 ou transferência de dívida (R$ 30k entrada + parcelas)."
+      "bank": "Transferência de Financiamento Santander ou Pagamento à Vista",
+      "optionsText": "Aceita pagamento à vista integral de R$ 79.900 ou transferência de dívida (Entrada de R$ 30.000 + parcelas). Aceita vistoria cautelar em qualquer empresa."
     },
-    "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
-    "cautelarStatus": "100% Aprovado",
-    "tags": ["Dentro do Orçamento", "Wallbox Grátis", "100% Elétrico", "Particular"]
+    "cautelarStatus": "Laudo Cautelar 100% Aprovado emitido há 15 dias",
+    "tags": [
+      "Foto Real",
+      "Dentro do Orçamento",
+      "Wallbox Grátis",
+      "100% Elétrico",
+      "Particular"
+    ]
+  },
+  {
+    "id": "byd-03",
+    "isTarget": true,
+    "modelCategory": "BYD Dolphin Mini",
+    "title": "BYD Dolphin Mini EV 5 Lugares 2024/2025",
+    "badge": "⚡ Versão 5 Lugares — Radar de Preço",
+    "year": 2024,
+    "km": 29000,
+    "color": "Preto Delan",
+    "fuel": "100% Elétrico",
+    "transmission": "Automático Direto",
+    "price": 84500,
+    "negotiatedTarget": 80000,
+    "originalPrice": 92000,
+    "fipePrice": 101000,
+    "priceVsFipe": "-R$ 16.500",
+    "image": "./img/cars/byd-dolphin-mini-preto.jpg",
+    "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_32150.1_&lim=20",
+    "dealer": {
+      "name": "BYD Dahruj Seminovos — Campinas",
+      "type": "Concessionária Oficial BYD",
+      "city": "Campinas",
+      "state": "SP",
+      "neighborhood": "Nova Campinas",
+      "address": "Av. José de Souza Campos (Norte-Sul), 1500 - Campinas - SP",
+      "phone": "(19) 3795-1000",
+      "whatsapp": "5519971239988",
+      "verified": true
+    },
+    "specs": {
+      "engine": "Elétrico 75cv",
+      "power": "75 cv - 13,8 kgfm",
+      "range": "280 km Inmetro",
+      "consumptionCity": "Gasto elétrico estimado: R$ 60/mês para rodar 1.000 km",
+      "trunk": "230 Litros",
+      "warranty": "Certificação Oficial BYD com 150 pontos de checagem",
+      "features": [
+        "Homologado para 5 ocupantes de fábrica (com 3 cintos de 3 pontos atrás)",
+        "Faróis em LED inteligentes",
+        "Painel Digital de 7\"",
+        "Controle de cruzeiro",
+        "Carregador por indução"
+      ]
+    },
+    "financing": {
+      "downPayment": 25350,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1745,
+      "interestRate": 1.35,
+      "bank": "Banco Santander / BV",
+      "optionsText": "Concessionária aberta a proposta de fechar em R$ 80.000 para pagamento à vista até o fim de semana. Financiamento com taxa de 1,35% a.m."
+    },
+    "cautelarStatus": "Certificado BYD 100% Aprovado",
+    "tags": [
+      "Foto Real",
+      "5 Lugares",
+      "Concessionária BYD",
+      "100% Elétrico"
+    ]
   },
   {
     "id": "tera-01",
     "isTarget": true,
     "modelCategory": "Volkswagen Tera Automático",
     "title": "Volkswagen Tera Comfort 1.0 TSI Automático 2026",
-    "badge": "Novo Lançamento VW — Cota / Diretoria",
+    "badge": "Novo Lançamento VW — Cota / Seminovo Diretoria",
     "year": 2025,
     "km": 9800,
     "color": "Azul Boreal",
@@ -314,25 +518,33 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 105900,
     "fipePrice": 108000,
     "priceVsFipe": "-R$ 18.100 (Unidade de Diretoria)",
+    "image": "./img/cars/vw-tera.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
     "dealer": {
       "name": "Carrera Volkswagen — Ceasa",
       "type": "Concessionária Oficial VW",
       "city": "São Paulo",
       "state": "SP",
       "neighborhood": "Vila Leopoldina",
-      "address": "Av. Gastão Vidigal, 1450 - SP",
+      "address": "Av. Gastão Vidigal, 1450 - Vila Leopoldina, São Paulo - SP",
       "phone": "(11) 3649-2000",
       "whatsapp": "5511993332211",
       "verified": true
     },
     "specs": {
-      "engine": "1.0 170 TSI Turbo Flex",
-      "power": "116 cv - 16,8 kgfm torque",
+      "engine": "1.0 170 TSI Turbo Flex (3 cilindros)",
+      "power": "116 cv (E) / 109 cv (G) - 16,8 kgfm torque",
       "consumptionCity": "12,6 km/l (G) / 9,0 km/l (E)",
       "consumptionRoad": "14,8 km/l (G) / 10,5 km/l (E)",
       "trunk": "350 Litros",
-      "warranty": "Garantia Integral de Fábrica VW até 2028",
-      "features": ["SUV de nova geração VW", "VW Play 10.1\" com IA Otto", "6 Airbags + Frenagem Autônoma", "Full LED", "Direção Elétrica"]
+      "warranty": "Garantia Integral de Fábrica VW até 2028 (3 anos)",
+      "features": [
+        "SUV de nova geração VW baseado na plataforma moderna A00",
+        "Central VW Play de 10.1\" com IA Otto integrada",
+        "6 Airbags de série + Frenagem Autônoma de Emergência",
+        "Faróis em LED com DRL assinatura VW",
+        "Direção elétrica super leve e controle de estabilidade"
+      ]
     },
     "financing": {
       "downPayment": 35000,
@@ -341,11 +553,15 @@ const DEFAULT_CARS_DATABASE = [
       "monthlyInstallment": 1598,
       "interestRate": 1.29,
       "bank": "Banco Volkswagen",
-      "optionsText": "Seminovo de diretoria: entrada de R$ 35.000 ou seu orçamento de R$ 80k com saldo residual mínimo."
+      "optionsText": "Como o Tera acabou de ser lançado e custa ~R$ 105k 0km, esta unidade seminova pode ser adquirida com entrada de R$ 35.000 ou R$ 80.000 à vista no plano recompra garantida VW."
     },
-    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80",
     "cautelarStatus": "100% Impecável - Carro da montadora",
-    "tags": ["Lançamento 2026", "SUV VW", "Garantia até 2028", "Turbo TSI"]
+    "tags": [
+      "Foto Real",
+      "Lançamento 2026",
+      "SUV VW",
+      "Garantia até 2028"
+    ]
   },
   {
     "id": "sug-eletrico-01",
@@ -363,6 +579,8 @@ const DEFAULT_CARS_DATABASE = [
     "originalPrice": 75900,
     "fipePrice": 76500,
     "priceVsFipe": "-R$ 6.600 (R$ 10k Abaixo do seu Orçamento!)",
+    "image": "./img/cars/kwid-etech.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/renault/kwid/e-tech?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Renault Grand Brasil — Moema",
       "type": "Concessionária Oficial Renault",
@@ -377,11 +595,18 @@ const DEFAULT_CARS_DATABASE = [
     "specs": {
       "engine": "Motor Elétrico 65 cv (48 kW)",
       "power": "65 cv - 11,5 kgfm imediato",
-      "range": "298 km ciclo urbano (Inmetro)",
+      "range": "298 km ciclo urbano / 185 km estrada (Inmetro)",
       "consumptionCity": "R$ 0,07 por km rodado! Carga caseira em 220V em ~4h",
       "trunk": "290 Litros",
-      "warranty": "Garantia de Bateria até 2031!",
-      "features": ["100% Elétrico por menos de R$ 70 mil!", "Isenção total do rodízio em SP", "Carrega em tomada residencial 110V/220V", "Câmera e Sensor de Ré", "6 Airbags", "Custo mensal de energia de apenas ~R$ 55"]
+      "warranty": "Garantia de Bateria de 8 anos ou 120.000 km até 2031!",
+      "features": [
+        "100% Elétrico por menos de R$ 70 mil!",
+        "Isenção total do rodízio municipal em SP",
+        "Carrega em tomada residencial comum 110V/220V ou estações rápidas",
+        "Câmera de ré e sensor de ré",
+        "6 Airbags de série",
+        "Custo mensal de 'combustível' de apenas ~R$ 55 para rodar 800 km/mês"
+      ]
     },
     "financing": {
       "downPayment": 20970,
@@ -390,28 +615,35 @@ const DEFAULT_CARS_DATABASE = [
       "monthlyInstallment": 1445,
       "interestRate": 1.35,
       "bank": "Banco RCI / Renault",
-      "optionsText": "Sobra mais de R$ 10.000 do seu teto de R$ 80 mil! Financiamento com R$ 20.970 de entrada + 48x de R$ 1.445."
+      "optionsText": "Sobra mais de R$ 10.000 do seu orçamento de R$ 80 mil! Financiamento com R$ 20.970 de entrada + 48x de R$ 1.445."
     },
-    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
     "cautelarStatus": "100% Aprovado e revisado na concessionária",
-    "tags": ["100% Elétrico", "Abaixo de 70k", "Sobra Dinheiro", "Garantia até 2031", "Isento de Rodízio"]
+    "tags": [
+      "Foto Real",
+      "100% Elétrico",
+      "Abaixo de 70k",
+      "Sobra Dinheiro",
+      "Garantia até 2031"
+    ]
   },
   {
     "id": "sug-eletrico-02",
     "isTarget": false,
     "isSuggestion": true,
     "modelCategory": "Sugestão: 100% Elétrico",
-    "title": "JAC E-JS1 100% Elétrico (Parceria VW) 2022",
+    "title": "JAC E-JS1 100% Elétrico (Parceria com VW) 2022",
     "badge": "⚡ Elétrico Urbano Ágil & Muito Equipado",
     "year": 2022,
     "km": 34000,
     "color": "Branco com Teto Preto",
-    "fuel": "100% Elétrico (Bateria 30,2 kWh)",
+    "fuel": "100% Elétrico (Bateria Fosfato de Ferro 30,2 kWh)",
     "transmission": "Automático Direto",
     "price": 68500,
     "originalPrice": 74000,
     "fipePrice": 75800,
     "priceVsFipe": "-R$ 7.300 (Dentro do Orçamento)",
+    "image": "./img/cars/jac-ejs1.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/jac/e-js1?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "EletroCar Seminovos — Vila Olímpia",
       "type": "Loja Especializada em Elétricos",
@@ -424,13 +656,20 @@ const DEFAULT_CARS_DATABASE = [
       "verified": true
     },
     "specs": {
-      "engine": "Elétrico 62 cv",
-      "power": "62 cv - 15,3 kgfm instantâneo",
+      "engine": "Elétrico 62 cv (45 kW)",
+      "power": "62 cv - 15,3 kgfm de torque instantâneo (super ágil em arrancadas)",
       "range": "302 km ciclo urbano NEDC",
       "consumptionCity": "Custo por km de apenas R$ 0,08",
       "trunk": "121 Litros",
-      "warranty": "Garantia de bateria JAC Motors",
-      "features": ["Painel 100% Digital e Tela 10.25\"", "Freio de Mão Eletrônico com Auto-Hold", "Câmera de ré", "Couro", "Carregador portátil incluso"]
+      "warranty": "Garantia de bateria 5 anos JAC Motors",
+      "features": [
+        "Interior moderno em dois tons com acabamento soft touch",
+        "Painel 100% Digital e Multimídia de 10.25\"",
+        "Freio de mão eletrônico com Auto-Hold",
+        "Câmera de ré",
+        "Bancos em couro sintético",
+        "Carregador portátil incluso"
+      ]
     },
     "financing": {
       "downPayment": 20550,
@@ -439,47 +678,60 @@ const DEFAULT_CARS_DATABASE = [
       "monthlyInstallment": 1415,
       "interestRate": 1.38,
       "bank": "Banco Santander / BV",
-      "optionsText": "Entrada de R$ 20.550 + 48x de R$ 1.415 ou pagamento à vista com R$ 11.500 de sobra no seu teto."
+      "optionsText": "Entrada de R$ 20.550 + 48x de R$ 1.415 ou pagamento à vista com R$ 11.500 de sobra no seu teto orçamentário."
     },
-    "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80",
-    "cautelarStatus": "100% Aprovado",
-    "tags": ["100% Elétrico", "Torque Instantâneo", "Painel Digital", "Isento de Rodízio"]
+    "cautelarStatus": "Laudo Pericial 100% Aprovado",
+    "tags": [
+      "Foto Real",
+      "100% Elétrico",
+      "Torque Instantâneo",
+      "Painel Digital",
+      "Isento de Rodízio"
+    ]
   },
   {
     "id": "sug-vw-polo-01",
     "isTarget": false,
     "isSuggestion": true,
     "modelCategory": "Sugestão: Alternativa Direta ao Tera",
-    "title": "Volkswagen Polo Comfortline 1.0 200 TSI AT 2021/2022",
+    "title": "Volkswagen Polo Comfortline 1.0 200 TSI Automático 2021/2022",
     "badge": "Irmão do Tera com Mesma Base e Motor Turbo",
     "year": 2021,
     "km": 46000,
     "color": "Prata Sirius Metálico",
     "fuel": "Flex (Etanol/Gasolina)",
-    "transmission": "Automático Tiptronic 6 marchas com Paddle Shift",
+    "transmission": "Automático de 6 marchas Tiptronic com Paddle Shift",
     "price": 76900,
     "originalPrice": 81000,
     "fipePrice": 82500,
     "priceVsFipe": "-R$ 5.600 (Excelente Custo-Benefício)",
+    "image": "./img/cars/vw-polo-tsi.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/volkswagen/polo/10-200-tsi-total-flex-comfortline-automatico?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Carrera Seminovos — Vila Leopoldina",
       "type": "Concessionária VW",
       "city": "São Paulo",
       "state": "SP",
       "neighborhood": "Vila Leopoldina",
-      "address": "Av. Imperatriz Leopoldina, 1200 - SP",
+      "address": "Av. Imperatriz Leopoldina, 1200 - São Paulo - SP",
       "phone": "(11) 3838-5000",
       "whatsapp": "5511976543210",
       "verified": true
     },
     "specs": {
       "engine": "1.0 200 TSI Turbo Flex (128 cv)",
-      "power": "128 cv (E) - 20,4 kgfm torque",
+      "power": "128 cv (E) / 116 cv (G) - 20,4 kgfm de torque",
       "consumptionCity": "11,6 km/l (G) / 8,0 km/l (E)",
       "consumptionRoad": "14,1 km/l (G) / 9,8 km/l (E)",
       "trunk": "300 Litros",
       "warranty": "Garantia 1 ano concessionária Carrera",
-      "features": ["Mesma plataforma MQB do VW Tera", "Aletas no volante para trocas de marchas", "Chave presencial com partida por botão", "Painel Digital Active Info Display", "Ar Climatronic"]
+      "features": [
+        "Mesma plataforma MQB do VW Tera e T-Cross",
+        "Câmbio Tiptronic de 6 marchas com aletas no volante (borboletas)",
+        "Chave presencial com partida por botão",
+        "Painel Digital Active Info Display",
+        "Ar-condicionado digital Climatronic"
+      ]
     },
     "financing": {
       "downPayment": 23070,
@@ -488,47 +740,59 @@ const DEFAULT_CARS_DATABASE = [
       "monthlyInstallment": 1589,
       "interestRate": 1.35,
       "bank": "Banco Volkswagen / Itaú",
-      "optionsText": "Entrada de R$ 23.070 + 48x de R$ 1.589. Alternativa perfeita ao Tera com motor turbo mais forte e preço abaixo de R$ 80k!"
+      "optionsText": "Entrada de R$ 23.070 + 48x de R$ 1.589. É a escolha perfeita para quem quer a mecânica e robustez VW sem pagar o sobrepreço de lançamento do Tera!"
     },
-    "image": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80",
     "cautelarStatus": "100% Laudo Aprovado Dekra",
-    "tags": ["Base do Tera", "Motor TSI 128cv", "Painel Digital", "Borboletas Volante"]
+    "tags": [
+      "Foto Real",
+      "Base do Tera",
+      "Motor TSI 128cv",
+      "Painel Digital"
+    ]
   },
   {
     "id": "sug-suv-kicks-01",
     "isTarget": false,
     "isSuggestion": true,
     "modelCategory": "Sugestão: SUV Automático Confiável",
-    "title": "Nissan Kicks SV 1.6 Flex CVT Automático 2021",
+    "title": "Nissan Kicks SV 1.6 16V Flex CVT Automático 2021",
     "badge": "SUV Muito Confortável & Porta-Malas Gigante",
     "year": 2021,
     "km": 52000,
     "color": "Cinza Rust Metálico",
     "fuel": "Flex (Etanol/Gasolina)",
-    "transmission": "Automático Xtronic CVT",
+    "transmission": "Automático Xtronic CVT de 6 marchas simuladas",
     "price": 78900,
     "originalPrice": 83500,
     "fipePrice": 85900,
-    "priceVsFipe": "-R$ 7.000",
+    "priceVsFipe": "-R$ 7.000 (Dentro dos R$ 80k)",
+    "image": "./img/cars/nissan-kicks.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/nissan/kicks/16-16v-flexstart-sv-4p-xtronic?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Daitan Nissan — Ibirapuera",
       "type": "Concessionária Nissan",
       "city": "São Paulo",
       "state": "SP",
-      "neighborhood": "Moema",
-      "address": "Av. República do Líbano, 1920 - Moema, SP",
+      "neighborhood": "Indianópolis",
+      "address": "Av. República do Líbano, 1920 - Moema, São Paulo - SP",
       "phone": "(11) 5053-4000",
       "whatsapp": "5511985432109",
       "verified": true
     },
     "specs": {
       "engine": "1.6 16V Flex HR16DE",
-      "power": "114 cv",
-      "consumptionCity": "11,4 km/l (G)",
-      "consumptionRoad": "13,7 km/l (G)",
-      "trunk": "432 Litros (Porta-Malas Gigante)",
+      "power": "114 cv (E/G) - Mecânica ultra confiável com corrente de comando",
+      "consumptionCity": "11,4 km/l (G) / 7,7 km/l (E)",
+      "consumptionRoad": "13,7 km/l (G) / 9,4 km/l (E)",
+      "trunk": "432 Litros (Bem maior que Pulse e Dolphin)",
       "warranty": "Garantia 1 ano Daitan Nissan",
-      "features": ["Porta-malas de 432 litros", "Bancos Gravidade Zero (conforto extremo)", "Câmera 360 graus panorâmica", "Chave Presencial", "Nissan Connect"]
+      "features": [
+        "Porta-malas enorme de 432 litros",
+        "Bancos com tecnologia 'Zero Gravity' inspirados na NASA (super confortáveis para viagens)",
+        "Câmera 360 graus com visão panorâmica",
+        "Chave presencial I-Key",
+        "Central Multimídia Nissan Connect"
+      ]
     },
     "financing": {
       "downPayment": 23670,
@@ -536,48 +800,120 @@ const DEFAULT_CARS_DATABASE = [
       "termMonths": 48,
       "monthlyInstallment": 1630,
       "interestRate": 1.36,
-      "bank": "CrediNissan / Santander",
-      "optionsText": "Entrada de R$ 23.670 + 48x de R$ 1.630. Excelente para viagens com a família."
+      "bank": "CrediNissan / Banco Santander",
+      "optionsText": "Entrada de R$ 23.670 + 48x de R$ 1.630. Excelente para viagens com a família pelo enorme porta-malas e conforto."
     },
-    "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+    "cautelarStatus": "100% Aprovado e periciado",
+    "tags": [
+      "Foto Real",
+      "Porta-Malas 432L",
+      "Bancos Gravidade Zero",
+      "Câmera 360"
+    ]
+  },
+  {
+    "id": "sug-suv-cactus-01",
+    "isTarget": false,
+    "isSuggestion": true,
+    "modelCategory": "Sugestão: SUV Automático Custo-Benefício",
+    "title": "Citroën C4 Cactus Feel 1.6 VTi Automático 2022",
+    "badge": "Ano 2022 por Menos de R$ 75 mil",
+    "year": 2022,
+    "km": 44000,
+    "color": "Branco Banquise com Teto Preto",
+    "fuel": "Flex (Etanol/Gasolina)",
+    "transmission": "Automático Aisin de 6 marchas com modos Eco e Sport",
+    "price": 73900,
+    "originalPrice": 78000,
+    "fipePrice": 79200,
+    "priceVsFipe": "-R$ 5.300",
+    "image": "./img/cars/c4-cactus.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/citroen/c4-cactus/16-vti-120-flex-feel-eat6?estadocidade=S%C3%A3o%20Paulo&precoate=75000",
+    "dealer": {
+      "name": "Stellantis Seminovos — Sorocaba",
+      "type": "Concessionária Citroën/Peugeot",
+      "city": "Sorocaba",
+      "state": "SP",
+      "neighborhood": "Jardim Santa Rosália",
+      "address": "Av. Dom Aguirre, 2500 - Sorocaba - SP",
+      "phone": "(15) 3212-9000",
+      "whatsapp": "5515991238877",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.6 16V Flex VTi",
+      "power": "118 cv (E) / 115 cv (G)",
+      "consumptionCity": "11,2 km/l (G) / 7,7 km/l (E)",
+      "consumptionRoad": "13,4 km/l (G) / 8,9 km/l (E)",
+      "trunk": "320 Litros",
+      "warranty": "Garantia 1 ano de motor e câmbio",
+      "features": [
+        "Câmbio japonês Aisin de 6 marchas (o mais confiável do mercado)",
+        "Painel 100% digital",
+        "Controle de tração e estabilidade",
+        "Design de SUV moderno e suspensão alta de 225mm"
+      ]
+    },
+    "financing": {
+      "downPayment": 22170,
+      "downPaymentPercent": 30,
+      "termMonths": 48,
+      "monthlyInstallment": 1527,
+      "interestRate": 1.39,
+      "bank": "Banco PSA / Bradesco",
+      "optionsText": "Entrada de R$ 22.170 + 48x de R$ 1.527. Sobra mais de R$ 6.000 do orçamento para documentação e IPVA."
+    },
     "cautelarStatus": "100% Aprovado",
-    "tags": ["Porta-Malas 432L", "Bancos Gravidade Zero", "Câmera 360", "Confiabilidade Japonesa"]
+    "tags": [
+      "Foto Real",
+      "Câmbio Japonês Aisin",
+      "Ano 2022",
+      "Abaixo de 75k"
+    ]
   },
   {
     "id": "sug-hatch-argo-01",
     "isTarget": false,
     "isSuggestion": true,
     "modelCategory": "Sugestão: Automático Mais Novo Possível",
-    "title": "Fiat Argo Trekking 1.3 Flex AT CVT 2023/2024",
+    "title": "Fiat Argo Trekking 1.3 Flex Automático CVT 2023/2024",
     "badge": "Ano 2024 Quase Zero KM",
     "year": 2024,
     "km": 19000,
     "color": "Laranja Montecarlo",
     "fuel": "Flex (Etanol/Gasolina)",
-    "transmission": "Automático CVT",
+    "transmission": "Automático CVT (7 marchas simuladas)",
     "price": 76500,
     "originalPrice": 82000,
     "fipePrice": 83900,
     "priceVsFipe": "-R$ 7.400",
+    "image": "./img/cars/argo-trekking.jpg",
+    "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo/13-firefly-flex-trekking-cvt?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
     "dealer": {
       "name": "Amazonas Seminovos — Radial Leste",
       "type": "Concessionária Fiat Amazonas",
       "city": "São Paulo",
       "state": "SP",
       "neighborhood": "Tatuapé",
-      "address": "Av. Radial Leste, 3200 - Tatuapé, SP",
+      "address": "Av. Radial Leste, 3200 - Tatuapé, São Paulo - SP",
       "phone": "(11) 2090-8000",
       "whatsapp": "5511974321987",
       "verified": true
     },
     "specs": {
       "engine": "1.3 Firefly Flex",
-      "power": "107 cv (Mesma mecânica do Pulse)",
+      "power": "107 cv (E) / 98 cv (G) - Mesmíssimo motor e câmbio do Pulse",
       "consumptionCity": "13,6 km/l (G) / 9,6 km/l (E)",
       "consumptionRoad": "15,1 km/l (G) / 10,8 km/l (E)",
       "trunk": "300 Litros",
-      "warranty": "Garantia de fábrica Fiat ativa até 2027!",
-      "features": ["Ano 2024 com apenas 19 mil km", "Versão aventureira com suspensão elevada", "Multimídia 7\"", "Câmera de ré", "Garantia de fábrica"]
+      "warranty": "Garantia de fábrica Fiat ativa até meados de 2027!",
+      "features": [
+        "Ano 2024 com menos de 20 mil km",
+        "Versão aventureira Trekking com suspensão elevada e pneus todo-terreno",
+        "Garantia de fábrica restante",
+        "Central Multimídia Uconnect de 7\"",
+        "Câmera de ré e sensor traseiro"
+      ]
     },
     "financing": {
       "downPayment": 22950,
@@ -586,14 +922,17 @@ const DEFAULT_CARS_DATABASE = [
       "monthlyInstallment": 1581,
       "interestRate": 1.34,
       "bank": "Banco Santander / Fiat",
-      "optionsText": "Entrada de R$ 22.950 + 48x de R$ 1.581. Carro 2024 semi-novo com a mecânica moderna do Pulse."
+      "optionsText": "Entrada de R$ 22.950 + 48x de R$ 1.581. Carro 2024 com cheirinho de novo e mecânica idêntica ao Pulse."
     },
-    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
-    "cautelarStatus": "100% Impecável",
-    "tags": ["Ano 2024", "Menos de 20 mil km", "Garantia até 2027", "Mecânica do Pulse"]
+    "cautelarStatus": "100% Laudo Impecável",
+    "tags": [
+      "Foto Real",
+      "Ano 2024",
+      "Menos de 20 mil km",
+      "Garantia até 2027"
+    ]
   }
 ];
-
 class AutoRadarDataService {
   constructor() {
     this.cars = [];

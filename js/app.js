@@ -313,10 +313,13 @@ document.addEventListener('DOMContentLoaded', async () => {
           <!-- Botões de Ação -->
           <div class="card-actions-row">
             <a href="${waLink}" target="_blank" rel="noopener" class="btn-card-main">
-              <span>💬</span> WhatsApp Loja
+              <span>💬</span> WhatsApp
+            </a>
+            <a href="${car.listingUrl || '#'}" target="_blank" rel="noopener" class="btn-card-listing" title="Abrir anúncio verificado na Webmotors / iCarros / Loja">
+              <span>🔗</span> Anúncio
             </a>
             <button class="btn-card-secondary btn-details" data-detail-id="${car.id}">
-              Detalhes
+              Ficha
             </button>
             <button class="btn-card-compare ${isCompared ? 'active' : ''}" data-compare-id="${car.id}" title="${isCompared ? 'Remover do comparador' : 'Adicionar ao comparador'}">
               ⚖️
@@ -672,10 +675,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
         <a href="${waLink}" target="_blank" rel="noopener" class="btn-primary" style="flex: 2; text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px;">
-          <span>💬</span> Abrir Conversa no WhatsApp com Vendedor
+          <span>💬</span> Chamar no WhatsApp da Loja
         </a>
-        <button class="btn-secondary-sm" onclick="window.autoRadarApp.openInSimulator('${car.id}')" style="flex: 1; padding: 12px;">
-          🧮 Simular Financiamento
+        <a href="${car.listingUrl || '#'}" target="_blank" rel="noopener" class="btn-card-listing-lg" style="flex: 2; text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>🔗</span> Abrir Anúncio Oficial (Webmotors / Portal)
+        </a>
+        <button class="btn-secondary-sm" onclick="window.autoRadarApp.openInSimulator('${car.id}')" style="flex: 1; min-width: 160px; padding: 12px;">
+          🧮 Simular Parcelas
         </button>
       </div>
     `;

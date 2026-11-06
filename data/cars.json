@@ -8,7 +8,7 @@
       "Fiat Pulse Automático"
     ],
     "targetRegion": "Estado de São Paulo (SP)",
-    "lastUpdated": "2026-11-06T12:23:57.730183",
+    "lastUpdated": "2026-11-06T13:30:00-03:00",
     "dailyUpdateSchedule": "06:00 AM (Diário)",
     "fuelPreference": "Elétrico / Híbrido / Automático Econômico"
   },
@@ -28,6 +28,8 @@
       "originalPrice": 78900,
       "fipePrice": 83450,
       "priceVsFipe": "-R$ 8.550 (Abaixo da FIPE)",
+      "image": "./img/cars/pulse-drive-cinza.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/13-firefly-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
       "dealer": {
         "name": "Fiat Sinal — Unidade Ipiranga",
         "type": "Concessionária Oficial Fiat",
@@ -62,12 +64,11 @@
         "monthlyInstallment": 1548,
         "interestRate": 1.39,
         "bank": "Banco Santander / Banco Fiat",
-        "optionsText": "Entrada de R$ 22.470 (30%) + 48x de R$ 1.548 ou entrada no cartão de crédito em até 21x. Aceita FGTS e veículo na troca.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 22.470 (30%) + 48x de R$ 1.548 ou entrada no cartão de crédito em até 21x. Aceita FGTS e veículo na troca."
       },
-      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Aprovado sem apontamentos (Supervisão)",
       "tags": [
+        "Foto Real",
         "Dentro do Orçamento",
         "Concessionária",
         "Laudo Aprovado",
@@ -89,6 +90,8 @@
       "originalPrice": 81900,
       "fipePrice": 84900,
       "priceVsFipe": "-R$ 7.100 (Abaixo da FIPE)",
+      "image": "./img/cars/pulse-turbo-branco.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse/10-turbo-200-flex-drive-at?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
       "dealer": {
         "name": "Localiza Seminovos — Santo André",
         "type": "Seminovos Certificados",
@@ -123,16 +126,14 @@
         "monthlyInstallment": 1608,
         "interestRate": 1.42,
         "bank": "Banco Itaú / BV Financeira",
-        "optionsText": "Entrada de R$ 23.340 + 48x de R$ 1.608 ou entrada zero com parcelas em 60x mediante análise de crédito. Aceita consórcio contemplado.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 23.340 + 48x de R$ 1.608 ou entrada zero com parcelas em 60x mediante análise de crédito. Aceita consórcio contemplado."
       },
-      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Aprovado (Dekra)",
       "tags": [
+        "Foto Real",
         "Dentro do Orçamento",
         "Motor Turbo",
-        "Laudo Aprovado",
-        "Seminovos Certificados"
+        "Laudo Aprovado"
       ]
     },
     {
@@ -150,6 +151,8 @@
       "originalPrice": 83000,
       "fipePrice": 86200,
       "priceVsFipe": "-R$ 6.700 (Abaixo da FIPE)",
+      "image": "./img/cars/pulse-drive-cinza.jpg",
+      "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/fiat/pulse?pe=80000&gb=2",
       "dealer": {
         "name": "Carrera Seminovos — Butantã",
         "type": "Concessionária Multimarcas",
@@ -184,16 +187,14 @@
         "monthlyInstallment": 1642,
         "interestRate": 1.35,
         "bank": "Banco Safra / Bradesco",
-        "optionsText": "Entrada facilitada em até 12x sem juros no cartão de R$ 23.850 + 48x de R$ 1.642. Taxa especial para correntistas.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada facilitada em até 12x sem juros no cartão de R$ 23.850 + 48x de R$ 1.642. Taxa especial para correntistas."
       },
-      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Periciado e aprovado",
       "tags": [
+        "Foto Real",
         "Dentro do Orçamento",
         "Ano 2023",
-        "Garantia de Fábrica",
-        "Único Dono"
+        "Garantia de Fábrica"
       ]
     },
     {
@@ -212,6 +213,8 @@
       "originalPrice": 84900,
       "fipePrice": 88300,
       "priceVsFipe": "-R$ 7.300 (Oferta Especial)",
+      "image": "./img/cars/pulse-audace-azul.jpg",
+      "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_28122.1_&lim=20",
       "dealer": {
         "name": "Auto Shopping Cristal — Multimarcas Sul",
         "type": "Loja Multimarcas Verificada",
@@ -246,16 +249,14 @@
         "monthlyInstallment": 1675,
         "interestRate": 1.45,
         "bank": "BV Financeira / Banco PAN",
-        "optionsText": "Preço de vitrine R$ 81.000, loja confirmou proposta à vista por R$ 79.500. Financiamento com entrada de R$ 24.300 + 48x de R$ 1.675.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Preço de vitrine R$ 81.000, loja confirmou proposta à vista por R$ 79.500. Financiamento com entrada de R$ 24.300 + 48x de R$ 1.675."
       },
-      "image": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Aprovado sem restrição",
       "tags": [
+        "Foto Real",
         "Pacote ADAS",
         "Motor Turbo",
-        "Chave Presencial",
-        "Partida Remota"
+        "Chave Presencial"
       ]
     },
     {
@@ -273,6 +274,8 @@
       "originalPrice": 76900,
       "fipePrice": 83450,
       "priceVsFipe": "-R$ 10.550 (Super Desconto)",
+      "image": "./img/cars/pulse-drive-cinza.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/pulse?estadocidade=Campinas&precoate=75000",
       "dealer": {
         "name": "Daitan Seminovos — Campinas Norte",
         "type": "Grupo Concessionárias Daitan",
@@ -307,16 +310,14 @@
         "monthlyInstallment": 1506,
         "interestRate": 1.38,
         "bank": "Banco Santander / Itaú",
-        "optionsText": "Entrada de R$ 21.870 + 48x de R$ 1.506. Aceita troca de menor ou maior valor com troco na conta.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 21.870 + 48x de R$ 1.506. Aceita troca de menor ou maior valor com troco na conta."
       },
-      "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Laudo Aprovado",
       "tags": [
+        "Foto Real",
         "Menor Preço",
         "Campinas",
-        "Super Desconto",
-        "Garantia 1 Ano"
+        "Super Desconto"
       ]
     },
     {
@@ -335,6 +336,8 @@
       "originalPrice": 96900,
       "fipePrice": 98500,
       "priceVsFipe": "-R$ 15.600 (Abaixo de Mercado)",
+      "image": "./img/cars/byd-dolphin-mini-branco.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/byd/dolphin-mini?estadocidade=S%C3%A3o%20Paulo&precoate=90000",
       "dealer": {
         "name": "AutoPrime Motors — Anhaia Mello",
         "type": "Especialista em Seminovos Elétricos",
@@ -370,12 +373,11 @@
         "monthlyInstallment": 1712,
         "interestRate": 1.39,
         "bank": "BYD Financiamentos (Banco BV / Santander)",
-        "optionsText": "Preço R$ 82.900 anunciado, vendedor aceita contraproposta de R$ 80.000 à vista! Financiamento com R$ 24.870 de entrada + 48x de R$ 1.712.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Preço R$ 82.900 anunciado, vendedor aceita contraproposta de R$ 80.000 à vista! Financiamento com R$ 24.870 de entrada + 48x de R$ 1.712."
       },
-      "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Aprovado sem retoques (Dekra)",
       "tags": [
+        "Foto Real",
         "100% Elétrico",
         "Bateria Blade",
         "Garantia até 2032",
@@ -397,6 +399,8 @@
       "originalPrice": 85000,
       "fipePrice": 98500,
       "priceVsFipe": "-R$ 18.600 (Preço Limite Casal)",
+      "image": "./img/cars/byd-dolphin-mini-verde.jpg",
+      "listingUrl": "https://sp.olx.com.br/autos-e-pecas/carros-vans-e-utilitarios/byd/dolphin-mini",
       "dealer": {
         "name": "Anúncio Verificado — Particular (Matheus & Renata)",
         "type": "Particular com Laudo Aprovado",
@@ -430,12 +434,11 @@
         "monthlyInstallment": 1780,
         "interestRate": 1.29,
         "bank": "Transferência de Financiamento Santander ou Pagamento à Vista",
-        "optionsText": "Aceita pagamento à vista integral de R$ 79.900 ou transferência de dívida (Entrada de R$ 30.000 + parcelas). Aceita vistoria cautelar em qualquer empresa.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Aceita pagamento à vista integral de R$ 79.900 ou transferência de dívida (Entrada de R$ 30.000 + parcelas). Aceita vistoria cautelar em qualquer empresa."
       },
-      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "Laudo Cautelar 100% Aprovado emitido há 15 dias",
       "tags": [
+        "Foto Real",
         "Dentro do Orçamento",
         "Wallbox Grátis",
         "100% Elétrico",
@@ -458,6 +461,8 @@
       "originalPrice": 92000,
       "fipePrice": 101000,
       "priceVsFipe": "-R$ 16.500",
+      "image": "./img/cars/byd-dolphin-mini-preto.jpg",
+      "listingUrl": "https://www.icarros.com.br/ache/listaanuncios.jsp?pag=1&ord=2&sop=untu_17.1_-flt_1.1_-cid_9668.1_-est_SP.1_-mod_32150.1_&lim=20",
       "dealer": {
         "name": "BYD Dahruj Seminovos — Campinas",
         "type": "Concessionária Oficial BYD",
@@ -491,16 +496,14 @@
         "monthlyInstallment": 1745,
         "interestRate": 1.35,
         "bank": "Banco Santander / BV",
-        "optionsText": "Concessionária aberta a proposta de fechar em R$ 80.000 para pagamento à vista até o fim de semana. Financiamento com taxa de 1,35% a.m.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Concessionária aberta a proposta de fechar em R$ 80.000 para pagamento à vista até o fim de semana. Financiamento com taxa de 1,35% a.m."
       },
-      "image": "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "Certificado BYD 100% Aprovado",
       "tags": [
+        "Foto Real",
         "5 Lugares",
         "Concessionária BYD",
-        "100% Elétrico",
-        "Custo Zero Combustível"
+        "100% Elétrico"
       ]
     },
     {
@@ -519,6 +522,8 @@
       "originalPrice": 105900,
       "fipePrice": 108000,
       "priceVsFipe": "-R$ 18.100 (Unidade de Diretoria)",
+      "image": "./img/cars/vw-tera.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros/estoque/volkswagen/tera?estadocidade=S%C3%A3o%20Paulo",
       "dealer": {
         "name": "Carrera Volkswagen — Ceasa",
         "type": "Concessionária Oficial VW",
@@ -552,74 +557,14 @@
         "monthlyInstallment": 1598,
         "interestRate": 1.29,
         "bank": "Banco Volkswagen",
-        "optionsText": "Como o Tera acabou de ser lançado e custa ~R$ 105k 0km, esta unidade seminova pode ser adquirida com entrada de R$ 35.000 ou R$ 80.000 à vista no plano recompra garantida VW.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Como o Tera acabou de ser lançado e custa ~R$ 105k 0km, esta unidade seminova pode ser adquirida com entrada de R$ 35.000 ou R$ 80.000 à vista no plano recompra garantida VW."
       },
-      "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Impecável - Carro da montadora",
       "tags": [
+        "Foto Real",
         "Lançamento 2026",
         "SUV VW",
-        "Garantia até 2028",
-        "Turbo TSI"
-      ]
-    },
-    {
-      "id": "tera-02",
-      "isTarget": true,
-      "modelCategory": "Volkswagen Tera Automático",
-      "title": "Volkswagen Tera 1.0 TSI Automático — Plano Entrada R$ 80k",
-      "badge": "0km com Quitação no Orçamento",
-      "year": 2026,
-      "km": 0,
-      "color": "Branco Cristal",
-      "fuel": "Flex (Etanol/Gasolina)",
-      "transmission": "Automático de 6 marchas",
-      "price": 102900,
-      "negotiatedTarget": 98000,
-      "budgetPlan": "Entrada R$ 80.000 (seu orçamento total) + Saldo em 24x sem juros!",
-      "dealer": {
-        "name": "Brasilwagen Volkswagen — Morumbi",
-        "type": "Concessionária Oficial VW",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Morumbi",
-        "address": "Av. Giovanni Gronchi, 4800 - Morumbi, São Paulo - SP",
-        "phone": "(11) 3740-5000",
-        "whatsapp": "5511994443322",
-        "verified": true
-      },
-      "specs": {
-        "engine": "1.0 Turbo TSI",
-        "power": "116 cv",
-        "consumptionCity": "12,6 km/l",
-        "consumptionRoad": "14,8 km/l",
-        "trunk": "350 Litros",
-        "warranty": "Garantia 3 anos 0km",
-        "features": [
-          "0km a faturar",
-          "3 primeiras revisões grátis pelo programa Revisão de Série VW",
-          "Painel Digital 8\"",
-          "Assistente de partida em rampa"
-        ]
-      },
-      "financing": {
-        "downPayment": 80000,
-        "downPaymentPercent": 77.7,
-        "termMonths": 24,
-        "monthlyInstallment": 1030,
-        "interestRate": 0.0,
-        "bank": "Banco Volkswagen (Taxa 0%)",
-        "optionsText": "Você paga os seus R$ 80.000 de entrada e parcela a diferença de R$ 22.900 em 24x de R$ 1.030 SEM JUROS (Taxa Zero de fábrica da VW)!",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
-      },
-      "image": "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
-      "cautelarStatus": "0km direto da fábrica",
-      "tags": [
-        "0km",
-        "Taxa Zero 0%",
-        "Revisões Grátis",
-        "Entrada R$ 80k"
+        "Garantia até 2028"
       ]
     },
     {
@@ -638,6 +583,8 @@
       "originalPrice": 75900,
       "fipePrice": 76500,
       "priceVsFipe": "-R$ 6.600 (R$ 10k Abaixo do seu Orçamento!)",
+      "image": "./img/cars/kwid-etech.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/renault/kwid/e-tech?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
       "dealer": {
         "name": "Renault Grand Brasil — Moema",
         "type": "Concessionária Oficial Renault",
@@ -672,17 +619,15 @@
         "monthlyInstallment": 1445,
         "interestRate": 1.35,
         "bank": "Banco RCI / Renault",
-        "optionsText": "Sobra mais de R$ 10.000 do seu orçamento de R$ 80 mil! Financiamento com R$ 20.970 de entrada + 48x de R$ 1.445.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Sobra mais de R$ 10.000 do seu orçamento de R$ 80 mil! Financiamento com R$ 20.970 de entrada + 48x de R$ 1.445."
       },
-      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Aprovado e revisado na concessionária",
       "tags": [
+        "Foto Real",
         "100% Elétrico",
         "Abaixo de 70k",
         "Sobra Dinheiro",
-        "Garantia até 2031",
-        "Isento de Rodízio"
+        "Garantia até 2031"
       ]
     },
     {
@@ -701,6 +646,8 @@
       "originalPrice": 74000,
       "fipePrice": 75800,
       "priceVsFipe": "-R$ 7.300 (Dentro do Orçamento)",
+      "image": "./img/cars/jac-ejs1.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/jac/e-js1?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
       "dealer": {
         "name": "EletroCar Seminovos — Vila Olímpia",
         "type": "Loja Especializada em Elétricos",
@@ -735,12 +682,11 @@
         "monthlyInstallment": 1415,
         "interestRate": 1.38,
         "bank": "Banco Santander / BV",
-        "optionsText": "Entrada de R$ 20.550 + 48x de R$ 1.415 ou pagamento à vista com R$ 11.500 de sobra no seu teto orçamentário.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 20.550 + 48x de R$ 1.415 ou pagamento à vista com R$ 11.500 de sobra no seu teto orçamentário."
       },
-      "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "Laudo Pericial 100% Aprovado",
       "tags": [
+        "Foto Real",
         "100% Elétrico",
         "Torque Instantâneo",
         "Painel Digital",
@@ -763,6 +709,8 @@
       "originalPrice": 81000,
       "fipePrice": 82500,
       "priceVsFipe": "-R$ 5.600 (Excelente Custo-Benefício)",
+      "image": "./img/cars/vw-polo-tsi.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/volkswagen/polo/10-200-tsi-total-flex-comfortline-automatico?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
       "dealer": {
         "name": "Carrera Seminovos — Vila Leopoldina",
         "type": "Concessionária VW",
@@ -796,16 +744,14 @@
         "monthlyInstallment": 1589,
         "interestRate": 1.35,
         "bank": "Banco Volkswagen / Itaú",
-        "optionsText": "Entrada de R$ 23.070 + 48x de R$ 1.589. É a escolha perfeita para quem quer a mecânica e robustez VW sem pagar o sobrepreço de lançamento do Tera!",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 23.070 + 48x de R$ 1.589. É a escolha perfeita para quem quer a mecânica e robustez VW sem pagar o sobrepreço de lançamento do Tera!"
       },
-      "image": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Laudo Aprovado Dekra",
       "tags": [
+        "Foto Real",
         "Base do Tera",
         "Motor TSI 128cv",
-        "Painel Digital",
-        "Borboletas Volante"
+        "Painel Digital"
       ]
     },
     {
@@ -824,6 +770,8 @@
       "originalPrice": 83500,
       "fipePrice": 85900,
       "priceVsFipe": "-R$ 7.000 (Dentro dos R$ 80k)",
+      "image": "./img/cars/nissan-kicks.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/nissan/kicks/16-16v-flexstart-sv-4p-xtronic?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
       "dealer": {
         "name": "Daitan Nissan — Ibirapuera",
         "type": "Concessionária Nissan",
@@ -857,16 +805,14 @@
         "monthlyInstallment": 1630,
         "interestRate": 1.36,
         "bank": "CrediNissan / Banco Santander",
-        "optionsText": "Entrada de R$ 23.670 + 48x de R$ 1.630. Excelente para viagens com a família pelo enorme porta-malas e conforto.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 23.670 + 48x de R$ 1.630. Excelente para viagens com a família pelo enorme porta-malas e conforto."
       },
-      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Aprovado e periciado",
       "tags": [
+        "Foto Real",
         "Porta-Malas 432L",
         "Bancos Gravidade Zero",
-        "Câmera 360",
-        "Confiabilidade Japonesa"
+        "Câmera 360"
       ]
     },
     {
@@ -885,6 +831,8 @@
       "originalPrice": 78000,
       "fipePrice": 79200,
       "priceVsFipe": "-R$ 5.300",
+      "image": "./img/cars/c4-cactus.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/citroen/c4-cactus/16-vti-120-flex-feel-eat6?estadocidade=S%C3%A3o%20Paulo&precoate=75000",
       "dealer": {
         "name": "Stellantis Seminovos — Sorocaba",
         "type": "Concessionária Citroën/Peugeot",
@@ -917,16 +865,14 @@
         "monthlyInstallment": 1527,
         "interestRate": 1.39,
         "bank": "Banco PSA / Bradesco",
-        "optionsText": "Entrada de R$ 22.170 + 48x de R$ 1.527. Sobra mais de R$ 6.000 do orçamento para documentação e IPVA.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 22.170 + 48x de R$ 1.527. Sobra mais de R$ 6.000 do orçamento para documentação e IPVA."
       },
-      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Aprovado",
       "tags": [
+        "Foto Real",
         "Câmbio Japonês Aisin",
         "Ano 2022",
-        "Abaixo de 75k",
-        "Suspensão Alta"
+        "Abaixo de 75k"
       ]
     },
     {
@@ -945,6 +891,8 @@
       "originalPrice": 82000,
       "fipePrice": 83900,
       "priceVsFipe": "-R$ 7.400",
+      "image": "./img/cars/argo-trekking.jpg",
+      "listingUrl": "https://www.webmotors.com.br/carros-usados/estoque/fiat/argo/13-firefly-flex-trekking-cvt?estadocidade=S%C3%A3o%20Paulo&precoate=80000",
       "dealer": {
         "name": "Amazonas Seminovos — Radial Leste",
         "type": "Concessionária Fiat Amazonas",
@@ -978,26 +926,15 @@
         "monthlyInstallment": 1581,
         "interestRate": 1.34,
         "bank": "Banco Santander / Fiat",
-        "optionsText": "Entrada de R$ 22.950 + 48x de R$ 1.581. Carro 2024 com cheirinho de novo e mecânica idêntica ao Pulse.",
-        "lastRecalc": "2026-11-06T12:23:57.730183"
+        "optionsText": "Entrada de R$ 22.950 + 48x de R$ 1.581. Carro 2024 com cheirinho de novo e mecânica idêntica ao Pulse."
       },
-      "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
       "cautelarStatus": "100% Laudo Impecável",
       "tags": [
+        "Foto Real",
         "Ano 2024",
         "Menos de 20 mil km",
-        "Garantia até 2027",
-        "Mecânica do Pulse"
+        "Garantia até 2027"
       ]
     }
-  ],
-  "stats": {
-    "lastCheckDate": "06/11/2026",
-    "totalVehicles": 16,
-    "targetModelsCount": 10,
-    "underBudgetCount": 14,
-    "electricCount": 5,
-    "averagePulsePrice": 77220.0,
-    "status": "Catálogo Sincronizado com Sucesso (Concessionárias & Lojas SP)"
-  }
+  ]
 }
