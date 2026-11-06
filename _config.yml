@@ -1,0 +1,4 @@
+exclude:
+  - agendar_tarefa_diaria.bat
+  - updater.py
+  - logs
