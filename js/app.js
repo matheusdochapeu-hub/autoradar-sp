@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', async () => {
  // Estado Local da UI
  const state = {
  currentTab: 'tab-targets',
- targetSubfilter: 'all',
  filterModel: 'all', // 'all', 'pulse', 'byd', 'tera'
  suggestionTier: '80k',
  searchQuery: '',
@@ -94,24 +93,34 @@ document.addEventListener('DOMContentLoaded', async () => {
  });
  });
 
- // ==============================================================
- // 2. Sub-filtros dos 3 Alvos
- // ==============================================================
- subfilterPills.forEach(pill => {
- pill.addEventListener('click', () => {
- subfilterPills.forEach(p => p.classList.remove('active'));
- pill.classList.add('active');
- state.targetSubfilter = pill.getAttribute('data-target');
- renderAllGrids();
- });
- });
+ // Normalizador de texto resiliente a acentos, pontuação e maiúsculas
+ function normalizeText(str) {
+ return (str || '')
+ .toString()
+ .toLowerCase()
+ .normalize('NFD')
+ .replace(/[\u0300-\u036f]/g, '');
+ }
+
+ function escapeHtml(str) {
+ return (str || '')
+ .toString()
+ .replace(/&/g, '&amp;')
+ .replace(/</g, '&lt;')
+ .replace(/>/g, '&gt;')
+ .replace(/"/g, '&quot;')
+ .replace(/'/g, '&#39;');
+ }
 
  // ==============================================================
- // 3. Filtros Globais (Busca, Preço, Combustível, Cidade, Ordenação)
+ // 2. Filtros Globais (Busca, Preço, Combustível, Cidade, Ordenação)
  // ==============================================================
  searchInput.addEventListener('input', (e) => {
- state.searchQuery = e.target.value.trim().toLowerCase();
+ state.searchQuery = e.target.value.trim();
  btnClearSearch.classList.toggle('hidden', state.searchQuery === '');
+ if (state.currentTab === 'tab-comparator' || state.currentTab === 'tab-simulator' || state.currentTab === 'tab-add') {
+ switchTab('tab-targets');
+ }
  renderAllGrids();
  });
 
@@ -122,50 +131,60 @@ document.addEventListener('DOMContentLoaded', async () => {
  renderAllGrids();
  });
 
-// Listeners antigos de <select> removidos (agora controlados por botões chips)
+ // ==============================================================
+ // 3. Lógica de Filtragem e Ordenação
+ // ==============================================================
+ function filterCars(carList, options = {}) {
+ const { isSuggestionsTab = false, targetTier = null } = options;
 
- // ==============================================================
- // 4. Lógica de Filtragem e Ordenação
- // ==============================================================
- function filterCars(carList) {
  return carList.filter(car => {
  // Filtro de Modelo Selecionado (Pulse, BYD, Tera)
- if (state.filterModel !== 'all') {
- const cat = (car.modelCategory || '').toLowerCase();
- const t = (car.title || '').toLowerCase();
+ if (state.filterModel !== 'all' && !isSuggestionsTab) {
+ const cat = normalizeText(car.modelCategory);
+ const t = normalizeText(car.title);
  if (state.filterModel === 'pulse' && !cat.includes('pulse') && !t.includes('pulse')) return false;
  if (state.filterModel === 'byd' && !cat.includes('dolphin') && !t.includes('dolphin')) return false;
  if (state.filterModel === 'tera' && !cat.includes('tera') && !t.includes('tera') && !t.includes('polo')) return false;
  }
+
  // Filtro de Preço (considera tanto preço anunciado quanto meta de negociação)
  const effectivePrice = car.negotiatedTarget || car.price;
- if (effectivePrice > state.filterPrice) return false;
+
+ // Na aba de sugestões, respeita a faixa de preço selecionada no botão de faixa
+ let maxAllowedPrice = state.filterPrice;
+ if (isSuggestionsTab && targetTier && targetTier !== 'all') {
+ const tierPrices = { '60k': 60000, '70k': 70000, '80k': 80000, '100k': 100000, '120k': 120000 };
+ maxAllowedPrice = Math.max(state.filterPrice, tierPrices[targetTier] || state.filterPrice);
+ }
+
+ if (effectivePrice > maxAllowedPrice) return false;
 
  // Filtro de Combustível
  if (state.filterFuel === 'electric') {
- const isElec = (car.fuel && car.fuel.toLowerCase().includes('elétrico')) || 
- (car.modelCategory && car.modelCategory.toLowerCase().includes('elétrico'));
+ const isElec = (car.fuel && normalizeText(car.fuel).includes('eletrico')) || 
+ (car.modelCategory && normalizeText(car.modelCategory).includes('eletrico')) ||
+ (car.modelCategory && normalizeText(car.modelCategory).includes('dolphin'));
  if (!isElec) return false;
  } else if (state.filterFuel === 'flex') {
- const isFlex = car.fuel && car.fuel.toLowerCase().includes('flex');
+ const isFlex = car.fuel && normalizeText(car.fuel).includes('flex');
  if (!isFlex) return false;
  }
 
  // Filtro de Cidade / Região em SP
  if (state.filterCity !== 'all') {
- const fc = state.filterCity.toLowerCase();
- const city = (car.dealer?.city || '').toLowerCase();
- const neigh = (car.dealer?.neighborhood || '').toLowerCase();
- const badge = (car.badge || '').toLowerCase();
+ const fc = normalizeText(state.filterCity);
+ const city = normalizeText(car.dealer?.city);
+ const neigh = normalizeText(car.dealer?.neighborhood);
+ const badge = normalizeText(car.badge);
 
  if (fc === 'abc') {
- const isAbc = city.includes('santo andré') || city.includes('são bernardo') || city.includes('sbc') || city.includes('são caetano') || city.includes('diadema') || city.includes('mauá') || badge.includes('abc');
+ const isAbc = city.includes('santo andre') || city.includes('sao bernardo') || city.includes('sbc') || city.includes('sao caetano') || city.includes('diadema') || city.includes('maua') || badge.includes('abc');
  if (!isAbc) return false;
  } else if (fc === 'barueri') {
  const isWest = city.includes('barueri') || city.includes('osasco') || neigh.includes('alphaville') || badge.includes('alphaville') || city.includes('cotia');
  if (!isWest) return false;
- } else if (fc === 'jundiaí') {
- const isJun = city.includes('jundiaí') || city.includes('piracicaba');
+ } else if (fc === 'jundiai') {
+ const isJun = city.includes('jundiai') || city.includes('piracicaba');
  if (!isJun) return false;
  } else {
  if (!city.includes(fc) && !neigh.includes(fc) && !badge.includes(fc)) {
@@ -174,20 +193,33 @@ document.addEventListener('DOMContentLoaded', async () => {
  }
  }
 
- // Busca por Texto
+ // Busca por Texto Inteligente (sem acento, múltiplos termos independentes de ordem)
  if (state.searchQuery) {
- const haystack = [
+ const queryTerms = normalizeText(state.searchQuery).split(/\s+/).filter(Boolean);
+ const haystackParts = [
  car.title,
  car.modelCategory,
  car.dealer?.name,
  car.dealer?.city,
  car.dealer?.neighborhood,
+ car.dealer?.address,
  car.fuel,
  car.specs?.engine,
- car.badge
- ].filter(Boolean).join(' ').toLowerCase();
+ car.specs?.warranty,
+ car.badge,
+ car.color,
+ car.transmission,
+ car.year,
+ car.portal,
+ car.cautelarStatus,
+ ...(car.tags || []),
+ ...(car.specs?.features || [])
+ ];
+ const normalizedHaystack = normalizeText(haystackParts.filter(Boolean).join(' '));
 
- if (!haystack.includes(state.searchQuery)) return false;
+ if (!queryTerms.every(term => normalizedHaystack.includes(term))) {
+ return false;
+ }
  }
 
  return true;
@@ -359,26 +391,17 @@ document.addEventListener('DOMContentLoaded', async () => {
  function renderAllGrids() {
  // 1. Nossos 3 Alvos
  let targets = window.autoRadarData.getTargetCars();
- if (state.targetSubfilter === 'pulse') {
- targets = targets.filter(c => c.modelCategory.includes('Pulse'));
- } else if (state.targetSubfilter === 'byd') {
- targets = targets.filter(c => c.modelCategory.includes('Dolphin'));
- } else if (state.targetSubfilter === 'tera') {
- targets = targets.filter(c => c.modelCategory.includes('Tera'));
+ if (state.filterModel === 'tera') {
+ const polo = window.autoRadarData.getAllCars().find(c => c.id === 'sug-vw-polo-01');
+ if (polo && !targets.some(t => t.id === polo.id)) {
+ targets = [...targets, polo];
+ }
  }
  const filteredTargets = sortCars(filterCars(targets));
- gridTargets.innerHTML = filteredTargets.length > 0 
- ? filteredTargets.map(createCarCardHTML).join('') 
- : '<div class="empty-state">Nenhum carro encontrado para os filtros selecionados nesta aba.</div>';
- countTargets.textContent = filteredTargets.length;
 
  // 2. 100% Elétricos
  const electrics = window.autoRadarData.getElectricCars();
  const filteredElectrics = sortCars(filterCars(electrics));
- gridElectrics.innerHTML = filteredElectrics.length > 0 
- ? filteredElectrics.map(createCarCardHTML).join('') 
- : '<div class="empty-state">Nenhum veículo elétrico encontrado com esses filtros.</div>';
- countElectrics.textContent = filteredElectrics.length;
 
  // 3. Sugestões & Similares com Lista Suspensa de Faixa de Preço
  let suggestions = window.autoRadarData.getSuggestionCars();
@@ -395,11 +418,59 @@ document.addEventListener('DOMContentLoaded', async () => {
  suggestions = suggestions.filter(c => c.priceTier === '120k' || (c.price > 100000 && c.price <= 120000));
  }
  }
- const filteredSuggestions = sortCars(filterCars(suggestions));
+ const filteredSuggestions = sortCars(filterCars(suggestions, { isSuggestionsTab: true, targetTier: state.suggestionTier }));
+
+ // Atualizar contadores das abas
+ countTargets.textContent = filteredTargets.length;
+ countElectrics.textContent = filteredElectrics.length;
+ countSuggestions.textContent = filteredSuggestions.length;
+ countCompare.textContent = state.comparedCarIds.length;
+
+ // Gerador de Empty State contextual com atalhos de busca
+ function buildEmptyState(tabName, ownCount, otherOptions = []) {
+ let html = '<div class="empty-state">';
+ if (state.searchQuery) {
+ html += `<p>Nenhum veículo encontrado em <strong>${tabName}</strong> para "<strong>${escapeHtml(state.searchQuery)}</strong>".</p>`;
+ const matchesInOthers = otherOptions.filter(opt => opt.count > 0);
+ if (matchesInOthers.length > 0) {
+ html += '<div class="empty-state-hints">';
+ matchesInOthers.forEach(opt => {
+ html += `<button type="button" class="btn-empty-switch" data-switch-tab="${opt.tabId}">Ver ${opt.count} oferta(s) em ${opt.name} →</button>`;
+ });
+ html += '</div>';
+ }
+ html += '<button type="button" class="btn-empty-clear" data-action="clear-search">Limpar Busca</button>';
+ } else {
+ html += `<p>Nenhum carro encontrado para os filtros selecionados em ${tabName}.</p>`;
+ html += '<button type="button" class="btn-empty-clear" data-action="reset-filters">Restaurar Filtros Padrão</button>';
+ }
+ html += '</div>';
+ return html;
+ }
+
+ // Renderizar Grid 1: Nossos 3 Alvos
+ gridTargets.innerHTML = filteredTargets.length > 0 
+ ? filteredTargets.map(createCarCardHTML).join('') 
+ : buildEmptyState('Nossos 3 Alvos', filteredTargets.length, [
+ { name: 'Radar 100% Elétricos', count: filteredElectrics.length, tabId: 'tab-electrics' },
+ { name: 'Sugestões & Similares', count: filteredSuggestions.length, tabId: 'tab-suggestions' }
+ ]);
+
+ // Renderizar Grid 2: Elétricos
+ gridElectrics.innerHTML = filteredElectrics.length > 0 
+ ? filteredElectrics.map(createCarCardHTML).join('') 
+ : buildEmptyState('Radar 100% Elétricos', filteredElectrics.length, [
+ { name: 'Nossos 3 Alvos', count: filteredTargets.length, tabId: 'tab-targets' },
+ { name: 'Sugestões & Similares', count: filteredSuggestions.length, tabId: 'tab-suggestions' }
+ ]);
+
+ // Renderizar Grid 3: Sugestões
  gridSuggestions.innerHTML = filteredSuggestions.length > 0 
  ? filteredSuggestions.map(createCarCardHTML).join('') 
- : '<div class="empty-state">Nenhuma sugestão encontrada nesta faixa de preço com os filtros selecionados.</div>';
- countSuggestions.textContent = filteredSuggestions.length;
+ : buildEmptyState('Sugestões & Similares', filteredSuggestions.length, [
+ { name: 'Nossos 3 Alvos', count: filteredTargets.length, tabId: 'tab-targets' },
+ { name: 'Radar 100% Elétricos', count: filteredElectrics.length, tabId: 'tab-electrics' }
+ ]);
 
  // Atualizar título dinâmico na aba
  const tabTitleEl = document.getElementById('tabSuggestionsTitle');
@@ -415,11 +486,9 @@ document.addEventListener('DOMContentLoaded', async () => {
  tabTitleEl.textContent = mapTitles[state.suggestionTier] || 'Sugestões & Similares';
  }
 
- // Atualizar Badge do Comparador
- countCompare.textContent = state.comparedCarIds.length;
-
- // Reanexar Event Listeners de Cards
+ // Reanexar Event Listeners de Cards e Botões do Empty State
  attachCardListeners();
+ attachEmptyStateListeners();
  }
 
  // ==============================================================
@@ -433,11 +502,6 @@ document.addEventListener('DOMContentLoaded', async () => {
  // Atualizar botões de chip de modelo
  document.querySelectorAll('#modelBtnGroup .filter-model-chip').forEach(btn => {
  btn.classList.toggle('active', btn.getAttribute('data-model') === modelKey);
- });
-
- // Atualizar pílulas da aba de alvos
- document.querySelectorAll('.subfilter-pill').forEach(pill => {
- pill.classList.toggle('active', pill.getAttribute('data-target') === modelKey);
  });
 
  // Atualizar cards de insight do topo
@@ -522,6 +586,61 @@ document.addEventListener('DOMContentLoaded', async () => {
  });
  });
 
+
+ 
+ function attachEmptyStateListeners() {
+ document.querySelectorAll('.btn-empty-switch').forEach(btn => {
+ btn.addEventListener('click', () => {
+ const tabId = btn.getAttribute('data-switch-tab');
+ if (tabId) switchTab(tabId);
+ });
+ });
+
+ document.querySelectorAll('[data-action="clear-search"]').forEach(btn => {
+ btn.addEventListener('click', () => {
+ searchInput.value = '';
+ state.searchQuery = '';
+ btnClearSearch.classList.add('hidden');
+ renderAllGrids();
+ });
+ });
+
+ document.querySelectorAll('[data-action="reset-filters"]').forEach(btn => {
+ btn.addEventListener('click', () => {
+ resetAllFilters();
+ });
+ });
+ }
+
+ function resetAllFilters() {
+ state.filterModel = 'all';
+ state.filterPrice = 80000;
+ state.filterFuel = 'all';
+ state.filterCity = 'all';
+ state.filterSort = 'price-asc';
+ state.searchQuery = '';
+ searchInput.value = '';
+ btnClearSearch.classList.add('hidden');
+
+ document.querySelectorAll('#modelBtnGroup .filter-model-chip').forEach(b => {
+ b.classList.toggle('active', b.getAttribute('data-model') === 'all');
+ });
+ document.querySelectorAll('.insight-card[data-insight-model]').forEach(c => c.classList.remove('active'));
+ document.querySelectorAll('#priceBtnGroup .filter-btn-chip').forEach(b => {
+ b.classList.toggle('active', b.getAttribute('data-price') === '80000');
+ });
+ document.querySelectorAll('#fuelBtnGroup .filter-btn-chip').forEach(b => {
+ b.classList.toggle('active', b.getAttribute('data-fuel') === 'all');
+ });
+ document.querySelectorAll('#regionBtnGroup .filter-btn-chip').forEach(b => {
+ b.classList.toggle('active', b.getAttribute('data-city') === 'all');
+ });
+ document.querySelectorAll('#sortBtnGroup .filter-btn-chip').forEach(b => {
+ b.classList.toggle('active', b.getAttribute('data-sort') === 'price-asc');
+ });
+
+ renderAllGrids();
+ }
 
  function attachCardListeners() {
  // Favoritar
@@ -1161,7 +1280,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  }
  } else {
  // Detectar iOS / Safari
- const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+ const isIos = /iphone|ipad|ipod/.test((window.navigator?.userAgent || '').toLowerCase());
  
  if (isIos) {
  // No iOS, exibimos o botão com instrução para adicionar à tela de início
@@ -1210,6 +1329,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
  // Expor métodos úteis globalmente
  window.autoRadarApp = {
+ switchTab,
+ resetAllFilters,
  toggleCompare,
  setSlotCar,
  removeSlot: (slotIdx) => setSlotCar(slotIdx, ''),
