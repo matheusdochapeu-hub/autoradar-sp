@@ -7,6 +7,14 @@
 
 ## 2. Histórico de Versões Recentes
 
+### v18 (Novembro/2026) — Sincronização de Preços Reais Auditados dos Anúncios
+- **Auditoria 100% Automatizada:** Realizado scraping de meta tags e títulos de cada anúncio individual (`carro.mercadolivre.com.br/MLB-...`, Grupo Toriba e Amazon VW) para extrair o valor real exato praticado no mercado.
+- **Preços Reais Atualizados:** Eliminados valores fictícios/mockados. Todos os 36 veículos agora exibem exatamente o valor anunciado pelo vendedor/loja (ex: Pulse Drive CVT de R$ 83.900 a R$ 103.900; Dolphin Mini de R$ 95.000 a R$ 109.900; VW Tera oficial R$ 124.290 TSI e R$ 139.990 High).
+- **Recálculo de Financiamento & FIPE:**
+  - `downPayment` (Entrada 30%) e `monthlyInstallment` (48x com CET real de mercado 2.50% a.m.) recalculados sobre os preços reais.
+  - `priceVsFipe` atualizado com a FIPE real de cada modelo/ano.
+  - Filtro padrão no header ajustado para "Todos os Preços" ativo para permitir navegação imediata em todo o catálogo real.
+
 ### v17 (Novembro/2026) — Redesenho de Ações e Layout dos Cards
 - **Diagramação em 2 Níveis de Ação:**
   - **Linha 1 (Conversão):** Botões com largura 50%/50% para "WhatsApp" (gradiente verde com ícone SVG) e "Ver Anúncio" (estilo ciano/azul com ícone de link externo).

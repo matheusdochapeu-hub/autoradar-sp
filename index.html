@@ -16,12 +16,12 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="css/style.css?v=17">
+ <link rel="stylesheet" href="css/style.css?v=18">
  <link rel="manifest" href="manifest.json">
  <script>
  // Limpeza automática imediata de caches legados
  (function() {
- const APP_VER = 'autoradar-sp-v17';
+ const APP_VER = 'autoradar-sp-v18';
  if (localStorage.getItem('autoradar_ver') !== APP_VER) {
  localStorage.setItem('autoradar_ver', APP_VER);
  if ('caches' in window) {
@@ -162,12 +162,12 @@
  <div class="filter-group-buttons">
  <span class="filter-group-label">Preço Máximo:</span>
  <div class="btn-group-chips" id="priceBtnGroup">
- <button type="button" class="filter-btn-chip active" data-price="80000">Até 80k (Teto)</button>
+ <button type="button" class="filter-btn-chip" data-price="80000">Até 80k (Teto)</button>
  <button type="button" class="filter-btn-chip" data-price="60000">Até 60k</button>
  <button type="button" class="filter-btn-chip" data-price="70000">Até 70k</button>
  <button type="button" class="filter-btn-chip" data-price="100000">Até 100k</button>
  <button type="button" class="filter-btn-chip" data-price="120000">Até 120k</button>
- <button type="button" class="filter-btn-chip" data-price="all">Todos os Preços</button>
+ <button type="button" class="filter-btn-chip active" data-price="all">Todos os Preços</button>
  </div>
  </div>
 
@@ -606,9 +606,9 @@
  </div>
 
  <!-- Scripts -->
- <script src="js/data.js?v=17"></script>
- <script src="js/financing.js?v=17"></script>
- <script src="js/app.js?v=17"></script>
+ <script src="js/data.js?v=18"></script>
+ <script src="js/financing.js?v=18"></script>
+ <script src="js/app.js?v=18"></script>
  <script>
  if ('serviceWorker' in navigator) {
  window.addEventListener('load', () => {

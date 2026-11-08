@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  filterModel: 'all', // 'all', 'pulse', 'byd', 'tera'
  suggestionTier: '80k',
  searchQuery: '',
- filterPrice: 80000,
+ filterPrice: Infinity,
  filterFuel: 'all',
  filterCity: 'all',
  filterSort: 'price-asc',
@@ -627,7 +627,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
  function resetAllFilters() {
  state.filterModel = 'all';
- state.filterPrice = 80000;
+ state.filterPrice = Infinity;
  state.filterFuel = 'all';
  state.filterCity = 'all';
  state.filterSort = 'price-asc';

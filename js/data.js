@@ -20,10 +20,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Strato",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático CVT (7 marchas simuladas)",
-    "price": 74900,
+    "price": 93900,
     "originalPrice": 78900,
-    "fipePrice": 83450,
-    "priceVsFipe": "-R$ 8.550 (Abaixo da FIPE)",
+    "fipePrice": 89200,
+    "priceVsFipe": "+R$ 4.700 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_911193-MLB118903050341_102026-O-fiat-pulse-13-4p-flex-drive-automatico-cvt.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5346799631-fiat-pulse-13-4p-flex-drive-automatico-cvt-_JM",
     "dealer": {
@@ -54,13 +54,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 22470,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1888,
+      "downPayment": 28170,
+      "financedAmount": 65730,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 22,470 (30%) + 48x de R$ 1,888 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2367
     },
     "cautelarStatus": "100% Aprovado sem apontamentos (Supervisão)",
     "tags": [
@@ -70,7 +68,8 @@ const DEFAULT_CARS_DATABASE = [
       "Laudo Aprovado",
       "Câmbio CVT"
     ],
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 85000
   },
   {
     "id": "pulse-02",
@@ -83,10 +82,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Banchisa com Teto Preto",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático CVT (7 marchas simuladas)",
-    "price": 77800,
+    "price": 103900,
     "originalPrice": 81900,
-    "fipePrice": 84900,
-    "priceVsFipe": "-R$ 7.100 (Abaixo da FIPE)",
+    "fipePrice": 98500,
+    "priceVsFipe": "+R$ 5.400 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_679224-MLB119261934677_102026-O-fiat-pulse-13-flex-drive-cvt.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7802462182-fiat-pulse-13-flex-drive-cvt-_JM",
     "dealer": {
@@ -117,13 +116,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23340,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1961,
+      "downPayment": 31170,
+      "financedAmount": 72730,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23,340 (30%) + 48x de R$ 1,961 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2619
     },
     "cautelarStatus": "100% Aprovado (Dekra)",
     "tags": [
@@ -132,7 +129,8 @@ const DEFAULT_CARS_DATABASE = [
       "Motor Turbo",
       "Laudo Aprovado"
     ],
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 95000
   },
   {
     "id": "pulse-03",
@@ -145,10 +143,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Preto Vulcano",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático CVT (7 marchas)",
-    "price": 79500,
+    "price": 98700,
     "originalPrice": 83000,
-    "fipePrice": 86200,
-    "priceVsFipe": "-R$ 6.700 (Abaixo da FIPE)",
+    "fipePrice": 94000,
+    "priceVsFipe": "+R$ 4.700 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_958621-MLB119191625394_112026-O-pulse-drive-13-cvt.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7946724150-pulse-drive-13-cvt-_JM",
     "dealer": {
@@ -179,13 +177,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23850,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2004,
+      "downPayment": 29610,
+      "financedAmount": 69090,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23,850 (30%) + 48x de R$ 2,004 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2488
     },
     "cautelarStatus": "100% Periciado e aprovado",
     "tags": [
@@ -194,7 +190,8 @@ const DEFAULT_CARS_DATABASE = [
       "Ano 2023",
       "Garantia de Fábrica"
     ],
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 90000
   },
   {
     "id": "pulse-04",
@@ -207,11 +204,11 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Azul Amalfi",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático CVT (7 marchas)",
-    "price": 81000,
-    "negotiatedTarget": 79000,
+    "price": 94000,
+    "negotiatedTarget": 89000,
     "originalPrice": 84900,
-    "fipePrice": 88300,
-    "priceVsFipe": "-R$ 7.300 (Oferta Especial)",
+    "fipePrice": 96500,
+    "priceVsFipe": "-R$ 2.500 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_947144-MLB115045515813_072026-O-pulse-audace-10t-aut.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-4936008389-pulse-audace-10t-aut-_JM",
     "dealer": {
@@ -242,13 +239,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 24300,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2042,
+      "downPayment": 28200,
+      "financedAmount": 65800,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 24,300 (30%) + 48x de R$ 2,042 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2369
     },
     "cautelarStatus": "100% Aprovado sem restrição",
     "tags": [
@@ -270,10 +265,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Prata Bari Metálico",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático CVT (7 marchas)",
-    "price": 72900,
+    "price": 93900,
     "originalPrice": 76900,
-    "fipePrice": 83450,
-    "priceVsFipe": "-R$ 10.550 (Super Desconto)",
+    "fipePrice": 89200,
+    "priceVsFipe": "+R$ 4.700 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_759772-MLB116123483935_082026-O-pulse-drive-13-aut.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5055644937-pulse-drive-13-aut-_JM",
     "dealer": {
@@ -304,13 +299,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 21870,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1837,
+      "downPayment": 28170,
+      "financedAmount": 65730,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 21,870 (30%) + 48x de R$ 1,837 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2367
     },
     "cautelarStatus": "100% Laudo Aprovado",
     "tags": [
@@ -319,7 +312,8 @@ const DEFAULT_CARS_DATABASE = [
       "Campinas",
       "Super Desconto"
     ],
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 85000
   },
   {
     "id": "byd-01",
@@ -332,11 +326,11 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Apricity com Interior Azul",
     "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
     "transmission": "Automático Direto (1 marcha)",
-    "price": 82900,
-    "negotiatedTarget": 79900,
+    "price": 95000,
+    "negotiatedTarget": 88000,
     "originalPrice": 96900,
-    "fipePrice": 98500,
-    "priceVsFipe": "-R$ 15.600 (Abaixo de Mercado)",
+    "fipePrice": 99800,
+    "priceVsFipe": "-R$ 4.800 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_607705-MLB117716262729_092026-O-byd-dolphin-mini-00-5p-electrico-4as.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5229384323-byd-dolphin-mini-00-5p-electrico-4as-_JM",
     "dealer": {
@@ -368,13 +362,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 24870,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2089,
+      "downPayment": 28500,
+      "financedAmount": 66500,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 24,870): 48x de R$ 2,089 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 33,160): 48x de R$ 1,458 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 2394
     },
     "cautelarStatus": "100% Aprovado sem retoques (Dekra)",
     "tags": [
@@ -397,10 +389,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Verde Sprout",
     "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
     "transmission": "Automático Direto",
-    "price": 79900,
+    "price": 109900,
     "originalPrice": 85000,
-    "fipePrice": 98500,
-    "priceVsFipe": "-R$ 18.600 (Preço Limite Casal)",
+    "fipePrice": 105000,
+    "priceVsFipe": "+R$ 4.900 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_860050-MLB117665602234_102026-O-byd-dolphin-mini-gs-eletrico.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5342985429-byd-dolphin-mini-gs-eletrico-_JM",
     "dealer": {
@@ -430,13 +422,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23970,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2014,
+      "downPayment": 32970,
+      "financedAmount": 76930,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 23,970): 48x de R$ 2,014 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,960): 48x de R$ 1,405 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 2770
     },
     "cautelarStatus": "Laudo Cautelar 100% Aprovado emitido há 15 dias",
     "tags": [
@@ -446,7 +436,8 @@ const DEFAULT_CARS_DATABASE = [
       "100% Elétrico",
       "Particular"
     ],
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 98000
   },
   {
     "id": "byd-03",
@@ -459,11 +450,11 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Preto Delan",
     "fuel": "100% Elétrico",
     "transmission": "Automático Direto",
-    "price": 84500,
-    "negotiatedTarget": 80000,
+    "price": 123900,
+    "negotiatedTarget": 110000,
     "originalPrice": 92000,
-    "fipePrice": 101000,
-    "priceVsFipe": "-R$ 16.500",
+    "fipePrice": 115800,
+    "priceVsFipe": "+R$ 8.100 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_888713-MLB120307849711_102026-O-byd-dolphin-mini-38-kw-eletrico-gs.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5472001911-byd-dolphin-mini-38-kw-eletrico-gs-_JM",
     "dealer": {
@@ -493,13 +484,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 25350,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2130,
+      "downPayment": 37170,
+      "financedAmount": 86730,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 25,350): 48x de R$ 2,130 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 33,800): 48x de R$ 1,486 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 3123
     },
     "cautelarStatus": "Certificado BYD 100% Aprovado",
     "tags": [
@@ -521,11 +510,11 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Azul Boreal",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático de 6 marchas Tiptronic",
-    "price": 89900,
-    "negotiatedTarget": 83000,
+    "price": 124290,
+    "negotiatedTarget": 119000,
     "originalPrice": 105900,
-    "fipePrice": 108000,
-    "priceVsFipe": "-R$ 18.100 (Unidade de Diretoria)",
+    "fipePrice": 124290,
+    "priceVsFipe": "Tabela Oficial VW 2026",
     "image": "https://cdn.dealerspace.ai/dealersites/vehicles/models/volkswagen/foto_model_890_1860.v1793116148-r1bm.webp",
     "listingUrl": "https://www.vwamazon.com.br/novos/volkswagen-tera",
     "dealer": {
@@ -555,13 +544,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 26970,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2266,
+      "downPayment": 37287,
+      "financedAmount": 87003,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 26,970 (30%) + 48x de R$ 2,266 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 3133
     },
     "cautelarStatus": "100% Impecável - Carro da montadora",
     "tags": [
@@ -583,11 +570,11 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Moonstone",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático de 6 marchas Tiptronic",
-    "price": 79900,
-    "negotiatedTarget": 78000,
+    "price": 139990,
+    "negotiatedTarget": 134000,
     "originalPrice": 105000,
-    "fipePrice": 108000,
-    "priceVsFipe": "-R$ 28.100 (Oportunidade Dentro do Teto)",
+    "fipePrice": 139990,
+    "priceVsFipe": "Tabela Oficial VW 2026",
     "image": "https://cdn.dealerspace.ai/dealersites/vehicles/models/volkswagen/foto_model_890_1860.v1793116148-r1bm.webp",
     "listingUrl": "https://ofertas.vw.com.br/ofertas/modelo/tera-high/325056",
     "dealer": {
@@ -617,13 +604,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23970,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2014,
+      "downPayment": 41997,
+      "financedAmount": 97993,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23.970 (30%) + 48x de R$ 2.014 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 3528
     },
     "cautelarStatus": "100% Aprovado (Dekra)",
     "tags": [
@@ -647,10 +632,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Verde Noronha Fosco",
     "fuel": "100% Elétrico (Bateria 26,8 kWh)",
     "transmission": "Automático Direto",
-    "price": 69900,
+    "price": 85900,
     "originalPrice": 75900,
-    "fipePrice": 76500,
-    "priceVsFipe": "-R$ 6.600 (R$ 10k Abaixo do seu Orçamento!)",
+    "fipePrice": 88000,
+    "priceVsFipe": "-R$ 2.100 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_691554-MLB119866621961_102026-O-renault-kwid-e-tech-kwid-intense-eletrico.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7854407938-renault-kwid-e-tech-kwid-intense-eletrico-_JM",
     "dealer": {
@@ -681,13 +666,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 20970,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1762,
+      "downPayment": 25770,
+      "financedAmount": 60130,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 20,970): 48x de R$ 1,762 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 27,960): 48x de R$ 1,229 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 2165
     },
     "cautelarStatus": "100% Aprovado e revisado na concessionária",
     "tags": [
@@ -698,7 +681,8 @@ const DEFAULT_CARS_DATABASE = [
       "Garantia até 2031"
     ],
     "priceTier": "70k",
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 78000
   },
   {
     "id": "sug-eletrico-02",
@@ -712,10 +696,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco com Teto Preto",
     "fuel": "100% Elétrico (Bateria Fosfato de Ferro 30,2 kWh)",
     "transmission": "Automático Direto",
-    "price": 68500,
+    "price": 63990,
     "originalPrice": 74000,
-    "fipePrice": 75800,
-    "priceVsFipe": "-R$ 7.300 (Dentro do Orçamento)",
+    "fipePrice": 71500,
+    "priceVsFipe": "-R$ 7.510 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_962819-MLB119104791114_112026-O-jac-e-js1-eletrico-automatico.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5510414169-jac-e-js1-eletrico-automatico-_JM",
     "dealer": {
@@ -746,13 +730,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 20550,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1726,
+      "downPayment": 19197,
+      "financedAmount": 44793,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 20,550): 48x de R$ 1,726 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 27,400): 48x de R$ 1,205 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 1613
     },
     "cautelarStatus": "Laudo Pericial 100% Aprovado",
     "tags": [
@@ -763,7 +745,8 @@ const DEFAULT_CARS_DATABASE = [
       "Isento de Rodízio"
     ],
     "priceTier": "70k",
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 59000
   },
   {
     "id": "sug-vw-polo-01",
@@ -777,10 +760,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Prata Sirius Metálico",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático de 6 marchas Tiptronic com Paddle Shift",
-    "price": 76900,
+    "price": 69900,
     "originalPrice": 81000,
-    "fipePrice": 82500,
-    "priceVsFipe": "-R$ 5.600 (Excelente Custo-Benefício)",
+    "fipePrice": 76500,
+    "priceVsFipe": "-R$ 6.600 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_929425-MLB119919348551_102026-O-volkswagen-polo-10-comfortline-tsi-aut-5p-2024.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5437797859-volkswagen-polo-10-comfortline-tsi-aut-5p-2024-_JM",
     "dealer": {
@@ -810,13 +793,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23070,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1938,
+      "downPayment": 20970,
+      "financedAmount": 48930,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23,070 (30%) + 48x de R$ 1,938 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 1762
     },
     "cautelarStatus": "100% Laudo Aprovado Dekra",
     "tags": [
@@ -826,7 +807,8 @@ const DEFAULT_CARS_DATABASE = [
       "Painel Digital"
     ],
     "priceTier": "80k",
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 65000
   },
   {
     "id": "sug-suv-kicks-01",
@@ -840,10 +822,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Rust Metálico",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático Xtronic CVT de 6 marchas simuladas",
-    "price": 78900,
+    "price": 107900,
     "originalPrice": 83500,
-    "fipePrice": 85900,
-    "priceVsFipe": "-R$ 7.000 (Dentro dos R$ 80k)",
+    "fipePrice": 109800,
+    "priceVsFipe": "-R$ 1.900 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_998432-MLB120132897425_102026-O-nissan-kicks-advance-cvt-2024.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5412338439-nissan-kicks-advance-cvt-2024-_JM",
     "dealer": {
@@ -873,13 +855,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23670,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1989,
+      "downPayment": 32370,
+      "financedAmount": 75530,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23,670 (30%) + 48x de R$ 1,989 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2720
     },
     "cautelarStatus": "100% Aprovado e periciado",
     "tags": [
@@ -889,7 +869,8 @@ const DEFAULT_CARS_DATABASE = [
       "Câmera 360"
     ],
     "priceTier": "80k",
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 99000
   },
   {
     "id": "sug-suv-cactus-01",
@@ -903,10 +884,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Banquise com Teto Preto",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático Aisin de 6 marchas com modos Eco e Sport",
-    "price": 73900,
+    "price": 72900,
     "originalPrice": 78000,
-    "fipePrice": 79200,
-    "priceVsFipe": "-R$ 5.300",
+    "fipePrice": 74800,
+    "priceVsFipe": "-R$ 1.900 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_978251-MLB117472824205_092026-O-citron-c4-cactus-cactus-feel-16-16v-flex-aut-2021202.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7458395590-citron-c4-cactus-cactus-feel-16-16v-flex-aut-2021202-_JM",
     "dealer": {
@@ -935,13 +916,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 22170,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1863,
+      "downPayment": 21870,
+      "financedAmount": 51030,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 22,170 (30%) + 48x de R$ 1,863 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 1837
     },
     "cautelarStatus": "100% Aprovado",
     "tags": [
@@ -951,7 +930,8 @@ const DEFAULT_CARS_DATABASE = [
       "Abaixo de 75k"
     ],
     "priceTier": "80k",
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 68000
   },
   {
     "id": "sug-hatch-argo-01",
@@ -965,10 +945,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Laranja Montecarlo",
     "fuel": "Flex (Etanol/Gasolina)",
     "transmission": "Automático CVT (7 marchas simuladas)",
-    "price": 76500,
+    "price": 89900,
     "originalPrice": 82000,
-    "fipePrice": 83900,
-    "priceVsFipe": "-R$ 7.400",
+    "fipePrice": 91500,
+    "priceVsFipe": "-R$ 1.600 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_833697-MLB118030280220_102026-O-argo-trekking-13-automatico.jpg",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5412879079-argo-trekking-13-automatico-_JM",
     "dealer": {
@@ -998,13 +978,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 22950,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1928,
+      "downPayment": 26970,
+      "financedAmount": 62930,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 22,950 (30%) + 48x de R$ 1,928 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2266
     },
     "cautelarStatus": "100% Laudo Impecável",
     "tags": [
@@ -1014,7 +992,8 @@ const DEFAULT_CARS_DATABASE = [
       "Garantia até 2027"
     ],
     "priceTier": "80k",
-    "portal": "Mercado Livre"
+    "portal": "Mercado Livre",
+    "negotiatedTarget": 82000
   },
   {
     "id": "pulse-06-rib",
@@ -1028,10 +1007,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Silverstone",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT (7 velocidades simuladas)",
-    "price": 76900,
+    "price": 88900,
     "originalPrice": 81900,
-    "fipePrice": 83450,
-    "priceVsFipe": "-R$ 6.550 (Abaixo da FIPE)",
+    "fipePrice": 89200,
+    "priceVsFipe": "-R$ 300 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_790133-MLB116721772940_092026-O-fiat-pulse-13-flex-drive-cvt.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7699017274-fiat-pulse-13-flex-drive-cvt-_JM",
@@ -1062,13 +1041,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23070,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1938,
+      "downPayment": 26670,
+      "financedAmount": 62230,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23,070 (30%) + 48x de R$ 1,938 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2241
     },
     "cautelarStatus": "100% Aprovado Dekra",
     "tags": [
@@ -1077,7 +1054,8 @@ const DEFAULT_CARS_DATABASE = [
       "Mercado Livre",
       "Dentro do Orçamento",
       "Laudo Aprovado"
-    ]
+    ],
+    "negotiatedTarget": 82000
   },
   {
     "id": "pulse-07-sjc",
@@ -1091,10 +1069,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Banchisa",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT 7v",
-    "price": 77900,
+    "price": 85998,
     "originalPrice": 82900,
-    "fipePrice": 84900,
-    "priceVsFipe": "-R$ 7.000 (Oportunidade)",
+    "fipePrice": 89500,
+    "priceVsFipe": "-R$ 3.502 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_808597-MLB117727013044_102026-O-fiat-pulse-10-turbo-200-flex-drive-cvt.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5392224925-fiat-pulse-10-turbo-200-flex-drive-cvt-_JM",
@@ -1124,13 +1102,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23370,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1963,
+      "downPayment": 25799,
+      "financedAmount": 60199,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23,370 (30%) + 48x de R$ 1,963 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2168
     },
     "cautelarStatus": "100% Periciado e Laudo Cautelar Aprovado",
     "tags": [
@@ -1139,7 +1115,8 @@ const DEFAULT_CARS_DATABASE = [
       "OLX",
       "Motor Turbo",
       "Laudo Aprovado"
-    ]
+    ],
+    "negotiatedTarget": 80000
   },
   {
     "id": "pulse-08-santos",
@@ -1153,10 +1130,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Strato",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT 7v",
-    "price": 76500,
+    "price": 83900,
     "originalPrice": 81000,
-    "fipePrice": 83450,
-    "priceVsFipe": "-R$ 6.950 (Abaixo da FIPE)",
+    "fipePrice": 89200,
+    "priceVsFipe": "-R$ 5.300 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_805993-MLB117325315658_102026-O-fiat-pulse-13-drive-flex-5p.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5348517031-fiat-pulse-13-drive-flex-5p-_JM",
@@ -1186,13 +1163,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 22950,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1928,
+      "downPayment": 25170,
+      "financedAmount": 58730,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 22,950 (30%) + 48x de R$ 1,928 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2115
     },
     "cautelarStatus": "100% Aprovado sem restrições",
     "tags": [
@@ -1201,7 +1176,8 @@ const DEFAULT_CARS_DATABASE = [
       "Webmotors",
       "Litoral",
       "Dentro do Orçamento"
-    ]
+    ],
+    "negotiatedTarget": 79000
   },
   {
     "id": "pulse-09-sorocaba",
@@ -1215,10 +1191,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Silverstone",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT",
-    "price": 75800,
+    "price": 88900,
     "originalPrice": 80900,
-    "fipePrice": 83450,
-    "priceVsFipe": "-R$ 7.650 (Super Oferta)",
+    "fipePrice": 89200,
+    "priceVsFipe": "-R$ 300 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_679883-MLB117224207386_102026-O-fiat-pulse-13-drive-flex-aut-5p.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5509773509-fiat-pulse-13-drive-flex-aut-5p-_JM",
@@ -1247,13 +1223,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 22740,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1910,
+      "downPayment": 26670,
+      "financedAmount": 62230,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 22,740 (30%) + 48x de R$ 1,910 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2241
     },
     "cautelarStatus": "100% Dekra Aprovado",
     "tags": [
@@ -1261,7 +1235,8 @@ const DEFAULT_CARS_DATABASE = [
       "Sorocaba",
       "Mobiauto",
       "Único Dono"
-    ]
+    ],
+    "negotiatedTarget": 82000
   },
   {
     "id": "pulse-10-alphaville",
@@ -1275,10 +1250,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Azul Amalfi",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT 7v",
-    "price": 78900,
+    "price": 85890,
     "originalPrice": 83500,
-    "fipePrice": 84900,
-    "priceVsFipe": "-R$ 6.000 (Seminovo Premium)",
+    "fipePrice": 89200,
+    "priceVsFipe": "-R$ 3.310 vs FIPE",
     "image": "https://production.autoforce.com/uploads/used_model/profile_image/26931541/model_main_webp_comprar-pulse-1-3-drive-4105_46585dd4b9.jpg.webp",
     "portal": "Grupo Toriba",
     "listingUrl": "https://www.toribacitroen.com.br/seminovos/pulse-1-3-drive-4105",
@@ -1307,13 +1282,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23670,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1989,
+      "downPayment": 25767,
+      "financedAmount": 60123,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 23,670 (30%) + 48x de R$ 1,989 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2165
     },
     "cautelarStatus": "100% Aprovado Certificado 240 Itens",
     "tags": [
@@ -1321,7 +1294,8 @@ const DEFAULT_CARS_DATABASE = [
       "Alphaville",
       "Kavak",
       "Garantia 2 Anos"
-    ]
+    ],
+    "negotiatedTarget": 80000
   },
   {
     "id": "byd-04-rib",
@@ -1335,10 +1309,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Sprout Green (Verde)",
     "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
     "transmission": "Automático Direto (1 marcha)",
-    "price": 79200,
+    "price": 122900,
     "originalPrice": 85000,
-    "fipePrice": 89900,
-    "priceVsFipe": "-R$ 10.700 (Excelente Oferta)",
+    "fipePrice": 115800,
+    "priceVsFipe": "+R$ 7.100 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_695286-MLB118131458242_102026-O-byd-dolphin-mini-38-kw-eletrico-gs.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5423214773-byd-dolphin-mini-38-kw-eletrico-gs-_JM",
@@ -1370,13 +1344,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23760,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1996,
+      "downPayment": 36870,
+      "financedAmount": 86030,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 23,760): 48x de R$ 1,996 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,680): 48x de R$ 1,393 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 3098
     },
     "cautelarStatus": "100% Impecável sem retoques",
     "tags": [
@@ -1385,7 +1357,8 @@ const DEFAULT_CARS_DATABASE = [
       "100% Elétrico",
       "Bateria Blade",
       "Garantia até 2032"
-    ]
+    ],
+    "negotiatedTarget": 110000
   },
   {
     "id": "byd-05-sjc",
@@ -1399,10 +1372,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Preto Cosmos",
     "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
     "transmission": "Automático Direto",
-    "price": 79800,
+    "price": 108900,
     "originalPrice": 86900,
-    "fipePrice": 91500,
-    "priceVsFipe": "-R$ 11.700 (5 Lugares Oficial)",
+    "fipePrice": 109800,
+    "priceVsFipe": "-R$ 900 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_910496-MLB119588672627_102026-O-byd-dolphin-mini-00-5l-aut-5p-electrico.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7828515716-byd-dolphin-mini-00-5l-aut-5p-electrico-_JM",
@@ -1432,13 +1405,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23940,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2011,
+      "downPayment": 32670,
+      "financedAmount": 76230,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 23,940): 48x de R$ 2,011 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,920): 48x de R$ 1,403 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 2745
     },
     "cautelarStatus": "100% Aprovado",
     "tags": [
@@ -1447,7 +1418,8 @@ const DEFAULT_CARS_DATABASE = [
       "5 Lugares",
       "100% Elétrico",
       "Bateria Blade"
-    ]
+    ],
+    "negotiatedTarget": 99000
   },
   {
     "id": "byd-06-santos",
@@ -1461,10 +1433,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Apricity",
     "fuel": "100% Elétrico",
     "transmission": "Automático Direto",
-    "price": 78500,
+    "price": 99990,
     "originalPrice": 84500,
-    "fipePrice": 88900,
-    "priceVsFipe": "-R$ 10.400 (Oportunidade)",
+    "fipePrice": 105000,
+    "priceVsFipe": "-R$ 5.010 vs FIPE",
     "image": "https://production.autoforce.com/uploads/used_model/profile_image/26938534/model_main_webp_comprar-dolphin-mini-38-kw-5l-5239_f80abc1591.jpg.webp",
     "portal": "Grupo Toriba",
     "listingUrl": "https://www.grupotoriba.com.br/seminovos/dolphin-mini-38-kw-5l-5239",
@@ -1495,13 +1467,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 23550,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1979,
+      "downPayment": 29997,
+      "financedAmount": 69993,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "BYD Finance / Santander / BV",
-      "optionsText": "Balcão Concessionária (30% entrada R$ 23,550): 48x de R$ 1,979 (CET real 2,50% a.m.). Campanha Montadora (40% entrada R$ 31,400): 48x de R$ 1,381 (taxa especial 1,49% a.m.)."
+      "monthlyInstallment": 2520
     },
     "cautelarStatus": "100% Impecável",
     "tags": [
@@ -1509,7 +1479,8 @@ const DEFAULT_CARS_DATABASE = [
       "Santos",
       "Litoral",
       "100% Elétrico"
-    ]
+    ],
+    "negotiatedTarget": 92000
   },
   {
     "id": "pulse-11-jundiai",
@@ -1523,10 +1494,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Silverstone",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT 7v",
-    "price": 76200,
+    "price": 85900,
     "originalPrice": 81500,
-    "fipePrice": 83450,
-    "priceVsFipe": "-R$ 7.250 (Abaixo da FIPE)",
+    "fipePrice": 89200,
+    "priceVsFipe": "-R$ 3.300 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_612954-MLB118676176245_102026-O-fiat-pulse-drive-13.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7743056840-fiat-pulse-drive-13-_JM",
@@ -1556,13 +1527,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 22860,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1921,
+      "downPayment": 25770,
+      "financedAmount": 60130,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 22,860 (30%) + 48x de R$ 1,921 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2165
     },
     "cautelarStatus": "100% Dekra Aprovado",
     "tags": [
@@ -1570,7 +1539,8 @@ const DEFAULT_CARS_DATABASE = [
       "Jundiaí",
       "Chaves na Mão",
       "Dentro do Orçamento"
-    ]
+    ],
+    "negotiatedTarget": 80000
   },
   {
     "id": "pulse-12-piracicaba",
@@ -1584,10 +1554,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Banchisa",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT 7v",
-    "price": 75400,
+    "price": 101900,
     "originalPrice": 80900,
-    "fipePrice": 83450,
-    "priceVsFipe": "-R$ 8.050 (Abaixo da FIPE)",
+    "fipePrice": 98000,
+    "priceVsFipe": "+R$ 3.900 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_658930-MLB117442402698_102026-O-pulse-drive-13-8v-flex-aut.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5360153805-pulse-drive-13-8v-flex-aut-_JM",
@@ -1616,13 +1586,11 @@ const DEFAULT_CARS_DATABASE = [
       ]
     },
     "financing": {
-      "downPayment": 22620,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1900,
+      "downPayment": 30570,
+      "financedAmount": 71330,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 22,620 (30%) + 48x de R$ 1,900 (taxa real de balcão de 2,50% a.m. com CET). Aceita entrada facilitada no cartão e veículo na troca."
+      "monthlyInstallment": 2568
     },
     "cautelarStatus": "100% Aprovado",
     "tags": [
@@ -1630,7 +1598,8 @@ const DEFAULT_CARS_DATABASE = [
       "Piracicaba",
       "Mobiauto",
       "Dentro do Orçamento"
-    ]
+    ],
+    "negotiatedTarget": 93000
   },
   {
     "id": "sug-60k-argo",
@@ -1645,10 +1614,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Banchisa",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático 5v com Paddle Shifts no volante",
-    "price": 57900,
+    "price": 69900,
     "originalPrice": 62000,
-    "fipePrice": 61200,
-    "priceVsFipe": "-R$ 3.300 (Abaixo da FIPE)",
+    "fipePrice": 73000,
+    "priceVsFipe": "-R$ 3.100 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_903894-MLB117654511304_102026-O-argo-trekking-13.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7803757540-argo-trekking-13-_JM",
@@ -1684,14 +1653,13 @@ const DEFAULT_CARS_DATABASE = [
       "Garantia 1 Ano"
     ],
     "financing": {
-      "downPayment": 17370,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1459,
+      "downPayment": 20970,
+      "financedAmount": 48930,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 17,370 (30%) + 48x de R$ 1,459 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 1762
+    },
+    "negotiatedTarget": 63000
   },
   {
     "id": "sug-60k-onix",
@@ -1706,10 +1674,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Prata Switchblade",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático de 6 marchas com conversor de torque",
-    "price": 59800,
+    "price": 65900,
     "originalPrice": 64500,
-    "fipePrice": 63900,
-    "priceVsFipe": "-R$ 4.100 (Abaixo da FIPE)",
+    "fipePrice": 68200,
+    "priceVsFipe": "-R$ 2.300 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_947898-MLB118782587613_102026-O-onix-14-ltz-spe4-aut.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5336524799-onix-14-ltz-spe4-aut-_JM",
@@ -1745,14 +1713,13 @@ const DEFAULT_CARS_DATABASE = [
       "Campinas"
     ],
     "financing": {
-      "downPayment": 17940,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1507,
+      "downPayment": 19770,
+      "financedAmount": 46130,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 17,940 (30%) + 48x de R$ 1,507 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 1661
+    },
+    "negotiatedTarget": 60000
   },
   {
     "id": "sug-70k-fit",
@@ -1767,10 +1734,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Barium",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT de 7 velocidades simuladas",
-    "price": 68900,
+    "price": 77900,
     "originalPrice": 73500,
-    "fipePrice": 72800,
-    "priceVsFipe": "-R$ 3.900 (Abaixo da FIPE)",
+    "fipePrice": 81500,
+    "priceVsFipe": "-R$ 3.600 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_777568-MLB118283761360_102026-O-honda-fit-15-lx-16v-flex-4p-automatico.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7861050836-honda-fit-15-lx-16v-flex-4p-automatico-_JM",
@@ -1806,14 +1773,13 @@ const DEFAULT_CARS_DATABASE = [
       "Super Confiável"
     ],
     "financing": {
-      "downPayment": 20670,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1737,
+      "downPayment": 23370,
+      "financedAmount": 54530,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 20,670 (30%) + 48x de R$ 1,737 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 1963
+    },
+    "negotiatedTarget": 72000
   },
   {
     "id": "sug-70k-hb20",
@@ -1828,10 +1794,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco Polar",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático de 6 marchas",
-    "price": 66900,
+    "price": 77990,
     "originalPrice": 71900,
-    "fipePrice": 70500,
-    "priceVsFipe": "-R$ 3.600 (Abaixo da FIPE)",
+    "fipePrice": 82000,
+    "priceVsFipe": "-R$ 4.010 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_622674-MLB119032170013_102026-O-hyundai-hb20-10-sport-tgdi-flex-aut-5p.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5358974945-hyundai-hb20-10-sport-tgdi-flex-aut-5p-_JM",
@@ -1867,14 +1833,13 @@ const DEFAULT_CARS_DATABASE = [
       "Santo André"
     ],
     "financing": {
-      "downPayment": 20070,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 1686,
+      "downPayment": 23397,
+      "financedAmount": 54593,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 20,070 (30%) + 48x de R$ 1,686 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 1966
+    },
+    "negotiatedTarget": 72000
   },
   {
     "id": "sug-100k-dolphin",
@@ -1889,10 +1854,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Dolphin / Afterglow Pink",
     "fuel": "100% Elétrico (Bateria Blade 44.9 kWh)",
     "transmission": "Automático Direto",
-    "price": 98900,
+    "price": 108990,
     "originalPrice": 109000,
-    "fipePrice": 112000,
-    "priceVsFipe": "-R$ 13.100 (Oportunidade Upgrade)",
+    "fipePrice": 114500,
+    "priceVsFipe": "-R$ 5.510 vs FIPE",
     "image": "https://production.autoforce.com/uploads/used_model/profile_image/26948204/model_main_webp_comprar-dolphin-mini-38-kw-gs-5256_48d000b2f4.jpg.webp",
     "portal": "Grupo Toriba",
     "listingUrl": "https://www.grupotoriba.com.br/seminovos/dolphin-mini-38-kw-gs-5256",
@@ -1930,14 +1895,13 @@ const DEFAULT_CARS_DATABASE = [
       "Bateria Blade"
     ],
     "financing": {
-      "downPayment": 29670,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2493,
+      "downPayment": 32697,
+      "financedAmount": 76293,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 29,670 (30%) + 48x de R$ 2,493 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 2747
+    },
+    "negotiatedTarget": 99000
   },
   {
     "id": "sug-100k-pulse-impetus",
@@ -1952,10 +1916,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Strato com Teto Preto",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático CVT de 7 marchas",
-    "price": 92500,
+    "price": 105890,
     "originalPrice": 99900,
-    "fipePrice": 98400,
-    "priceVsFipe": "-R$ 5.900 (Abaixo da FIPE)",
+    "fipePrice": 112000,
+    "priceVsFipe": "-R$ 6.110 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_601232-MLB120421356607_102026-O-fiat-pulse-impetus-10-turbo-200-flex-aut-20242024.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-6824646026-fiat-pulse-impetus-10-turbo-200-flex-aut-20242024-_JM",
@@ -1992,14 +1956,13 @@ const DEFAULT_CARS_DATABASE = [
       "ADAS"
     ],
     "financing": {
-      "downPayment": 27750,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2331,
+      "downPayment": 31767,
+      "financedAmount": 74123,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 27,750 (30%) + 48x de R$ 2,331 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 2669
+    },
+    "negotiatedTarget": 98000
   },
   {
     "id": "sug-100k-renegade",
@@ -2014,10 +1977,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Preto Carbon",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático de 6 marchas",
-    "price": 94900,
+    "price": 104890,
     "originalPrice": 102000,
-    "fipePrice": 101500,
-    "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
+    "fipePrice": 109000,
+    "priceVsFipe": "-R$ 4.110 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_620523-MLB117444626722_102026-O-jeep-renegade-13-t270-turbo-flex-sport-altitude-at6.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-7778578782-jeep-renegade-13-t270-turbo-flex-sport-altitude-at6-_JM",
@@ -2055,14 +2018,13 @@ const DEFAULT_CARS_DATABASE = [
       "Jeep"
     ],
     "financing": {
-      "downPayment": 28470,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2392,
+      "downPayment": 31467,
+      "financedAmount": 73423,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 28,470 (30%) + 48x de R$ 2,392 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 2644
+    },
+    "negotiatedTarget": 96000
   },
   {
     "id": "sug-120k-dolphin-plus",
@@ -2077,10 +2039,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza com Teto Preto (Dual Color)",
     "fuel": "100% Elétrico (Bateria Blade 60.5 kWh)",
     "transmission": "Automático Direto",
-    "price": 119800,
+    "price": 144990,
     "originalPrice": 134000,
-    "fipePrice": 132000,
-    "priceVsFipe": "-R$ 12.200 (Super Desconto)",
+    "fipePrice": 149800,
+    "priceVsFipe": "-R$ 4.810 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_983426-MLB120874429755_112026-O-byd-dolphin-eletrico-automatico.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5515978209-byd-dolphin-eletrico-automatico-_JM",
@@ -2118,14 +2080,13 @@ const DEFAULT_CARS_DATABASE = [
       "Blade 60 kWh"
     ],
     "financing": {
-      "downPayment": 35940,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 3019,
+      "downPayment": 43497,
+      "financedAmount": 101493,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 35,940 (30%) + 48x de R$ 3,019 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 3654
+    },
+    "negotiatedTarget": 135000
   },
   {
     "id": "sug-120k-pulse-abarth",
@@ -2140,10 +2101,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Branco com Faixas Vermelhas Abarth",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático de 6 marchas com calibração Abarth",
-    "price": 118500,
+    "price": 109990,
     "originalPrice": 128000,
-    "fipePrice": 125900,
-    "priceVsFipe": "-R$ 7.400 (Abaixo da FIPE)",
+    "fipePrice": 118500,
+    "priceVsFipe": "-R$ 8.510 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_942823-MLB117197193496_102026-O-fiat-pulse-abarth-13-turbo-16v-flex-aut-20232023.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5336683163-fiat-pulse-abarth-13-turbo-16v-flex-aut-20232023-_JM",
@@ -2179,14 +2140,13 @@ const DEFAULT_CARS_DATABASE = [
       "Esportivo Autêntico"
     ],
     "financing": {
-      "downPayment": 35550,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2987,
+      "downPayment": 32997,
+      "financedAmount": 76993,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 35,550 (30%) + 48x de R$ 2,987 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 2772
+    },
+    "negotiatedTarget": 102000
   },
   {
     "id": "sug-120k-nivus-high",
@@ -2201,10 +2161,10 @@ const DEFAULT_CARS_DATABASE = [
     "color": "Cinza Moonstone",
     "fuel": "Flex (Gasolina / Etanol)",
     "transmission": "Automático de 6 marchas",
-    "price": 112900,
+    "price": 117900,
     "originalPrice": 121000,
-    "fipePrice": 119500,
-    "priceVsFipe": "-R$ 6.600 (Abaixo da FIPE)",
+    "fipePrice": 121500,
+    "priceVsFipe": "-R$ 3.600 vs FIPE",
     "image": "https://http2.mlstatic.com/D_NQ_NP_858957-MLB117428525235_092026-O-volkswagen-nivus-highline.jpg",
     "portal": "Mercado Livre",
     "listingUrl": "https://carro.mercadolivre.com.br/MLB-5210374763-volkswagen-nivus-highline-_JM",
@@ -2241,16 +2201,16 @@ const DEFAULT_CARS_DATABASE = [
       "Alphaville"
     ],
     "financing": {
-      "downPayment": 33870,
-      "downPaymentPercent": 30,
-      "termMonths": 48,
-      "monthlyInstallment": 2846,
+      "downPayment": 35370,
+      "financedAmount": 82530,
+      "months": 48,
       "interestRate": 2.5,
-      "bank": "Banco Santander / BV / Itaú",
-      "optionsText": "Entrada de R$ 33,870 (30%) + 48x de R$ 2,846 (taxa real de balcão de 2,50% a.m. com CET). Aceita FGTS e troca."
-    }
+      "monthlyInstallment": 2972
+    },
+    "negotiatedTarget": 110000
   }
 ];
+
 class AutoRadarDataService {
  constructor() {
  this.cars = [];
