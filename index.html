@@ -16,12 +16,12 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="css/style.css?v=18">
+ <link rel="stylesheet" href="css/style.css?v=19">
  <link rel="manifest" href="manifest.json">
  <script>
  // Limpeza automática imediata de caches legados
  (function() {
- const APP_VER = 'autoradar-sp-v18';
+ const APP_VER = 'autoradar-sp-v19';
  if (localStorage.getItem('autoradar_ver') !== APP_VER) {
  localStorage.setItem('autoradar_ver', APP_VER);
  if ('caches' in window) {
@@ -162,13 +162,13 @@
  <div class="filter-group-buttons">
  <span class="filter-group-label">Preço Máximo:</span>
  <div class="btn-group-chips" id="priceBtnGroup">
- <button type="button" class="filter-btn-chip" data-price="80000">Até 80k (Teto)</button>
- <button type="button" class="filter-btn-chip" data-price="60000">Até 60k</button>
- <button type="button" class="filter-btn-chip" data-price="70000">Até 70k</button>
- <button type="button" class="filter-btn-chip" data-price="100000">Até 100k</button>
- <button type="button" class="filter-btn-chip" data-price="120000">Até 120k</button>
- <button type="button" class="filter-btn-chip active" data-price="all">Todos os Preços</button>
- </div>
+          <button type="button" class="filter-btn-chip active" data-price="all">Todos os Preços</button>
+          <button type="button" class="filter-btn-chip" data-price="80000">Até 80k</button>
+          <button type="button" class="filter-btn-chip" data-price="100000">Até 100k</button>
+          <button type="button" class="filter-btn-chip" data-price="120000">Até 120k</button>
+          <button type="button" class="filter-btn-chip" data-price="140000">Até 140k (Tera / Híbridos)</button>
+          <button type="button" class="filter-btn-chip" data-price="160000">Até 160k (Dolphin Plus / Tera High)</button>
+        </div>
  </div>
 
  <!-- 3. Botões de Combustível -->
@@ -321,16 +321,16 @@
  
  <!-- Botões de Faixas de Sugestão -->
  <div class="suggestion-btn-group" id="suggestionTierBtnGroup" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
- <span class="filter-group-label">Faixa de Sugestão:</span>
- <div class="btn-group-chips">
- <button type="button" class="filter-btn-chip active" data-tier="80k">Até 80k (Base)</button>
- <button type="button" class="filter-btn-chip" data-tier="60k">Até 60k</button>
- <button type="button" class="filter-btn-chip" data-tier="70k">Até 70k</button>
- <button type="button" class="filter-btn-chip" data-tier="100k">Até 100k</button>
- <button type="button" class="filter-btn-chip" data-tier="120k">Até 120k</button>
- <button type="button" class="filter-btn-chip" data-tier="all">Todas as Faixas</button>
- </div>
- </div>
+          <span class="filter-group-label">Faixa de Sugestão:</span>
+          <div class="btn-group-chips">
+            <button type="button" class="filter-btn-chip active" data-tier="all">Todas as Faixas</button>
+            <button type="button" class="filter-btn-chip" data-tier="80k">Até 80k</button>
+            <button type="button" class="filter-btn-chip" data-tier="100k">Até 100k</button>
+            <button type="button" class="filter-btn-chip" data-tier="120k">Até 120k</button>
+            <button type="button" class="filter-btn-chip" data-tier="140k">Até 140k</button>
+            <button type="button" class="filter-btn-chip" data-tier="160k">Até 160k</button>
+          </div>
+        </div>
  </div>
 
  <div class="cars-grid" id="gridSuggestions">
@@ -606,9 +606,9 @@
  </div>
 
  <!-- Scripts -->
- <script src="js/data.js?v=18"></script>
- <script src="js/financing.js?v=18"></script>
- <script src="js/app.js?v=18"></script>
+ <script src="js/data.js?v=19"></script>
+ <script src="js/financing.js?v=19"></script>
+ <script src="js/app.js?v=19"></script>
  <script>
  if ('serviceWorker' in navigator) {
  window.addEventListener('load', () => {

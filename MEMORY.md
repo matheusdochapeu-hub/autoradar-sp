@@ -7,6 +7,22 @@
 
 ## 2. Histórico de Versões Recentes
 
+### v19 (Novembro/2026) — Expansão do Catálogo: Gama Completa de Teras, Dolphins e Pulses
+- **Volkswagen Tera Expandido (Gama Oficial 2026):**
+  - Adicionado **Tera 1.0 MPI Manual** (Entrada por R$ 108.490 na Sorana VW ZN).
+  - Adicionado **Tera Comfort 170 TSI Automático** (Intermediário por R$ 134.790 na Vigorito VW ABC).
+  - Adicionado **Tera Highline 200 TSI Automático** (Topo de linha por R$ 147.190 na VW Ofertas Brasil).
+  - Todos com fotos oficiais de estúdio das concessionárias autorizadas e links diretos de reserva/estoque.
+- **BYD Dolphin Expandido:**
+  - Adicionado **BYD Dolphin EV GS 44.9 kWh** (Hatch médio tradicional de 95 cv por R$ 104.900 na Dahruj Seminovos).
+  - Adicionado **BYD Dolphin Plus 60.5 kWh 204 cv** esportivo com teto panorâmico (R$ 159.900 na Toriba Jardins).
+- **Fiat Pulse Expandido (Gama Híbrida 2025):**
+  - Adicionado **Fiat Pulse Audace 1.0 Turbo 200 Hybrid CVT 2025** (R$ 116.790 na Fiat Sinal Morumbi).
+  - Adicionado **Fiat Pulse Impetus 1.0 Turbo 200 Hybrid Flex Aut 2025** (R$ 129.900 na Daitan Campinas).
+- **Filtros de Preço Ampliados:**
+  - Botões de filtro no topo e na aba de sugestões agora cobrem todas as faixas reais: `Todos os Preços` (padrão), `Até 80k`, `Até 100k`, `Até 120k`, `Até 140k` e `Até 160k`.
+  - Catálogo total expandido para **43 veículos** auditados com links individuais e fotos reais.
+
 ### v18 (Novembro/2026) — Sincronização de Preços Reais Auditados dos Anúncios
 - **Auditoria 100% Automatizada:** Realizado scraping de meta tags e títulos de cada anúncio individual (`carro.mercadolivre.com.br/MLB-...`, Grupo Toriba e Amazon VW) para extrair o valor real exato praticado no mercado.
 - **Preços Reais Atualizados:** Eliminados valores fictícios/mockados. Todos os 36 veículos agora exibem exatamente o valor anunciado pelo vendedor/loja (ex: Pulse Drive CVT de R$ 83.900 a R$ 103.900; Dolphin Mini de R$ 95.000 a R$ 109.900; VW Tera oficial R$ 124.290 TSI e R$ 139.990 High).

@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  // Na aba de sugestões, respeita a faixa de preço selecionada no botão de faixa
  let maxAllowedPrice = state.filterPrice;
  if (isSuggestionsTab && targetTier && targetTier !== 'all') {
- const tierPrices = { '60k': 60000, '70k': 70000, '80k': 80000, '100k': 100000, '120k': 120000 };
+ const tierPrices = { '60k': 60000, '70k': 70000, '80k': 80000, '100k': 100000, '120k': 120000, '140k': 140000, '160k': 160000 };
  maxAllowedPrice = Math.max(state.filterPrice, tierPrices[targetTier] || state.filterPrice);
  }
 
