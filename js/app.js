@@ -248,13 +248,13 @@ document.addEventListener('DOMContentLoaded', async () => {
  // 5. Renderização dos Cards Estilo Marketplace
  // ==============================================================
  function getExactCarImage(c) {
- if (!c || !c.image) return null;
- if (c.image.includes('unsplash')) return null;
- if (c.image.startsWith('./img/cars/') || c.image.startsWith('img/cars/')) {
- return c.image;
- }
- return null;
- }
+    if (!c || !c.image) return null;
+    if (c.image.includes('unsplash')) return null;
+    if (c.image.startsWith('./img/cars/') || c.image.startsWith('img/cars/') || c.image.startsWith('http://') || c.image.startsWith('https://')) {
+      return c.image;
+    }
+    return null;
+  }
 
  function createCarCardHTML(car) {
  const isElec = car.fuel?.includes('Elétrico');
