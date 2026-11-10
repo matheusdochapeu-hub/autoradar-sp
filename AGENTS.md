@@ -22,8 +22,16 @@ python -m http.server 8000   # abrir http://localhost:8000
 
 ## Testes
 
-**Não há suíte automatizada** (ponto de melhoria prioritário). Ao alterar o catálogo,
-valide manualmente: abrir o app, filtrar por faixa de preço e conferir os cards.
+```powershell
+node scripts/check-syntax.js      # sintaxe de js/*.js e sw.js
+node --test test/**/*.test.js     # 13 testes: sintaxe, catálogo, HTML e Service Worker
+```
+CI em `.github/workflows/ci.yml` roda os dois em todo push/PR.
+
+O que a suíte protege: catálogo (`data/cars.json`) válido e não vazio, scripts
+referenciados existentes, ordem de dependência (`data.js` antes de `app.js`),
+uniformidade do `?v=` e precache do Service Worker coerente com o `index.html`
+(inclusive as fotos dos carros).
 
 ## Deploy
 
@@ -49,9 +57,10 @@ valide manualmente: abrir o app, filtrar por faixa de preço e conferir os cards
 2. Manter o padrão de "quanto abaixo da FIPE" e a estimativa de parcela — é o diferencial
    do app.
 3. Ao publicar assets, **incrementar `CACHE_NAME`** no `sw.js`.
-4. Enquanto não houver testes, **nunca reescrever `js/` em massa**: mudanças pequenas e
-   verificação manual no navegador.
-5. Adicionar uma suíte de testes em Node (padrão do `../maracaju88`) é bem-vindo.
+4. Ao alterar o catálogo, rode `node --test test/**/*.test.js` antes de commitar —
+   a suíte valida o JSON e as fotos referenciadas.
+5. **Nunca reaproveitar `id` no HTML** e mantenha o `?v=` uniforme: o app é servido
+   pelo GitHub Pages e o cache do navegador já causou tela desatualizada.
 
 ## Vizinhança (ecossistema)
 
