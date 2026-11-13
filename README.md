@@ -1,63 +1,102 @@
-# 🚗⚡ AutoRadar SP — Buscador de Carros & Marketplace até R$ 80k
+# AutoRadar SP — radar de preços de carros no Estado de São Paulo
 
-> **Link do App Online (PWA):** [https://matheusdochapeu-hub.github.io/autoradar-sp/](https://matheusdochapeu-hub.github.io/autoradar-sp/)  
-> **Repositório GitHub:** [https://github.com/matheusdochapeu-hub/autoradar-sp](https://github.com/matheusdochapeu-hub/autoradar-sp)
+> **App (PWA):** [https://matheusdochapeu-hub.github.io/autoradar-sp/](https://matheusdochapeu-hub.github.io/autoradar-sp/)
+> **Repositório:** [https://github.com/matheusdochapeu-hub/autoradar-sp](https://github.com/matheusdochapeu-hub/autoradar-sp)
 
-Aplicativo e marketplace inteligente sob medida para **Matheus & Scarlet** encontrarem o carro ideal no Estado de São Paulo, priorizando:
-1. **BYD Dolphin Mini** (100% Elétrico)
-2. **Fiat Pulse Automático** (Drive 1.3 CVT ou Turbo 200 AT)
-3. **Volkswagen Tera Automático** (1.0 TSI AT)
-4. **Radar 100% Elétricos & Sugestões Similares até R$ 80.000**.
+PWA em HTML/CSS/JS puro (sem build e sem dependências) que organiza **ofertas reais
+de lojas de São Paulo** para três modelos-alvo:
 
----
+1. **BYD Dolphin** (Mini, GS e Plus — 100% elétrico)
+2. **Fiat Pulse** automático (1.3 CVT e Turbo 200)
+3. **Volkswagen Tera** automático (com o Polo TSI como alternativa direta)
 
-## 🌟 Funcionalidades do Aplicativo
-
-### 1. 🎯 Visual Marketplace com Nossos 3 Alvos
-- Cards completos com fotos de alta qualidade, quilometragem, ano, combustível, câmbio, porta-malas e laudo pericial cautelar.
-- Preço à vista comparado com a Tabela FIPE (com indicação de quanto está abaixo do mercado).
-- Opção de Financiamento detalhada no card: entrada recomendada e valor estimado da parcela em 48x.
-- Botão direto de **WhatsApp** com mensagem pré-formatada para a concessionária/loja de SP.
-- Localização exata em São Paulo (Capital, Santo André/ABC, São Bernardo, Campinas, Sorocaba).
-
-### 2. ⚡ Radar 100% Elétricos (Preferência Declarada)
-- Modelos 100% elétricos disponíveis até R$ 80k ou negociáveis:
-  - **BYD Dolphin Mini**: Bateria Blade, 280 km de autonomia, tela giratória, isenção de rodízio SP.
-  - **Renault Kwid E-Tech**: 100% elétrico por **R$ 69.900** (sobra R$ 10.000 no orçamento!).
-  - **JAC E-JS1**: Parceria JAC/VW, 15,3 kgfm de torque imediato por **R$ 68.500**.
-- Custo por km rodado calculado: apenas **~R$ 0,08 por km** (menos de R$ 60/mês para rodar 800 km).
-
-### 3. 💡 Aba de Sugestões & Similares até R$ 80k
-- Alternativas automáticas modernas caso o Tera ou Dolphin estejam com preços acima do teto:
-  - **VW Polo Comfortline 200 TSI AT**: Mesma plataforma MQB e motor turbo do Tera por R$ 76.900.
-  - **Nissan Kicks 1.6 CVT**: Conforto extremo com bancos Gravidade Zero e porta-malas gigante de 432L por R$ 78.900.
-  - **Citroën C4 Cactus Feel 1.6 AT**: Câmbio japonês Aisin 6m e suspensão alta por R$ 73.900.
-  - **Fiat Argo Trekking 1.3 CVT 2024**: Quase zero km (19.000 km) com a mesma mecânica do Pulse por R$ 76.500.
-
-### 4. ⚖️ Comparador Técnico Lado a Lado
-- Compare até 3 carros simultaneamente em autonomia, consumo na cidade/estrada, capacidade do porta-malas, potência, garantia e opções de financiamento.
-
-### 5. 🧮 Simulador de Financiamento & Gestão do Orçamento de R$ 80k
-- Simulação Tabela Price com sliders de entrada, prazos de 12 a 60 meses e taxas de juros reais de concessionária em SP.
-- Cálculo de sobra de reserva: mostra quanto dos seus R$ 80.000 sobra intacto na conta rendendo no Tesouro Selic caso decida financiar parte da compra.
-
-### 6. 🔄 Atualização Diária Automática
-- **No App**: Botão *"Varredura Diária"* no topo para sincronizar e revalidar as ofertas das lojas.
-- **Script Python (`updater.py`)**: Rotina que valida preços, recalcula índices e salva histórico em `data/cars.json` e `logs/daily_update.log`.
-- **Agendador de Tarefas do Windows (`agendar_tarefa_diaria.bat`)**: Configura execução automática diária às 06:00 da manhã sem intervenção humana.
+Além dos alvos, o catálogo traz sugestões de automáticos e elétricos por faixa de preço.
 
 ---
 
-## 🚀 Como Executar
+## O que o app faz
 
-### Opção 1: Uso Direto no Navegador
-Dê um duplo clique no arquivo [`index.html`](file:///c:/Users/matheus.ribeiro/Desktop/Matheus/5.%20IA/autoradar-sp/index.html) para abrir o aplicativo instantaneamente no seu navegador favorito (Chrome, Edge, etc.).
+| Recurso | Como funciona |
+|---|---|
+| **Catálogo** | `data/cars.json` — cada oferta tem preço, FIPE, km, loja, cidade, foto e link do anúncio original |
+| **Preço vs FIPE** | Mostra quanto o anúncio está acima ou abaixo da tabela FIPE |
+| **Parcela estimada** | Tabela Price (48x, taxa de mercado ~2,5% a.m.) calculada em `js/financing.js` |
+| **Filtros** | Modelo, preço máximo, combustível, região (geradas a partir do catálogo), ordenação e busca sem acento |
+| **Teto de R$ 80.000** | Pílula no topo mostra quantas ofertas cabem no teto e filtra com 1 clique |
+| **Favoritos** | Salva ofertas no `localStorage` e filtra por elas |
+| **Comparador** | Até 3 veículos lado a lado, com duelos prontos |
+| **Simulador** | Entrada, prazo (12–60x) e cenários de taxa; mostra juros totais e custo efetivo |
+| **Meus anúncios** | Cadastro manual de uma oferta encontrada, salvo localmente |
+| **Offline** | Service Worker com precache do app shell; fotos entram no cache sob demanda |
 
-### Opção 2: Ativar Atualização Automática no Windows
-1. Clique com o botão direito em [`agendar_tarefa_diaria.bat`](file:///c:/Users/matheus.ribeiro/Desktop/Matheus/5.%20IA/autoradar-sp/agendar_tarefa_diaria.bat) e selecione *"Executar como Administrador"*.
-2. A tarefa `AutoRadarSP_DailyUpdate` será criada no Windows Task Scheduler para rodar todo dia às 06:00.
+Nada de preço, FIPE ou link é gerado por estimativa: se um dado não existe, o campo
+aparece como indisponível. A regra está em [AGENTS.md](AGENTS.md).
 
-### Opção 3: Rodar Atualização Manual via Terminal
-```bash
-python updater.py
+---
+
+## Como rodar localmente
+
+O app busca `data/cars.json` por `fetch`, então precisa de um servidor HTTP
+(abrir o arquivo direto com `file://` cai no fallback embutido):
+
+```powershell
+python -m http.server 8000
+# abra http://localhost:8000
 ```
+
+## Testes e verificação
+
+```powershell
+node scripts/check-syntax.js               # sintaxe de js/*.js e sw.js
+node scripts/sync-fallback.js --check      # fallback offline x catálogo
+node --test "test/**/*.test.js"            # 22 testes
+```
+
+O CI em `.github/workflows/ci.yml` roda os três em todo push/PR.
+A suíte cobre: catálogo válido (ids únicos, preço/FIPE/parcela coerentes, faixa de
+preço), fallback sincronizado, links https, HTML/ordem dos scripts `?v=`,
+precache do Service Worker e a versão do cache batendo com o `index.html`.
+
+## Deploy
+
+GitHub Pages via `.github/workflows/pages.yml` (branch `main`).
+Ao publicar assets, suba a versão em três lugares: `?v=` dos scripts/CSS no
+`index.html`, `APP_VER` inline e `CACHE_NAME` no `sw.js` (o teste falha se
+ficarem diferentes).
+
+---
+
+## Estrutura
+
+```
+index.html            SPA (abas, filtros, simulador, formulário)
+css/style.css         Tema escuro + responsivo
+js/data.js            Catálogo (fetch + fallback offline) e regiões de SP
+js/app.js             Filtros, render dos cards, comparador, PWA
+js/financing.js       Tabela Price e formatação de moeda
+data/cars.json        Fonte oficial do catálogo
+sw.js                 Service Worker (cache versionado)
+scripts/              check-syntax.js, sync-fallback.js, fetch_listings.py
+test/                 Suíte node:test
+updater.py            Manutenção de metadados/estatísticas do JSON
+```
+
+---
+
+## Ampliar o catálogo (mais carros e mais cidades)
+
+1. Encontre anúncios reais dos modelos-alvo em novas cidades.
+2. Colete os dados com apoio do script (ele lê só o que a página publica):
+   ```powershell
+   python scripts/fetch_listings.py "https://carro.mercadolivre.com.br/MLB-..." --file links.txt
+   ```
+   O resultado vai para `data/candidates.json` com preço, foto, ano e link.
+3. **Revise à mão** FIPE, loja, bairro e laudo — esses campos não vêm do anúncio.
+4. Mova os aprovados para `data/cars.json` e rode:
+   ```powershell
+   node scripts/sync-fallback.js
+   node --test "test/**/*.test.js"
+   ```
+
+As regiões do filtro são derivadas de `REGIOES_SP` + catálogo: uma cidade nova
+aparece automaticamente no filtro, com a contagem de ofertas.

@@ -3,9 +3,34 @@
 ## 1. Visão Geral
 - **URL de Produção:** https://matheusdochapeu-hub.github.io/autoradar-sp/
 - **Repositório:** https://github.com/matheusdochapeu-hub/autoradar-sp.git
-- **Objetivo:** Radar inteligente de veículos em São Paulo (Pulse, BYD Dolphin Mini/Plus, VW Tera e alternativas automáticas/elétricas até R$ 80k-120k).
+- **Objetivo:** Radar de ofertas reais de veículos em São Paulo (Pulse, BYD Dolphin e VW Tera, com alternativas automáticas/elétricas).
 
 ## 2. Histórico de Versões Recentes
+
+### v20 (Novembro/2026) — Auditoria de dados, UX honesta e base ampliável
+- **Links:** 3 anúncios do Grupo Toriba (Dolphin Mini GS, Dolphin Mini 5L e Pulse Drive Alphaville)
+  saíram do ar (HTTP 404). Passaram a apontar para o estoque oficial da loja, com
+  `listingStatus: "estoque"` e aviso no card ("Ver Estoque").
+- **Faixas de sugestão:** 12 dos 16 carros tinham `priceTier` errado (ex.: Kwid de R$ 85.900
+  rotulado como "70k"). A faixa agora é derivada do preço real e o filtro usa preço, não rótulo.
+  As faixas "Até 140k" e "Até 160k" antes não filtravam nada; agora filtram.
+- **Regiões:** chips de filtro passaram a ser gerados do catálogo (`REGIOES_SP` + contagem),
+  então a lista de locais cresce junto com os dados e não mostra região vazia.
+- **Textos de oferta:** os cards de destaque não têm mais números fixos; mostram contagem,
+  faixa real de preço e quantas ofertas cabem no teto de R$ 80.000.
+- **Atualização:** o botão "Varredura Diária" (que só simulava uma espera) virou "Atualizar",
+  que refaz o fetch de `data/cars.json` e informa quantas ofertas novas chegaram.
+  "Limpar Cache" saiu do header para o rodapé; `alert()` foi trocado por toasts.
+- **Favoritos:** existiam no `localStorage` sem nenhuma tela; agora há chip de filtro com contagem.
+- **Fallback offline:** `js/data.js` era uma cópia manual de `data/cars.json` (risco de divergir).
+  Agora é gerado por `scripts/sync-fallback.js` e um teste falha se sair de sincronia.
+- **Qualidade:** escape de HTML e validação de URL (bloqueia `javascript:`), eventos delegados
+  (sem re-bind a cada render), busca com debounce, modal acessível (ESC + foco) e rodapé com
+  data do catálogo e disclaimer.
+- **Testes:** 13 → 22, incluindo integridade do catálogo (ids, preço vs FIPE, parcela Price,
+  `priceTier`, links) e versão do cache batendo com o `?v=` do HTML.
+- **Precache:** removidas as 13 fotos locais órfãs (~1,9 MB) do precache; fotos dos anúncios
+  entram no cache sob demanda.
 
 ### v19 (Novembro/2026) — Expansão do Catálogo: Gama Completa de Teras, Dolphins e Pulses
 - **Volkswagen Tera Expandido (Gama Oficial 2026):**

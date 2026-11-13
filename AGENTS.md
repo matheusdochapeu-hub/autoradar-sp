@@ -5,14 +5,15 @@
 ## O que é
 
 PWA/marketplace de busca de carros no Estado de São Paulo, focado em elétricos e
-automáticos até uma faixa de preço (BYD Dolphin, Fiat Pulse, VW Tera e alternativas).
-Traz preço vs. FIPE, financiamento estimado, comparador lado a lado e contato por WhatsApp.
+automáticos (BYD Dolphin, Fiat Pulse e VW Tera como modelos-alvo). Traz preço vs. FIPE,
+financiamento estimado, comparador lado a lado e contato por WhatsApp.
+O catálogo cobre ofertas de R$ 64k a R$ 160k; R$ 80.000 é o teto de orçamento do usuário.
 
 ## Stack
 
 - PWA em HTML/CSS/vanilla JS (sem build, sem dependências).
 - Catálogo e dados em `data/`; lógica em `js/`.
-- `updater.py` + `agendar_tarefa_diaria.bat` mantêm o catálogo atualizado localmente.
+- `updater.py` + `agendar_tarefa_diaria.bat` mantêm os metadados do catálogo localmente.
 
 ## Rodar localmente
 
@@ -20,23 +21,30 @@ Traz preço vs. FIPE, financiamento estimado, comparador lado a lado e contato p
 python -m http.server 8000   # abrir http://localhost:8000
 ```
 
+Abrir `index.html` direto por `file://` funciona só em modo fallback: o `fetch` de
+`data/cars.json` é bloqueado, e o app usa a cópia embutida em `js/data.js`.
+
 ## Testes
 
 ```powershell
-node scripts/check-syntax.js      # sintaxe de js/*.js e sw.js
-node --test test/**/*.test.js     # 13 testes: sintaxe, catálogo, HTML e Service Worker
+node scripts/check-syntax.js              # sintaxe de js/*.js e sw.js
+node scripts/sync-fallback.js --check     # fallback offline x data/cars.json
+node --test "test/**/*.test.js"           # 22 testes: catálogo, HTML, SW e sintaxe
 ```
-CI em `.github/workflows/ci.yml` roda os dois em todo push/PR.
 
-O que a suíte protege: catálogo (`data/cars.json`) válido e não vazio, scripts
-referenciados existentes, ordem de dependência (`data.js` antes de `app.js`),
-uniformidade do `?v=` e precache do Service Worker coerente com o `index.html`
-(inclusive as fotos dos carros).
+CI em `.github/workflows/ci.yml` roda sintaxe + testes em todo push/PR.
+
+O que a suíte protege: catálogo (`data/cars.json`) válido com ids únicos, preço vs
+FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallback de
+`js/data.js` sincronizado; scripts referenciados existentes, ordem de dependência
+(`data.js` antes de `app.js`), uniformidade do `?v=`, precache do Service Worker e
+`CACHE_NAME` igual à versão dos assets.
 
 ## Deploy
 
-- GitHub Pages via `.github/workflows/pages.yml` (branch `main` + `gh-pages`):
+- GitHub Pages via `.github/workflows/pages.yml` (branch `main`):
   <https://matheusdochapeu-hub.github.io/autoradar-sp/>
+- A branch `gh-pages` é legado (parada na v14) e não é usada pela publicação.
 - Cache versionado em `sw.js` (`autoradar-sp-vN`).
 
 ## Arquivos-chave
@@ -44,23 +52,30 @@ uniformidade do `?v=` e precache do Service Worker coerente com o `index.html`
 | Arquivo | Papel |
 |---|---|
 | `index.html` | SPA (catálogo, radar elétrico, comparador, sugestões) |
-| `js/` | Filtros, renderização dos cards e simulador de financiamento |
-| `data/` | Catálogo de veículos, preços e concessionárias |
-| `updater.py` | Atualização do catálogo |
+| `js/app.js` | Filtros, cards, comparador, simulador e PWA |
+| `js/data.js` | Catálogo (fetch/fallback), regiões de SP e helpers |
+| `js/financing.js` | Tabela Price e formatação de moeda |
+| `data/cars.json` | **Fonte oficial** do catálogo |
+| `scripts/sync-fallback.js` | Regenera o fallback de `js/data.js` a partir do JSON |
+| `scripts/fetch_listings.py` | Coleta candidatos de anúncios reais (revisão manual) |
 | `sw.js` | Service Worker |
 | `MEMORY.md` | Histórico de versões do catálogo |
 
 ## Regras críticas
 
 1. **Preço, FIPE e links de loja são dados factuais.** Não invente valores nem URLs:
-   se não houver fonte, marque como indisponível.
+   se não houver fonte, marque como indisponível. Isso vale também para textos de
+   marketing (README, cards de destaque): números fixos no HTML envelhecem e mentem.
 2. Manter o padrão de "quanto abaixo da FIPE" e a estimativa de parcela — é o diferencial
    do app.
-3. Ao publicar assets, **incrementar `CACHE_NAME`** no `sw.js`.
-4. Ao alterar o catálogo, rode `node --test test/**/*.test.js` antes de commitar —
-   a suíte valida o JSON e as fotos referenciadas.
+3. Ao publicar assets, **incremente a versão nos três lugares**: `?v=` no `index.html`,
+   `APP_VER` inline e `CACHE_NAME` no `sw.js` (o teste falha se divergirem).
+4. Ao alterar o catálogo, rode `node scripts/sync-fallback.js` e depois
+   `node --test "test/**/*.test.js"` — a suíte valida o JSON, o fallback e os links.
 5. **Nunca reaproveitar `id` no HTML** e mantenha o `?v=` uniforme: o app é servido
    pelo GitHub Pages e o cache do navegador já causou tela desatualizada.
+6. Filtros de região devem ser gerados de `REGIOES_SP` + catálogo. Não fixe cidades
+   no HTML: região sem oferta vira filtro que esvazia a tela.
 
 ## Vizinhança (ecossistema)
 

@@ -1,4 +1,11 @@
-const CACHE_NAME = 'autoradar-sp-v19';
+const CACHE_NAME = 'autoradar-sp-v20';
+
+/**
+ * Precache do app shell.
+ * As fotos dos anúncios são externas e entram no cache sob demanda (runtime),
+ * então não entram aqui: o precache precisa ser pequeno para instalar rápido
+ * no celular.
+ */
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -10,80 +17,89 @@ const ASSETS_TO_CACHE = [
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './icons/icon.svg',
-  './img/cars/pulse-drive-cinza.jpg',
-  './img/cars/pulse-turbo-branco.jpg',
-  './img/cars/pulse-audace-azul.jpg',
-  './img/cars/byd-dolphin-mini-branco.jpg',
-  './img/cars/byd-dolphin-mini-verde.jpg',
-  './img/cars/byd-dolphin-mini-preto.jpg',
-  './img/cars/vw-tera.jpg',
-  './img/cars/vw-polo-tsi.jpg',
-  './img/cars/kwid-etech.jpg',
-  './img/cars/jac-ejs1.jpg',
-  './img/cars/nissan-kicks.jpg',
-  './img/cars/c4-cactus.jpg',
-  './img/cars/argo-trekking.jpg'
+  './icons/icon-maskable-512.png',
+  './icons/icon.svg'
 ];
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
+  // Um asset ausente não deve impedir a instalação do Service Worker.
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
+    caches.open(CACHE_NAME).then((cache) =>
+      Promise.all(
+        ASSETS_TO_CACHE.map((url) =>
+          cache.add(url).catch((err) => console.warn('[SW] falha ao precachear', url, err))
+        )
+      )
+    )
   );
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
+    caches.keys().then((keys) =>
+      Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
-            console.log('[SW] Apagando cache antigo obsoleto:', key);
+            console.log('[SW] Removendo cache antigo:', key);
             return caches.delete(key);
           }
+          return undefined;
         })
-      );
-    })
+      )
+    )
   );
   self.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
-  const url = event.request.url;
+  const { request } = event;
+  if (request.method !== 'GET') return;
 
-  // Network-first para HTML, scripts e cars.json (sempre entrega a versão mais recente)
-  const isCodeOrData = url.includes('data/cars.json') || 
-                       url.includes('.js') || 
-                       url.endsWith('/') || 
-                       url.includes('index.html');
+  const url = new URL(request.url);
+  if (!['http:', 'https:'].includes(url.protocol)) return;
 
+  const isSameOrigin = url.origin === self.location.origin;
+  const isCodeOrData =
+    isSameOrigin &&
+    (url.pathname.endsWith('/') ||
+      /\.(?:html|js|css|json|webmanifest)$/i.test(url.pathname));
+
+  // Network-first: código e catálogo sempre tentam a versão mais nova.
   if (isCodeOrData) {
     event.respondWith(
-      fetch(event.request)
+      fetch(request)
         .then((response) => {
           if (response && response.status === 200) {
             const clone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
           }
           return response;
         })
-        .catch(() => caches.match(event.request).then(cached => cached || caches.match('./index.html')))
+        .catch(() =>
+          caches
+            .match(request)
+            .then((cached) => cached || caches.match('./index.html'))
+        )
     );
     return;
   }
 
-  // Cache-first para imagens e ícones locais já otimizados
+  // Cache-first para imagens/ícones (local e fotos dos anúncios).
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) return cachedResponse;
-      return fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const clone = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+    (async () => {
+      const cached = await caches.match(request);
+      if (cached) return cached;
+      try {
+        const response = await fetch(request);
+        if (response && (response.status === 200 || response.type === 'opaque')) {
+          const cache = await caches.open(CACHE_NAME);
+          cache.put(request, response.clone());
         }
-        return networkResponse;
-      });
-    })
+        return response;
+      } catch (err) {
+        return new Response('', { status: 504, statusText: 'Offline sem cópia em cache' });
+      }
+    })()
   );
 });

@@ -9,3 +9,10 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Artefatos locais de QA
+.tmp-*
+index-probe.html
+
+# Candidatos coletados (revisar antes de entrar no catálogo)
+data/candidates.json

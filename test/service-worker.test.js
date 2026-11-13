@@ -50,10 +50,40 @@ test('Service Worker: todo script do index.html está precacheado', () => {
   assert.equal(fora.length, 0, `Scripts fora do precache (faltariam offline): ${fora.join(', ')}`);
 });
 
-test('Service Worker: fotos do catálogo referenciadas existem', () => {
-  const fotos = assets.filter((a) => a.startsWith('./img/'));
-  assert.ok(fotos.length > 0, 'O precache deve incluir as fotos dos carros.');
+test('Service Worker: fotos locais do catálogo estão precacheadas', () => {
+  const db = JSON.parse(fs.readFileSync(path.join(rootDir, 'data', 'cars.json'), 'utf8'));
+  const locais = (db.cars || [])
+    .map((c) => c.image || '')
+    .filter((img) => /^(\.\/)?img\//i.test(img))
+    .map((img) => `./${img.replace(/^\.\//, '')}`);
 
-  const ausentes = fotos.filter((f) => !fs.existsSync(path.join(rootDir, f.replace(/^\.\//, ''))));
-  assert.equal(ausentes.length, 0, `Fotos ausentes: ${ausentes.join(', ')}`);
+  if (locais.length === 0) {
+    // O catálogo atual usa fotos externas dos anúncios: nada a precachear aqui.
+    assert.ok(assets.some((a) => a.includes('icons/')), 'O precache deve manter os ícones do PWA.');
+    return;
+  }
+
+  const normalizados = assets.map((a) => a.replace(/^\.\//, ''));
+  const fora = locais.filter((img) => !normalizados.includes(img.replace(/^\.\//, '')));
+  assert.equal(fora.length, 0, `Fotos locais fora do precache: ${fora.join(', ')}`);
+});
+
+test('Service Worker: versão do cache combina com o ?v= e o APP_VER do HTML', () => {
+  const versoes = [...new Set(Array.from(html.matchAll(/\?v=(\d+)/g)).map((m) => m[1]))];
+  assert.equal(versoes.length, 1, `O HTML deve ter uma única versão de asset (encontrado: ${versoes.join(', ')}).`);
+
+  const versaoHtml = versoes[0];
+  const versaoCache = String(cacheName).replace('autoradar-sp-v', '');
+  assert.equal(
+    versaoCache,
+    versaoHtml,
+    `CACHE_NAME (${cacheName}) e os assets (?v=${versaoHtml}) precisam ter a mesma versão.`
+  );
+
+  const appVer = /const\s+APP_VER\s*=\s*['"]([^'"]+)['"]/.exec(html)?.[1];
+  assert.equal(
+    appVer,
+    `autoradar-sp-v${versaoHtml}`,
+    'A constante APP_VER do index.html precisa acompanhar a versão do cache.'
+  );
 });

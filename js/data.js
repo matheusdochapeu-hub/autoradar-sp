@@ -680,7 +680,7 @@ const DEFAULT_CARS_DATABASE = [
       "Sobra Dinheiro",
       "Garantia até 2031"
     ],
-    "priceTier": "70k",
+    "priceTier": "100k",
     "portal": "Mercado Livre",
     "negotiatedTarget": 78000
   },
@@ -806,7 +806,7 @@ const DEFAULT_CARS_DATABASE = [
       "Motor TSI 128cv",
       "Painel Digital"
     ],
-    "priceTier": "80k",
+    "priceTier": "70k",
     "portal": "Mercado Livre",
     "negotiatedTarget": 65000
   },
@@ -868,7 +868,7 @@ const DEFAULT_CARS_DATABASE = [
       "Bancos Gravidade Zero",
       "Câmera 360"
     ],
-    "priceTier": "80k",
+    "priceTier": "120k",
     "portal": "Mercado Livre",
     "negotiatedTarget": 99000
   },
@@ -991,7 +991,7 @@ const DEFAULT_CARS_DATABASE = [
       "Menos de 20 mil km",
       "Garantia até 2027"
     ],
-    "priceTier": "80k",
+    "priceTier": "100k",
     "portal": "Mercado Livre",
     "negotiatedTarget": 82000
   },
@@ -1256,7 +1256,7 @@ const DEFAULT_CARS_DATABASE = [
     "priceVsFipe": "-R$ 3.310 vs FIPE",
     "image": "https://production.autoforce.com/uploads/used_model/profile_image/26931541/model_main_webp_comprar-pulse-1-3-drive-4105_46585dd4b9.jpg.webp",
     "portal": "Grupo Toriba",
-    "listingUrl": "https://www.toribacitroen.com.br/seminovos/pulse-1-3-drive-4105",
+    "listingUrl": "https://www.toribacitroen.com.br/seminovos",
     "dealer": {
       "name": "Kavak Hub — Alphaville",
       "type": "Seminovos Certificados com Garantia",
@@ -1295,7 +1295,9 @@ const DEFAULT_CARS_DATABASE = [
       "Kavak",
       "Garantia 2 Anos"
     ],
-    "negotiatedTarget": 80000
+    "negotiatedTarget": 80000,
+    "listingStatus": "estoque",
+    "listingNote": "Anuncio individual fora do ar; link abre o estoque da loja."
   },
   {
     "id": "byd-04-rib",
@@ -1439,7 +1441,7 @@ const DEFAULT_CARS_DATABASE = [
     "priceVsFipe": "-R$ 5.010 vs FIPE",
     "image": "https://production.autoforce.com/uploads/used_model/profile_image/26938534/model_main_webp_comprar-dolphin-mini-38-kw-5l-5239_f80abc1591.jpg.webp",
     "portal": "Grupo Toriba",
-    "listingUrl": "https://www.grupotoriba.com.br/seminovos/dolphin-mini-38-kw-5l-5239",
+    "listingUrl": "https://www.grupotoriba.com.br/seminovos",
     "dealer": {
       "name": "Dahruj BYD — Santos Litoral",
       "type": "Concessionária Oficial BYD",
@@ -1480,7 +1482,9 @@ const DEFAULT_CARS_DATABASE = [
       "Litoral",
       "100% Elétrico"
     ],
-    "negotiatedTarget": 92000
+    "negotiatedTarget": 92000,
+    "listingStatus": "estoque",
+    "listingNote": "Anuncio individual fora do ar; link abre o estoque da loja."
   },
   {
     "id": "pulse-11-jundiai",
@@ -1607,7 +1611,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "Fiat Argo Automático",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "60k",
+    "priceTier": "70k",
     "badge": "Sugestão até 60k",
     "year": "2020/2020",
     "km": 48200,
@@ -1667,7 +1671,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "Chevrolet Onix Automático",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "60k",
+    "priceTier": "70k",
     "badge": "Sugestão até 60k",
     "year": "2019/2019",
     "km": 52400,
@@ -1727,7 +1731,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "Honda Fit Automático",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "70k",
+    "priceTier": "80k",
     "badge": "Sugestão até 70k",
     "year": "2018/2018",
     "km": 49800,
@@ -1787,7 +1791,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "Hyundai HB20 Automático",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "70k",
+    "priceTier": "80k",
     "badge": "Sugestão até 70k",
     "year": "2019/2019",
     "km": 44100,
@@ -1847,7 +1851,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "BYD Dolphin EV",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "100k",
+    "priceTier": "120k",
     "badge": "Upgrade até 100k",
     "year": "2023/2024",
     "km": 14200,
@@ -1860,7 +1864,7 @@ const DEFAULT_CARS_DATABASE = [
     "priceVsFipe": "-R$ 5.510 vs FIPE",
     "image": "https://production.autoforce.com/uploads/used_model/profile_image/26948204/model_main_webp_comprar-dolphin-mini-38-kw-gs-5256_48d000b2f4.jpg.webp",
     "portal": "Grupo Toriba",
-    "listingUrl": "https://www.grupotoriba.com.br/seminovos/dolphin-mini-38-kw-gs-5256",
+    "listingUrl": "https://www.grupotoriba.com.br/seminovos",
     "dealer": {
       "name": "Dahruj BYD — Vila Olímpia",
       "type": "Concessionária Oficial BYD",
@@ -1901,7 +1905,9 @@ const DEFAULT_CARS_DATABASE = [
       "interestRate": 2.5,
       "monthlyInstallment": 2747
     },
-    "negotiatedTarget": 99000
+    "negotiatedTarget": 99000,
+    "listingStatus": "estoque",
+    "listingNote": "Anuncio individual fora do ar; link abre o estoque da loja."
   },
   {
     "id": "sug-100k-pulse-impetus",
@@ -1909,7 +1915,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "Fiat Pulse Automático",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "100k",
+    "priceTier": "120k",
     "badge": "Upgrade até 100k",
     "year": "2023/2024",
     "km": 18900,
@@ -1970,7 +1976,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "Jeep Renegade Automático",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "100k",
+    "priceTier": "120k",
     "badge": "Upgrade até 100k",
     "year": "2022/2023",
     "km": 34100,
@@ -2032,7 +2038,7 @@ const DEFAULT_CARS_DATABASE = [
     "modelCategory": "BYD Dolphin EV",
     "isTarget": false,
     "isSuggestion": true,
-    "priceTier": "120k",
+    "priceTier": "160k",
     "badge": "Premium até 120k",
     "year": "2023/2024",
     "km": 11800,
@@ -2611,134 +2617,287 @@ const DEFAULT_CARS_DATABASE = [
   }
 ];
 
+
+/**
+ * Regiões de busca em SP. Cada região agrupa cidades reais do estado.
+ * Os chips de filtro são gerados a partir daqui + do catálogo: regiões sem
+ * oferta não aparecem, e novas cidades passam a aparecer sozinhas quando o
+ * catálogo cresce.
+ */
+const REGIOES_SP = [
+  { key: 'capital', label: 'SP Capital', cities: ['sao paulo'] },
+  { key: 'abc', label: 'Grande SP & ABC', cities: ['santo andre', 'sao bernardo do campo', 'sao bernardo', 'sao caetano do sul', 'diadema', 'maua', 'guarulhos', 'osasco', 'cotia', 'taboao da serra'] },
+  { key: 'alphaville', label: 'Alphaville / Barueri', cities: ['barueri', 'santana de parnaiba'] },
+  { key: 'campinas', label: 'Campinas e Região', cities: ['campinas', 'hortolandia', 'sumare', 'indaiatuba', 'valinhos', 'vinhedo', 'paulinia'] },
+  { key: 'ribeirao', label: 'Ribeirão Preto', cities: ['ribeirao preto', 'sertaozinho'] },
+  { key: 'vale', label: 'SJC / Vale do Paraíba', cities: ['sao jose dos campos', 'taubate', 'jacarei', 'cacapava', 'guaratingueta', 'pindamonhangaba'] },
+  { key: 'sorocaba', label: 'Sorocaba', cities: ['sorocaba', 'votorantim', 'itapetininga'] },
+  { key: 'litoral', label: 'Santos / Baixada Santista', cities: ['santos', 'sao vicente', 'guaruja', 'praia grande', 'cubatao', 'mongagua'] },
+  { key: 'jundiai', label: 'Jundiaí / Piracicaba', cities: ['jundiai', 'piracicaba', 'limeira', 'americana'] },
+  { key: 'bauru', label: 'Bauru / Marília', cities: ['bauru', 'marilia', 'jau', 'botucatu'] },
+  { key: 'saocarlos', label: 'São Carlos / Araraquara', cities: ['sao carlos', 'araraquara', 'rio claro'] },
+  { key: 'riopreto', label: 'São José do Rio Preto', cities: ['sao jose do rio preto', 'catanduva'] },
+  { key: 'prudente', label: 'Presidente Prudente', cities: ['presidente prudente'] },
+  { key: 'franca', label: 'Franca / Barretos', cities: ['franca', 'barretos'] }
+];
+
+const BUDGET_LIMIT = 80000;
+
+function normalizar(str) {
+  return (str || '')
+    .toString()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
+
+function regiaoDaCidade(cidade) {
+  const alvo = normalizar(cidade);
+  if (!alvo) return null;
+  return REGIOES_SP.find((r) => r.cities.some((c) => alvo.includes(c))) || null;
+}
+
 class AutoRadarDataService {
- constructor() {
- this.cars = [];
- this.customCars = [];
- this.favorites = new Set();
- this.lastSync = null;
- }
+  constructor() {
+    this.cars = [];
+    this.customCars = [];
+    this.favorites = new Set();
+    this.lastSync = null;
+    this.usingFallback = false;
+  }
 
- async init() {
- this.loadFavorites();
- this.loadCustomCars();
+  async init() {
+    this.loadFavorites();
+    this.loadCustomCars();
+    await this.reload();
+    return this.cars;
+  }
 
- try {
- const resp = await fetch('data/cars.json');
- if (resp.ok) {
- const json = await resp.json();
- this.cars = json.cars || [];
- this.lastSync = json.metadata?.lastUpdated || new Date().toISOString();
- } else {
- throw new Error('Falha HTTP ao carregar cars.json');
- }
- } catch (err) {
- console.warn('Carregando base de fallback offline do AutoRadar SP:', err.message);
- this.cars = [...DEFAULT_CARS_DATABASE];
- this.lastSync = localStorage.getItem(STORAGE_KEY_LAST_SYNC) || new Date().toISOString();
- }
+  /**
+   * Busca o catálogo publicado em data/cars.json.
+   * `bust=true` ignora o cache do navegador (usado pelo botão de atualizar).
+   */
+  async reload(bust = false) {
+    const url = bust ? `data/cars.json?ts=${Date.now()}` : 'data/cars.json';
+    try {
+      const resp = await fetch(url, bust ? { cache: 'no-store' } : undefined);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} ao carregar data/cars.json`);
+      const json = await resp.json();
+      const cars = Array.isArray(json.cars) ? json.cars : [];
+      if (cars.length === 0) throw new Error('data/cars.json sem veículos');
 
- // Mesclar anúncios cadastrados pelo casal
- if (this.customCars.length > 0) {
- this.cars = [...this.customCars, ...this.cars];
- }
+      this.cars = cars;
+      this.metadata = json.metadata || {};
+      this.lastSync = this.metadata.lastUpdated || new Date().toISOString();
+      this.usingFallback = false;
+      localStorage.setItem(STORAGE_KEY_LAST_SYNC, String(this.lastSync));
+      return { ok: true, count: cars.length, updatedAt: this.lastSync, cached: false };
+    } catch (err) {
+      console.warn('[AutoRadar] usando fallback offline:', err.message);
+      this.cars = [...DEFAULT_CARS_DATABASE];
+      this.metadata = { lastUpdated: localStorage.getItem(STORAGE_KEY_LAST_SYNC) || new Date().toISOString() };
+      this.lastSync = this.metadata.lastUpdated;
+      this.usingFallback = true;
+      return { ok: false, count: this.cars.length, updatedAt: this.lastSync, error: err.message };
+    } finally {
+      if (this.customCars.length > 0) this.cars = [...this.customCars, ...this.cars];
+    }
+  }
 
- return this.cars;
- }
+  loadFavorites() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY_FAVORITES);
+      if (saved) this.favorites = new Set(JSON.parse(saved));
+    } catch (e) {
+      this.favorites = new Set();
+    }
+  }
 
- loadFavorites() {
- try {
- const saved = localStorage.getItem(STORAGE_KEY_FAVORITES);
- if (saved) {
- this.favorites = new Set(JSON.parse(saved));
- }
- } catch (e) {
- this.favorites = new Set();
- }
- }
+  toggleFavorite(carId) {
+    if (this.favorites.has(carId)) this.favorites.delete(carId);
+    else this.favorites.add(carId);
+    localStorage.setItem(STORAGE_KEY_FAVORITES, JSON.stringify([...this.favorites]));
+    return this.favorites.has(carId);
+  }
 
- toggleFavorite(carId) {
- if (this.favorites.has(carId)) {
- this.favorites.delete(carId);
- } else {
- this.favorites.add(carId);
- }
- localStorage.setItem(STORAGE_KEY_FAVORITES, JSON.stringify([...this.favorites]));
- return this.favorites.has(carId);
- }
+  isFavorite(carId) {
+    return this.favorites.has(carId);
+  }
 
- isFavorite(carId) {
- return this.favorites.has(carId);
- }
+  getFavoriteCars() {
+    return this.cars.filter((c) => this.favorites.has(c.id));
+  }
 
- loadCustomCars() {
- try {
- const saved = localStorage.getItem(STORAGE_KEY_CUSTOM_CARS);
- if (saved) {
- if (saved.includes('unsplash')) {
- localStorage.removeItem(STORAGE_KEY_CUSTOM_CARS);
- this.customCars = [];
- } else {
- this.customCars = JSON.parse(saved);
- }
- }
- } catch (e) {
- this.customCars = [];
- }
- }
+  loadCustomCars() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY_CUSTOM_CARS);
+      if (saved) {
+        if (saved.includes('unsplash')) {
+          localStorage.removeItem(STORAGE_KEY_CUSTOM_CARS);
+          this.customCars = [];
+        } else {
+          this.customCars = JSON.parse(saved);
+        }
+      }
+    } catch (e) {
+      this.customCars = [];
+    }
+  }
 
- addCustomCar(newCar) {
- newCar.id = 'custom-' + Date.now();
- newCar.isCustom = true;
- newCar.isTarget = ['Fiat Pulse Automático', 'BYD Dolphin Mini', 'Volkswagen Tera Automático'].includes(newCar.modelCategory);
- this.customCars.unshift(newCar);
- this.cars.unshift(newCar);
- localStorage.setItem(STORAGE_KEY_CUSTOM_CARS, JSON.stringify(this.customCars));
- return newCar;
- }
+  /** Só aceita links http(s) — evita javascript:/data: vindos do formulário. */
+  sanitizeUrl(value) {
+    const raw = (value || '').toString().trim();
+    if (!raw) return '';
+    try {
+      const url = new URL(raw, window.location.href);
+      return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+    } catch (e) {
+      return '';
+    }
+  }
 
- getAllCars() {
- return this.cars;
- }
+  addCustomCar(newCar) {
+    newCar.id = 'custom-' + Date.now();
+    newCar.isCustom = true;
+    newCar.isTarget = ['Fiat Pulse Automático', 'BYD Dolphin Mini', 'Volkswagen Tera Automático'].includes(newCar.modelCategory);
+    newCar.listingUrl = this.sanitizeUrl(newCar.listingUrl || newCar.link);
+    newCar.price = Number(newCar.price) || 0;
+    newCar.km = Number(newCar.km) || 0;
+    newCar.financing = {
+      downPayment: Math.round(newCar.price * 0.3),
+      months: 48,
+      interestRate: 2.5
+    };
+    this.customCars.unshift(newCar);
+    this.cars.unshift(newCar);
+    localStorage.setItem(STORAGE_KEY_CUSTOM_CARS, JSON.stringify(this.customCars));
+    return newCar;
+  }
 
- getTargetCars() {
- return this.cars.filter(c => c.isTarget);
- }
+  removeCustomCar(carId) {
+    this.customCars = this.customCars.filter((c) => c.id !== carId);
+    this.cars = this.cars.filter((c) => c.id !== carId);
+    localStorage.setItem(STORAGE_KEY_CUSTOM_CARS, JSON.stringify(this.customCars));
+  }
 
- getElectricCars() {
- return this.cars.filter(c => 
- (c.fuel && c.fuel.toLowerCase().includes('elétrico')) || 
- (c.modelCategory && c.modelCategory.toLowerCase().includes('elétrico')) ||
- (c.modelCategory && c.modelCategory.toLowerCase().includes('dolphin'))
- );
- }
+  getAllCars() {
+    return this.cars;
+  }
 
- getSuggestionCars() {
- return this.cars.filter(c => !c.isTarget || c.isSuggestion);
- }
+  getTargetCars() {
+    return this.cars.filter((c) => c.isTarget);
+  }
 
- getCarById(id) {
- return this.cars.find(c => c.id === id);
- }
+  getElectricCars() {
+    return this.cars.filter(
+      (c) =>
+        (c.fuel && normalizar(c.fuel).includes('eletrico')) ||
+        (c.modelCategory && normalizar(c.modelCategory).includes('eletrico')) ||
+        (c.modelCategory && normalizar(c.modelCategory).includes('dolphin'))
+    );
+  }
 
- getLastSyncFormatted() {
- if (!this.lastSync) return 'Hoje às 12:00';
- try {
- const d = new Date(this.lastSync);
- const isToday = d.toDateString() === new Date().toDateString();
- const time = d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
- return isToday ? `Hoje às ${time}` : `${d.toLocaleDateString('pt-BR')} às ${time}`;
- } catch (e) {
- return 'Hoje às 12:00';
- }
- }
+  getSuggestionCars() {
+    return this.cars.filter((c) => !c.isTarget || c.isSuggestion);
+  }
 
- triggerManualSync() {
- this.lastSync = new Date().toISOString();
- localStorage.setItem(STORAGE_KEY_LAST_SYNC, this.lastSync);
- return this.getLastSyncFormatted();
- }
+  getCarById(id) {
+    return this.cars.find((c) => c.id === id);
+  }
+
+  /** Preço usado nos filtros: alvo de negociação quando existe. */
+  static effectivePrice(car) {
+    return Number(car.negotiatedTarget || car.price || 0);
+  }
+
+  getOffersUnderBudget(limit = BUDGET_LIMIT) {
+    return this.cars.filter((c) => AutoRadarDataService.effectivePrice(c) <= limit);
+  }
+
+  getBudgetStats(limit = BUDGET_LIMIT) {
+    const total = this.cars.length;
+    const dentro = this.getOffersUnderBudget(limit).length;
+    return { limit, total, dentro, fora: total - dentro };
+  }
+
+  /**
+   * Regiões com oferta no catálogo atual, com contagem.
+   * Regiões vazias são omitidas para não gerar filtro que sempre esvazia a tela.
+   */
+  getRegions() {
+    const contagem = new Map();
+    let semRegiao = 0;
+
+    for (const car of this.cars) {
+      const regiao = regiaoDaCidade(car.dealer?.city) || regiaoDaCidade(car.dealer?.neighborhood);
+      if (regiao) contagem.set(regiao.key, (contagem.get(regiao.key) || 0) + 1);
+      else semRegiao += 1;
+    }
+
+    return REGIOES_SP
+      .map((r) => ({ ...r, count: contagem.get(r.key) || 0 }))
+      .filter((r) => r.count > 0)
+      .sort((a, b) => b.count - a.count)
+      .concat(semRegiao > 0 ? [{ key: 'outras', label: 'Outras cidades', cities: [], count: semRegiao, catchAll: true }] : []);
+  }
+
+  static matchesRegion(car, regionKey) {
+    if (!regionKey || regionKey === 'all') return true;
+    const region = REGIOES_SP.find((r) => r.key === regionKey);
+    const cidade = normalizar(car.dealer?.city);
+    const bairro = normalizar(car.dealer?.neighborhood);
+
+    if (!region) {
+      // "outras": cidades que não caem em nenhuma região mapeada
+      return !regiaoDaCidade(cidade) && !regiaoDaCidade(bairro);
+    }
+    return region.cities.some((c) => cidade.includes(c)) || region.cities.some((c) => bairro.includes(c));
+  }
+
+  /** Estatísticas por modelo alvo, para os cards de destaque (sem texto fixo). */
+  getModelStats() {
+    const grupos = [
+      { key: 'pulse', label: 'Fiat Pulse Automático', match: (c) => c.isTarget && normalizar(c.modelCategory).includes('pulse') },
+      { key: 'byd', label: 'BYD Dolphin (Elétrico)', match: (c) => c.isTarget && normalizar(c.modelCategory).includes('dolphin') },
+      { key: 'tera', label: 'Volkswagen Tera Automático', match: (c) => c.isTarget && normalizar(c.modelCategory).includes('tera') }
+    ];
+
+    return grupos.map((g) => {
+      const lista = this.cars.filter(g.match);
+      const precos = lista.map((c) => Number(c.price)).filter((n) => n > 0).sort((a, b) => a - b);
+      return {
+        key: g.key,
+        label: g.label,
+        count: lista.length,
+        min: precos[0] || 0,
+        max: precos[precos.length - 1] || 0,
+        underBudget: lista.filter((c) => AutoRadarDataService.effectivePrice(c) <= BUDGET_LIMIT).length,
+        eletricos: lista.filter((c) => normalizar(c.fuel).includes('eletrico')).length
+      };
+    });
+  }
+
+  getCatalogUpdatedAt() {
+    return this.lastSync;
+  }
+
+  getLastSyncFormatted() {
+    if (!this.lastSync) return 'sem registro';
+    try {
+      const d = new Date(this.lastSync);
+      if (Number.isNaN(d.getTime())) return 'sem registro';
+      const isToday = d.toDateString() === new Date().toDateString();
+      const time = d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      return isToday ? `hoje às ${time}` : `${d.toLocaleDateString('pt-BR')} às ${time}`;
+    } catch (e) {
+      return 'sem registro';
+    }
+  }
 }
 
 // Instância global para consumo no app
 window.autoRadarData = new AutoRadarDataService();
+window.AutoRadarDataService = AutoRadarDataService;
+window.AutoRadarRegions = REGIOES_SP;
+window.AutoRadarBudget = BUDGET_LIMIT;
+window.autoRadarNormalize = normalizar;

@@ -4,7 +4,11 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="theme-color" content="#0d1117">
- <title>AutoRadar SP — Buscador de Carros & Marketplace até R$ 80k</title>
+ <meta name="description" content="Radar de preços de carros em São Paulo: Fiat Pulse automático, BYD Dolphin (elétrico) e VW Tera, com preço vs FIPE, parcela estimada e link direto para o anúncio original.">
+ <meta property="og:title" content="AutoRadar SP — Radar de preços de carros em São Paulo">
+ <meta property="og:description" content="Fiat Pulse automático, BYD Dolphin elétrico e VW Tera: ofertas reais de lojas de SP com preço vs FIPE, parcela estimada e link para o anúncio.">
+ <meta property="og:type" content="website">
+ <title>AutoRadar SP — Radar de preços de carros no Estado de São Paulo</title>
  
  <!-- Meta tags PWA -->
  <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,12 +20,12 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="css/style.css?v=19">
+ <link rel="stylesheet" href="css/style.css?v=20">
  <link rel="manifest" href="manifest.json">
  <script>
  // Limpeza automática imediata de caches legados
  (function() {
- const APP_VER = 'autoradar-sp-v19';
+ const APP_VER = 'autoradar-sp-v20';
  if (localStorage.getItem('autoradar_ver') !== APP_VER) {
  localStorage.setItem('autoradar_ver', APP_VER);
  if ('caches' in window) {
@@ -44,31 +48,28 @@
  <span class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
  <div class="brand-text">
  <span class="brand-title">AutoRadar <span class="highlight-sp">SP</span></span>
- <span class="brand-subtitle">Buscador Inteligente de Veículos até R$ 80.000</span>
+ <span class="brand-subtitle">Fiat Pulse, BYD Dolphin e VW Tera • ofertas reais em SP</span>
  </div>
  </div>
  </div>
 
- <!-- Status de Atualização Diária -->
+ <!-- Status real do catálogo -->
  <div class="sync-status-card">
  <div class="sync-indicator">
  <span class="pulse-dot"></span>
- <span id="syncStatusText">Atualizado Hoje às 12:00</span>
+ <span id="syncStatusText">Carregando catálogo…</span>
  </div>
- <button id="btnForceSync" class="btn-refresh" title="Forçar checagem de novas ofertas nas lojas de SP">
+ <button id="btnRefreshCatalog" class="btn-refresh" title="Recarrega o catálogo publicado e confere se há ofertas novas">
  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
- Varredura Diária
- </button>
- <button id="btnClearCache" class="btn-refresh" title="Limpar cache do navegador e forçar recarga das fotos reais dos anúncios">
- Limpar Cache
+ Atualizar
  </button>
  </div>
 
- <!-- Resumo do Orçamento do Casal -->
- <div class="budget-badge-pill">
+ <!-- Resumo do Orçamento (clicável: filtra dentro do teto) -->
+ <div class="budget-badge-pill clickable" id="budgetPill" role="button" tabindex="0" aria-pressed="false" title="Mostrar apenas as ofertas dentro do teto de R$ 80.000">
  <span class="pill-label">Nosso Teto:</span>
- <span class="pill-value">Até R$ 80.000</span>
- <span class="pill-pref">Preferência 100% Elétricos</span>
+ <span class="pill-value">R$ 80.000</span>
+ <span class="pill-pref" id="budgetCount">—</span>
  </div>
 
  <!-- Botão de Instalação PWA -->
@@ -82,7 +83,7 @@
  <nav class="main-tabs-nav">
  <div class="nav-container">
  <button class="nav-tab active" data-tab="tab-targets">
- Nossos 3 Alvos
+ Nossos 3 Modelos
  <span class="tab-count" id="countTargets">0</span>
  </button>
  <button class="nav-tab" data-tab="tab-electrics">
@@ -112,26 +113,23 @@
  <div class="container insights-grid">
  <div class="insight-card pulse-card" data-insight-model="pulse" title="Clique para filtrar apenas o Fiat Pulse">
  <div class="insight-header">
- 
  <strong>Fiat Pulse Automático</strong>
  </div>
- <p><strong>Mais acessível e abundante:</strong> Grande oferta entre <strong>R$ 72.900 e R$ 79.900</strong> em concessionárias de SP. Motor 1.3 Firefly CVT ou 1.0 Turbo 200.</p>
+ <p id="insightPulse">Carregando ofertas do catálogo…</p>
  <span class="insight-click-hint">Clique para filtrar o Pulse</span>
  </div>
- <div class="insight-card dolphin-card" data-insight-model="byd" title="Clique para filtrar apenas o BYD Dolphin Mini">
+ <div class="insight-card dolphin-card" data-insight-model="byd" title="Clique para filtrar apenas o BYD Dolphin">
  <div class="insight-header">
- 
- <strong>BYD Dolphin Mini (Elétrico)</strong>
+ <strong>BYD Dolphin (Elétrico)</strong>
  </div>
- <p><strong>Custo de R$ 0,08/km e isento de rodízio:</strong> Mercado de seminovos oscila entre R$ 80k-95k. Oportunidades de repasse/particular são monitoradas diariamente!</p>
- <span class="insight-click-hint">Clique para filtrar o Dolphin Mini</span>
+ <p id="insightByd">Carregando ofertas do catálogo…</p>
+ <span class="insight-click-hint">Clique para filtrar o Dolphin</span>
  </div>
  <div class="insight-card tera-card" data-insight-model="tera" title="Clique para filtrar apenas o VW Tera">
  <div class="insight-header">
- 
  <strong>Volkswagen Tera Automático</strong>
  </div>
- <p><strong>Lançamento recente (2025/2026):</strong> Preço 0km a partir de R$ 105k. Mostramos ofertas de diretoria e a alternativa direta <strong>Polo TSI AT por R$ 76k</strong>.</p>
+ <p id="insightTera">Carregando ofertas do catálogo…</p>
  <span class="insight-click-hint">Clique para filtrar o Tera</span>
  </div>
  </div>
@@ -155,6 +153,7 @@
  <button type="button" class="filter-btn-chip filter-model-chip" data-model="pulse">Fiat Pulse AT</button>
  <button type="button" class="filter-btn-chip filter-model-chip" data-model="byd">BYD Dolphin Mini</button>
  <button type="button" class="filter-btn-chip filter-model-chip" data-model="tera">VW Tera AT</button>
+ <button type="button" class="filter-btn-chip filter-model-chip" data-model="favorites" id="favFilterChip" title="Mostrar apenas os anúncios que você salvou">♡ Favoritos</button>
  </div>
  </div>
 
@@ -181,20 +180,11 @@
  </div>
  </div>
 
- <!-- 4. Botões de Região em SP com Scroll -->
+ <!-- 4. Botões de Região em SP (gerados a partir do catálogo) -->
  <div class="filter-group-buttons">
  <span class="filter-group-label">Região em SP:</span>
  <div class="btn-group-chips scrollable" id="regionBtnGroup">
  <button type="button" class="filter-btn-chip active" data-city="all">Todo o Estado</button>
- <button type="button" class="filter-btn-chip" data-city="São Paulo">SP Capital</button>
- <button type="button" class="filter-btn-chip" data-city="ABC">Grande SP & ABC</button>
- <button type="button" class="filter-btn-chip" data-city="Barueri">Alphaville / Barueri</button>
- <button type="button" class="filter-btn-chip" data-city="Campinas">Campinas</button>
- <button type="button" class="filter-btn-chip" data-city="Ribeirão Preto">Ribeirão Preto</button>
- <button type="button" class="filter-btn-chip" data-city="São José dos Campos">SJC / Vale</button>
- <button type="button" class="filter-btn-chip" data-city="Sorocaba">Sorocaba</button>
- <button type="button" class="filter-btn-chip" data-city="Santos">Santos / Litoral</button>
- <button type="button" class="filter-btn-chip" data-city="Jundiaí">Jundiaí / Piracicaba</button>
  </div>
  </div>
 
@@ -203,6 +193,7 @@
  <span class="filter-group-label">Ordenar Por:</span>
  <div class="btn-group-chips" id="sortBtnGroup">
  <button type="button" class="filter-btn-chip active" data-sort="price-asc">Menor Preço</button>
+ <button type="button" class="filter-btn-chip" data-sort="fipe-asc">Mais abaixo da FIPE</button>
  <button type="button" class="filter-btn-chip" data-sort="electric-first">Elétricos 1º</button>
  <button type="button" class="filter-btn-chip" data-sort="km-asc">Menor KM</button>
  <button type="button" class="filter-btn-chip" data-sort="year-desc">Mais Novo</button>
@@ -220,7 +211,7 @@
  <div class="portal-hub-title">
  <span></span> Radares de Busca Automotiva em SP (Busca Direta nos Portais)
  </div>
- <p class="portal-hub-desc">Acesse com 1 clique as buscas oficiais pré-filtradas (até R$ 80.000 • Estado de São Paulo • Nossos Modelos):</p>
+ <p class="portal-hub-desc">Acesse com 1 clique as buscas oficiais pré-filtradas nos portais (Estado de São Paulo • nossos modelos):</p>
  </div>
  </div>
  <div class="portal-chips-grid">
@@ -248,7 +239,7 @@
  <div class="portal-chip-sub">Concessionárias do Estado</div>
  </div>
  </a>
- <a href="https://www.mobiauto.com.br/carros/fiat/pulse/sp?preco_ate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <a href="https://www.mobiauto.com.br/comprar/carros/sp/fiat/pulse" target="_blank" rel="noopener" class="portal-chip-link">
  <div class="portal-chip-content">
  <div class="portal-chip-name">Mobiauto SP</div>
  <div class="portal-chip-sub">Ofertas Capital e Interior</div>
@@ -260,7 +251,7 @@
  <div class="portal-chip-sub">Revisados com Garantia</div>
  </div>
  </a>
- <a href="https://www.chavesnamao.com.br/carros-usados/sp/fiat/pulse/?precoate=80000" target="_blank" rel="noopener" class="portal-chip-link">
+ <a href="https://www.chavesnamao.com.br/carros-usados/sp/?marca=fiat&modelo=pulse" target="_blank" rel="noopener" class="portal-chip-link">
  <div class="portal-chip-content">
  <div class="portal-chip-name">Chaves na Mão SP</div>
  <div class="portal-chip-sub">Lojistas do Interior e ABC</div>
@@ -279,7 +270,7 @@
  <!-- Área Principal de Conteúdo -->
  <main class="main-content container">
 
- <!-- ABA 1: Nossos 3 Alvos -->
+ <!-- ABA 1: Nossos 3 Modelos -->
  <div id="tab-targets" class="tab-pane active">
  <div class="section-title-wrap">
  <div>
@@ -298,8 +289,8 @@
  <div id="tab-electrics" class="tab-pane">
  <div class="section-title-wrap">
  <div>
- <h2>Radar Especial de Carros Elétricos até R$ 80k</h2>
- <p class="section-desc">Atendendo à sua preferência por elétricos: BYD Dolphin Mini, Renault Kwid E-Tech, JAC E-JS1 e Chery iCar. Zero gasto com gasolina e isenção de rodízio em SP!</p>
+ <h2>Radar Especial de Carros 100% Elétricos</h2>
+ <p class="section-desc">BYD Dolphin Mini, Renault Kwid E-Tech, JAC E-JS1 e demais elétricos do catálogo. Custo por km menor que a gasolina e isenção de rodízio em SP.</p>
  </div>
  <div class="electric-benefit-badge">
  <span> IPVA Reduzido + Isenção de Rodízio SP + ~R$ 0,08 por km rodado</span>
@@ -351,7 +342,7 @@
  <!-- Atalhos de Comparações Rápidas (1-Clique) -->
  <div class="compare-shortcuts-bar">
  <span class="compare-shortcuts-label">Duelos Prontos:</span>
- <button class="shortcut-chip" data-compare-preset="alvos">Nossos 3 Alvos (Pulse vs Dolphin Mini vs Tera)</button>
+ <button class="shortcut-chip" data-compare-preset="alvos">Nossos 3 Modelos (Pulse vs Dolphin vs Tera)</button>
  <button class="shortcut-chip" data-compare-preset="eletricos">Duelo 100% Elétricos (Dolphin Mini vs Kwid vs JAC)</button>
  <button class="shortcut-chip" data-compare-preset="automaticos">Automáticos até 80k (Pulse vs Polo TSI vs Kicks)</button>
  <button class="shortcut-chip" data-compare-preset="economicos">Mais Econômicos (Pulse CVT vs Dolphin Mini vs Kwid E-Tech)</button>
@@ -484,6 +475,10 @@
  <strong id="simSummaryFinanced">R$ 55.930,00</strong>
  </div>
  <div class="cost-item">
+ <span>Juros Totais do Financiamento:</span>
+ <strong id="simSummaryInterest" class="text-red">R$ 18.384,56</strong>
+ </div>
+ <div class="cost-item">
  <span>Custo Efetivo Total (Entrada + Parcelas):</span>
  <strong id="simSummaryTotalCost">R$ 98.284,56</strong>
  </div>
@@ -595,10 +590,25 @@
 
  </main>
 
+ <footer class="app-footer">
+ <div class="container footer-inner">
+ <div class="footer-main">
+ <strong>AutoRadar SP</strong> — radar de ofertas reais de lojas de São Paulo.
+ <span class="footer-sep">•</span>
+ Preços e links pertencem aos anúncios originais; confirme disponibilidade, laudo e valor direto com a loja.
+ </div>
+ <div class="footer-actions">
+ <span id="footerUpdated" class="footer-updated">Catálogo: —</span>
+ <a class="footer-link" href="https://github.com/matheusdochapeu-hub/autoradar-sp" target="_blank" rel="noopener">Código no GitHub</a>
+ <button type="button" id="btnClearCache" class="footer-link footer-button" title="Apaga cache e service worker e recarrega o app">Limpar cache</button>
+ </div>
+ </div>
+ </footer>
+
  <!-- Modal de Detalhes do Carro -->
- <div id="carModal" class="modal-backdrop hidden">
+ <div id="carModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Ficha técnica do veículo">
  <div class="modal-card">
- <button class="modal-close" id="btnCloseModal">&times;</button>
+ <button class="modal-close" id="btnCloseModal" aria-label="Fechar ficha técnica">&times;</button>
  <div id="modalContent">
  <!-- Injetado dinamicamente -->
  </div>
@@ -606,9 +616,9 @@
  </div>
 
  <!-- Scripts -->
- <script src="js/data.js?v=19"></script>
- <script src="js/financing.js?v=19"></script>
- <script src="js/app.js?v=19"></script>
+ <script src="js/data.js?v=20"></script>
+ <script src="js/financing.js?v=20"></script>
+ <script src="js/app.js?v=20"></script>
  <script>
  if ('serviceWorker' in navigator) {
  window.addEventListener('load', () => {
