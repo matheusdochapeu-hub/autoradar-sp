@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       .replace(/'/g, '&#39;');
 
   const safeHref = (u) => (/^https?:\/\//i.test((u || '').trim()) ? u.trim() : '');
+
+  const fmtKm = (km) =>
+    km === null || km === undefined || km === '' ? 'n/d' : `${Number(km).toLocaleString('pt-BR')} km`;
   const safeImg = (u) => {
     const s = (u || '').trim();
     if (!s) return '';
@@ -195,9 +198,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const out = [...list];
     switch (state.filterSort) {
       case 'km-asc':
-        return out.sort((a, b) => (a.km || 0) - (b.km || 0));
+        return out.sort((a, b) => (a.km ?? Infinity) - (b.km ?? Infinity));
       case 'year-desc':
-        return out.sort((a, b) => (b.year || 0) - (a.year || 0));
+        return out.sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
       case 'fipe-asc':
         // Mais abaixo da FIPE primeiro; oferta sem FIPE confirmada vai para o fim.
         return out.sort((a, b) => {
@@ -290,7 +293,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
           <div class="specs-pills-grid">
             <div class="spec-pill"><div class="info"><span class="label">Ano / Mod</span><span class="val">${esc(car.year || '—')}</span></div></div>
-            <div class="spec-pill"><div class="info"><span class="label">KM Rodados</span><span class="val">${(car.km || 0).toLocaleString('pt-BR')} km</span></div></div>
+            <div class="spec-pill"><div class="info"><span class="label">KM Rodados</span><span class="val">${fmtKm(car.km)}</span></div></div>
             <div class="spec-pill"><div class="info"><span class="label">${isElec ? 'Autonomia' : 'Câmbio'}</span><span class="val">${esc(isElec ? car.specs?.range || 'n/d' : car.transmission || 'Automático')}</span></div></div>
             <div class="spec-pill"><div class="info"><span class="label">Porta-Malas</span><span class="val">${esc(car.specs?.trunk || 'n/d')}</span></div></div>
           </div>
@@ -1131,7 +1134,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       <div class="modal-specs-grid">
         <div class="modal-spec"><span>Ano</span><strong>${esc(car.year || '—')}</strong></div>
-        <div class="modal-spec"><span>KM</span><strong>${(car.km || 0).toLocaleString('pt-BR')} km</strong></div>
+        <div class="modal-spec"><span>KM</span><strong>${fmtKm(car.km)}</strong></div>
         <div class="modal-spec"><span>Combustível</span><strong>${esc(car.fuel || '—')}</strong></div>
         <div class="modal-spec"><span>Câmbio</span><strong>${esc(car.transmission || '—')}</strong></div>
         <div class="modal-spec"><span>${isElec ? 'Autonomia' : 'Consumo cidade'}</span><strong>${esc(isElec ? car.specs?.range || 'n/d' : car.specs?.consumptionCity || 'n/d')}</strong></div>

@@ -22,10 +22,20 @@ test('Catálogo: ids únicos e campos obrigatórios', () => {
   assert.equal(new Set(ids).size, ids.length, 'Há ids repetidos no catálogo.');
 
   for (const car of cars) {
-    for (const campo of ['id', 'title', 'modelCategory', 'price', 'year', 'km', 'fuel', 'dealer', 'specs', 'financing']) {
+    for (const campo of ['id', 'title', 'modelCategory', 'price', 'fuel', 'dealer', 'specs', 'financing']) {
       assert.ok(car[campo] !== undefined && car[campo] !== null && car[campo] !== '', `${car.id}: campo "${campo}" ausente.`);
     }
     assert.ok(Number(car.price) > 0, `${car.id}: preço precisa ser positivo.`);
+    assert.ok(
+      car.km === null || (Number.isFinite(Number(car.km)) && Number(car.km) >= 0),
+      `${car.id}: km deve ser número >= 0 ou null (anúncio não informa).`
+    );
+    // Ano pode vir como "2023" ou "2023/2024" (ano/modelo) — ou null quando o
+    // anúncio não informa.
+    assert.ok(
+      car.year === null || /^\d{4}(\/\d{2,4})?$/.test(String(car.year)),
+      `${car.id}: ano inválido (${car.year}).`
+    );
     assert.ok(car.dealer.city, `${car.id}: dealer.city ausente (filtro de região depende dele).`);
   }
 });

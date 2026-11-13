@@ -2490,6 +2490,336 @@ const DEFAULT_CARS_DATABASE = [
     },
     "priceTier": null,
     "verifiedAt": "2026-11-13"
+  },
+  {
+    "id": "mlb-5112863011",
+    "isTarget": true,
+    "modelCategory": "Fiat Pulse Automático",
+    "title": "Fiat Pulse Impetus 1.0 Turbo 200 Flex CVT",
+    "badge": "Abaixo da FIPE",
+    "year": 2025,
+    "km": null,
+    "color": "Não informada",
+    "fuel": "Flex (Etanol/Gasolina)",
+    "transmission": "Automático CVT",
+    "price": 109990,
+    "fipePrice": 121533,
+    "priceVsFipe": "-R$ 11.543 vs FIPE",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_738415-MLB116582565461_082026-O-fiat-pulse-impetus-10-tb-flex-aut-2025.webp",
+    "listingUrl": "https://carro.mercadolivre.com.br/MLB-5112863011-fiat-pulse-impetus-10-tb-flex-aut-2025-_JM",
+    "dealer": {
+      "name": "Loja no Mercado Livre",
+      "city": "Campinas",
+      "state": "SP",
+      "neighborhood": "",
+      "whatsapp": "",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.0 Turbo 200 Flex (3 cilindros)",
+      "power": "130 cv (E) / 125 cv (G) - 20,4 kgfm de torque",
+      "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
+      "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia Localiza de 360 dias com assistência 24h",
+      "features": [
+        "Motor Turbo 200 de 130cv",
+        "Modo Sport com botão no volante",
+        "Faróis e Lanternas em LED",
+        "Central Multimídia Uconnect",
+        "Direção Elétrica com ajuste de altura",
+        "Rodas de Liga Leve aro 16"
+      ]
+    },
+    "financing": {
+      "downPayment": 32997,
+      "financedAmount": 76993,
+      "months": 48,
+      "interestRate": 2.5,
+      "monthlyInstallment": 2772
+    },
+    "cautelarStatus": "",
+    "tags": [
+      "Anúncio verificado",
+      "Mercado Livre"
+    ],
+    "portal": "Mercado Livre",
+    "verifiedAt": "2026-11-13"
+  },
+  {
+    "id": "mlb-7275936400",
+    "isTarget": true,
+    "modelCategory": "Fiat Pulse Automático",
+    "title": "Fiat Pulse Abarth 1.3 Turbo 270 Flex AT",
+    "badge": "Abaixo da FIPE",
+    "year": 2024,
+    "km": null,
+    "color": "Branca",
+    "fuel": "Flex (Etanol/Gasolina)",
+    "transmission": "Automático CVT",
+    "price": 119700,
+    "fipePrice": 126922,
+    "priceVsFipe": "-R$ 7.222 vs FIPE",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_844208-MLB115181370674_082026-O-fiat-pulse-abarth-13-turbo-270-flex-aut-5p.webp",
+    "listingUrl": "https://carro.mercadolivre.com.br/MLB-7275936400-fiat-pulse-abarth-13-turbo-270-flex-aut-5p-_JM",
+    "dealer": {
+      "name": "Loja no Mercado Livre",
+      "city": "São Paulo",
+      "state": "SP",
+      "neighborhood": "Zona Sul",
+      "whatsapp": "",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.0 Turbo 200 Flex (3 cilindros)",
+      "power": "130 cv (E) / 125 cv (G) - 20,4 kgfm de torque",
+      "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
+      "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia Localiza de 360 dias com assistência 24h",
+      "features": [
+        "Motor Turbo 200 de 130cv",
+        "Modo Sport com botão no volante",
+        "Faróis e Lanternas em LED",
+        "Central Multimídia Uconnect",
+        "Direção Elétrica com ajuste de altura",
+        "Rodas de Liga Leve aro 16"
+      ]
+    },
+    "financing": {
+      "downPayment": 35910,
+      "financedAmount": 83790,
+      "months": 48,
+      "interestRate": 2.5,
+      "monthlyInstallment": 3017
+    },
+    "cautelarStatus": "",
+    "tags": [
+      "Anúncio verificado",
+      "Mercado Livre"
+    ],
+    "portal": "Mercado Livre",
+    "verifiedAt": "2026-11-13"
+  },
+  {
+    "id": "mlb-4806547659",
+    "isTarget": true,
+    "modelCategory": "BYD Dolphin Mini",
+    "title": "BYD Dolphin Mini EV 38 kWh (100% Elétrico)",
+    "badge": "Abaixo da FIPE",
+    "year": null,
+    "km": null,
+    "color": "Não informada",
+    "fuel": "100% Elétrico",
+    "transmission": "Automático (redução única)",
+    "price": 103990,
+    "fipePrice": 110546,
+    "priceVsFipe": "-R$ 6.556 vs FIPE",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_628521-MLB113664029469_062026-O-dolphin-mini-38-kw-eletrico.webp",
+    "listingUrl": "https://carro.mercadolivre.com.br/MLB-4806547659-dolphin-mini-38-kw-eletrico-_JM",
+    "dealer": {
+      "name": "Loja no Mercado Livre",
+      "city": "São José do Rio Preto",
+      "state": "SP",
+      "neighborhood": "",
+      "whatsapp": "",
+      "verified": true
+    },
+    "specs": {
+      "engine": "Motor Elétrico Síncrono de Ímã Permanente",
+      "power": "75 cv (55 kW) - Torque Instantâneo 13,8 kgfm",
+      "range": "280 km (PBEV/Inmetro) / até 340 km cidade",
+      "consumptionCity": "R$ 0,08 por km rodado (~R$ 18 carga completa em casa)",
+      "trunk": "230 Litros (expansível para 930L)",
+      "warranty": "Garantia de Bateria Blade de 8 anos ou 200.000 km ativa até 2032!",
+      "features": [
+        "Bateria Blade BYD Ultra-Segura",
+        "Isenção de Rodízio em São Paulo",
+        "IPVA com Alíquota Especial/Reembolso SP",
+        "Tela Giratória Elétrica de 10.1\" com GPS e Spotify nativos",
+        "Carregador Portátil Original de Tomada + Cabo Tipo 2",
+        "Freio de Estacionamento Eletrônico com Auto-Hold",
+        "6 Airbags de Série"
+      ]
+    },
+    "financing": {
+      "downPayment": 31197,
+      "financedAmount": 72793,
+      "months": 48,
+      "interestRate": 2.5,
+      "monthlyInstallment": 2621
+    },
+    "cautelarStatus": "",
+    "tags": [
+      "Anúncio verificado",
+      "Mercado Livre"
+    ],
+    "portal": "Mercado Livre",
+    "verifiedAt": "2026-11-13"
+  },
+  {
+    "id": "mlb-5095157929",
+    "isTarget": true,
+    "modelCategory": "Volkswagen Tera Automático",
+    "title": "Volkswagen Tera High 1.0 TSI Automático",
+    "badge": "Preço do anúncio",
+    "year": 2026,
+    "km": 4100,
+    "color": "Não informada",
+    "fuel": "Flex (Etanol/Gasolina)",
+    "transmission": "Automático 6 marchas",
+    "price": 131900,
+    "fipePrice": null,
+    "priceVsFipe": "FIPE indisponível",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_699644-MLB116499191805_082026-O-volkswagen-tera-10-high-tsi-aut-4p.webp",
+    "listingUrl": "https://carro.mercadolivre.com.br/MLB-5095157929-volkswagen-tera-10-high-tsi-aut-4p-_JM",
+    "dealer": {
+      "name": "Loja no Mercado Livre",
+      "city": "Taubaté",
+      "state": "SP",
+      "neighborhood": "",
+      "whatsapp": "",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.0 170 TSI Turbo Flex (3 cilindros)",
+      "power": "116 cv (E) / 109 cv (G) - 16,8 kgfm torque",
+      "consumptionCity": "12,6 km/l (G) / 9,0 km/l (E)",
+      "consumptionRoad": "14,8 km/l (G) / 10,5 km/l (E)",
+      "trunk": "350 Litros",
+      "warranty": "Garantia Integral de Fábrica VW até 2028 (3 anos)",
+      "features": [
+        "SUV de nova geração VW baseado na plataforma moderna A00",
+        "Central VW Play de 10.1\" com IA Otto integrada",
+        "6 Airbags de série + Frenagem Autônoma de Emergência",
+        "Faróis em LED com DRL assinatura VW",
+        "Direção elétrica super leve e controle de estabilidade"
+      ]
+    },
+    "financing": {
+      "downPayment": 39570,
+      "financedAmount": 92330,
+      "months": 48,
+      "interestRate": 2.5,
+      "monthlyInstallment": 3324
+    },
+    "cautelarStatus": "",
+    "tags": [
+      "Anúncio verificado",
+      "Mercado Livre"
+    ],
+    "portal": "Mercado Livre",
+    "verifiedAt": "2026-11-13"
+  },
+  {
+    "id": "mlb-6894082160",
+    "isTarget": true,
+    "modelCategory": "Fiat Pulse Automático",
+    "title": "Fiat Pulse Impetus 1.0 Turbo 200 Flex CVT",
+    "badge": "Abaixo da FIPE",
+    "year": 2023,
+    "km": null,
+    "color": "Não informada",
+    "fuel": "Flex (Etanol/Gasolina)",
+    "transmission": "Automático CVT",
+    "price": 99990,
+    "fipePrice": 103711,
+    "priceVsFipe": "-R$ 3.721 vs FIPE",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_900910-MLB113032370379_062026-O-fiat-pulse-10-turbo-200-flex-impetus-cvt.webp",
+    "listingUrl": "https://carro.mercadolivre.com.br/MLB-6894082160-fiat-pulse-10-turbo-200-flex-impetus-cvt-_JM",
+    "dealer": {
+      "name": "Loja no Mercado Livre",
+      "city": "Campinas",
+      "state": "SP",
+      "neighborhood": "",
+      "whatsapp": "",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.0 Turbo 200 Flex (3 cilindros)",
+      "power": "130 cv (E) / 125 cv (G) - 20,4 kgfm de torque",
+      "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
+      "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia Localiza de 360 dias com assistência 24h",
+      "features": [
+        "Motor Turbo 200 de 130cv",
+        "Modo Sport com botão no volante",
+        "Faróis e Lanternas em LED",
+        "Central Multimídia Uconnect",
+        "Direção Elétrica com ajuste de altura",
+        "Rodas de Liga Leve aro 16"
+      ]
+    },
+    "financing": {
+      "downPayment": 29997,
+      "financedAmount": 69993,
+      "months": 48,
+      "interestRate": 2.5,
+      "monthlyInstallment": 2520
+    },
+    "cautelarStatus": "",
+    "tags": [
+      "Anúncio verificado",
+      "Mercado Livre"
+    ],
+    "portal": "Mercado Livre",
+    "verifiedAt": "2026-11-13"
+  },
+  {
+    "id": "mlb-7896886766",
+    "isTarget": true,
+    "modelCategory": "Fiat Pulse Automático",
+    "title": "Fiat Pulse Drive 1.0 Turbo 200 Flex CVT",
+    "badge": "Abaixo da FIPE",
+    "year": 2023,
+    "km": null,
+    "color": "Não informada",
+    "fuel": "Flex (Etanol/Gasolina)",
+    "transmission": "Automático CVT",
+    "price": 84490,
+    "fipePrice": 89699,
+    "priceVsFipe": "-R$ 5.209 vs FIPE",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_818563-MLB120318753861_102026-O-fiat-pulse-10-turbo-200-flex-drive-cvt.webp",
+    "listingUrl": "https://carro.mercadolivre.com.br/MLB-7896886766-fiat-pulse-10-turbo-200-flex-drive-cvt-_JM",
+    "dealer": {
+      "name": "Loja no Mercado Livre",
+      "city": "São Paulo",
+      "state": "SP",
+      "neighborhood": "Centro",
+      "whatsapp": "",
+      "verified": true
+    },
+    "specs": {
+      "engine": "1.0 Turbo 200 Flex (3 cilindros)",
+      "power": "130 cv (E) / 125 cv (G) - 20,4 kgfm de torque",
+      "consumptionCity": "12,0 km/l (G) / 8,5 km/l (E)",
+      "consumptionRoad": "14,6 km/l (G) / 10,2 km/l (E)",
+      "trunk": "370 Litros",
+      "warranty": "Garantia Localiza de 360 dias com assistência 24h",
+      "features": [
+        "Motor Turbo 200 de 130cv",
+        "Modo Sport com botão no volante",
+        "Faróis e Lanternas em LED",
+        "Central Multimídia Uconnect",
+        "Direção Elétrica com ajuste de altura",
+        "Rodas de Liga Leve aro 16"
+      ]
+    },
+    "financing": {
+      "downPayment": 25347,
+      "financedAmount": 59143,
+      "months": 48,
+      "interestRate": 2.5,
+      "monthlyInstallment": 2130
+    },
+    "cautelarStatus": "",
+    "tags": [
+      "Anúncio verificado",
+      "Mercado Livre"
+    ],
+    "portal": "Mercado Livre",
+    "verifiedAt": "2026-11-13"
   }
 ];
 

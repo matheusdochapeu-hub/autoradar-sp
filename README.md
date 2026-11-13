@@ -77,7 +77,7 @@ js/financing.js       Tabela Price e formatação de moeda
 data/cars.json        Fonte oficial do catálogo
 sw.js                 Service Worker (cache versionado)
 scripts/              check-syntax.js, sync-fallback.js, fetch_listings.py,
-                      audit_catalog.py, apply_audit.py
+                      audit_catalog.py, apply_audit.py, import_candidates.py
 test/                 Suíte node:test
 updater.py            Manutenção de metadados/estatísticas do JSON
 ```
@@ -107,8 +107,14 @@ python scripts/apply_audit.py       # grava preço/FIPE/ano/cidade/UF no catálo
 node scripts/sync-fallback.js && node --test "test/**/*.test.js"
 ```
 
-Depois da v21: **21 ofertas em SP e 22 em outros estados**, FIPE em 35 ofertas e
-8 ofertas de site de loja sem preço legível no HTML (ficaram sinalizadas).
+Para incluir ofertas novas (com validação automática de modelo, faixa vs FIPE, UF,
+duplicata e link vivo):
+
+```powershell
+python scripts/import_candidates.py "https://carro.mercadolivre.com.br/MLB-..." --dry-run
+```
+
+Depois da v22: **49 ofertas — 27 em SP e 22 em outros estados**.
 
 ## Ampliar o catálogo (mais carros e mais cidades)
 

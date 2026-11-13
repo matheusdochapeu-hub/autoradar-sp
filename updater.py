@@ -51,8 +51,9 @@ def validar(cars):
                 problemas.append(f"{cid}: campo obrigatório ausente ({campo})")
         if not isinstance(car.get("price"), (int, float)) or car.get("price", 0) <= 0:
             problemas.append(f"{cid}: preço inválido")
-        # km = 0 é válido (carro 0 km); ausente/negativo não é.
-        if not isinstance(car.get("km"), (int, float)) or car.get("km", -1) < 0:
+        # km = 0 é válido (carro 0 km) e None significa "não informado".
+        km = car.get("km")
+        if km is not None and (not isinstance(km, (int, float)) or km < 0):
             problemas.append(f"{cid}: quilometragem inválida")
         if not car.get("dealer", {}).get("city"):
             problemas.append(f"{cid}: dealer.city ausente (filtro de região)")

@@ -7,6 +7,19 @@
 
 ## 2. Histórico de Versões Recentes
 
+### v22 (Novembro/2026) — +6 ofertas reais em SP (49 no total, 27 em SP)
+- **Importador:** `scripts/import_candidates.py` recebe URLs de anúncios e só grava se:
+  modelo é um dos alvos, preço plausível contra a FIPE (0,70x–1,30x), UF é SP, não é
+  duplicata e a página responde. Cidade/UF vêm do anúncio.
+- **Novas ofertas:** Pulse Impetus (Campinas, 2), Pulse Abarth (São Paulo),
+  Pulse Drive Turbo (São Paulo), Dolphin Mini 38 kWh (São José do Rio Preto) e
+  Tera High TSI (Taubaté).
+- **Descartadas na validação:** Dolphin Mini a R$ 48.800 (0,46x da FIPE — anúncio
+  suspeito), Tera Outfit em Caxias do Sul/RS e Tera Comfort em Itaguaí/RJ (fora de SP).
+- **Campos opcionais de verdade:** `km` e `year` aceitam `null` quando o anúncio não
+  informa — o card mostra "n/d" em vez de inventar 0 km.
+- Região "Campinas e Região" volta a aparecer (2 ofertas). Total: 49 ofertas, 27 em SP.
+
 ### v21 (Novembro/2026) — Catálogo passa a refletir o anúncio (cidade, estado, FIPE, preço)
 - **Auditoria completa:** `scripts/audit_catalog.py` abriu as 43 ofertas e comparou com o
   anúncio. Resultado: **0 de 43 batiam**. Cidade, FIPE e ano eram decorativos.

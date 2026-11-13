@@ -8,7 +8,7 @@ PWA/marketplace de busca de carros, focado em elétricos e automáticos (BYD Dol
 Fiat Pulse e VW Tera como modelos-alvo). Traz preço vs. FIPE, financiamento estimado,
 comparador lado a lado e link para o anúncio oficial. O filtro de estado começa em SP,
 mas o catálogo tem ofertas de outros estados (cidade/UF vêm do anúncio).
-O catálogo cobre ofertas de R$ 64k a R$ 150k; R$ 80.000 é o teto de orçamento do usuário.
+O catálogo tem 49 ofertas (27 em SP) de R$ 64k a R$ 150k; R$ 80.000 é o teto de orçamento do usuário.
 
 ## Stack
 
@@ -61,6 +61,7 @@ FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallba
 | `scripts/fetch_listings.py` | Coleta candidatos de anúncios reais (revisão manual) |
 | `scripts/audit_catalog.py` | Compara o catálogo com o anúncio publicado (preço, FIPE, cidade, UF, ano) |
 | `scripts/apply_audit.py` | Grava no catálogo o que o anúncio publica e remove campo sem fonte |
+| `scripts/import_candidates.py` | Importa anúncios novos validando modelo, FIPE, UF e duplicata |
 | `sw.js` | Service Worker |
 | `MEMORY.md` | Histórico de versões do catálogo |
 
@@ -87,6 +88,8 @@ FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallba
    card usa o anúncio oficial e mostra "Laudo no anúncio".
 9. **Cidade/estado vêm do anúncio**, não do nome do arquivo nem do id antigo. Se um
    anúncio mudar de loja, rode auditoria + `apply_audit.py` de novo.
+10. **`km` e `year` podem ser `null`** quando o anúncio não informa: a UI mostra "n/d".
+    Nunca preencha com 0 nem com um ano chutado para o teste passar.
 
 ## Vizinhança (ecossistema)
 
