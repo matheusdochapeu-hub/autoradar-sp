@@ -1,14 +1,115 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect width="512" height="512" rx="128" fill="#0a0d12"/>
-  <circle cx="256" cy="256" r="210" fill="none" stroke="#00ff88" stroke-width="8" stroke-dasharray="16 12"/>
-  <circle cx="256" cy="256" r="160" fill="none" stroke="#00b4d8" stroke-width="4" opacity="0.4"/>
-  <!-- Ícone do Carro Esportivo -->
-  <path d="M110 320 L140 230 C150 200 180 180 220 180 L292 180 C332 180 362 200 372 230 L402 320 C412 335 405 350 390 350 L370 350 C365 350 360 345 360 340 L360 320 L152 320 L152 340 C152 345 147 350 142 350 L122 350 C107 350 100 335 110 320 Z" fill="#00ff88"/>
-  <!-- Janelas -->
-  <path d="M165 240 L185 200 L327 200 L347 240 Z" fill="#0a0d12"/>
-  <!-- Faróis -->
-  <circle cx="160" cy="285" r="16" fill="#fbbf24"/>
-  <circle cx="352" cy="285" r="16" fill="#fbbf24"/>
-  <!-- Raio Elétrico Central -->
-  <polygon points="270,120 230,220 265,220 240,310 300,200 265,200" fill="#00e5ff" stroke="#fff" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#04070d"/>
+      <stop offset="0.55" stop-color="#071522"/>
+      <stop offset="1" stop-color="#03060b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.46" r="0.62">
+      <stop offset="0" stop-color="#00ff88" stop-opacity="0.16"/>
+      <stop offset="0.55" stop-color="#00d9a0" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#00ff88" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#39ff9f"/>
+      <stop offset="0.45" stop-color="#00ef7e"/>
+      <stop offset="1" stop-color="#00b862"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#c8ffff"/>
+      <stop offset="0.35" stop-color="#42e8ff"/>
+      <stop offset="1" stop-color="#009bff"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00ff88" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#00ff88" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#00ff88" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lamp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe29a"/>
+      <stop offset="1" stop-color="#ff9d00"/>
+    </linearGradient>
+    <filter id="glowGreen" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="glowBolt" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="rounded">
+      <rect width="1024" height="1024" rx="220"/>
+    </clipPath>
+  </defs>
+
+  <g id="background">
+    <rect width="1024" height="1024" rx="220" fill="url(#bg)"/>
+    <rect width="1024" height="1024" rx="220" fill="url(#glow)"/>
+    <g clip-path="url(#rounded)" stroke="#00ff88" opacity="0.06">
+      <path d="M0 128 H1024 M0 256 H1024 M0 384 H1024 M0 512 H1024 M0 640 H1024 M0 768 H1024 M0 896 H1024" stroke-width="2"/>
+      <path d="M128 0 V1024 M256 0 V1024 M384 0 V1024 M512 0 V1024 M640 0 V1024 M768 0 V1024 M896 0 V1024" stroke-width="2"/>
+    </g>
+  </g>
+
+  <g id="art">
+    <!-- radar sweep -->
+    <path d="M512 500 L512 120 A380 380 0 0 1 869 370 Z" fill="url(#sweep)"/>
+    <path d="M512 500 L869 370" stroke="#5dffc0" stroke-width="5" opacity="0.55"/>
+    <!-- radar rings -->
+    <g fill="none">
+      <circle cx="512" cy="500" r="380" stroke="#00ff88" stroke-width="6" opacity="0.45"/>
+      <circle cx="512" cy="500" r="380" stroke="#00ff88" stroke-width="7" opacity="0.8" stroke-dasharray="3 19" stroke-linecap="round"/>
+      <circle cx="512" cy="500" r="300" stroke="#00ff88" stroke-width="3" opacity="0.38"/>
+      <circle cx="512" cy="500" r="220" stroke="#00d9a0" stroke-width="2.5" opacity="0.28"/>
+      <circle cx="512" cy="500" r="140" stroke="#00d9a0" stroke-width="2" opacity="0.2"/>
+      <path d="M132 500 H892 M512 120 V880" stroke="#00ff88" stroke-width="2" opacity="0.14"/>
+    </g>
+    <!-- radar blips -->
+    <g fill="#00ff88">
+      <circle cx="748" cy="330" r="8" opacity="0.9"/>
+      <circle cx="752" cy="330" r="22" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.4"/>
+      <circle cx="286" cy="602" r="6" opacity="0.65"/>
+      <circle cx="642" cy="742" r="5" opacity="0.5"/>
+    </g>
+
+    <!-- car -->
+    <g filter="url(#shadow)" transform="translate(512 600) scale(1.04) translate(-512 -600)">
+      <path d="M244 706 C 250 654 266 610 292 578 C 312 552 344 534 386 524 L 420 480 C 448 448 478 434 512 434 C 546 434 576 448 604 480 L 638 524 C 680 534 712 552 732 578 C 758 610 774 654 780 706 C 784 736 764 754 736 754 L 692 754 C 672 754 660 742 657 722 L 650 690 L 374 690 L 367 722 C 364 742 352 754 332 754 L 288 754 C 260 754 240 736 244 706 Z" fill="url(#car)" stroke="#02140d" stroke-width="10" stroke-linejoin="round"/>
+      <!-- mirrors -->
+      <path d="M258 584 C 242 582 234 592 236 604 L 244 618 L 270 610 Z" fill="#00d977"/>
+      <path d="M766 584 C 782 582 790 592 788 604 L 780 618 L 754 610 Z" fill="#00d977"/>
+      <!-- windshield -->
+      <path d="M408 512 L 446 478 C 466 460 488 452 512 452 C 536 452 558 460 578 478 L 616 512 Z" fill="#041019"/>
+      <path d="M416 507 L 452 476 C 470 462 490 456 512 456" fill="none" stroke="#9dffd0" stroke-width="5" opacity="0.5" stroke-linecap="round"/>
+      <!-- hood crease -->
+      <path d="M300 566 C 348 540 402 532 446 530" fill="none" stroke="#a8ffd4" stroke-width="6" opacity="0.35" stroke-linecap="round"/>
+      <!-- headlights -->
+      <g>
+        <rect x="298" y="598" width="96" height="46" rx="23" fill="#ffb300" opacity="0.45" filter="url(#glowGreen)"/>
+        <rect x="298" y="598" width="96" height="46" rx="23" fill="url(#lamp)"/>
+        <rect x="316" y="610" width="58" height="12" rx="6" fill="#fff2c7" opacity="0.8"/>
+        <rect x="630" y="598" width="96" height="46" rx="23" fill="#ffb300" opacity="0.45" filter="url(#glowGreen)"/>
+        <rect x="630" y="598" width="96" height="46" rx="23" fill="url(#lamp)"/>
+        <rect x="648" y="610" width="58" height="12" rx="6" fill="#fff2c7" opacity="0.8"/>
+      </g>
+      <!-- grille -->
+      <rect x="424" y="642" width="176" height="58" rx="18" fill="#031017"/>
+      <g fill="#0c2f27">
+        <rect x="444" y="654" width="16" height="34" rx="8"/>
+        <rect x="480" y="654" width="16" height="34" rx="8"/>
+        <rect x="516" y="654" width="16" height="34" rx="8"/>
+        <rect x="552" y="654" width="16" height="34" rx="8"/>
+      </g>
+      <!-- lower bumper -->
+      <rect x="374" y="688" width="276" height="12" rx="6" fill="#02100a"/>
+    </g>
+
+    <!-- lightning bolt -->
+    <g>
+      <path d="M566 246 L 438 508 L 506 508 L 466 716 L 604 470 L 526 470 Z" fill="#00e5ff" opacity="0.65" filter="url(#glowBolt)"/>
+      <path d="M566 246 L 438 508 L 506 508 L 466 716 L 604 470 L 526 470 Z" fill="url(#bolt)" stroke="#ffffff" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M548 290 L 480 466 L 520 466 L 500 574" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.65" stroke-linecap="round"/>
+    </g>
+  </g>
 </svg>
