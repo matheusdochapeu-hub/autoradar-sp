@@ -1,4 +1,4 @@
-const CACHE_NAME = 'autoradar-sp-v20';
+const CACHE_NAME = 'autoradar-sp-v21';
 
 /**
  * Precache do app shell.

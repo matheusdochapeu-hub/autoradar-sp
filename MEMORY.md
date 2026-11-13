@@ -7,6 +7,24 @@
 
 ## 2. Histórico de Versões Recentes
 
+### v21 (Novembro/2026) — Catálogo passa a refletir o anúncio (cidade, estado, FIPE, preço)
+- **Auditoria completa:** `scripts/audit_catalog.py` abriu as 43 ofertas e comparou com o
+  anúncio. Resultado: **0 de 43 batiam**. Cidade, FIPE e ano eram decorativos.
+- **Dados corrigidos pelo anúncio:** preço, FIPE, ano, foto, cidade e **estado** agora vêm da
+  página (`scripts/apply_audit.py`). Resultado: **21 ofertas em SP** e **22 em outros estados**
+  (SC 6, RS 4, RJ 4, MG 3, DF/GO/AL/MS/ES 1 cada), com FIPE em 35 e 8 ofertas de site de loja
+  sem preço legível no HTML.
+- **Filtro de estado:** chips gerados do catálogo (`SP` é o padrão), com contagem; a região de
+  SP só aparece quando o estado é SP. Cards fora de SP ganham o selo `Fora de SP • UF`.
+- **Removido o que não tinha fonte:** WhatsApp (números sequenciais inventados), endereço,
+  telefone, "laudo aprovado", preço de negociação e preço original. O contato agora é o
+  anúncio oficial; o card mostra "Laudo no anúncio" em vez de afirmar perícia.
+- **Títulos limpos:** a cidade que ficava no fim do título (ex.: "— Campinas") saiu, porque
+  a localização real mudou.
+- **Regiões de SP ampliadas:** Caieiras/Franco da Rocha (Grande SP), Lorena (Vale) e
+  Lençóis Paulista (Bauru/Marília).
+- Versão v21 no HTML, `APP_VER` e `CACHE_NAME`.
+
 ### v20 (Novembro/2026) — Auditoria de dados, UX honesta e base ampliável
 - **Links:** 3 anúncios do Grupo Toriba (Dolphin Mini GS, Dolphin Mini 5L e Pulse Drive Alphaville)
   saíram do ar (HTTP 404). Passaram a apontar para o estoque oficial da loja, com

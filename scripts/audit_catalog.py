@@ -65,7 +65,9 @@ def extrair(html):
 
     preco = valor_brl(titulo) or valor_brl(primeiro(html, r'"price":\{"type":"price","value":([\d\.]+)'))
     fipe_txt = primeiro(html, r"R\$\s*[\d\.]+(?:,\d{2})?\s*FIPE")
-    cidade = primeiro(html, r'"city":"([^"]+)"')
+    local = re.search(r'"city":"([^"]+)","state":"([^"]+)"', html)
+    cidade = local.group(1) if local else primeiro(html, r'"city":"([^"]+)"')
+    estado = local.group(2) if local else None
     bairro = primeiro(html, r'"neighborhood":"([^"]+)"')
 
     anos = re.findall(r"\b(20\d{2})\b", f"{titulo} {descricao}")
@@ -79,6 +81,7 @@ def extrair(html):
         "fipe": valor_brl(fipe_txt) if fipe_txt else None,
         "fipeTexto": fipe_txt,
         "cidade": cidade,
+        "estado": estado,
         "bairro": bairro,
         "ano": ano,
         "km": int(km.replace(".", "")) if km else None,

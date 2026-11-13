@@ -4,10 +4,11 @@
 
 ## O que é
 
-PWA/marketplace de busca de carros no Estado de São Paulo, focado em elétricos e
-automáticos (BYD Dolphin, Fiat Pulse e VW Tera como modelos-alvo). Traz preço vs. FIPE,
-financiamento estimado, comparador lado a lado e contato por WhatsApp.
-O catálogo cobre ofertas de R$ 64k a R$ 160k; R$ 80.000 é o teto de orçamento do usuário.
+PWA/marketplace de busca de carros, focado em elétricos e automáticos (BYD Dolphin,
+Fiat Pulse e VW Tera como modelos-alvo). Traz preço vs. FIPE, financiamento estimado,
+comparador lado a lado e link para o anúncio oficial. O filtro de estado começa em SP,
+mas o catálogo tem ofertas de outros estados (cidade/UF vêm do anúncio).
+O catálogo cobre ofertas de R$ 64k a R$ 150k; R$ 80.000 é o teto de orçamento do usuário.
 
 ## Stack
 
@@ -29,7 +30,7 @@ Abrir `index.html` direto por `file://` funciona só em modo fallback: o `fetch`
 ```powershell
 node scripts/check-syntax.js              # sintaxe de js/*.js e sw.js
 node scripts/sync-fallback.js --check     # fallback offline x data/cars.json
-node --test "test/**/*.test.js"           # 22 testes: catálogo, HTML, SW e sintaxe
+node --test "test/**/*.test.js"           # 23 testes: catálogo, HTML, SW e sintaxe
 ```
 
 CI em `.github/workflows/ci.yml` roda sintaxe + testes em todo push/PR.
@@ -58,7 +59,8 @@ FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallba
 | `data/cars.json` | **Fonte oficial** do catálogo |
 | `scripts/sync-fallback.js` | Regenera o fallback de `js/data.js` a partir do JSON |
 | `scripts/fetch_listings.py` | Coleta candidatos de anúncios reais (revisão manual) |
-| `scripts/audit_catalog.py` | Compara o catálogo com o anúncio publicado (preço, FIPE, cidade, ano) |
+| `scripts/audit_catalog.py` | Compara o catálogo com o anúncio publicado (preço, FIPE, cidade, UF, ano) |
+| `scripts/apply_audit.py` | Grava no catálogo o que o anúncio publica e remove campo sem fonte |
 | `sw.js` | Service Worker |
 | `MEMORY.md` | Histórico de versões do catálogo |
 
@@ -80,6 +82,11 @@ FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallba
 7. **Rode `python scripts/audit_catalog.py` antes de publicar dados.** A auditoria de
    13/11/2026 mostrou 0/43 ofertas coerentes com o anúncio: cidade, FIPE e ano do
    catálogo não vinham da fonte. Dado de localização não pode ser decorativo.
+8. **Contato só entra se estiver publicado.** Telefone/WhatsApp/endereço e "laudo
+   aprovado" do catálogo antigo eram inventados (números sequenciais). Sem fonte, o
+   card usa o anúncio oficial e mostra "Laudo no anúncio".
+9. **Cidade/estado vêm do anúncio**, não do nome do arquivo nem do id antigo. Se um
+   anúncio mudar de loja, rode auditoria + `apply_audit.py` de novo.
 
 ## Vizinhança (ecossistema)
 

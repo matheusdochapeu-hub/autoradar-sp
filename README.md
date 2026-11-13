@@ -4,7 +4,7 @@
 > **Repositório:** [https://github.com/matheusdochapeu-hub/autoradar-sp](https://github.com/matheusdochapeu-hub/autoradar-sp)
 
 PWA em HTML/CSS/JS puro (sem build e sem dependências) que organiza **ofertas reais
-de lojas de São Paulo** para três modelos-alvo:
+de lojas do Brasil** (filtro padrão em São Paulo) para três modelos-alvo:
 
 1. **BYD Dolphin** (Mini, GS e Plus — 100% elétrico)
 2. **Fiat Pulse** automático (1.3 CVT e Turbo 200)
@@ -21,7 +21,7 @@ Além dos alvos, o catálogo traz sugestões de automáticos e elétricos por fa
 | **Catálogo** | `data/cars.json` — cada oferta tem preço, FIPE, km, loja, cidade, foto e link do anúncio original |
 | **Preço vs FIPE** | Mostra quanto o anúncio está acima ou abaixo da tabela FIPE |
 | **Parcela estimada** | Tabela Price (48x, taxa de mercado ~2,5% a.m.) calculada em `js/financing.js` |
-| **Filtros** | Modelo, preço máximo, combustível, região (geradas a partir do catálogo), ordenação e busca sem acento |
+| **Filtros** | Estado (padrão SP), modelo, preço máximo, combustível, região de SP, ordenação e busca sem acento — todos gerados do catálogo |
 | **Teto de R$ 80.000** | Pílula no topo mostra quantas ofertas cabem no teto e filtra com 1 clique |
 | **Favoritos** | Salva ofertas no `localStorage` e filtra por elas |
 | **Comparador** | Até 3 veículos lado a lado, com duelos prontos |
@@ -76,7 +76,8 @@ js/app.js             Filtros, render dos cards, comparador, PWA
 js/financing.js       Tabela Price e formatação de moeda
 data/cars.json        Fonte oficial do catálogo
 sw.js                 Service Worker (cache versionado)
-scripts/              check-syntax.js, sync-fallback.js, fetch_listings.py
+scripts/              check-syntax.js, sync-fallback.js, fetch_listings.py,
+                      audit_catalog.py, apply_audit.py
 test/                 Suíte node:test
 updater.py            Manutenção de metadados/estatísticas do JSON
 ```
@@ -96,7 +97,18 @@ O script abre cada `listingUrl`, extrai preço, FIPE, cidade e ano publicados e
 compara com `data/cars.json`. Ele **não altera nada**: grava
 `data/audit-report.json` e imprime as divergências. Resultado da última execução
 (13/11/2026): **0 de 43 ofertas batiam** — cidades, FIPE e anos do catálogo não
-correspondem aos anúncios.
+correspondiam aos anúncios.
+
+Para aplicar o que o anúncio publica (e limpar campo sem fonte):
+
+```powershell
+python scripts/audit_catalog.py     # gera data/audit-report.json
+python scripts/apply_audit.py       # grava preço/FIPE/ano/cidade/UF no catálogo
+node scripts/sync-fallback.js && node --test "test/**/*.test.js"
+```
+
+Depois da v21: **21 ofertas em SP e 22 em outros estados**, FIPE em 35 ofertas e
+8 ofertas de site de loja sem preço legível no HTML (ficaram sinalizadas).
 
 ## Ampliar o catálogo (mais carros e mais cidades)
 

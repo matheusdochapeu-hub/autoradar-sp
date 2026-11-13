@@ -32,6 +32,15 @@ test('Catálogo: ids únicos e campos obrigatórios', () => {
 
 test('Catálogo: preço, FIPE e texto "vs FIPE" contam a mesma história', () => {
   for (const car of cars) {
+    // Sem FIPE conferida, o card precisa dizer isso em vez de inventar comparação.
+    if (car.fipePrice === null || car.fipePrice === undefined) {
+      assert.equal(
+        car.priceVsFipe,
+        'FIPE indisponível',
+        `${car.id}: sem FIPE deve exibir "FIPE indisponível".`
+      );
+      continue;
+    }
     assert.ok(Number(car.fipePrice) > 0, `${car.id}: fipePrice precisa existir.`);
 
     // Textos numéricos ("+R$ 4.700 vs FIPE") precisam bater com price - fipePrice.
@@ -99,7 +108,23 @@ test('Fallback offline de js/data.js espelha data/cars.json', () => {
   );
 });
 
-test('Regiões: todo carro cai em uma região conhecida ou em "outras"', () => {
+test('Catálogo: toda oferta tem cidade e UF válida (fonte: anúncio)', () => {
+  const UFS = new Set([
+    'AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR',
+    'RJ','RN','RO','RR','RS','SC','SE','SP','TO',
+  ]);
+  for (const car of cars) {
+    assert.ok(car.dealer?.city, `${car.id}: cidade ausente.`);
+    assert.ok(
+      UFS.has(car.dealer?.state),
+      `${car.id}: UF inválida (${car.dealer?.state}).`
+    );
+  }
+  const emSp = cars.filter((c) => c.dealer.state === 'SP').length;
+  assert.ok(emSp > 0 && emSp < cars.length, 'O catálogo deve ter ofertas em SP e fora de SP.');
+});
+
+test('Regiões: carro de SP cai em região conhecida ou em "outras"', () => {
   const src = fs.readFileSync(path.join(rootDir, 'js', 'data.js'), 'utf8');
   const bloco = src.match(/const REGIOES_SP = \[([\s\S]*?)\n\];/);
   assert.ok(bloco, 'REGIOES_SP não encontrado em js/data.js.');
@@ -108,9 +133,10 @@ test('Regiões: todo carro cai em uma região conhecida ou em "outras"', () => {
   const semAcento = (s) =>
     String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-  const cobertas = cars.filter((c) => cidades.some((cid) => semAcento(c.dealer?.city).includes(cid)));
+  const emSp = cars.filter((c) => c.dealer?.state === 'SP');
+  const cobertas = emSp.filter((c) => cidades.some((cid) => semAcento(c.dealer?.city).includes(cid)));
   assert.ok(
-    cobertas.length / cars.length >= 0.9,
-    `Só ${cobertas.length}/${cars.length} carros têm cidade mapeada em REGIOES_SP.`
+    cobertas.length / emSp.length >= 0.9,
+    `Só ${cobertas.length}/${emSp.length} carros de SP têm cidade mapeada em REGIOES_SP.`
   );
 });

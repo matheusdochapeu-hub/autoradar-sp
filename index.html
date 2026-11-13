@@ -20,12 +20,12 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="css/style.css?v=20">
+ <link rel="stylesheet" href="css/style.css?v=21">
  <link rel="manifest" href="manifest.json">
  <script>
  // Limpeza automática imediata de caches legados
  (function() {
- const APP_VER = 'autoradar-sp-v20';
+ const APP_VER = 'autoradar-sp-v21';
  if (localStorage.getItem('autoradar_ver') !== APP_VER) {
  localStorage.setItem('autoradar_ver', APP_VER);
  if ('caches' in window) {
@@ -48,7 +48,7 @@
  <span class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
  <div class="brand-text">
  <span class="brand-title">AutoRadar <span class="highlight-sp">SP</span></span>
- <span class="brand-subtitle">Fiat Pulse, BYD Dolphin e VW Tera • ofertas reais em SP</span>
+ <span class="brand-subtitle">Fiat Pulse, BYD Dolphin e VW Tera • ofertas reais de lojas do Brasil</span>
  </div>
  </div>
  </div>
@@ -180,15 +180,23 @@
  </div>
  </div>
 
- <!-- 4. Botões de Região em SP (gerados a partir do catálogo) -->
+ <!-- 4. Estado (gerado a partir do catálogo; padrão SP) -->
  <div class="filter-group-buttons">
+ <span class="filter-group-label">Estado:</span>
+ <div class="btn-group-chips scrollable" id="stateBtnGroup">
+ <button type="button" class="filter-btn-chip active" data-state="SP">São Paulo</button>
+ </div>
+ </div>
+
+ <!-- 5. Região em SP (só faz sentido com o filtro de estado em SP) -->
+ <div class="filter-group-buttons" id="regionFilterGroup">
  <span class="filter-group-label">Região em SP:</span>
  <div class="btn-group-chips scrollable" id="regionBtnGroup">
  <button type="button" class="filter-btn-chip active" data-city="all">Todo o Estado</button>
  </div>
  </div>
 
- <!-- 5. Botões de Ordenação -->
+ <!-- 6. Botões de Ordenação -->
  <div class="filter-group-buttons">
  <span class="filter-group-label">Ordenar Por:</span>
  <div class="btn-group-chips" id="sortBtnGroup">
@@ -275,7 +283,7 @@
  <div class="section-title-wrap">
  <div>
  <h2>Carros nos 3 Modelos Desejados</h2>
- <p class="section-desc">BYD Dolphin Mini, Volkswagen Tera Automático e Fiat Pulse Automático encontrados em lojas e concessionárias de São Paulo.</p>
+ <p class="section-desc">BYD Dolphin, Volkswagen Tera e Fiat Pulse com preço, FIPE e localização do anúncio original. O filtro de estado já vem em São Paulo — troque para ver outros estados.</p>
  </div>
  
  </div>
@@ -595,7 +603,7 @@
  <div class="footer-main">
  <strong>AutoRadar SP</strong> — radar de ofertas reais de lojas de São Paulo.
  <span class="footer-sep">•</span>
- Preços e links pertencem aos anúncios originais; confirme disponibilidade, laudo e valor direto com a loja.
+ Preços, FIPE, cidade e estado vêm do anúncio original; confirme disponibilidade e condições direto com a loja.
  </div>
  <div class="footer-actions">
  <span id="footerUpdated" class="footer-updated">Catálogo: —</span>
@@ -616,9 +624,9 @@
  </div>
 
  <!-- Scripts -->
- <script src="js/data.js?v=20"></script>
- <script src="js/financing.js?v=20"></script>
- <script src="js/app.js?v=20"></script>
+ <script src="js/data.js?v=21"></script>
+ <script src="js/financing.js?v=21"></script>
+ <script src="js/app.js?v=21"></script>
  <script>
  if ('serviceWorker' in navigator) {
  window.addEventListener('load', () => {

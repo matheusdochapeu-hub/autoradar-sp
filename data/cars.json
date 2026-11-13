@@ -8,12 +8,12 @@
       "Fiat Pulse Automático"
     ],
     "targetRegion": "Estado de São Paulo (SP)",
-    "lastUpdated": "2026-11-06T15:10:00-03:00",
+    "lastUpdated": "2026-11-13T15:54:07-03:00",
     "dailyUpdateSchedule": "06:00 AM (Diário)",
     "fuelPreference": "Elétrico / Híbrido / Automático Econômico",
     "totalCars": 43,
-    "catalogVersion": "v20",
-    "generatedAt": "2026-11-06T15:10:00-03:00"
+    "catalogVersion": "v21",
+    "generatedAt": "2026-11-13T15:54:07-03:00"
   },
   "cars": [
     {
@@ -21,27 +21,23 @@
       "isTarget": true,
       "modelCategory": "Fiat Pulse Automático",
       "title": "Fiat Pulse Drive 1.3 Flex AT (CVT 7v)",
-      "badge": "Oportunidade Abaixo de 80k",
-      "year": 2022,
+      "badge": "Abaixo da FIPE",
+      "year": 2025,
       "km": 42000,
       "color": "Cinza Strato",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático CVT (7 marchas simuladas)",
       "price": 93900,
-      "originalPrice": 78900,
-      "fipePrice": 89200,
-      "priceVsFipe": "+R$ 4.700 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_911193-MLB118903050341_102026-O-fiat-pulse-13-4p-flex-drive-automatico-cvt.jpg",
+      "fipePrice": 98272,
+      "priceVsFipe": "-R$ 4.372 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_911193-MLB118903050341_102026-O-fiat-pulse-13-4p-flex-drive-automatico-cvt.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5346799631-fiat-pulse-13-4p-flex-drive-automatico-cvt-_JM",
       "dealer": {
-        "name": "Fiat Sinal — Unidade Ipiranga",
-        "type": "Concessionária Oficial Fiat",
-        "city": "São Paulo",
+        "name": "Loja no Mercado Livre",
+        "city": "Lençóis Paulista",
         "state": "SP",
-        "neighborhood": "Ipiranga",
-        "address": "Av. Nazaré, 1200 - Ipiranga, São Paulo - SP",
-        "phone": "(11) 2065-9000",
-        "whatsapp": "5511999887711",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -67,7 +63,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2367
       },
-      "cautelarStatus": "100% Aprovado sem apontamentos (Supervisão)",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Dentro do Orçamento",
@@ -76,34 +72,31 @@
         "Câmbio CVT"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 85000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-02",
       "isTarget": true,
       "modelCategory": "Fiat Pulse Automático",
       "title": "Fiat Pulse Drive 1.0 Turbo 200 Flex AT",
-      "badge": "Motor Turbo Potente",
+      "badge": "Acima da FIPE",
       "year": 2022,
       "km": 49000,
       "color": "Branco Banchisa com Teto Preto",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático CVT (7 marchas simuladas)",
       "price": 103900,
-      "originalPrice": 81900,
-      "fipePrice": 98500,
-      "priceVsFipe": "+R$ 5.400 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_679224-MLB119261934677_102026-O-fiat-pulse-13-flex-drive-cvt.jpg",
+      "fipePrice": 86737,
+      "priceVsFipe": "+R$ 17.163 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_679224-MLB119261934677_102026-O-fiat-pulse-13-flex-drive-cvt.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7802462182-fiat-pulse-13-flex-drive-cvt-_JM",
       "dealer": {
-        "name": "Localiza Seminovos — Santo André",
-        "type": "Seminovos Certificados",
-        "city": "Santo André",
-        "state": "SP",
-        "neighborhood": "Campestre",
-        "address": "Av. Dom Pedro II, 1850 - Campestre, Santo André - SP",
-        "phone": "(11) 4992-8000",
-        "whatsapp": "5511988776655",
+        "name": "Loja no Mercado Livre",
+        "city": "Araguari",
+        "state": "MG",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -129,7 +122,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2619
       },
-      "cautelarStatus": "100% Aprovado (Dekra)",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Dentro do Orçamento",
@@ -137,34 +130,31 @@
         "Laudo Aprovado"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 95000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-03",
       "isTarget": true,
       "modelCategory": "Fiat Pulse Automático",
       "title": "Fiat Pulse Drive 1.3 AT CVT 2023",
-      "badge": "Ano 2023 Baixa KM",
+      "badge": "Abaixo da FIPE",
       "year": 2023,
       "km": 31500,
       "color": "Preto Vulcano",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático CVT (7 marchas)",
-      "price": 98700,
-      "originalPrice": 83000,
-      "fipePrice": 94000,
-      "priceVsFipe": "+R$ 4.700 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_958621-MLB119191625394_112026-O-pulse-drive-13-cvt.jpg",
+      "price": 98200,
+      "fipePrice": 107144,
+      "priceVsFipe": "-R$ 8.944 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_958621-MLB119191625394_112026-O-pulse-drive-13-cvt.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7946724150-pulse-drive-13-cvt-_JM",
       "dealer": {
-        "name": "Carrera Seminovos — Butantã",
-        "type": "Concessionária Multimarcas",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Butantã",
-        "address": "Av. Vital Brasil, 850 - Butantã, São Paulo - SP",
-        "phone": "(11) 3724-7000",
-        "whatsapp": "5511977665544",
+        "name": "Loja no Mercado Livre",
+        "city": "Porto Alegre",
+        "state": "RS",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -184,13 +174,13 @@
         ]
       },
       "financing": {
-        "downPayment": 29610,
-        "financedAmount": 69090,
+        "downPayment": 29460,
+        "financedAmount": 68740,
         "months": 48,
         "interestRate": 2.5,
-        "monthlyInstallment": 2488
+        "monthlyInstallment": 2475
       },
-      "cautelarStatus": "100% Periciado e aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Dentro do Orçamento",
@@ -198,35 +188,31 @@
         "Garantia de Fábrica"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 90000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-04",
       "isTarget": true,
       "modelCategory": "Fiat Pulse Automático",
       "title": "Fiat Pulse Audace Turbo 200 AT (Versão Top)",
-      "badge": "Negociável para R$ 79.900",
+      "badge": "Abaixo da FIPE",
       "year": 2022,
       "km": 54000,
       "color": "Azul Amalfi",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático CVT (7 marchas)",
       "price": 94000,
-      "negotiatedTarget": 89000,
-      "originalPrice": 84900,
-      "fipePrice": 96500,
-      "priceVsFipe": "-R$ 2.500 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_947144-MLB115045515813_072026-O-pulse-audace-10t-aut.jpg",
+      "fipePrice": 94622,
+      "priceVsFipe": "-R$ 622 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_947144-MLB115045515813_072026-O-pulse-audace-10t-aut.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-4936008389-pulse-audace-10t-aut-_JM",
       "dealer": {
-        "name": "Auto Shopping Cristal — Multimarcas Sul",
-        "type": "Loja Multimarcas Verificada",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Interlagos",
-        "address": "Av. das Nações Unidas, 22540 - Jurubatuba, São Paulo - SP",
-        "phone": "(11) 5696-3000",
-        "whatsapp": "5511966554433",
+        "name": "Loja no Mercado Livre",
+        "city": "Brasília",
+        "state": "DF",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -252,41 +238,39 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2369
       },
-      "cautelarStatus": "100% Aprovado sem restrição",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Pacote ADAS",
         "Motor Turbo",
         "Chave Presencial"
       ],
-      "portal": "Mercado Livre"
+      "portal": "Mercado Livre",
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-05",
       "isTarget": true,
       "modelCategory": "Fiat Pulse Automático",
-      "title": "Fiat Pulse Drive 1.3 AT CVT — Campinas",
-      "badge": "Preço Mais Baixo de SP",
+      "title": "Fiat Pulse Drive 1.3 AT CVT",
+      "badge": "Acima da FIPE",
       "year": 2022,
       "km": 58000,
       "color": "Prata Bari Metálico",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático CVT (7 marchas)",
       "price": 93900,
-      "originalPrice": 76900,
-      "fipePrice": 89200,
-      "priceVsFipe": "+R$ 4.700 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_759772-MLB116123483935_082026-O-pulse-drive-13-aut.jpg",
+      "fipePrice": 92390,
+      "priceVsFipe": "+R$ 1.510 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_759772-MLB116123483935_082026-O-pulse-drive-13-aut.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5055644937-pulse-drive-13-aut-_JM",
       "dealer": {
-        "name": "Daitan Seminovos — Campinas Norte",
-        "type": "Grupo Concessionárias Daitan",
-        "city": "Campinas",
-        "state": "SP",
-        "neighborhood": "Taquaral",
-        "address": "Av. Barão de Itapura, 2100 - Taquaral, Campinas - SP",
-        "phone": "(19) 3743-8000",
-        "whatsapp": "5519981223344",
+        "name": "Loja no Mercado Livre",
+        "city": "Duque de Caxias",
+        "state": "RJ",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -312,7 +296,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2367
       },
-      "cautelarStatus": "100% Laudo Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Menor Preço",
@@ -320,35 +304,31 @@
         "Super Desconto"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 85000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "byd-01",
       "isTarget": true,
       "modelCategory": "BYD Dolphin Mini",
       "title": "BYD Dolphin Mini EV 38 kWh (100% Elétrico)",
-      "badge": "100% Elétrico — Oportunidade Repasse",
-      "year": 2024,
-      "km": 36000,
+      "badge": "Abaixo da FIPE",
+      "year": 2025,
+      "km": 105000,
       "color": "Branco Apricity com Interior Azul",
       "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
       "transmission": "Automático Direto (1 marcha)",
       "price": 95000,
-      "negotiatedTarget": 88000,
-      "originalPrice": 96900,
-      "fipePrice": 99800,
-      "priceVsFipe": "-R$ 4.800 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_607705-MLB117716262729_092026-O-byd-dolphin-mini-00-5p-electrico-4as.jpg",
+      "fipePrice": 105975,
+      "priceVsFipe": "-R$ 10.975 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_607705-MLB117716262729_092026-O-byd-dolphin-mini-00-5p-electrico-4as.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5229384323-byd-dolphin-mini-00-5p-electrico-4as-_JM",
       "dealer": {
-        "name": "AutoPrime Motors — Anhaia Mello",
-        "type": "Especialista em Seminovos Elétricos",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Vila Prudente",
-        "address": "Av. Prof. Luiz Ignácio Anhaia Mello, 3400 - São Paulo - SP",
-        "phone": "(11) 2345-6789",
-        "whatsapp": "5511991234567",
+        "name": "Loja no Mercado Livre",
+        "city": "Florianópolis",
+        "state": "SC",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -375,7 +355,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2394
       },
-      "cautelarStatus": "100% Aprovado sem retoques (Dekra)",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "100% Elétrico",
@@ -383,34 +363,32 @@
         "Garantia até 2032",
         "Isento de Rodízio"
       ],
-      "portal": "Mercado Livre"
+      "portal": "Mercado Livre",
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "byd-02",
       "isTarget": true,
       "modelCategory": "BYD Dolphin Mini",
-      "title": "BYD Dolphin Mini EV 2024 — Particular / Consórcio",
-      "badge": "Direto com Proprietário / Ágio",
-      "year": 2024,
-      "km": 24000,
+      "title": "BYD Dolphin Mini EV 2024",
+      "badge": "Preço do anúncio",
+      "year": 2025,
+      "km": 80000,
       "color": "Verde Sprout",
       "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
       "transmission": "Automático Direto",
       "price": 109900,
-      "originalPrice": 85000,
-      "fipePrice": 105000,
-      "priceVsFipe": "+R$ 4.900 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_860050-MLB117665602234_102026-O-byd-dolphin-mini-gs-eletrico.jpg",
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_860050-MLB117665602234_102026-O-byd-dolphin-mini-gs-eletrico.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5342985429-byd-dolphin-mini-gs-eletrico-_JM",
       "dealer": {
-        "name": "Anúncio Verificado — Particular (Matheus & Renata)",
-        "type": "Particular com Laudo Aprovado",
-        "city": "São Bernardo do Campo",
-        "state": "SP",
-        "neighborhood": "Rudge Ramos",
-        "address": "Av. Caminho do Mar, 2100 - Rudge Ramos, SBC - SP",
-        "phone": "(11) 98765-4321",
-        "whatsapp": "5511987654321",
+        "name": "Loja no Mercado Livre",
+        "city": "Itajaí",
+        "state": "SC",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -435,7 +413,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2770
       },
-      "cautelarStatus": "Laudo Cautelar 100% Aprovado emitido há 15 dias",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Dentro do Orçamento",
@@ -444,35 +422,31 @@
         "Particular"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 98000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "byd-03",
       "isTarget": true,
       "modelCategory": "BYD Dolphin Mini",
       "title": "BYD Dolphin Mini EV 5 Lugares 2024/2025",
-      "badge": "Versão 5 Lugares — Radar de Preço",
-      "year": 2024,
-      "km": 29000,
+      "badge": "Preço do anúncio",
+      "year": 2027,
+      "km": 0,
       "color": "Preto Delan",
       "fuel": "100% Elétrico",
       "transmission": "Automático Direto",
       "price": 123900,
-      "negotiatedTarget": 110000,
-      "originalPrice": 92000,
-      "fipePrice": 115800,
-      "priceVsFipe": "+R$ 8.100 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_888713-MLB120307849711_102026-O-byd-dolphin-mini-38-kw-eletrico-gs.jpg",
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_888713-MLB120307849711_102026-O-byd-dolphin-mini-38-kw-eletrico-gs.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5472001911-byd-dolphin-mini-38-kw-eletrico-gs-_JM",
       "dealer": {
-        "name": "BYD Dahruj Seminovos — Campinas",
-        "type": "Concessionária Oficial BYD",
-        "city": "Campinas",
-        "state": "SP",
-        "neighborhood": "Nova Campinas",
-        "address": "Av. José de Souza Campos (Norte-Sul), 1500 - Campinas - SP",
-        "phone": "(19) 3795-1000",
-        "whatsapp": "5519971239988",
+        "name": "Loja no Mercado Livre",
+        "city": "Itaboraí",
+        "state": "RJ",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -497,29 +471,29 @@
         "interestRate": 2.5,
         "monthlyInstallment": 3123
       },
-      "cautelarStatus": "Certificado BYD 100% Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "5 Lugares",
         "Concessionária BYD",
         "100% Elétrico"
       ],
-      "portal": "Mercado Livre"
+      "portal": "Mercado Livre",
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "tera-01",
       "isTarget": true,
       "modelCategory": "Volkswagen Tera Automático",
       "title": "Volkswagen Tera Comfort 1.0 TSI Automático 2026",
-      "badge": "Novo Lançamento VW — Cota / Seminovo Diretoria",
+      "badge": "Oferta de loja",
       "year": 2025,
       "km": 9800,
       "color": "Azul Boreal",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático de 6 marchas Tiptronic",
       "price": 124290,
-      "negotiatedTarget": 119000,
-      "originalPrice": 105900,
       "fipePrice": 124290,
       "priceVsFipe": "Tabela Oficial VW 2026",
       "image": "https://cdn.dealerspace.ai/dealersites/vehicles/models/volkswagen/foto_model_890_1860.v1793116148-r1bm.webp",
@@ -531,8 +505,7 @@
         "state": "SP",
         "neighborhood": "Vila Leopoldina",
         "address": "Av. Gastão Vidigal, 1450 - Vila Leopoldina, São Paulo - SP",
-        "phone": "(11) 3649-2000",
-        "whatsapp": "5511993332211",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -557,7 +530,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 3133
       },
-      "cautelarStatus": "100% Impecável - Carro da montadora",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Lançamento 2026",
@@ -571,15 +544,13 @@
       "isTarget": true,
       "modelCategory": "Volkswagen Tera Automático",
       "title": "Volkswagen Tera 1.0 170 TSI Automático 2026",
-      "badge": "Lançamento 2026 • Repasse Frotista / CNPJ",
+      "badge": "Oferta de loja",
       "year": 2025,
       "km": 6500,
       "color": "Cinza Moonstone",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático de 6 marchas Tiptronic",
       "price": 139990,
-      "negotiatedTarget": 134000,
-      "originalPrice": 105000,
       "fipePrice": 139990,
       "priceVsFipe": "Tabela Oficial VW 2026",
       "image": "https://cdn.dealerspace.ai/dealersites/vehicles/models/volkswagen/foto_model_890_1860.v1793116148-r1bm.webp",
@@ -591,8 +562,7 @@
         "state": "SP",
         "neighborhood": "Lapa",
         "address": "Av. Ermano Marchetti, 1020 - Lapa, São Paulo - SP",
-        "phone": "(11) 3613-7000",
-        "whatsapp": "5511993332211",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -617,7 +587,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 3528
       },
-      "cautelarStatus": "100% Aprovado (Dekra)",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Lançamento 2026",
@@ -633,27 +603,23 @@
       "isSuggestion": true,
       "modelCategory": "Sugestão: 100% Elétrico",
       "title": "Renault Kwid E-Tech 100% Elétrico 2023",
-      "badge": "O Elétrico Mais Acessível do Brasil",
-      "year": 2023,
+      "badge": "Acima da FIPE",
+      "year": 2026,
       "km": 21000,
       "color": "Verde Noronha Fosco",
       "fuel": "100% Elétrico (Bateria 26,8 kWh)",
       "transmission": "Automático Direto",
       "price": 85900,
-      "originalPrice": 75900,
-      "fipePrice": 88000,
-      "priceVsFipe": "-R$ 2.100 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_691554-MLB119866621961_102026-O-renault-kwid-e-tech-kwid-intense-eletrico.jpg",
+      "fipePrice": 55969,
+      "priceVsFipe": "+R$ 29.931 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_691554-MLB119866621961_102026-O-renault-kwid-e-tech-kwid-intense-eletrico.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7854407938-renault-kwid-e-tech-kwid-intense-eletrico-_JM",
       "dealer": {
-        "name": "Renault Grand Brasil — Moema",
-        "type": "Concessionária Oficial Renault",
+        "name": "Loja no Mercado Livre",
         "city": "São Paulo",
         "state": "SP",
-        "neighborhood": "Moema",
-        "address": "Av. Ibirapuera, 2770 - Moema, São Paulo - SP",
-        "phone": "(11) 5054-9000",
-        "whatsapp": "5511995556677",
+        "neighborhood": "Zona Norte",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -679,7 +645,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2165
       },
-      "cautelarStatus": "100% Aprovado e revisado na concessionária",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "100% Elétrico",
@@ -689,7 +655,7 @@
       ],
       "priceTier": "100k",
       "portal": "Mercado Livre",
-      "negotiatedTarget": 78000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-eletrico-02",
@@ -697,27 +663,23 @@
       "isSuggestion": true,
       "modelCategory": "Sugestão: 100% Elétrico",
       "title": "JAC E-JS1 100% Elétrico (Parceria com VW) 2022",
-      "badge": "Elétrico Urbano Ágil & Muito Equipado",
-      "year": 2022,
-      "km": 34000,
+      "badge": "Preço do anúncio",
+      "year": 2023,
+      "km": 128000,
       "color": "Branco com Teto Preto",
       "fuel": "100% Elétrico (Bateria Fosfato de Ferro 30,2 kWh)",
       "transmission": "Automático Direto",
       "price": 63990,
-      "originalPrice": 74000,
-      "fipePrice": 71500,
-      "priceVsFipe": "-R$ 7.510 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_962819-MLB119104791114_112026-O-jac-e-js1-eletrico-automatico.jpg",
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_962819-MLB119104791114_112026-O-jac-e-js1-eletrico-automatico.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5510414169-jac-e-js1-eletrico-automatico-_JM",
       "dealer": {
-        "name": "EletroCar Seminovos — Vila Olímpia",
-        "type": "Loja Especializada em Elétricos",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Vila Olímpia",
-        "address": "Rua Funchal, 418 - Vila Olímpia, São Paulo - SP",
-        "phone": "(11) 3045-8800",
-        "whatsapp": "5511998761234",
+        "name": "Loja no Mercado Livre",
+        "city": "Porto Alegre",
+        "state": "RS",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -743,7 +705,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 1613
       },
-      "cautelarStatus": "Laudo Pericial 100% Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "100% Elétrico",
@@ -753,7 +715,7 @@
       ],
       "priceTier": "70k",
       "portal": "Mercado Livre",
-      "negotiatedTarget": 59000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-vw-polo-01",
@@ -761,27 +723,23 @@
       "isSuggestion": true,
       "modelCategory": "Sugestão: Alternativa Direta ao Tera",
       "title": "Volkswagen Polo Comfortline 1.0 200 TSI Automático 2021/2022",
-      "badge": "Irmão do Tera com Mesma Base e Motor Turbo",
-      "year": 2021,
-      "km": 46000,
+      "badge": "Abaixo da FIPE",
+      "year": 2024,
+      "km": 62000,
       "color": "Prata Sirius Metálico",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático de 6 marchas Tiptronic com Paddle Shift",
       "price": 69900,
-      "originalPrice": 81000,
-      "fipePrice": 76500,
-      "priceVsFipe": "-R$ 6.600 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_929425-MLB119919348551_102026-O-volkswagen-polo-10-comfortline-tsi-aut-5p-2024.jpg",
+      "fipePrice": 89266,
+      "priceVsFipe": "-R$ 19.366 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_929425-MLB119919348551_102026-O-volkswagen-polo-10-comfortline-tsi-aut-5p-2024.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5437797859-volkswagen-polo-10-comfortline-tsi-aut-5p-2024-_JM",
       "dealer": {
-        "name": "Carrera Seminovos — Vila Leopoldina",
-        "type": "Concessionária VW",
-        "city": "São Paulo",
+        "name": "Loja no Mercado Livre",
+        "city": "Ribeirão Preto",
         "state": "SP",
-        "neighborhood": "Vila Leopoldina",
-        "address": "Av. Imperatriz Leopoldina, 1200 - São Paulo - SP",
-        "phone": "(11) 3838-5000",
-        "whatsapp": "5511976543210",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -806,7 +764,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 1762
       },
-      "cautelarStatus": "100% Laudo Aprovado Dekra",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Base do Tera",
@@ -815,7 +773,7 @@
       ],
       "priceTier": "70k",
       "portal": "Mercado Livre",
-      "negotiatedTarget": 65000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-suv-kicks-01",
@@ -823,27 +781,23 @@
       "isSuggestion": true,
       "modelCategory": "Sugestão: SUV Automático Confiável",
       "title": "Nissan Kicks SV 1.6 16V Flex CVT Automático 2021",
-      "badge": "SUV Muito Confortável & Porta-Malas Gigante",
-      "year": 2021,
+      "badge": "Abaixo da FIPE",
+      "year": 2024,
       "km": 52000,
       "color": "Cinza Rust Metálico",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático Xtronic CVT de 6 marchas simuladas",
       "price": 107900,
-      "originalPrice": 83500,
-      "fipePrice": 109800,
-      "priceVsFipe": "-R$ 1.900 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_998432-MLB120132897425_102026-O-nissan-kicks-advance-cvt-2024.jpg",
+      "fipePrice": 109199,
+      "priceVsFipe": "-R$ 1.299 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_998432-MLB120132897425_102026-O-nissan-kicks-advance-cvt-2024.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5412338439-nissan-kicks-advance-cvt-2024-_JM",
       "dealer": {
-        "name": "Daitan Nissan — Ibirapuera",
-        "type": "Concessionária Nissan",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Indianópolis",
-        "address": "Av. República do Líbano, 1920 - Moema, São Paulo - SP",
-        "phone": "(11) 5053-4000",
-        "whatsapp": "5511985432109",
+        "name": "Loja no Mercado Livre",
+        "city": "Caxias do Sul",
+        "state": "RS",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -868,7 +822,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2720
       },
-      "cautelarStatus": "100% Aprovado e periciado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Porta-Malas 432L",
@@ -877,7 +831,7 @@
       ],
       "priceTier": "120k",
       "portal": "Mercado Livre",
-      "negotiatedTarget": 99000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-suv-cactus-01",
@@ -885,27 +839,23 @@
       "isSuggestion": true,
       "modelCategory": "Sugestão: SUV Automático Custo-Benefício",
       "title": "Citroën C4 Cactus Feel 1.6 VTi Automático 2022",
-      "badge": "Ano 2022 por Menos de R$ 75 mil",
+      "badge": "Abaixo da FIPE",
       "year": 2022,
-      "km": 44000,
+      "km": 90913,
       "color": "Branco Banquise com Teto Preto",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático Aisin de 6 marchas com modos Eco e Sport",
-      "price": 72900,
-      "originalPrice": 78000,
-      "fipePrice": 74800,
-      "priceVsFipe": "-R$ 1.900 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_978251-MLB117472824205_092026-O-citron-c4-cactus-cactus-feel-16-16v-flex-aut-2021202.jpg",
+      "price": 69900,
+      "fipePrice": 75197,
+      "priceVsFipe": "-R$ 5.297 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_929155-MLB119565173580_112026-O-citron-c4-cactus-cactus-feel-16-16v-flex-aut-2021202.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7458395590-citron-c4-cactus-cactus-feel-16-16v-flex-aut-2021202-_JM",
       "dealer": {
-        "name": "Stellantis Seminovos — Sorocaba",
-        "type": "Concessionária Citroën/Peugeot",
-        "city": "Sorocaba",
-        "state": "SP",
-        "neighborhood": "Jardim Santa Rosália",
-        "address": "Av. Dom Aguirre, 2500 - Sorocaba - SP",
-        "phone": "(15) 3212-9000",
-        "whatsapp": "5515991238877",
+        "name": "Loja no Mercado Livre",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "neighborhood": "Zona Sul",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -923,22 +873,22 @@
         ]
       },
       "financing": {
-        "downPayment": 21870,
-        "financedAmount": 51030,
+        "downPayment": 20970,
+        "financedAmount": 48930,
         "months": 48,
         "interestRate": 2.5,
-        "monthlyInstallment": 1837
+        "monthlyInstallment": 1762
       },
-      "cautelarStatus": "100% Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Câmbio Japonês Aisin",
         "Ano 2022",
         "Abaixo de 75k"
       ],
-      "priceTier": "80k",
+      "priceTier": "70k",
       "portal": "Mercado Livre",
-      "negotiatedTarget": 68000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-hatch-argo-01",
@@ -946,27 +896,23 @@
       "isSuggestion": true,
       "modelCategory": "Sugestão: Automático Mais Novo Possível",
       "title": "Fiat Argo Trekking 1.3 Flex Automático CVT 2023/2024",
-      "badge": "Ano 2024 Quase Zero KM",
+      "badge": "Acima da FIPE",
       "year": 2024,
       "km": 19000,
       "color": "Laranja Montecarlo",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático CVT (7 marchas simuladas)",
       "price": 89900,
-      "originalPrice": 82000,
-      "fipePrice": 91500,
-      "priceVsFipe": "-R$ 1.600 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_833697-MLB118030280220_102026-O-argo-trekking-13-automatico.jpg",
+      "fipePrice": 87597,
+      "priceVsFipe": "+R$ 2.303 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_833697-MLB118030280220_102026-O-argo-trekking-13-automatico.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5412879079-argo-trekking-13-automatico-_JM",
       "dealer": {
-        "name": "Amazonas Seminovos — Radial Leste",
-        "type": "Concessionária Fiat Amazonas",
-        "city": "São Paulo",
+        "name": "Loja no Mercado Livre",
+        "city": "Caieiras",
         "state": "SP",
-        "neighborhood": "Tatuapé",
-        "address": "Av. Radial Leste, 3200 - Tatuapé, São Paulo - SP",
-        "phone": "(11) 2090-8000",
-        "whatsapp": "5511974321987",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -991,7 +937,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2266
       },
-      "cautelarStatus": "100% Laudo Impecável",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Ano 2024",
@@ -1000,36 +946,32 @@
       ],
       "priceTier": "100k",
       "portal": "Mercado Livre",
-      "negotiatedTarget": 82000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-06-rib",
-      "title": "Fiat Pulse Drive 1.3 AT CVT — Ribeirão Preto",
+      "title": "Fiat Pulse Drive 1.3 AT CVT",
       "modelCategory": "Fiat Pulse Automático",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "Interior SP • Ribeirão",
+      "badge": "Acima da FIPE",
       "year": "2023/2023",
       "km": 29800,
       "color": "Cinza Silverstone",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT (7 velocidades simuladas)",
       "price": 88900,
-      "originalPrice": 81900,
-      "fipePrice": 89200,
-      "priceVsFipe": "-R$ 300 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_790133-MLB116721772940_092026-O-fiat-pulse-13-flex-drive-cvt.jpg",
+      "fipePrice": 87065,
+      "priceVsFipe": "+R$ 1.835 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_790133-MLB116721772940_092026-O-fiat-pulse-13-flex-drive-cvt.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7699017274-fiat-pulse-13-flex-drive-cvt-_JM",
       "dealer": {
-        "name": "Movida Seminovos — Ribeirão Preto",
-        "type": "Seminovos Certificados",
+        "name": "Loja no Mercado Livre",
         "city": "Ribeirão Preto",
         "state": "SP",
-        "neighborhood": "Jardim Botânico",
-        "address": "Av. Maurílio Biagi, 1850 - Ribeirão Preto, SP",
-        "phone": "(16) 3968-4500",
-        "whatsapp": "5516997451234",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1054,7 +996,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2241
       },
-      "cautelarStatus": "100% Aprovado Dekra",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Ribeirão Preto",
@@ -1062,36 +1004,33 @@
         "Dentro do Orçamento",
         "Laudo Aprovado"
       ],
-      "negotiatedTarget": 82000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-07-sjc",
-      "title": "Fiat Pulse Drive 1.0 Turbo 200 AT — SJC Vale do Paraíba",
+      "title": "Fiat Pulse Drive 1.0 Turbo 200 AT",
       "modelCategory": "Fiat Pulse Automático",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "Vale do Paraíba",
-      "year": "2022/2023",
+      "badge": "Abaixo da FIPE",
+      "year": 2006,
       "km": 36500,
       "color": "Branco Banchisa",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT 7v",
       "price": 85998,
-      "originalPrice": 82900,
-      "fipePrice": 89500,
-      "priceVsFipe": "-R$ 3.502 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_808597-MLB117727013044_102026-O-fiat-pulse-10-turbo-200-flex-drive-cvt.jpg",
+      "fipePrice": 89254,
+      "priceVsFipe": "-R$ 3.256 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_808597-MLB117727013044_102026-O-fiat-pulse-10-turbo-200-flex-drive-cvt.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5392224925-fiat-pulse-10-turbo-200-flex-drive-cvt-_JM",
       "dealer": {
-        "name": "Destaque Fiat — São José dos Campos",
-        "type": "Concessionária Autorizada Fiat",
-        "city": "São José dos Campos",
+        "name": "Loja no Mercado Livre",
+        "city": "Ribeirão Preto",
         "state": "SP",
-        "neighborhood": "Jardim Aquárius",
-        "address": "Av. Cassiano Ricardo, 1400 - SJC, SP",
-        "phone": "(12) 3946-8800",
-        "whatsapp": "5512988776655",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1115,7 +1054,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2168
       },
-      "cautelarStatus": "100% Periciado e Laudo Cautelar Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "São José dos Campos",
@@ -1123,36 +1062,33 @@
         "Motor Turbo",
         "Laudo Aprovado"
       ],
-      "negotiatedTarget": 80000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-08-santos",
-      "title": "Fiat Pulse Drive 1.3 AT CVT — Santos Litoral",
+      "title": "Fiat Pulse Drive 1.3 AT CVT",
       "modelCategory": "Fiat Pulse Automático",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "Litoral / Baixada Santista",
+      "badge": "Abaixo da FIPE",
       "year": "2023/2023",
-      "km": 27400,
+      "km": 46575,
       "color": "Cinza Strato",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT 7v",
       "price": 83900,
-      "originalPrice": 81000,
-      "fipePrice": 89200,
-      "priceVsFipe": "-R$ 5.300 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_805993-MLB117325315658_102026-O-fiat-pulse-13-drive-flex-5p.jpg",
+      "fipePrice": 87065,
+      "priceVsFipe": "-R$ 3.165 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_805993-MLB117325315658_102026-O-fiat-pulse-13-drive-flex-5p.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5348517031-fiat-pulse-13-drive-flex-5p-_JM",
       "dealer": {
-        "name": "Comeri Litoral — Concessionária",
-        "type": "Concessionária Multimarcas Litoral",
-        "city": "Santos",
+        "name": "Loja no Mercado Livre",
+        "city": "São Paulo",
         "state": "SP",
-        "neighborhood": "Gonzaga",
-        "address": "Av. Ana Costa, 310 - Gonzaga, Santos, SP",
-        "phone": "(13) 3229-9000",
-        "whatsapp": "5513996541234",
+        "neighborhood": "Zona Sul",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1176,7 +1112,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2115
       },
-      "cautelarStatus": "100% Aprovado sem restrições",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Santos",
@@ -1184,36 +1120,33 @@
         "Litoral",
         "Dentro do Orçamento"
       ],
-      "negotiatedTarget": 79000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-09-sorocaba",
-      "title": "Fiat Pulse Drive 1.3 Flex AT — Sorocaba",
+      "title": "Fiat Pulse Drive 1.3 Flex AT",
       "modelCategory": "Fiat Pulse Automático",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "Sorocaba & Região",
-      "year": "2023/2023",
+      "badge": "Acima da FIPE",
+      "year": 2022,
       "km": 31200,
       "color": "Cinza Silverstone",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT",
       "price": 88900,
-      "originalPrice": 80900,
-      "fipePrice": 89200,
-      "priceVsFipe": "-R$ 300 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_679883-MLB117224207386_102026-O-fiat-pulse-13-drive-flex-aut-5p.jpg",
+      "fipePrice": 86521,
+      "priceVsFipe": "+R$ 2.379 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_679883-MLB117224207386_102026-O-fiat-pulse-13-drive-flex-aut-5p.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5509773509-fiat-pulse-13-drive-flex-aut-5p-_JM",
       "dealer": {
-        "name": "Abrão Reze Seminovos — Sorocaba",
-        "type": "Concessionária Tradicional",
-        "city": "Sorocaba",
+        "name": "Loja no Mercado Livre",
+        "city": "Lorena",
         "state": "SP",
-        "neighborhood": "Campolim",
-        "address": "Av. Antônio Carlos Comitre, 1100 - Campolim, Sorocaba, SP",
-        "phone": "(15) 3219-5000",
-        "whatsapp": "5515998765432",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1236,29 +1169,29 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2241
       },
-      "cautelarStatus": "100% Dekra Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Sorocaba",
         "Mobiauto",
         "Único Dono"
       ],
-      "negotiatedTarget": 82000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-10-alphaville",
-      "title": "Fiat Pulse Drive 1.3 AT CVT — Alphaville / Barueri",
+      "title": "Fiat Pulse Drive 1.3 AT CVT",
       "modelCategory": "Fiat Pulse Automático",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "Alphaville / Barueri",
+      "badge": "Oferta de loja",
       "year": "2023/2023",
       "km": 22100,
       "color": "Azul Amalfi",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT 7v",
       "price": 85890,
-      "originalPrice": 83500,
       "fipePrice": 89200,
       "priceVsFipe": "-R$ 3.310 vs FIPE",
       "image": "https://production.autoforce.com/uploads/used_model/profile_image/26931541/model_main_webp_comprar-pulse-1-3-drive-4105_46585dd4b9.jpg.webp",
@@ -1271,8 +1204,7 @@
         "state": "SP",
         "neighborhood": "Alphaville",
         "address": "Alameda Araguaia, 2044 - Alphaville, Barueri, SP",
-        "phone": "(11) 3230-0000",
-        "whatsapp": "5511991238899",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1295,45 +1227,40 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2165
       },
-      "cautelarStatus": "100% Aprovado Certificado 240 Itens",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Alphaville",
         "Kavak",
         "Garantia 2 Anos"
       ],
-      "negotiatedTarget": 80000,
       "listingStatus": "estoque",
       "listingNote": "Anuncio individual fora do ar; link abre o estoque da loja."
     },
     {
       "id": "byd-04-rib",
-      "title": "BYD Dolphin Mini EV 38 kWh — Ribeirão Preto",
+      "title": "BYD Dolphin Mini EV 38 kWh",
       "modelCategory": "BYD Dolphin Mini",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "100% Elétrico • Ribeirão",
-      "year": "2024/2025",
-      "km": 9400,
+      "badge": "Preço do anúncio",
+      "year": 2027,
+      "km": 380,
       "color": "Sprout Green (Verde)",
       "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
       "transmission": "Automático Direto (1 marcha)",
       "price": 122900,
-      "originalPrice": 85000,
-      "fipePrice": 115800,
-      "priceVsFipe": "+R$ 7.100 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_695286-MLB118131458242_102026-O-byd-dolphin-mini-38-kw-eletrico-gs.jpg",
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_695286-MLB118131458242_102026-O-byd-dolphin-mini-38-kw-eletrico-gs.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5423214773-byd-dolphin-mini-38-kw-eletrico-gs-_JM",
       "dealer": {
-        "name": "BYD Dahruj — Ribeirão Preto",
-        "type": "Concessionária Oficial BYD",
-        "city": "Ribeirão Preto",
-        "state": "SP",
-        "neighborhood": "Nova Aliança",
-        "address": "Av. Braz Olaia Acosta, 720 - Ribeirão Preto, SP",
-        "phone": "(16) 3514-8000",
-        "whatsapp": "5516996321122",
+        "name": "Loja no Mercado Livre",
+        "city": "Içara",
+        "state": "SC",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1359,7 +1286,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 3098
       },
-      "cautelarStatus": "100% Impecável sem retoques",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Ribeirão Preto",
@@ -1367,36 +1294,33 @@
         "Bateria Blade",
         "Garantia até 2032"
       ],
-      "negotiatedTarget": 110000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "byd-05-sjc",
-      "title": "BYD Dolphin Mini EV 5 Lugares — SJC Vale do Paraíba",
+      "title": "BYD Dolphin Mini EV 5 Lugares",
       "modelCategory": "BYD Dolphin Mini",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "100% Elétrico • 5 Lugares",
-      "year": "2024/2025",
+      "badge": "Abaixo da FIPE",
+      "year": 2025,
       "km": 8200,
       "color": "Preto Cosmos",
       "fuel": "100% Elétrico (Bateria Blade 38 kWh)",
       "transmission": "Automático Direto",
-      "price": 108900,
-      "originalPrice": 86900,
-      "fipePrice": 109800,
-      "priceVsFipe": "-R$ 900 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_910496-MLB119588672627_102026-O-byd-dolphin-mini-00-5l-aut-5p-electrico.jpg",
+      "price": 106900,
+      "fipePrice": 119975,
+      "priceVsFipe": "-R$ 13.075 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_910496-MLB119588672627_102026-O-byd-dolphin-mini-00-5l-aut-5p-electrico.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7828515716-byd-dolphin-mini-00-5l-aut-5p-electrico-_JM",
       "dealer": {
-        "name": "Dahruj BYD — São José dos Campos",
-        "type": "Concessionária Oficial BYD",
-        "city": "São José dos Campos",
+        "name": "Loja no Mercado Livre",
+        "city": "São Paulo",
         "state": "SP",
-        "neighborhood": "Jardim São Dimas",
-        "address": "Av. Nelson D'Ávila, 1200 - SJC, SP",
-        "phone": "(12) 3904-4000",
-        "whatsapp": "5512991112233",
+        "neighborhood": "Zona Norte",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1414,13 +1338,13 @@
         ]
       },
       "financing": {
-        "downPayment": 32670,
-        "financedAmount": 76230,
+        "downPayment": 32070,
+        "financedAmount": 74830,
         "months": 48,
         "interestRate": 2.5,
-        "monthlyInstallment": 2745
+        "monthlyInstallment": 2694
       },
-      "cautelarStatus": "100% Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "São José dos Campos",
@@ -1428,22 +1352,22 @@
         "100% Elétrico",
         "Bateria Blade"
       ],
-      "negotiatedTarget": 99000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "byd-06-santos",
-      "title": "BYD Dolphin Mini EV — Santos / Baixada Santista",
+      "title": "BYD Dolphin Mini EV",
       "modelCategory": "BYD Dolphin Mini",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "100% Elétrico • Santos",
+      "badge": "Oferta de loja",
       "year": "2024/2024",
       "km": 11500,
       "color": "Branco Apricity",
       "fuel": "100% Elétrico",
       "transmission": "Automático Direto",
       "price": 99990,
-      "originalPrice": 84500,
       "fipePrice": 105000,
       "priceVsFipe": "-R$ 5.010 vs FIPE",
       "image": "https://production.autoforce.com/uploads/used_model/profile_image/26938534/model_main_webp_comprar-dolphin-mini-38-kw-5l-5239_f80abc1591.jpg.webp",
@@ -1456,8 +1380,7 @@
         "state": "SP",
         "neighborhood": "Ponta da Praia",
         "address": "Av. Rei Alberto I, 180 - Ponta da Praia, Santos, SP",
-        "phone": "(13) 3269-8000",
-        "whatsapp": "5513997788990",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1482,45 +1405,40 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2520
       },
-      "cautelarStatus": "100% Impecável",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Santos",
         "Litoral",
         "100% Elétrico"
       ],
-      "negotiatedTarget": 92000,
       "listingStatus": "estoque",
       "listingNote": "Anuncio individual fora do ar; link abre o estoque da loja."
     },
     {
       "id": "pulse-11-jundiai",
-      "title": "Fiat Pulse Drive 1.3 Flex AT CVT — Jundiaí",
+      "title": "Fiat Pulse Drive 1.3 Flex AT CVT",
       "modelCategory": "Fiat Pulse Automático",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "Jundiaí & Região",
-      "year": "2023/2023",
+      "badge": "Abaixo da FIPE",
+      "year": 2026,
       "km": 28900,
       "color": "Cinza Silverstone",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT 7v",
       "price": 85900,
-      "originalPrice": 81500,
-      "fipePrice": 89200,
-      "priceVsFipe": "-R$ 3.300 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_612954-MLB118676176245_102026-O-fiat-pulse-drive-13.jpg",
+      "fipePrice": 87065,
+      "priceVsFipe": "-R$ 1.165 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_612954-MLB118676176245_102026-O-fiat-pulse-drive-13.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7743056840-fiat-pulse-drive-13-_JM",
       "dealer": {
-        "name": "Carrera Seminovos — Jundiaí",
-        "type": "Concessionária Multimarcas",
-        "city": "Jundiaí",
-        "state": "SP",
-        "neighborhood": "Anhangabaú",
-        "address": "Av. 9 de Julho, 2500 - Jundiaí, SP",
-        "phone": "(11) 4583-7000",
-        "whatsapp": "5511995544332",
+        "name": "Loja no Mercado Livre",
+        "city": "Joinville",
+        "state": "SC",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1544,43 +1462,40 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2165
       },
-      "cautelarStatus": "100% Dekra Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Jundiaí",
         "Chaves na Mão",
         "Dentro do Orçamento"
       ],
-      "negotiatedTarget": 80000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-12-piracicaba",
-      "title": "Fiat Pulse Drive 1.3 AT CVT — Piracicaba",
+      "title": "Fiat Pulse Drive 1.3 AT CVT",
       "modelCategory": "Fiat Pulse Automático",
       "isTarget": true,
       "isSuggestion": false,
-      "badge": "Piracicaba & Região",
+      "badge": "Abaixo da FIPE",
       "year": "2023/2023",
-      "km": 33100,
+      "km": 29694,
       "color": "Branco Banchisa",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT 7v",
       "price": 101900,
-      "originalPrice": 80900,
-      "fipePrice": 98000,
-      "priceVsFipe": "+R$ 3.900 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_658930-MLB117442402698_102026-O-pulse-drive-13-8v-flex-aut.jpg",
+      "fipePrice": 107144,
+      "priceVsFipe": "-R$ 5.244 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_658930-MLB117442402698_102026-O-pulse-drive-13-8v-flex-aut.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5360153805-pulse-drive-13-8v-flex-aut-_JM",
       "dealer": {
-        "name": "Stefanini Fiat — Piracicaba",
-        "type": "Concessionária Oficial Fiat",
-        "city": "Piracicaba",
-        "state": "SP",
-        "neighborhood": "Vila Rezende",
-        "address": "Av. Rui Barbosa, 600 - Piracicaba, SP",
-        "phone": "(19) 3412-8000",
-        "whatsapp": "5519998877661",
+        "name": "Loja no Mercado Livre",
+        "city": "Ponte Nova",
+        "state": "MG",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1603,14 +1518,15 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2568
       },
-      "cautelarStatus": "100% Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Piracicaba",
         "Mobiauto",
         "Dentro do Orçamento"
       ],
-      "negotiatedTarget": 93000
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-60k-argo",
@@ -1619,27 +1535,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "70k",
-      "badge": "Sugestão até 60k",
-      "year": "2020/2020",
+      "badge": "Acima da FIPE",
+      "year": 2020,
       "km": 48200,
       "color": "Branco Banchisa",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático 5v com Paddle Shifts no volante",
       "price": 69900,
-      "originalPrice": 62000,
-      "fipePrice": 73000,
-      "priceVsFipe": "-R$ 3.100 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_903894-MLB117654511304_102026-O-argo-trekking-13.jpg",
+      "fipePrice": 67644,
+      "priceVsFipe": "+R$ 2.256 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_903894-MLB117654511304_102026-O-argo-trekking-13.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7803757540-argo-trekking-13-_JM",
       "dealer": {
-        "name": "Fiat Sinal — Unidade Ipiranga",
-        "type": "Concessionária Oficial Fiat",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Ipiranga",
-        "phone": "(11) 2067-1000",
-        "whatsapp": "5511999991111",
+        "name": "Loja no Mercado Livre",
+        "city": "Goiânia",
+        "state": "GO",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1656,7 +1569,7 @@
           "Sensor de estacionamento"
         ]
       },
-      "cautelarStatus": "100% Aprovado Supervisão",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 60k",
@@ -1670,7 +1583,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 1762
       },
-      "negotiatedTarget": 63000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-60k-onix",
@@ -1679,27 +1592,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "70k",
-      "badge": "Sugestão até 60k",
-      "year": "2019/2019",
-      "km": 52400,
+      "badge": "Acima da FIPE",
+      "year": 2018,
+      "km": 9,
       "color": "Prata Switchblade",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático de 6 marchas com conversor de torque",
       "price": 65900,
-      "originalPrice": 64500,
-      "fipePrice": 68200,
-      "priceVsFipe": "-R$ 2.300 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_947898-MLB118782587613_102026-O-onix-14-ltz-spe4-aut.jpg",
+      "fipePrice": 64986,
+      "priceVsFipe": "+R$ 914 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_947898-MLB118782587613_102026-O-onix-14-ltz-spe4-aut.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5336524799-onix-14-ltz-spe4-aut-_JM",
       "dealer": {
-        "name": "Localiza Seminovos — Campinas Taquaral",
-        "type": "Seminovos Certificados",
-        "city": "Campinas",
-        "state": "SP",
-        "neighborhood": "Taquaral",
-        "phone": "(19) 3795-8000",
-        "whatsapp": "5519992345678",
+        "name": "Loja no Mercado Livre",
+        "city": "Estância Velha",
+        "state": "RS",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1716,7 +1626,7 @@
           "Câmera de ré"
         ]
       },
-      "cautelarStatus": "100% Dekra Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 60k",
@@ -1730,7 +1640,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 1661
       },
-      "negotiatedTarget": 60000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-70k-fit",
@@ -1739,27 +1649,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "80k",
-      "badge": "Sugestão até 70k",
+      "badge": "Acima da FIPE",
       "year": "2018/2018",
       "km": 49800,
       "color": "Cinza Barium",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT de 7 velocidades simuladas",
       "price": 77900,
-      "originalPrice": 73500,
-      "fipePrice": 81500,
-      "priceVsFipe": "-R$ 3.600 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_777568-MLB118283761360_102026-O-honda-fit-15-lx-16v-flex-4p-automatico.jpg",
+      "fipePrice": 73955,
+      "priceVsFipe": "+R$ 3.945 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_777568-MLB118283761360_102026-O-honda-fit-15-lx-16v-flex-4p-automatico.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7861050836-honda-fit-15-lx-16v-flex-4p-automatico-_JM",
       "dealer": {
-        "name": "Daitan Seminovos — São Paulo",
-        "type": "Concessionária Especializada Honda",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Moema",
-        "phone": "(11) 5053-8000",
-        "whatsapp": "5511998877665",
+        "name": "Loja no Mercado Livre",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "neighborhood": "Zona Oeste",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1776,7 +1683,7 @@
           "Ar condicionado digital"
         ]
       },
-      "cautelarStatus": "100% Cautelar Dekra Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 70k",
@@ -1790,7 +1697,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 1963
       },
-      "negotiatedTarget": 72000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-70k-hb20",
@@ -1799,27 +1706,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "80k",
-      "badge": "Sugestão até 70k",
-      "year": "2019/2019",
-      "km": 44100,
+      "badge": "Abaixo da FIPE",
+      "year": 2022,
+      "km": 14,
       "color": "Branco Polar",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático de 6 marchas",
       "price": 77990,
-      "originalPrice": 71900,
-      "fipePrice": 82000,
-      "priceVsFipe": "-R$ 4.010 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_622674-MLB119032170013_102026-O-hyundai-hb20-10-sport-tgdi-flex-aut-5p.jpg",
+      "fipePrice": 80272,
+      "priceVsFipe": "-R$ 2.282 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_622674-MLB119032170013_102026-O-hyundai-hb20-10-sport-tgdi-flex-aut-5p.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5358974945-hyundai-hb20-10-sport-tgdi-flex-aut-5p-_JM",
       "dealer": {
-        "name": "Carrera Seminovos — Santo André",
-        "type": "Concessionária Multimarcas",
-        "city": "Santo André",
+        "name": "Loja no Mercado Livre",
+        "city": "Taubaté",
         "state": "SP",
-        "neighborhood": "Campestre",
-        "phone": "(11) 4433-2000",
-        "whatsapp": "5511993344556",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1836,7 +1740,7 @@
           "Acendimento automático dos faróis"
         ]
       },
-      "cautelarStatus": "100% Periciado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 70k",
@@ -1850,7 +1754,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 1966
       },
-      "negotiatedTarget": 72000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-100k-dolphin",
@@ -1859,14 +1763,13 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "120k",
-      "badge": "Upgrade até 100k",
+      "badge": "Oferta de loja",
       "year": "2023/2024",
       "km": 14200,
       "color": "Cinza Dolphin / Afterglow Pink",
       "fuel": "100% Elétrico (Bateria Blade 44.9 kWh)",
       "transmission": "Automático Direto",
       "price": 108990,
-      "originalPrice": 109000,
       "fipePrice": 114500,
       "priceVsFipe": "-R$ 5.510 vs FIPE",
       "image": "https://production.autoforce.com/uploads/used_model/profile_image/26948204/model_main_webp_comprar-dolphin-mini-38-kw-gs-5256_48d000b2f4.jpg.webp",
@@ -1878,8 +1781,7 @@
         "city": "São Paulo",
         "state": "SP",
         "neighborhood": "Vila Olímpia",
-        "phone": "(11) 3048-2000",
-        "whatsapp": "5511997788112",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1897,7 +1799,7 @@
           "Tela rotativa 12.8\""
         ]
       },
-      "cautelarStatus": "100% Impecável sem apontamentos",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 100k",
@@ -1912,7 +1814,6 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2747
       },
-      "negotiatedTarget": 99000,
       "listingStatus": "estoque",
       "listingNote": "Anuncio individual fora do ar; link abre o estoque da loja."
     },
@@ -1923,27 +1824,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "120k",
-      "badge": "Upgrade até 100k",
+      "badge": "Abaixo da FIPE",
       "year": "2023/2024",
       "km": 18900,
       "color": "Cinza Strato com Teto Preto",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático CVT de 7 marchas",
       "price": 105890,
-      "originalPrice": 99900,
-      "fipePrice": 112000,
-      "priceVsFipe": "-R$ 6.110 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_601232-MLB120421356607_102026-O-fiat-pulse-impetus-10-turbo-200-flex-aut-20242024.jpg",
+      "fipePrice": 111490,
+      "priceVsFipe": "-R$ 5.600 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_601232-MLB120421356607_102026-O-fiat-pulse-impetus-10-turbo-200-flex-aut-20242024.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-6824646026-fiat-pulse-impetus-10-turbo-200-flex-aut-20242024-_JM",
       "dealer": {
-        "name": "Movida Seminovos — Ribeirão Preto",
-        "type": "Seminovos Certificados",
-        "city": "Ribeirão Preto",
-        "state": "SP",
-        "neighborhood": "Jardim Botânico",
-        "phone": "(16) 3968-4500",
-        "whatsapp": "5516997451234",
+        "name": "Loja no Mercado Livre",
+        "city": "Itajaí",
+        "state": "SC",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -1960,7 +1858,7 @@
           "Teto bicolor"
         ]
       },
-      "cautelarStatus": "100% Aprovado Dekra",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 100k",
@@ -1975,7 +1873,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2669
       },
-      "negotiatedTarget": 98000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-100k-renegade",
@@ -1984,27 +1882,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "120k",
-      "badge": "Upgrade até 100k",
-      "year": "2022/2023",
-      "km": 34100,
+      "badge": "Preço do anúncio",
+      "year": 2025,
+      "km": 15816,
       "color": "Preto Carbon",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático de 6 marchas",
       "price": 104890,
-      "originalPrice": 102000,
-      "fipePrice": 109000,
-      "priceVsFipe": "-R$ 4.110 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_620523-MLB117444626722_102026-O-jeep-renegade-13-t270-turbo-flex-sport-altitude-at6.jpg",
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_620523-MLB117444626722_102026-O-jeep-renegade-13-t270-turbo-flex-sport-altitude-at6.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7778578782-jeep-renegade-13-t270-turbo-flex-sport-altitude-at6-_JM",
       "dealer": {
-        "name": "Destaque Jeep — São José dos Campos",
-        "type": "Concessionária Jeep",
-        "city": "São José dos Campos",
-        "state": "SP",
-        "neighborhood": "Jardim Aquárius",
-        "phone": "(12) 3946-8800",
-        "whatsapp": "5512988776655",
+        "name": "Loja no Mercado Livre",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -2022,7 +1917,7 @@
           "Painel digital"
         ]
       },
-      "cautelarStatus": "100% Aprovado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 100k",
@@ -2037,7 +1932,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2644
       },
-      "negotiatedTarget": 96000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-120k-dolphin-plus",
@@ -2046,27 +1941,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "160k",
-      "badge": "Premium até 120k",
+      "badge": "Abaixo da FIPE",
       "year": "2023/2024",
       "km": 11800,
       "color": "Cinza com Teto Preto (Dual Color)",
       "fuel": "100% Elétrico (Bateria Blade 60.5 kWh)",
       "transmission": "Automático Direto",
       "price": 144990,
-      "originalPrice": 134000,
-      "fipePrice": 149800,
-      "priceVsFipe": "-R$ 4.810 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_983426-MLB120874429755_112026-O-byd-dolphin-eletrico-automatico.jpg",
+      "fipePrice": 148399,
+      "priceVsFipe": "-R$ 3.409 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_771518-MLB121454532123_112026-O-byd-dolphin-eletrico-automatico.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5515978209-byd-dolphin-eletrico-automatico-_JM",
       "dealer": {
-        "name": "Dahruj BYD — Morumbi",
-        "type": "Concessionária Oficial BYD",
+        "name": "Loja no Mercado Livre",
         "city": "São Paulo",
         "state": "SP",
-        "neighborhood": "Morumbi",
-        "phone": "(11) 3740-9000",
-        "whatsapp": "5511991223344",
+        "neighborhood": "Zona Norte",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -2084,7 +1976,7 @@
           "204 cavalos de potência"
         ]
       },
-      "cautelarStatus": "100% Impecável laudo pericial",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 120k",
@@ -2099,7 +1991,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 3654
       },
-      "negotiatedTarget": 135000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-120k-pulse-abarth",
@@ -2108,27 +2000,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "120k",
-      "badge": "Premium até 120k",
+      "badge": "Preço do anúncio",
       "year": "2023/2024",
       "km": 15400,
       "color": "Branco com Faixas Vermelhas Abarth",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático de 6 marchas com calibração Abarth",
       "price": 109990,
-      "originalPrice": 128000,
-      "fipePrice": 118500,
-      "priceVsFipe": "-R$ 8.510 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_942823-MLB117197193496_102026-O-fiat-pulse-abarth-13-turbo-16v-flex-aut-20232023.jpg",
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_942823-MLB117197193496_102026-O-fiat-pulse-abarth-13-turbo-16v-flex-aut-20232023.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5336683163-fiat-pulse-abarth-13-turbo-16v-flex-aut-20232023-_JM",
       "dealer": {
-        "name": "Grupo Daitan Abarth — Campinas",
-        "type": "Concessionária Autorizada Fiat / Abarth",
-        "city": "Campinas",
-        "state": "SP",
-        "neighborhood": "Nova Campinas",
-        "phone": "(19) 3755-9000",
-        "whatsapp": "5519997881122",
+        "name": "Loja no Mercado Livre",
+        "city": "Maceió",
+        "state": "AL",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -2145,7 +2034,7 @@
           "Freio de mão eletrônico com Auto Hold"
         ]
       },
-      "cautelarStatus": "100% Periciado",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 120k",
@@ -2159,7 +2048,7 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2772
       },
-      "negotiatedTarget": 102000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "sug-120k-nivus-high",
@@ -2168,27 +2057,24 @@
       "isTarget": false,
       "isSuggestion": true,
       "priceTier": "120k",
-      "badge": "Premium até 120k",
+      "badge": "Acima da FIPE",
       "year": "2023/2024",
       "km": 21300,
       "color": "Cinza Moonstone",
       "fuel": "Flex (Gasolina / Etanol)",
       "transmission": "Automático de 6 marchas",
       "price": 117900,
-      "originalPrice": 121000,
-      "fipePrice": 121500,
-      "priceVsFipe": "-R$ 3.600 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_858957-MLB117428525235_092026-O-volkswagen-nivus-highline.jpg",
+      "fipePrice": 117092,
+      "priceVsFipe": "+R$ 808 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_858957-MLB117428525235_092026-O-volkswagen-nivus-highline.webp",
       "portal": "Mercado Livre",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5210374763-volkswagen-nivus-highline-_JM",
       "dealer": {
-        "name": "Kavak Hub — Alphaville",
-        "type": "Seminovos Certificados",
-        "city": "Barueri",
-        "state": "SP",
-        "neighborhood": "Alphaville",
-        "phone": "(11) 3230-0000",
-        "whatsapp": "5511991238899",
+        "name": "Loja no Mercado Livre",
+        "city": "Gaspar",
+        "state": "SC",
+        "neighborhood": "",
+        "whatsapp": "",
         "verified": true
       },
       "specs": {
@@ -2205,7 +2091,7 @@
           "VW Play com conexão sem fio"
         ]
       },
-      "cautelarStatus": "100% Certificado 240 Itens",
+      "cautelarStatus": "",
       "tags": [
         "Foto Real",
         "Até 120k",
@@ -2220,21 +2106,20 @@
         "interestRate": 2.5,
         "monthlyInstallment": 2972
       },
-      "negotiatedTarget": 110000
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "tera-mpi-01",
       "isTarget": true,
       "modelCategory": "Volkswagen Tera 2026",
       "title": "Volkswagen Tera 1.0 MPI Manual 2026",
-      "badge": "Lançamento Entrada 2026",
+      "badge": "Oferta de loja",
       "year": 2026,
       "km": 0,
       "color": "Branco Cristal",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Manual (5 marchas)",
       "price": 108490,
-      "originalPrice": 108490,
       "fipePrice": 108490,
       "priceVsFipe": "Tabela Oficial VW 2026",
       "image": "https://production.autoforce.com/uploads/version/profile_image/12623/model_main_webp_comprar-tera-mpi_76e15a6cb4.png.webp",
@@ -2246,11 +2131,11 @@
         "state": "SP",
         "neighborhood": "Santana",
         "address": "Av. Braz Leme, 2000 - Santana, São Paulo - SP",
-        "whatsapp": "5511999990001",
+        "whatsapp": "",
         "rating": 4.9,
         "reviewsCount": 420
       },
-      "cautelarStatus": true,
+      "cautelarStatus": "",
       "cautelarCompany": "Zero KM Fábrica VW",
       "specs": {
         "engine": "1.0 MPI 3 Cilindros Aspirado 84 cv",
@@ -2271,7 +2156,6 @@
         "Sensor de estacionamento traseiro"
       ],
       "portal": "Sorana VW",
-      "negotiatedTarget": 104000,
       "financing": {
         "downPayment": 32547,
         "financedAmount": 75943,
@@ -2285,14 +2169,13 @@
       "isTarget": true,
       "modelCategory": "Volkswagen Tera 2026",
       "title": "Volkswagen Tera Comfort 170 TSI Automático 2026",
-      "badge": "Intermediário Automático Turbo",
+      "badge": "Oferta de loja",
       "year": 2026,
       "km": 0,
       "color": "Prata Lunar",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático (6 marchas Tiptronic)",
       "price": 134790,
-      "originalPrice": 134790,
       "fipePrice": 134790,
       "priceVsFipe": "Tabela Oficial VW 2026",
       "image": "https://vigoritovw.com.br/wp-content/uploads/sites/5/2025/05/25_0002_STILL_TERA_COMF_170TSI_AQ_MY26_3_4_FRENTE_R4R4_PRATA_LUNAR_ESTU_9000X6000px-1-e1779733521834.png",
@@ -2304,11 +2187,11 @@
         "state": "SP",
         "neighborhood": "Centro",
         "address": "Av. Industrial, 1100 - Santo André - SP",
-        "whatsapp": "5511999990002",
+        "whatsapp": "",
         "rating": 4.8,
         "reviewsCount": 510
       },
-      "cautelarStatus": true,
+      "cautelarStatus": "",
       "cautelarCompany": "Zero KM Fábrica VW",
       "specs": {
         "engine": "1.0 170 TSI Turbo Flex 116 cv",
@@ -2328,7 +2211,6 @@
         "Câmera de ré com guias dinâmicas"
       ],
       "portal": "Vigorito VW",
-      "negotiatedTarget": 129000,
       "financing": {
         "downPayment": 40437,
         "financedAmount": 94353,
@@ -2342,14 +2224,13 @@
       "isTarget": true,
       "modelCategory": "Volkswagen Tera 2026",
       "title": "Volkswagen Tera Highline 200 TSI Automático 2026",
-      "badge": "Topo de Linha / ADAS Completo",
+      "badge": "Oferta de loja",
       "year": 2026,
       "km": 0,
       "color": "Azul Biscay",
       "fuel": "Flex (Etanol/Gasolina)",
       "transmission": "Automático (6 marchas)",
       "price": 147190,
-      "originalPrice": 147190,
       "fipePrice": 147190,
       "priceVsFipe": "Tabela Oficial VW 2026",
       "image": "https://cdn.dealerspace.ai/dealersites/vehicles/models/volkswagen/foto_model_890_1860.v1793116148-r1bm.webp",
@@ -2361,11 +2242,11 @@
         "state": "SP",
         "neighborhood": "Capital",
         "address": "Rede Autorizada São Paulo - SP",
-        "whatsapp": "5511999990003",
+        "whatsapp": "",
         "rating": 4.9,
         "reviewsCount": 890
       },
-      "cautelarStatus": true,
+      "cautelarStatus": "",
       "cautelarCompany": "Zero KM Fábrica VW",
       "specs": {
         "engine": "1.0 200 TSI Turbo Flex 128 cv",
@@ -2385,7 +2266,6 @@
         "Rodas de liga leve aro 17 escurecidas"
       ],
       "portal": "Volkswagen Ofertas",
-      "negotiatedTarget": 142000,
       "financing": {
         "downPayment": 44157,
         "financedAmount": 103033,
@@ -2399,30 +2279,28 @@
       "isTarget": true,
       "modelCategory": "BYD Dolphin 100% Elétrico",
       "title": "BYD Dolphin EV GS 44.9 kWh (Hatch Médio) 2024",
-      "badge": "Elétrico Mais Vendido do Brasil",
-      "year": 2024,
-      "km": 16000,
+      "badge": "Preço do anúncio",
+      "year": 2025,
+      "km": 39000,
       "color": "Cinza Afterglow",
       "fuel": "100% Elétrico",
       "transmission": "Automático Elétrico Direto",
       "price": 104900,
-      "originalPrice": 149800,
-      "fipePrice": 112000,
-      "priceVsFipe": "-R$ 7.100 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_779012-MLB116376765097_082026-O-dolphin-ev-gs-eletrico.jpg",
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_779012-MLB116376765097_082026-O-dolphin-ev-gs-eletrico.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5087599037-dolphin-ev-gs-eletrico-_JM",
       "dealer": {
-        "name": "Dahruj BYD Seminovos",
-        "type": "Concessionária Autorizada BYD",
-        "city": "São Paulo",
+        "name": "Loja no Mercado Livre",
+        "city": "Franco da Rocha",
         "state": "SP",
-        "neighborhood": "Vila Olímpia",
-        "address": "Av. dos Bandeirantes, 3200 - Vila Olímpia, São Paulo - SP",
-        "whatsapp": "5511999990004",
+        "neighborhood": "",
+        "whatsapp": "",
         "rating": 4.9,
-        "reviewsCount": 380
+        "reviewsCount": 380,
+        "verified": true
       },
-      "cautelarStatus": true,
+      "cautelarStatus": "",
       "cautelarCompany": "Super Visão Aprovado",
       "specs": {
         "engine": "Motor Elétrico Síncrono Ímã Permanente 95 cv",
@@ -2442,44 +2320,43 @@
         "Espaço interno plano de entre-eixos de 2,70 metros"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 99000,
       "financing": {
         "downPayment": 31470,
         "financedAmount": 73430,
         "months": 48,
         "interestRate": 2.5,
-        "monthlyInstallment": 2646
-      }
+        "monthlyInstallment": 2644
+      },
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "byd-dolphin-plus-sport",
       "isTarget": true,
       "modelCategory": "BYD Dolphin 100% Elétrico",
       "title": "BYD Dolphin Plus 60.5 kWh 204 cv Esportivo 2024",
-      "badge": "204 cv / Teto Solar Panorâmico",
-      "year": 2024,
+      "badge": "Preço do anúncio",
+      "year": 2025,
       "km": 12000,
       "color": "Branco e Preto Bitom",
       "fuel": "100% Elétrico",
       "transmission": "Automático Elétrico Direto",
-      "price": 159900,
-      "originalPrice": 179800,
-      "fipePrice": 165000,
-      "priceVsFipe": "-R$ 5.100 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_903384-MLB120354977071_102026-O-byd-dolphin-plus-00-ev-aut-5p-electrico.jpg",
+      "price": 149900,
+      "fipePrice": null,
+      "priceVsFipe": "FIPE indisponível",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_903384-MLB120354977071_102026-O-byd-dolphin-plus-00-ev-aut-5p-electrico.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-5476218125-byd-dolphin-plus-00-ev-aut-5p-electrico-_JM",
       "dealer": {
-        "name": "Toriba BYD Jardins",
-        "type": "Concessionária Autorizada BYD",
+        "name": "Loja no Mercado Livre",
         "city": "São Paulo",
         "state": "SP",
-        "neighborhood": "Jardins",
-        "address": "Av. Europa, 650 - Jardins, São Paulo - SP",
-        "whatsapp": "5511999990005",
+        "neighborhood": "Zona Norte",
+        "whatsapp": "",
         "rating": 5,
-        "reviewsCount": 290
+        "reviewsCount": 290,
+        "verified": true
       },
-      "cautelarStatus": true,
+      "cautelarStatus": "",
       "cautelarCompany": "DEKRA Vistoria Cautelar",
       "specs": {
         "engine": "Motor Elétrico de Alta Performance 204 cv",
@@ -2499,44 +2376,43 @@
         "Bancos esportivos dianteiros aquecidos com ajuste elétrico"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 152000,
       "financing": {
-        "downPayment": 47970,
-        "financedAmount": 111930,
+        "downPayment": 44970,
+        "financedAmount": 104930,
         "months": 48,
         "interestRate": 2.5,
-        "monthlyInstallment": 4034
-      }
+        "monthlyInstallment": 3778
+      },
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-hybrid-audace-01",
       "isTarget": true,
       "modelCategory": "Fiat Pulse Automático",
       "title": "Fiat Pulse Audace 1.0 Turbo 200 Hybrid CVT 2025",
-      "badge": "Novo Motor Híbrido Flex 2025",
-      "year": 2025,
+      "badge": "Acima da FIPE",
+      "year": 2026,
       "km": 4500,
       "color": "Cinza Silverstone",
       "fuel": "Híbrido Flex (Bio-Hybrid MHEV 12V)",
       "transmission": "Automático CVT (7 marchas simuladas)",
       "price": 116790,
-      "originalPrice": 125990,
-      "fipePrice": 122000,
-      "priceVsFipe": "-R$ 5.210 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_683710-MLB118249744576_102026-O-fiat-pulse-10-turbo-200-hybrid-audace-cvt.jpg",
+      "fipePrice": 111110,
+      "priceVsFipe": "+R$ 5.680 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_683710-MLB118249744576_102026-O-fiat-pulse-10-turbo-200-hybrid-audace-cvt.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7856758606-fiat-pulse-10-turbo-200-hybrid-audace-cvt-_JM",
       "dealer": {
-        "name": "Fiat Sinal — Unidade Morumbi",
-        "type": "Concessionária Oficial Fiat",
-        "city": "São Paulo",
-        "state": "SP",
-        "neighborhood": "Morumbi",
-        "address": "Av. Giovanni Gronchi, 4500 - Morumbi, São Paulo - SP",
-        "whatsapp": "5511999990006",
+        "name": "Loja no Mercado Livre",
+        "city": "Campo Grande",
+        "state": "MS",
+        "neighborhood": "",
+        "whatsapp": "",
         "rating": 4.9,
-        "reviewsCount": 440
+        "reviewsCount": 440,
+        "verified": true
       },
-      "cautelarStatus": true,
+      "cautelarStatus": "",
       "cautelarCompany": "Super Visão Laudo Aprovado",
       "specs": {
         "engine": "1.0 Turbo 200 + Sistema Híbrido Leve 12V (Bio-Hybrid)",
@@ -2556,44 +2432,43 @@
         "Sensor de chuva e acendimento automático dos faróis"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 112000,
       "financing": {
         "downPayment": 35037,
         "financedAmount": 81753,
         "months": 48,
         "interestRate": 2.5,
-        "monthlyInstallment": 2946
-      }
+        "monthlyInstallment": 2944
+      },
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     },
     {
       "id": "pulse-hybrid-impetus-01",
       "isTarget": true,
       "modelCategory": "Fiat Pulse Automático",
       "title": "Fiat Pulse Impetus 1.0 Turbo 200 Hybrid Flex Aut 2025",
-      "badge": "Topo de Linha Híbrido / Teto Bitom",
+      "badge": "Abaixo da FIPE",
       "year": 2025,
-      "km": 2800,
+      "km": 7000,
       "color": "Branco Banchisa com Teto Preto",
       "fuel": "Híbrido Flex (Bio-Hybrid MHEV 12V)",
       "transmission": "Automático CVT (7 marchas simuladas)",
       "price": 129900,
-      "originalPrice": 140990,
-      "fipePrice": 136500,
-      "priceVsFipe": "-R$ 6.600 vs FIPE",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_612654-MLB118853258298_102026-O-fiat-pulse-10-impetus-turbo-200-hybrid-flex-aut-5p-hibr.jpg",
+      "fipePrice": 130449,
+      "priceVsFipe": "-R$ 549 vs FIPE",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_612654-MLB118853258298_102026-O-fiat-pulse-10-impetus-turbo-200-hybrid-flex-aut-5p-hibr.webp",
       "listingUrl": "https://carro.mercadolivre.com.br/MLB-7917009844-fiat-pulse-10-impetus-turbo-200-hybrid-flex-aut-5p-hibr-_JM",
       "dealer": {
-        "name": "Fiat Daitan — Campinas Norte",
-        "type": "Concessionária Oficial Fiat",
-        "city": "Campinas",
-        "state": "SP",
-        "neighborhood": "Taquaral",
-        "address": "Av. Orosimbo Maia, 2100 - Cambuí, Campinas - SP",
-        "whatsapp": "5511999990007",
+        "name": "Loja no Mercado Livre",
+        "city": "Serra",
+        "state": "ES",
+        "neighborhood": "",
+        "whatsapp": "",
         "rating": 4.8,
-        "reviewsCount": 395
+        "reviewsCount": 395,
+        "verified": true
       },
-      "cautelarStatus": true,
+      "cautelarStatus": "",
       "cautelarCompany": "DEKRA Vistoria Aprovada",
       "specs": {
         "engine": "1.0 Turbo 200 Bio-Hybrid Flex 130 cv",
@@ -2613,14 +2488,15 @@
         "Rodas de liga leve aro 17 diamantadas"
       ],
       "portal": "Mercado Livre",
-      "negotiatedTarget": 124000,
       "financing": {
         "downPayment": 38970,
         "financedAmount": 90930,
         "months": 48,
         "interestRate": 2.5,
-        "monthlyInstallment": 3277
-      }
+        "monthlyInstallment": 3274
+      },
+      "priceTier": null,
+      "verifiedAt": "2026-11-13"
     }
   ]
 }

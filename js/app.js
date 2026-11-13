@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   await data.init();
 
   const BUDGET = window.AutoRadarBudget || 80000;
+
+  const UF_NOME = {
+    SP: 'São Paulo', RJ: 'Rio de Janeiro', MG: 'Minas Gerais', SC: 'Santa Catarina',
+    RS: 'Rio Grande do Sul', PR: 'Paraná', GO: 'Goiás', DF: 'Distrito Federal',
+    MS: 'Mato Grosso do Sul', ES: 'Espírito Santo', AL: 'Alagoas', BA: 'Bahia',
+    CE: 'Ceará', PE: 'Pernambuco', AM: 'Amazonas', PA: 'Pará', MT: 'Mato Grosso',
+    RN: 'Rio Grande do Norte', PB: 'Paraíba', PI: 'Piauí', MA: 'Maranhão',
+    SE: 'Sergipe', TO: 'Tocantins', RO: 'Rondônia', AC: 'Acre', AP: 'Amapá', RR: 'Roraima',
+  };
   const fmt = CarFinancingCalculator.formatCurrency;
 
   const norm = (s) => (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -46,6 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     searchQuery: '',
     filterPrice: Infinity,
     filterFuel: 'all',
+    filterState: 'SP',
     filterRegion: 'all',
     filterSort: 'price-asc',
     compareSlots: ['pulse-01', 'byd-01', null],
@@ -174,7 +184,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (state.onlyFavorites && !data.isFavorite(car.id)) return false;
       if (precoEfetivo(car) > state.filterPrice) return false;
       if (!matchesFuel(car, state.filterFuel)) return false;
-      if (!window.AutoRadarDataService.matchesRegion(car, state.filterRegion)) return false;
+      if (!window.AutoRadarDataService.matchesState(car, state.filterState)) return false;
+      if (state.filterState === 'SP' && !window.AutoRadarDataService.matchesRegion(car, state.filterRegion)) return false;
       if (!matchesSearch(car, state.searchQuery)) return false;
       return true;
     });
@@ -188,11 +199,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       case 'year-desc':
         return out.sort((a, b) => (b.year || 0) - (a.year || 0));
       case 'fipe-asc':
-        // Mais abaixo da FIPE primeiro (quanto mais negativo, melhor)
+        // Mais abaixo da FIPE primeiro; oferta sem FIPE confirmada vai para o fim.
         return out.sort((a, b) => {
-          const da = (a.price || 0) - (a.fipePrice || a.price || 0);
-          const db = (b.price || 0) - (b.fipePrice || b.price || 0);
-          return da - db || a.price - b.price;
+          const da = a.fipePrice ? (a.price || 0) - a.fipePrice : Infinity;
+          const dbo = b.fipePrice ? (b.price || 0) - b.fipePrice : Infinity;
+          return da - dbo || a.price - b.price;
         });
       case 'electric-first':
         return out.sort((a, b) => {
@@ -245,7 +256,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <img src="${esc(cardImg)}" alt="${titulo}" loading="lazy" onerror="this.closest('.car-image-box').remove();">
           <span class="car-badge-top ${isElec ? 'badge-electric' : ''}">${badge}</span>
           <button class="car-favorite-btn ${isFav ? 'favorited' : ''}" data-fav-id="${esc(car.id)}" aria-label="Salvar nos favoritos" aria-pressed="${isFav}">${isFav ? CORACAO_CHEIO : CORACAO_VAZIO}</button>
-          <div class="car-location-tag">${esc(car.dealer?.city || 'São Paulo')} - ${esc(car.dealer?.neighborhood || 'SP')}</div>
+          <div class="car-location-tag">${esc(car.dealer?.city || 'São Paulo')} - ${esc(car.dealer?.neighborhood || car.dealer?.state || 'SP')}</div>
         </div>`
       : `
         <div class="car-card-no-img-header">
@@ -290,12 +301,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <svg class="store-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 <span>${esc(car.dealer?.name || 'Loja verificada')}</span>
               </span>
+              ${car.dealer?.state && car.dealer.state !== 'SP' ? `<span class="car-state-out">Fora de SP • ${esc(car.dealer.state)}</span>` : ''}
               ${car.portal ? `<span class="car-portal-badge">${esc(car.portal)}</span>` : ''}
             </div>
             <div class="dealer-meta-right">
               <span class="cautelar-approved" title="${esc(car.cautelarStatus || '')}">
                 <svg class="check-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                <span>${car.cautelarStatus ? 'Laudo OK' : 'Periciado'}</span>
+                <span>${car.cautelarStatus ? 'Laudo OK' : 'Laudo no anúncio'}</span>
               </span>
             </div>
           </div>
@@ -425,7 +437,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Cards de destaque do topo (números reais do catálogo)
   function renderInsights() {
-    const stats = data.getModelStats();
+    const stats = data.getModelStats(state.filterState);
     const alvo = {
       pulse: { el: $('insightPulse'), extra: 'Câmbio automático (CVT ou Turbo 200)' },
       byd: { el: $('insightByd'), extra: 'Zero combustível e isenção de rodízio em SP' },
@@ -464,6 +476,29 @@ document.addEventListener('DOMContentLoaded', async () => {
             `<button type="button" class="filter-btn-chip" data-city="${esc(r.key)}">${esc(r.label)} (${r.count})</button>`
         )
         .join('');
+  }
+
+  function renderStates() {
+    const container = $('stateBtnGroup');
+    if (!container) return;
+    const total = data.getAllCars().length;
+    container.innerHTML =
+      `<button type="button" class="filter-btn-chip ${state.filterState === 'all' ? 'active' : ''}" data-state="all">Todos (${total})</button>` +
+      data
+      .getStates()
+      .map(
+        (s) =>
+          `<button type="button" class="filter-btn-chip ${s.uf === state.filterState ? 'active' : ''}" data-state="${esc(
+            s.uf
+          )}">${esc(UF_NOME[s.uf] || s.uf)} (${s.count})</button>`
+      )
+      .join('');
+  }
+
+  function syncRegionVisibility() {
+    const grupo = $('regionFilterGroup');
+    if (!grupo) return;
+    grupo.style.display = state.filterState === 'SP' ? '' : 'none';
   }
 
   function renderSyncStatus() {
@@ -549,6 +584,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   });
 
+  // Estado: delegação (chips gerados do catálogo)
+  const stateGroup = $('stateBtnGroup');
+  if (stateGroup) {
+    stateGroup.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-state]');
+      if (!btn) return;
+      state.filterState = btn.getAttribute('data-state');
+      state.filterRegion = 'all';
+      renderStates();
+      renderRegions();
+      syncRegionVisibility();
+      renderInsights();
+      renderAllGrids();
+    });
+  }
+
   // Região: delegação (os chips são gerados dinamicamente)
   const regionGroup = $('regionBtnGroup');
   if (regionGroup) {
@@ -612,6 +663,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     state.onlyFavorites = false;
     state.filterPrice = Infinity;
     state.filterFuel = 'all';
+    state.filterState = 'SP';
     state.filterRegion = 'all';
     state.filterSort = 'price-asc';
     state.suggestionTier = 'all';
@@ -627,6 +679,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (regionGroup) setChipActive('#regionBtnGroup', 'data-city', 'all');
     document.querySelectorAll('.insight-card[data-insight-model]').forEach((c) => c.classList.remove('active'));
 
+    renderStates();
+    renderRegions();
+    syncRegionVisibility();
     renderAllGrids();
     renderBudget();
   }
@@ -1272,7 +1327,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // =====================================================================
   // Inicialização
   // =====================================================================
+  renderStates();
   renderRegions();
+  syncRegionVisibility();
   populateCompareSlots();
   populateSimulatorCarSelect();
   renderAllGrids();
