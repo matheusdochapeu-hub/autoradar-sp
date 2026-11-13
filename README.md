@@ -83,6 +83,21 @@ updater.py            Manutenção de metadados/estatísticas do JSON
 
 ---
 
+## Auditar o catálogo contra os anúncios
+
+O catálogo só vale se bater com o anúncio publicado. Antes de confiar nos dados:
+
+```powershell
+python scripts/audit_catalog.py              # audita todas as ofertas
+python scripts/audit_catalog.py --limit 10   # amostra
+```
+
+O script abre cada `listingUrl`, extrai preço, FIPE, cidade e ano publicados e
+compara com `data/cars.json`. Ele **não altera nada**: grava
+`data/audit-report.json` e imprime as divergências. Resultado da última execução
+(13/11/2026): **0 de 43 ofertas batiam** — cidades, FIPE e anos do catálogo não
+correspondem aos anúncios.
+
 ## Ampliar o catálogo (mais carros e mais cidades)
 
 1. Encontre anúncios reais dos modelos-alvo em novas cidades.

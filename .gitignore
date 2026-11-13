@@ -16,3 +16,6 @@ index-probe.html
 
 # Candidatos coletados (revisar antes de entrar no catálogo)
 data/candidates.json
+
+# Relatório de auditoria (gerado localmente)
+data/audit-report.json

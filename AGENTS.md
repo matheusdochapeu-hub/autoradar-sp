@@ -44,7 +44,7 @@ FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallba
 
 - GitHub Pages via `.github/workflows/pages.yml` (branch `main`):
   <https://matheusdochapeu-hub.github.io/autoradar-sp/>
-- A branch `gh-pages` é legado (parada na v14) e não é usada pela publicação.
+- A branch `gh-pages` antiga foi removida; o conteúdo dela ficou no tag `legacy-gh-pages-v14`.
 - Cache versionado em `sw.js` (`autoradar-sp-vN`).
 
 ## Arquivos-chave
@@ -58,6 +58,7 @@ FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallba
 | `data/cars.json` | **Fonte oficial** do catálogo |
 | `scripts/sync-fallback.js` | Regenera o fallback de `js/data.js` a partir do JSON |
 | `scripts/fetch_listings.py` | Coleta candidatos de anúncios reais (revisão manual) |
+| `scripts/audit_catalog.py` | Compara o catálogo com o anúncio publicado (preço, FIPE, cidade, ano) |
 | `sw.js` | Service Worker |
 | `MEMORY.md` | Histórico de versões do catálogo |
 
@@ -76,6 +77,9 @@ FIPE coerente, parcela na Tabela Price, `priceTier` batendo com o preço; fallba
    pelo GitHub Pages e o cache do navegador já causou tela desatualizada.
 6. Filtros de região devem ser gerados de `REGIOES_SP` + catálogo. Não fixe cidades
    no HTML: região sem oferta vira filtro que esvazia a tela.
+7. **Rode `python scripts/audit_catalog.py` antes de publicar dados.** A auditoria de
+   13/11/2026 mostrou 0/43 ofertas coerentes com o anúncio: cidade, FIPE e ano do
+   catálogo não vinham da fonte. Dado de localização não pode ser decorativo.
 
 ## Vizinhança (ecossistema)
 
